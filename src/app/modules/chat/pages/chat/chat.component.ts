@@ -6,7 +6,6 @@ import { ToastrService } from 'ngx-toastr';
 import OpenAI from 'openai';
 import { Assistant } from 'openai/resources/beta/assistants';
 import { Message } from 'openai/resources/beta/threads/messages';
-import { KeyService } from 'src/app/core/services/key.service';
 import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
 import { EsnAiSnapshotService } from 'src/app/core/services/snapshot.service';
 import { EsnAiUserConfigService } from 'src/app/core/services/user-config.service';
