@@ -3,6 +3,7 @@
 </button>
 
 <div class="config-elm-list">
+  <mat-spinner *ngIf="loading" diameter="40"></mat-spinner>
   <div
     *ngFor="let file of files"
     class="file config-elm-list__element"
@@ -12,10 +13,11 @@
     <div class="config-elm-list__element__info">{{ file.id }}</div>
   </div>
 </div>
-
-<button mat-raised-button color="primary" (click)="fileInput.click()">
-  + Import new file
-</button>
+<div class="config-footer-actions-container">
+  <button mat-raised-button color="primary" (click)="fileInput.click()">
+    + Import new file
+  </button>
+</div>
 
 <input
   #fileInput

@@ -3,6 +3,7 @@
 </button>
 
 <div class="config-elm-list">
+  <mat-spinner *ngIf="loading" diameter="40"></mat-spinner>
   <div
     *ngFor="let assistant of assistants"
     class="assistant config-elm-list__element"
@@ -14,10 +15,12 @@
   </div>
 </div>
 
-<button
-  mat-raised-button
-  color="primary"
-  (click)="openAssistantCreationModal()"
->
-  + Create assistant
-</button>
+<div class="config-footer-actions-container">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="openAssistantCreationModal()"
+  >
+    + Create assistant
+  </button>
+</div>

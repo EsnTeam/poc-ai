@@ -10,6 +10,7 @@ import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
 export class FilesComponent {
   public files: any[];
   public selectedFile: File | null = null;
+  public loading: boolean = true;
   constructor(public oaiService: EsnOpenaiService, public router: Router) {}
 
   async ngOnInit() {
@@ -17,7 +18,9 @@ export class FilesComponent {
   }
 
   public async refresh() {
+    this.loading = true;
     this.files = await this.oaiService.listFiles();
+    this.loading = false;
   }
 
   public back() {

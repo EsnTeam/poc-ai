@@ -19,6 +19,7 @@ import {
 } from 'src/app/modules/shared/model/constants';
 
 //what are the names and types of the <attr> of <elm> with name contrat ?
+// https://esnteam.github.io/poc-ai/poc-ai/
 
 @Component({
   selector: 'app-chat',
@@ -39,6 +40,7 @@ export class ChatComponent {
   public assistants: Assistant[] = [];
   public autoRunThread: boolean = true;
   public showUsage: boolean = true;
+  public snapshotLoading: boolean = false;
 
   constructor(
     public oaiService: EsnOpenaiService,
@@ -153,8 +155,10 @@ export class ChatComponent {
     });
   }
 
-  public downloadSnapshot() {
-    this.snapshotService.downloadSnapshot(this.threadId);
+  public async downloadSnapshot() {
+    this.snapshotLoading = true;
+    await this.snapshotService.downloadSnapshot(this.threadId);
+    this.snapshotLoading = false;
   }
 
   public async clearThread() {
@@ -236,7 +240,7 @@ export class ChatComponent {
         (inputToks / 1000000) * this.getPricePerMInputTokens() +
         (outputToks / 1000000) * this.getPricePerMOutputTokens();
 
-      if (cost < 0.00001) {
+      if (cost < 0.0001) {
         cost = '< 0.0001';
       } else {
         cost = Math.trunc(cost * 10000) / 10000;

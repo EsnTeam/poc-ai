@@ -10,6 +10,7 @@ import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
 })
 export class ThreadsComponent {
   public threads: Thread[] = [];
+  public loading: boolean = true;
   constructor(
     public oaiService: EsnOpenaiService,
     public activatedRoute: ActivatedRoute,
@@ -21,7 +22,9 @@ export class ThreadsComponent {
   }
 
   public async refresh() {
+    this.loading = true;
     this.threads = await this.oaiService.listThreads();
+    this.loading = false;
   }
   public goToChatView(thread: Thread) {
     this.router.navigate([`/poc-ai/threads/${thread.id}/chat`]);

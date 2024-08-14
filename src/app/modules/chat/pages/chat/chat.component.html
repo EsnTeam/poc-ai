@@ -8,7 +8,12 @@
       Clear thread
     </button>
 
-    <button mat-raised-button color="primary" (click)="runThread()">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="runThread()"
+      [disabled]="!assistants.length"
+    >
       Manual run
     </button>
 
@@ -54,8 +59,14 @@
     >
       Manage Assistants
     </button>
-    <button mat-raised-button color="primary" (click)="downloadSnapshot()">
-      Download snapshot
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="downloadSnapshot()"
+      [disabled]="snapshotLoading"
+    >
+      <span *ngIf="!snapshotLoading">Download snapshot</span
+      ><mat-spinner *ngIf="snapshotLoading" diameter="20"></mat-spinner>
     </button>
     <!-- <button mat-raised-button color="primary" (click)="runThread()">RUN</button> -->
   </div>
@@ -90,6 +101,7 @@
 
     <mat-form-field class="chat-input-field">
       <textarea
+        [disabled]="!assistants.length"
         matInput
         type="text"
         [(ngModel)]="value"

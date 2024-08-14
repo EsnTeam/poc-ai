@@ -13,6 +13,7 @@ import { AssistantEditionDialogComponent } from '../../components/assistant-edit
 })
 export class AssistantsComponent {
   public assistants: Assistant[];
+  public loading: boolean = true;
   constructor(
     public oaiService: EsnOpenaiService,
     public router: Router,
@@ -28,7 +29,9 @@ export class AssistantsComponent {
   }
 
   public async refresh() {
+    this.loading = true;
     this.assistants = await this.oaiService.listAssistants();
+    this.loading = false;
   }
 
   public back() {
