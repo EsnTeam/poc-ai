@@ -1,0 +1,23 @@
+<button mat-raised-button color="primary" (click)="back()">
+  {{ "< Back" }}
+</button>
+
+<div class="config-elm-list">
+  <div
+    *ngFor="let assistant of assistants"
+    class="assistant config-elm-list__element"
+    (click)="goToDetailView(assistant)"
+    [matTooltip]="stringify(assistant)"
+  >
+    <div class="config-elm-list__element__label">{{ assistant.name }}</div>
+    <div class="config-elm-list__element__info">{{ assistant.model }}</div>
+  </div>
+</div>
+
+<button
+  mat-raised-button
+  color="primary"
+  (click)="openAssistantCreationModal()"
+>
+  + Create assistant
+</button>

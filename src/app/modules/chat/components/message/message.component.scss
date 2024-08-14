@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  &:not(.bot) {
+    justify-content: flex-end;
+    .message-inner {
+      background-color: #dcf8c7;
+      .avatar {
+        background-image: url("~src/assets/149071.png");
+        background-position: top 0px right 0;
+      }
+    }
+  }
+
+  .file {
+    display: flex;
+    justify-content: flex-end;
+    color: grey;
+  }
+  .message-inner {
+    position: relative;
+    white-space: pre-wrap;
+    background-color: whitesmoke;
+    box-shadow: 1px 2px 2px #00000075;
+    align-items: center;
+    display: flex;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+    margin: 0.5rem;
+    max-width: 85%;
+    border-radius: 8px;
+    .text {
+      margin-left: 1rem;
+    }
+
+    .avatar {
+      background-image: url("~src/assets/intelligence-artificielle.jpg");
+      background-size: auto 100%;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: top 0px right -8px;
+    }
+  }
+
+  .delete-container {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    cursor: pointer;
+    color: black;
+  }
+}

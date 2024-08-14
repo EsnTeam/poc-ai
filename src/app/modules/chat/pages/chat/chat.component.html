@@ -1,0 +1,101 @@
+<div class="header">
+  <div class="header__leading">
+    <button mat-raised-button color="primary" (click)="back()">
+      {{ "< Back" }}
+    </button>
+
+    <button mat-raised-button color="primary" (click)="clearThread()">
+      Clear thread
+    </button>
+
+    <button mat-raised-button color="primary" (click)="runThread()">
+      Manual run
+    </button>
+
+    <button mat-raised-button color="primary" (click)="refreshMessages()">
+      Refresh messages
+    </button>
+    <span
+      class="checkbox-container"
+      matTooltip="After each message, automatically run the thread, poll for completion and refresh messages"
+    >
+      <input
+        [(ngModel)]="autoRunThread"
+        (ngModelChange)="updateConfig()"
+        type="checkbox"
+      />
+      <span class="chose-file-label">Auto run thread</span>
+    </span>
+    <span class="checkbox-container">
+      <input
+        [(ngModel)]="showUsage"
+        (ngModelChange)="updateConfig()"
+        type="checkbox"
+      />
+      <span class="chose-file-label">Show usage</span>
+    </span>
+  </div>
+  <div class="header__trailing">
+    <mat-form-field *ngIf="assistants.length">
+      <mat-label>Run with</mat-label>
+      <mat-select [(ngModel)]="assistantId" (ngModelChange)="updateConfig()">
+        <mat-option
+          ng-size="8"
+          *ngFor="let assistant of assistants"
+          [value]="assistant.id"
+          >{{ assistant.name }} ({{ assistant.model }})</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onManageAssistantsClick()"
+    >
+      Manage Assistants
+    </button>
+    <button mat-raised-button color="primary" (click)="downloadSnapshot()">
+      Download snapshot
+    </button>
+    <!-- <button mat-raised-button color="primary" (click)="runThread()">RUN</button> -->
+  </div>
+</div>
+
+<div class="view container">
+  <div class="message-list">
+    <app-message
+      *ngFor="let message of messages.reverse()"
+      [message]="message"
+      [files]="files"
+      (delete)="onDeleteMessage(message)"
+    ></app-message>
+  </div>
+  <div class="processing-indicator" *ngIf="processing">
+    <mat-spinner diameter="20"></mat-spinner><span>&nbsp;Processing...</span>
+  </div>
+  <div class="footer">
+    <div class="file-select-container">
+      <input type="checkbox" (change)="handleWithFileClick($event)" />
+      <span class="chose-file-label">Attach file to message</span>
+      <select name="file" (change)="onSelectedFileChange($event)">
+        <option value="">--Choose a file--</option>
+        <option *ngFor="let file of files" [value]="file.id">
+          {{ file.filename }}
+        </option>
+      </select>
+      <button mat-raised-button color="primary" (click)="onManageFilesClick()">
+        Manage files
+      </button>
+    </div>
+
+    <mat-form-field class="chat-input-field">
+      <textarea
+        matInput
+        type="text"
+        [(ngModel)]="value"
+        (keydown)="onInput($event)"
+        placeholder="Entrez votre message..."
+      ></textarea>
+    </mat-form-field>
+  </div>
+</div>

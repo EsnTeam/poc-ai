@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  background-color: #d7d0c9;
+  background-image: url("~src/assets/background.png");
+  min-width: 100vw;
+  min-height: 100vh;
+
+  .password-form {
+    position: absolute;
+    top: 40%;
+    margin: auto;
+    width: 100%;
+
+    mat-form-field {
+      margin: auto;
+      display: block;
+      width: 50%;
+    }
+  }
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+  background: rgb(245, 245, 245);
+}

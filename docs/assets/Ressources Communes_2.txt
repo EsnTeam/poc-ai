@@ -1,0 +1,1919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DocumentPublisher="http:///schemas/DocumentPublisher/_GlK5MDIxEe-n_btyyktV6g/0" xmlns:default="http:///schemas/default/_GlfpUDIxEe-n_btyyktV6g/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DocumentPublisher/_GlK5MDIxEe-n_btyyktV6g/0 Document%20Publisher.profile.uml#_GlrPhzIxEe-n_btyyktV6g http:///schemas/default/_GlfpUDIxEe-n_btyyktV6g/0 default.profile.uml#_Gl55BzIxEe-n_btyyktV6g">
+  <uml:Model xmi:id="_GlFZoDIxEe-n_btyyktV6g" name="Ressources Communes">
+    <eAnnotations xmi:id="_GlFZoTIxEe-n_btyyktV6g" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_GlFZojIxEe-n_btyyktV6g" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_GlFZozIxEe-n_btyyktV6g" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GlFZpDIxEe-n_btyyktV6g" name="Documents Communs">
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_GlFZpTIxEe-n_btyyktV6g" name="Doctest" clientDependency="_GlFZqDIxEe-n_btyyktV6g" fileName="C:\Users\D74779\modeliosaas\5.4\ws\Standard_GIFEN\doc\Doctest.docx">
+        <ownedComment xmi:id="_GlFZpjIxEe-n_btyyktV6g">
+          <body></body>
+        </ownedComment>
+        <ownedComment xmi:id="_GlFZpzIxEe-n_btyyktV6g">
+          <body></body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_GlFZqDIxEe-n_btyyktV6g" name="" supplier="_GlFZoDIxEe-n_btyyktV6g" client="_GlFZpTIxEe-n_btyyktV6g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GlFZqTIxEe-n_btyyktV6g" name="LOV Communes">
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZqjIxEe-n_btyyktV6g" name="Accrédit_Type">
+        <ownedLiteral xmi:id="_GlFZqzIxEe-n_btyyktV6g" name="Electrique"/>
+        <ownedLiteral xmi:id="_GlFZrDIxEe-n_btyyktV6g" name="Levage"/>
+        <ownedLiteral xmi:id="_GlFZrTIxEe-n_btyyktV6g" name="Permis Feu"/>
+        <ownedLiteral xmi:id="_GlFZrjIxEe-n_btyyktV6g" name="..."/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZrzIxEe-n_btyyktV6g" name="Catégories_GénieCivil">
+        <ownedLiteral xmi:id="_GlFZsDIxEe-n_btyyktV6g" name="Levée des préalables"/>
+        <ownedLiteral xmi:id="_GlFZsTIxEe-n_btyyktV6g" name=" Prise en compte des préalables replis de chantier"/>
+        <ownedLiteral xmi:id="_GlFZsjIxEe-n_btyyktV6g" name="Contrôle du DSI de chantier"/>
+        <ownedLiteral xmi:id="_GlFZszIxEe-n_btyyktV6g" name="Pose DMP"/>
+        <ownedLiteral xmi:id="_GlFZtDIxEe-n_btyyktV6g" name="Pose DDC"/>
+        <ownedLiteral xmi:id="_GlFZtTIxEe-n_btyyktV6g" name="Dépose DMP"/>
+        <ownedLiteral xmi:id="_GlFZtjIxEe-n_btyyktV6g" name="Dépose DDC"/>
+        <ownedLiteral xmi:id="_GlFZtzIxEe-n_btyyktV6g" name="NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZuDIxEe-n_btyyktV6g" name="Classement_Values">
+        <ownedLiteral xmi:id="_GlFZuTIxEe-n_btyyktV6g" name="C1"/>
+        <ownedLiteral xmi:id="_GlFZujIxEe-n_btyyktV6g" name="C2"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZuzIxEe-n_btyyktV6g" name="Etat">
+        <ownedLiteral xmi:id="_GlFZvDIxEe-n_btyyktV6g" name="BPO"/>
+        <ownedLiteral xmi:id="_GlFZvTIxEe-n_btyyktV6g" name="BPE"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZvjIxEe-n_btyyktV6g" name="Etat_Maturité">
+        <ownedLiteral xmi:id="_GlFZvzIxEe-n_btyyktV6g" name="BPO"/>
+        <ownedLiteral xmi:id="_GlFZwDIxEe-n_btyyktV6g" name="BPE"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZwTIxEe-n_btyyktV6g" name="Etat_Validité">
+        <ownedLiteral xmi:id="_GlFZwjIxEe-n_btyyktV6g" name="BPO"/>
+        <ownedLiteral xmi:id="_GlFZwzIxEe-n_btyyktV6g" name="BPE"/>
+        <ownedLiteral xmi:id="_GlFZxDIxEe-n_btyyktV6g" name="DES"/>
+        <ownedLiteral xmi:id="_GlFZxTIxEe-n_btyyktV6g" name="CAE"/>
+        <ownedLiteral xmi:id="_GlFZxjIxEe-n_btyyktV6g" name="TQC"/>
+        <ownedLiteral xmi:id="_GlFZxzIxEe-n_btyyktV6g" name="ANNULE"/>
+        <ownedLiteral xmi:id="_GlFZyDIxEe-n_btyyktV6g" name="INF"/>
+        <ownedLiteral xmi:id="_GlFZyTIxEe-n_btyyktV6g" name="BPEE"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZyjIxEe-n_btyyktV6g" name="Format_Doc">
+        <ownedLiteral xmi:id="_GlFZyzIxEe-n_btyyktV6g" name="2D"/>
+        <ownedLiteral xmi:id="_GlFZzDIxEe-n_btyyktV6g" name="3D"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZzTIxEe-n_btyyktV6g" name="Famille matériel">
+        <ownedLiteral xmi:id="_GlFZzjIxEe-n_btyyktV6g" name="POMPE"/>
+        <ownedLiteral xmi:id="_GlFZzzIxEe-n_btyyktV6g" name="VANNE"/>
+        <ownedLiteral xmi:id="_GlFZ0DIxEe-n_btyyktV6g" name="TANK"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZ0TIxEe-n_btyyktV6g" name="Importance_Values">
+        <ownedLiteral xmi:id="_GlFZ0jIxEe-n_btyyktV6g" name="Majeur"/>
+        <ownedLiteral xmi:id="_GlFZ0zIxEe-n_btyyktV6g" name="Mineur"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZ1DIxEe-n_btyyktV6g" name="Niveau">
+        <ownedLiteral xmi:id="_GlFZ1TIxEe-n_btyyktV6g" name="Rédacteur"/>
+        <ownedLiteral xmi:id="_GlFZ1jIxEe-n_btyyktV6g" name="Vérificateur"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlFZ1zIxEe-n_btyyktV6g" name="PIDU_Values">
+        <ownedLiteral xmi:id="_GlGAsDIxEe-n_btyyktV6g" name="1"/>
+        <ownedLiteral xmi:id="_GlGAsTIxEe-n_btyyktV6g" name="2"/>
+        <ownedLiteral xmi:id="_GlGAsjIxEe-n_btyyktV6g" name="3"/>
+        <ownedLiteral xmi:id="_GlGAszIxEe-n_btyyktV6g" name="4"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGAtDIxEe-n_btyyktV6g" name="Revue">
+        <ownedLiteral xmi:id="_GlGAtTIxEe-n_btyyktV6g" name="VSO"/>
+        <ownedLiteral xmi:id="_GlGAtjIxEe-n_btyyktV6g" name="VSO-SR"/>
+        <ownedLiteral xmi:id="_GlGAtzIxEe-n_btyyktV6g" name="VAO"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGAuDIxEe-n_btyyktV6g" name="Rôles">
+        <ownedLiteral xmi:id="_GlGAuTIxEe-n_btyyktV6g" name="Exécutant"/>
+        <ownedLiteral xmi:id="_GlGAujIxEe-n_btyyktV6g" name="Contrôleur Technique"/>
+        <ownedLiteral xmi:id="_GlGAuzIxEe-n_btyyktV6g" name="Surveillant Titulaire"/>
+        <ownedLiteral xmi:id="_GlGAvDIxEe-n_btyyktV6g" name="Surveillant EDF"/>
+        <ownedLiteral xmi:id="_GlGAvTIxEe-n_btyyktV6g" name=" Surveillant Externe"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGAvjIxEe-n_btyyktV6g" name="Statut_Contrat">
+        <ownedLiteral xmi:id="_GlGAvzIxEe-n_btyyktV6g" name="Temporaire (en réalisation),"/>
+        <ownedLiteral xmi:id="_GlGAwDIxEe-n_btyyktV6g" name=" Applicable (vérifié)"/>
+        <ownedLiteral xmi:id="_GlGAwTIxEe-n_btyyktV6g" name="En contrôle (terminé mais pas contrôlé)"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGAwjIxEe-n_btyyktV6g" name="Statut_PV">
+        <ownedLiteral xmi:id="_GlGAwzIxEe-n_btyyktV6g" name="Temporaire (en réalisation)"/>
+        <ownedLiteral xmi:id="_GlGAxDIxEe-n_btyyktV6g" name="Applicable (vérifié)"/>
+        <ownedLiteral xmi:id="_GlGAxTIxEe-n_btyyktV6g" name="En contrôle (terminé mais pas contrôlé)"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGAxjIxEe-n_btyyktV6g" name="Statut_Values">
+        <ownedLiteral xmi:id="_GlGAxzIxEe-n_btyyktV6g" name="Draft"/>
+        <ownedLiteral xmi:id="_GlGAyDIxEe-n_btyyktV6g" name="Frozen"/>
+        <ownedLiteral xmi:id="_GlGAyTIxEe-n_btyyktV6g" name="Released"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGAyjIxEe-n_btyyktV6g" name="Organisme">
+        <ownedLiteral xmi:id="_GlGAyzIxEe-n_btyyktV6g" name="Surveillance"/>
+        <ownedLiteral xmi:id="_GlGAzDIxEe-n_btyyktV6g" name="Habilitation"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGAzTIxEe-n_btyyktV6g" name="Résultat_Surveillance">
+        <ownedLiteral xmi:id="_GlGAzjIxEe-n_btyyktV6g" name="VSO"/>
+        <ownedLiteral xmi:id="_GlGAzzIxEe-n_btyyktV6g" name="VSO SR"/>
+        <ownedLiteral xmi:id="_GlGA0DIxEe-n_btyyktV6g" name="VAO"/>
+        <ownedLiteral xmi:id="_GlGA0TIxEe-n_btyyktV6g" name="NS sans FDS"/>
+        <ownedLiteral xmi:id="_GlGA0jIxEe-n_btyyktV6g" name="NS avec FDS"/>
+        <ownedLiteral xmi:id="_GlGA0zIxEe-n_btyyktV6g" name="PERPB "/>
+        <ownedLiteral xmi:id="_GlGA1DIxEe-n_btyyktV6g" name="PERPP"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGA1TIxEe-n_btyyktV6g" name="Statut_Revue">
+        <ownedLiteral xmi:id="_GlGA1jIxEe-n_btyyktV6g" name="Démarée"/>
+        <ownedLiteral xmi:id="_GlGA1zIxEe-n_btyyktV6g" name="En cours"/>
+        <ownedLiteral xmi:id="_GlGA2DIxEe-n_btyyktV6g" name="Finalisée"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGA2TIxEe-n_btyyktV6g" name="Type_Doc">
+        <ownedLiteral xmi:id="_GlGA2jIxEe-n_btyyktV6g" name="Photo"/>
+        <ownedLiteral xmi:id="_GlGA2zIxEe-n_btyyktV6g" name="Scan 3D"/>
+        <ownedLiteral xmi:id="_GlGA3DIxEe-n_btyyktV6g" name="CT"/>
+        <ownedLiteral xmi:id="_GlGA3TIxEe-n_btyyktV6g" name="PV"/>
+        <ownedLiteral xmi:id="_GlGA3jIxEe-n_btyyktV6g" name="Plan"/>
+        <ownedLiteral xmi:id="_GlGA3zIxEe-n_btyyktV6g" name="Relevé topographique"/>
+        <ownedLiteral xmi:id="_GlGA4DIxEe-n_btyyktV6g" name="Norme"/>
+        <ownedLiteral xmi:id="_GlGA4TIxEe-n_btyyktV6g" name="..."/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGA4jIxEe-n_btyyktV6g" name="Type_Fourn">
+        <ownedLiteral xmi:id="_GlGA4zIxEe-n_btyyktV6g" name="Titulaire"/>
+        <ownedLiteral xmi:id="_GlGA5DIxEe-n_btyyktV6g" name="Sous-Traitant"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGA5TIxEe-n_btyyktV6g" name="Type_Marché">
+        <ownedLiteral xmi:id="_GlGA5jIxEe-n_btyyktV6g" name="Simple"/>
+        <ownedLiteral xmi:id="_GlGA5zIxEe-n_btyyktV6g" name="Cadre"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGA6DIxEe-n_btyyktV6g" name="Type_NC">
+        <ownedLiteral xmi:id="_GlGA6TIxEe-n_btyyktV6g" name="Mineure"/>
+        <ownedLiteral xmi:id="_GlGA6jIxEe-n_btyyktV6g" name="Majeure"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGA6zIxEe-n_btyyktV6g" name="Type_Notif">
+        <ownedLiteral xmi:id="_GlGA7DIxEe-n_btyyktV6g" name="Arrêt"/>
+        <ownedLiteral xmi:id="_GlGA7TIxEe-n_btyyktV6g" name="Convocation"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_GlGA7jIxEe-n_btyyktV6g" name="Type_Outil">
+        <ownedLiteral xmi:id="_GlGA7zIxEe-n_btyyktV6g" name="Temporaire"/>
+        <ownedLiteral xmi:id="_GlGA8DIxEe-n_btyyktV6g" name="Outillage"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GlGA8TIxEe-n_btyyktV6g" name="Attributs Communs">
+      <ownedAttribute xmi:id="_GlGA8jIxEe-n_btyyktV6g" name="Accréditation" visibility="public" type="_GlFZqjIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGA8zIxEe-n_btyyktV6g" name="Adresse" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA9DIxEe-n_btyyktV6g" name="Adresse" visibility="public" type="_GlIdnTIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGA9TIxEe-n_btyyktV6g" name="AIP" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA9jIxEe-n_btyyktV6g" name="Applicabilité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA9zIxEe-n_btyyktV6g" name="Approbateur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA-DIxEe-n_btyyktV6g" name="Catégorie" visibility="public" type="_GlFZrzIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGA-TIxEe-n_btyyktV6g" name="Certification" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA-jIxEe-n_btyyktV6g" name="Classement" visibility="public" type="_GlFZuDIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGA-zIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA_DIxEe-n_btyyktV6g" name="Contact" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA_TIxEe-n_btyyktV6g" name="Confidentialité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA_jIxEe-n_btyyktV6g" name="Critère d'acceptabilité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGA_zIxEe-n_btyyktV6g" name="Date" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBADIxEe-n_btyyktV6g" name="Date de début" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBATIxEe-n_btyyktV6g" name="Date de demande" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBAjIxEe-n_btyyktV6g" name="Date d'édition" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBAzIxEe-n_btyyktV6g" name="Date d'émission" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBBDIxEe-n_btyyktV6g" name="Date d'envoi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBBTIxEe-n_btyyktV6g" name="Date d'exécution" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBBjIxEe-n_btyyktV6g" name="Date de fin" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBBzIxEe-n_btyyktV6g" name="Date de publication" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBCDIxEe-n_btyyktV6g" name="Date de référence" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBCTIxEe-n_btyyktV6g" name="Date de signature" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBCjIxEe-n_btyyktV6g" name="Date de suivi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBCzIxEe-n_btyyktV6g" name="Date de validation" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBDDIxEe-n_btyyktV6g" name="Date de validité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBDTIxEe-n_btyyktV6g" name="Date effective d'envoi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBDjIxEe-n_btyyktV6g" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBDzIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBEDIxEe-n_btyyktV6g" name="Détail" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBETIxEe-n_btyyktV6g" name="Domaine de qualification" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBEjIxEe-n_btyyktV6g" name="EIP" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBEzIxEe-n_btyyktV6g" name="Email" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBFDIxEe-n_btyyktV6g" name="Enoncé" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBFTIxEe-n_btyyktV6g" name="Entité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBFjIxEe-n_btyyktV6g" name="Entreprise" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBFzIxEe-n_btyyktV6g" name="Etat de validité" visibility="public" type="_GlFZwTIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBGDIxEe-n_btyyktV6g" name="Export control" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBGTIxEe-n_btyyktV6g" name="Famille matérielle" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBGjIxEe-n_btyyktV6g" name="Fonction" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBGzIxEe-n_btyyktV6g" name="Format" visibility="public" type="_GlFZyjIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBHDIxEe-n_btyyktV6g" name="Identifiant" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBHTIxEe-n_btyyktV6g" name="Identifiant usine" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBHjIxEe-n_btyyktV6g" name="Identifiant signataire" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBHzIxEe-n_btyyktV6g" name="Importance" visibility="public" type="_GlFZ0TIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBIDIxEe-n_btyyktV6g" name="Justification" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBITIxEe-n_btyyktV6g" name="Levée" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBIjIxEe-n_btyyktV6g" name="Libellé" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBIzIxEe-n_btyyktV6g" name="Lot de commande" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBJDIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBJTIxEe-n_btyyktV6g" name="Numéro" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBJjIxEe-n_btyyktV6g" name="Numéro" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBJzIxEe-n_btyyktV6g" name="Numéro de canal" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBKDIxEe-n_btyyktV6g" name="Numéro commande" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBKTIxEe-n_btyyktV6g" name="Numéro de séquence" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBKjIxEe-n_btyyktV6g" name="Numéro de série" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBKzIxEe-n_btyyktV6g" name="Numéro de SIREN" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBLDIxEe-n_btyyktV6g" name="Numéro de SIRET" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBLTIxEe-n_btyyktV6g" name="Niveau d'intervention" visibility="public" type="_GlFZ1DIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBLjIxEe-n_btyyktV6g" name="Numéro marché" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBLzIxEe-n_btyyktV6g" name="Phase industrielle" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBMDIxEe-n_btyyktV6g" name="PIDU" visibility="public" type="_GlFZ1zIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBMTIxEe-n_btyyktV6g" name="Prénom" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBMjIxEe-n_btyyktV6g" name="Prise en compte" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBMzIxEe-n_btyyktV6g" name="Propriétaire" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBNDIxEe-n_btyyktV6g" name="Quantité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBNTIxEe-n_btyyktV6g" name="Rang" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBNjIxEe-n_btyyktV6g" name="Rédacteur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBNzIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBODIxEe-n_btyyktV6g" name="Référence donneur d'ordre" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBOTIxEe-n_btyyktV6g" name="Référence fournisseur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBOjIxEe-n_btyyktV6g" name="Référence industrielle" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBOzIxEe-n_btyyktV6g" name="Résultat" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBPDIxEe-n_btyyktV6g" name="Résultat" visibility="public" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBPTIxEe-n_btyyktV6g" name="Résultat de surveillance" visibility="public" type="_GlGAzTIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBPjIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBPzIxEe-n_btyyktV6g" name="RGPD" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBQDIxEe-n_btyyktV6g" name="Rôle" visibility="public" type="_GlGAuDIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBQTIxEe-n_btyyktV6g" name="Signature" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBQjIxEe-n_btyyktV6g" name="Statut" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBQzIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlFZvjIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBRDIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAvjIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBRTIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAwjIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBRjIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBRzIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGA1TIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBSDIxEe-n_btyyktV6g" name="Téléphone" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBSTIxEe-n_btyyktV6g" name="Trigramme" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBSjIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBSzIxEe-n_btyyktV6g" name="Type" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBTDIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA2TIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBTTIxEe-n_btyyktV6g" name="Type" visibility="protected" type="_GlGA4jIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBTjIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA5TIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBTzIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA6DIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBUDIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA6zIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBUTIxEe-n_btyyktV6g" name="Type organisme" visibility="public" type="_GlGAyjIxEe-n_btyyktV6g" isUnique="false"/>
+      <ownedAttribute xmi:id="_GlGBUjIxEe-n_btyyktV6g" name="Vérificateur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GlGBUzIxEe-n_btyyktV6g" name="Version" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GlGBVDIxEe-n_btyyktV6g" name="Objets Métiers Communs">
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGBVTIxEe-n_btyyktV6g" name="Activité">
+        <ownedComment xmi:id="_GlGBVjIxEe-n_btyyktV6g">
+          <ownedComment xmi:id="_GlGBVzIxEe-n_btyyktV6g">
+            <body>Activité : aggrège ordre d'exécution (ordonnancement/chronologie/procédure) des tâches
+
+</body>
+          </ownedComment>
+          <body>Activité : aggrège ordre d'exécution (ordonnancement/chronologie/procédure) des tâches</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_GlGBWDIxEe-n_btyyktV6g" visibility="public" type="_GlIdRDIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlGBWjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBWTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBWjIxEe-n_btyyktV6g" memberEnd="_GlGBWDIxEe-n_btyyktV6g _GlGBWzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBWzIxEe-n_btyyktV6g" visibility="public" type="_GlGBVTIxEe-n_btyyktV6g" isUnique="false" association="_GlGBWjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGBXDIxEe-n_btyyktV6g" name="Affaire">
+        <ownedComment xmi:id="_GlGBXTIxEe-n_btyyktV6g">
+          <body></body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_GlGBXjIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGBZjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBXzIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGBYDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBYTIxEe-n_btyyktV6g" visibility="public" type="_GlGBVTIxEe-n_btyyktV6g" isUnique="false" association="_GlGBaTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBYjIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGBYzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBZDIxEe-n_btyyktV6g" name="Numéro" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBZTIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBZjIxEe-n_btyyktV6g" name="peut déboucher sur" memberEnd="_GlGBXjIxEe-n_btyyktV6g _GlGBZzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBZzIxEe-n_btyyktV6g" visibility="public" type="_GlGBXDIxEe-n_btyyktV6g" isUnique="false" association="_GlGBZjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBaDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBaTIxEe-n_btyyktV6g" memberEnd="_GlGBYTIxEe-n_btyyktV6g _GlGBajIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBajIxEe-n_btyyktV6g" visibility="public" type="_GlGBXDIxEe-n_btyyktV6g" isUnique="false" association="_GlGBaTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGBazIxEe-n_btyyktV6g" name="Autorisation">
+        <ownedAttribute xmi:id="_GlGBbDIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlGBcjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBbTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBbjIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBbzIxEe-n_btyyktV6g" name="Date de validité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBcDIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBcTIxEe-n_btyyktV6g" name="Propriétaire" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBcjIxEe-n_btyyktV6g" name="porte sur" memberEnd="_GlGBbDIxEe-n_btyyktV6g _GlGBczIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBczIxEe-n_btyyktV6g" visibility="public" type="_GlGBazIxEe-n_btyyktV6g" isUnique="false" association="_GlGBcjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBdDIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGBdTIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGBdjIxEe-n_btyyktV6g" name="Avenant">
+        <ownedAttribute xmi:id="_GlGBdzIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGBfzIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGBeDIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGBgzIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGBeTIxEe-n_btyyktV6g" name="commande" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" association="_GlGBhjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBejIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBezIxEe-n_btyyktV6g" name="Numéro" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBfDIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBfTIxEe-n_btyyktV6g" name="Date d'exécution" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBfjIxEe-n_btyyktV6g" name="Date de signature" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBfzIxEe-n_btyyktV6g" name="met à jour" memberEnd="_GlGBdzIxEe-n_btyyktV6g _GlGBgDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBgDIxEe-n_btyyktV6g" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlGBfzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBgTIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGBgjIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBgzIxEe-n_btyyktV6g" name="Met à jour" memberEnd="_GlGBeDIxEe-n_btyyktV6g _GlGBhDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBhDIxEe-n_btyyktV6g" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlGBgzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBhTIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBhjIxEe-n_btyyktV6g" name="Met à jour" memberEnd="_GlGBeTIxEe-n_btyyktV6g _GlGBhzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBhzIxEe-n_btyyktV6g" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlGBhjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBiDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGBiTIxEe-n_btyyktV6g" name="Avis">
+        <ownedAttribute xmi:id="_GlGBijIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlFZvjIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGBizIxEe-n_btyyktV6g" name="Bâtiment">
+        <ownedAttribute xmi:id="_GlGBjDIxEe-n_btyyktV6g" visibility="public" type="_GlHPNjIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlGBjzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBjTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBjjIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBjzIxEe-n_btyyktV6g" memberEnd="_GlGBjDIxEe-n_btyyktV6g _GlGBkDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBkDIxEe-n_btyyktV6g" visibility="public" type="_GlGBizIxEe-n_btyyktV6g" isUnique="false" association="_GlGBjzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGBkTIxEe-n_btyyktV6g" name="Bordereau d'envoi">
+        <ownedAttribute xmi:id="_GlGBkjIxEe-n_btyyktV6g" visibility="public" type="_GlIc8jIxEe-n_btyyktV6g" isUnique="false" association="_GlGBmzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBkzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBlDIxEe-n_btyyktV6g" visibility="public" type="_GlIdNDIxEe-n_btyyktV6g" isUnique="false" association="_GlGBnjIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGBlTIxEe-n_btyyktV6g" visibility="public" type="_GlHPJTIxEe-n_btyyktV6g" isUnique="false" association="_GlGBoTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBljIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBlzIxEe-n_btyyktV6g" visibility="public" type="_GlH16TIxEe-n_btyyktV6g" isUnique="false" association="_GlGnwDIxEe-n_btyyktV6g">
+          <ownedComment xmi:id="_GlGBmDIxEe-n_btyyktV6g">
+            <body>&lt;Saisir le texte de la note ici></body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBmTIxEe-n_btyyktV6g" name="Numéro de canal" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGBmjIxEe-n_btyyktV6g" name="Date d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBmzIxEe-n_btyyktV6g" name="Concerne" memberEnd="_GlGBkjIxEe-n_btyyktV6g _GlGBnDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBnDIxEe-n_btyyktV6g" visibility="public" type="_GlGBkTIxEe-n_btyyktV6g" isUnique="false" association="_GlGBmzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBnTIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBnjIxEe-n_btyyktV6g" name="Concerne" memberEnd="_GlGBlDIxEe-n_btyyktV6g _GlGBnzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBnzIxEe-n_btyyktV6g" visibility="public" type="_GlGBkTIxEe-n_btyyktV6g" isUnique="false" association="_GlGBnjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBoDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGBoTIxEe-n_btyyktV6g" name="Concerne" memberEnd="_GlGBlTIxEe-n_btyyktV6g _GlGBojIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGBojIxEe-n_btyyktV6g" visibility="public" type="_GlGBkTIxEe-n_btyyktV6g" isUnique="false" association="_GlGBoTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGBozIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGnwDIxEe-n_btyyktV6g" name="Concerne" memberEnd="_GlGBlzIxEe-n_btyyktV6g _GlGnwTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGnwTIxEe-n_btyyktV6g" visibility="public" type="_GlGBkTIxEe-n_btyyktV6g" isUnique="false" association="_GlGnwDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGnwjIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGnwzIxEe-n_btyyktV6g" name="Contrat">
+        <ownedAttribute xmi:id="_GlGnxDIxEe-n_btyyktV6g" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlGn2TIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGnxTIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGnxjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGnxzIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlGn2zIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGnyDIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGnyTIxEe-n_btyyktV6g" visibility="public" type="_GlH2YDIxEe-n_btyyktV6g" isUnique="false" association="_GlGn3jIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGnyjIxEe-n_btyyktV6g" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" association="_GlGn4DIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGnyzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGnzDIxEe-n_btyyktV6g" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlGn4jIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGnzTIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGnzjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGnzzIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlGn5DIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGn0DIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn0TIxEe-n_btyyktV6g" name="Numéro" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn0jIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn0zIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn1DIxEe-n_btyyktV6g" name="Date d'éxécution" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn1TIxEe-n_btyyktV6g" name="Date de signature" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn1jIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAvjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlGn1zIxEe-n_btyyktV6g" name="PIDU" visibility="public" type="_GlFZ1zIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlGn2DIxEe-n_btyyktV6g" name="Type" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn2TIxEe-n_btyyktV6g" name="donne lieu à" memberEnd="_GlGnxDIxEe-n_btyyktV6g _GlGn2jIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn2jIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGn2TIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn2zIxEe-n_btyyktV6g" name="est associé à" memberEnd="_GlGnxzIxEe-n_btyyktV6g _GlGn3DIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn3DIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGn2zIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGn3TIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn3jIxEe-n_btyyktV6g" memberEnd="_GlGnyTIxEe-n_btyyktV6g _GlGn3zIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn3zIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGn3jIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn4DIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlGnyjIxEe-n_btyyktV6g _GlGn4TIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn4TIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGn4DIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn4jIxEe-n_btyyktV6g" name="Donne lieu " memberEnd="_GlGnzDIxEe-n_btyyktV6g _GlGn4zIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn4zIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGn4jIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn5DIxEe-n_btyyktV6g" name="Concerne" memberEnd="_GlGnzzIxEe-n_btyyktV6g _GlGn5TIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn5TIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGn5DIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGn5jIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGn5zIxEe-n_btyyktV6g" name="Commande">
+        <ownedAttribute xmi:id="_GlGn6DIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlGn8jIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGn6TIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGn6jIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn6zIxEe-n_btyyktV6g" visibility="public" type="_GlHPODIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlGn9TIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGn7DIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGn7TIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn7jIxEe-n_btyyktV6g" name="Numéro commande" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn7zIxEe-n_btyyktV6g" name="Lot de commande" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn8DIxEe-n_btyyktV6g" name="Date d'exécution" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn8TIxEe-n_btyyktV6g" name="Date de signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn8jIxEe-n_btyyktV6g" memberEnd="_GlGn6DIxEe-n_btyyktV6g _GlGn8zIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn8zIxEe-n_btyyktV6g" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" association="_GlGn8jIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGn9DIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGn9TIxEe-n_btyyktV6g" memberEnd="_GlGn6zIxEe-n_btyyktV6g _GlGn9jIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGn9jIxEe-n_btyyktV6g" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" association="_GlGn9TIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGn9zIxEe-n_btyyktV6g" name="Constat">
+        <ownedAttribute xmi:id="_GlGn-DIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGn-TIxEe-n_btyyktV6g" name="Contrôle Technique">
+        <ownedAttribute xmi:id="_GlGn-jIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoATIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGn-zIxEe-n_btyyktV6g" visibility="public" type="_GlGoETIxEe-n_btyyktV6g" isUnique="false" association="_GlGoBTIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGn_DIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn_TIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn_jIxEe-n_btyyktV6g" name="Date d'émission" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGn_zIxEe-n_btyyktV6g" name="Critère d'acceptabilité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoADIxEe-n_btyyktV6g" name="Résultat" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoATIxEe-n_btyyktV6g" name="porte sur" memberEnd="_GlGn-jIxEe-n_btyyktV6g _GlGoAjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoAjIxEe-n_btyyktV6g" visibility="public" type="_GlGn-TIxEe-n_btyyktV6g" isUnique="false" association="_GlGoATIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoAzIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGoBDIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoBTIxEe-n_btyyktV6g" name="mentionne" memberEnd="_GlGn-zIxEe-n_btyyktV6g _GlGoBjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoBjIxEe-n_btyyktV6g" visibility="public" type="_GlGn-TIxEe-n_btyyktV6g" isUnique="false" association="_GlGoBTIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGoBzIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGoCDIxEe-n_btyyktV6g" name="Datasheet">
+        <ownedAttribute xmi:id="_GlGoCTIxEe-n_btyyktV6g" visibility="public" type="_GlGoZjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoDzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoCjIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoCzIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoDDIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoDTIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlGoDjIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoDzIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlGoCTIxEe-n_btyyktV6g _GlGoEDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoEDIxEe-n_btyyktV6g" visibility="public" type="_GlGoCDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoDzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGoETIxEe-n_btyyktV6g" name="Document">
+        <ownedAttribute xmi:id="_GlGoEjIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoEzIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA2TIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlGoFDIxEe-n_btyyktV6g" name="Format" visibility="public" type="_GlFZyjIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGoFTIxEe-n_btyyktV6g" name="Document de référence">
+        <generalization xmi:id="_GlGoFjIxEe-n_btyyktV6g" general="_GlGoETIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGoFzIxEe-n_btyyktV6g" name="contrat" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoITIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGoGDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoGTIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoGjIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoGzIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlGoHDIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoHTIxEe-n_btyyktV6g" name="Détail" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoHjIxEe-n_btyyktV6g" name="Confidentialité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoHzIxEe-n_btyyktV6g" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoIDIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA2TIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoITIxEe-n_btyyktV6g" memberEnd="_GlGoFzIxEe-n_btyyktV6g _GlGoIjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoIjIxEe-n_btyyktV6g" visibility="public" type="_GlGoFTIxEe-n_btyyktV6g" isUnique="false" association="_GlGoITIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGoIzIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGoJDIxEe-n_btyyktV6g" name="Donneur d'Ordres">
+        <generalization xmi:id="_GlGoJTIxEe-n_btyyktV6g" general="_GlGohTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGoJjIxEe-n_btyyktV6g" visibility="public" type="_GlIdbTIxEe-n_btyyktV6g" isUnique="false" association="_GlGoLzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoJzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoKDIxEe-n_btyyktV6g" name="contrat" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoMTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoKTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoKjIxEe-n_btyyktV6g" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoMzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoKzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoLDIxEe-n_btyyktV6g" visibility="public" type="_GlGBkTIxEe-n_btyyktV6g" isUnique="false" association="_GlGoNTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoLTIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGoLjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoLzIxEe-n_btyyktV6g" name="est responsable de" memberEnd="_GlGoJjIxEe-n_btyyktV6g _GlGoMDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoMDIxEe-n_btyyktV6g" visibility="public" type="_GlGoJDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoLzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoMTIxEe-n_btyyktV6g" name="Signe" memberEnd="_GlGoKDIxEe-n_btyyktV6g _GlGoMjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoMjIxEe-n_btyyktV6g" visibility="public" type="_GlGoJDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoMTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoMzIxEe-n_btyyktV6g" name="Signe" memberEnd="_GlGoKjIxEe-n_btyyktV6g _GlGoNDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoNDIxEe-n_btyyktV6g" visibility="public" type="_GlGoJDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoMzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoNTIxEe-n_btyyktV6g" name="Signe" memberEnd="_GlGoLDIxEe-n_btyyktV6g _GlGoNjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoNjIxEe-n_btyyktV6g" visibility="public" type="_GlGoJDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoNTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGoNzIxEe-n_btyyktV6g" name="Dossier de Suivi">
+        <ownedAttribute xmi:id="_GlGoODIxEe-n_btyyktV6g" visibility="public" type="_GlGoNzIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlGoQjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoOTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoOjIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlGoRDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoOzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoPDIxEe-n_btyyktV6g" visibility="public" type="_GlGoJDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoRzIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGoPTIxEe-n_btyyktV6g" name="Tidtre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoPjIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoPzIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoQDIxEe-n_btyyktV6g" name="Date d'édition" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoQTIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlFZvjIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoQjIxEe-n_btyyktV6g" memberEnd="_GlGoODIxEe-n_btyyktV6g _GlGoQzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoQzIxEe-n_btyyktV6g" visibility="public" type="_GlGoNzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoQjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoRDIxEe-n_btyyktV6g" name="mentionne" memberEnd="_GlGoOjIxEe-n_btyyktV6g _GlGoRTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoRTIxEe-n_btyyktV6g" visibility="public" type="_GlGoNzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoRDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoRjIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoRzIxEe-n_btyyktV6g" name="mentionne" memberEnd="_GlGoPDIxEe-n_btyyktV6g _GlGoSDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoSDIxEe-n_btyyktV6g" visibility="public" type="_GlGoNzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoRzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoSTIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGoSjIxEe-n_btyyktV6g" name="Dossier technique">
+        <ownedAttribute xmi:id="_GlGoSzIxEe-n_btyyktV6g" visibility="public" type="_GlGoCDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoWzIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGoTDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoTTIxEe-n_btyyktV6g" visibility="public" type="_GlIdWzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoXTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoTjIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoTzIxEe-n_btyyktV6g" visibility="public" type="_GlHPGzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoXzIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGoUDIxEe-n_btyyktV6g" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" association="_GlGoYTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoUTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoUjIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoZDIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGoUzIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoVDIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoVTIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoVjIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlGoVzIxEe-n_btyyktV6g" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoWDIxEe-n_btyyktV6g" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoWTIxEe-n_btyyktV6g" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoWjIxEe-n_btyyktV6g" name="Date de publication" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoWzIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlGoSzIxEe-n_btyyktV6g _GlGoXDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoXDIxEe-n_btyyktV6g" visibility="public" type="_GlGoSjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoWzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoXTIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlGoTTIxEe-n_btyyktV6g _GlGoXjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoXjIxEe-n_btyyktV6g" visibility="public" type="_GlGoSjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoXTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoXzIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlGoTzIxEe-n_btyyktV6g _GlGoYDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoYDIxEe-n_btyyktV6g" visibility="public" type="_GlGoSjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoXzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoYTIxEe-n_btyyktV6g" name="Est effectif pour" memberEnd="_GlGoUDIxEe-n_btyyktV6g _GlGoYjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoYjIxEe-n_btyyktV6g" visibility="public" type="_GlGoSjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoYTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoYzIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoZDIxEe-n_btyyktV6g" name="Est effectif pour" memberEnd="_GlGoUjIxEe-n_btyyktV6g _GlGoZTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoZTIxEe-n_btyyktV6g" visibility="public" type="_GlGoSjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoZDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGoZjIxEe-n_btyyktV6g" name="Exigence">
+        <ownedAttribute xmi:id="_GlGoZzIxEe-n_btyyktV6g" visibility="public" type="_GlGonTIxEe-n_btyyktV6g" isUnique="false" association="_GlGoczIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoaDIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoaTIxEe-n_btyyktV6g" visibility="public" type="_GlGoFTIxEe-n_btyyktV6g" isUnique="false" association="_GlGodjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoajIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoazIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlGoeTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGobDIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGobTIxEe-n_btyyktV6g" name="Identifiant" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGobjIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGobzIxEe-n_btyyktV6g" name="Enoncé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGocDIxEe-n_btyyktV6g" name="Version" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGocTIxEe-n_btyyktV6g" name="Statut" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGocjIxEe-n_btyyktV6g" name="Justification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoczIxEe-n_btyyktV6g" name="est associée à" memberEnd="_GlGoZzIxEe-n_btyyktV6g _GlGodDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGodDIxEe-n_btyyktV6g" visibility="public" type="_GlGoZjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoczIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGodTIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGodjIxEe-n_btyyktV6g" name="se réfère à" memberEnd="_GlGoaTIxEe-n_btyyktV6g _GlGodzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGodzIxEe-n_btyyktV6g" visibility="public" type="_GlGoZjIxEe-n_btyyktV6g" isUnique="false" association="_GlGodjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoeDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoeTIxEe-n_btyyktV6g" name="est associée à" memberEnd="_GlGoazIxEe-n_btyyktV6g _GlGoejIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGoejIxEe-n_btyyktV6g" visibility="public" type="_GlGoZjIxEe-n_btyyktV6g" isUnique="false" association="_GlGoeTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoezIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGofDIxEe-n_btyyktV6g" name="Exigence contractuelle">
+        <generalization xmi:id="_GlGofTIxEe-n_btyyktV6g" general="_GlGoZjIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlGofjIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGogjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGofzIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGogDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGogTIxEe-n_btyyktV6g" name="Libellé" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGogjIxEe-n_btyyktV6g" name="contraint" memberEnd="_GlGofjIxEe-n_btyyktV6g _GlGogzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGogzIxEe-n_btyyktV6g" visibility="public" type="_GlGofDIxEe-n_btyyktV6g" isUnique="false" association="_GlGogjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGohDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGohTIxEe-n_btyyktV6g" name="Entité Juridique">
+        <ownedAttribute xmi:id="_GlGohjIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlGokjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGohzIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGoiDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoiTIxEe-n_btyyktV6g" visibility="public" type="_GlHPDzIxEe-n_btyyktV6g" isUnique="false" association="_GlGoljIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGoijIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGoizIxEe-n_btyyktV6g" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlGomTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGojDIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGojTIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGojjIxEe-n_btyyktV6g" name="Numéro de SIREN" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGojzIxEe-n_btyyktV6g" name="Nom" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGokDIxEe-n_btyyktV6g" name="Contact" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGokTIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGokjIxEe-n_btyyktV6g" name="signe" memberEnd="_GlGohjIxEe-n_btyyktV6g _GlGokzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGokzIxEe-n_btyyktV6g" visibility="public" type="_GlGohTIxEe-n_btyyktV6g" isUnique="false" association="_GlGokjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGolDIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGolTIxEe-n_btyyktV6g" value="2"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGoljIxEe-n_btyyktV6g" name="délivre" memberEnd="_GlGoiTIxEe-n_btyyktV6g _GlGolzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGolzIxEe-n_btyyktV6g" visibility="public" type="_GlGohTIxEe-n_btyyktV6g" isUnique="false" association="_GlGoljIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGomDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlGomTIxEe-n_btyyktV6g" name="signe" memberEnd="_GlGoizIxEe-n_btyyktV6g _GlGomjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlGomjIxEe-n_btyyktV6g" visibility="public" type="_GlGohTIxEe-n_btyyktV6g" isUnique="false" association="_GlGomTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlGomzIxEe-n_btyyktV6g" value="2"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlGonDIxEe-n_btyyktV6g" value="2"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlGonTIxEe-n_btyyktV6g" name="Equipement">
+        <ownedAttribute xmi:id="_GlGonjIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlGonzIxEe-n_btyyktV6g" name="EIP" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHO0DIxEe-n_btyyktV6g" name="Exigence Technique">
+        <generalization xmi:id="_GlHO0TIxEe-n_btyyktV6g" general="_GlGoZjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHO0jIxEe-n_btyyktV6g" name="Fournisseur">
+        <generalization xmi:id="_GlHO0zIxEe-n_btyyktV6g" general="_GlGohTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlHO1DIxEe-n_btyyktV6g" visibility="public" type="_GlIdfTIxEe-n_btyyktV6g" isUnique="false" association="_GlHO8DIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlHO1TIxEe-n_btyyktV6g" name="usine" visibility="public" type="_GlIdeDIxEe-n_btyyktV6g" isUnique="false" association="_GlHO8jIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO1jIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO1zIxEe-n_btyyktV6g" name="contrat" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlHO9TIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO2DIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO2TIxEe-n_btyyktV6g" name="marché" visibility="public" type="_GlHPPzIxEe-n_btyyktV6g" isUnique="false" association="_GlHO-DIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO2jIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO2zIxEe-n_btyyktV6g" name="organisme" visibility="public" type="_GlH2TjIxEe-n_btyyktV6g" isUnique="false" association="_GlHO-zIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO3DIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO3TIxEe-n_btyyktV6g" visibility="public" type="_GlHPJTIxEe-n_btyyktV6g" isUnique="false" association="_GlHO_jIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHO3jIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO3zIxEe-n_btyyktV6g" visibility="public" type="_GlH16TIxEe-n_btyyktV6g" isUnique="false" association="_GlHPADIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlHO4DIxEe-n_btyyktV6g" visibility="public" type="_GlHPODIxEe-n_btyyktV6g" isUnique="false" association="_GlHPAjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHO4TIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO4jIxEe-n_btyyktV6g" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" association="_GlHPBDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHO4zIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO5DIxEe-n_btyyktV6g" name="avenant" visibility="public" type="_GlGBdjIxEe-n_btyyktV6g" isUnique="false" association="_GlHPBjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHO5TIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO5jIxEe-n_btyyktV6g" name="contrat" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlHPCDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHO5zIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO6DIxEe-n_btyyktV6g" name="réponse" visibility="public" type="_GlIc8jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPCzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHO6TIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO6jIxEe-n_btyyktV6g" visibility="public" type="_GlGBkTIxEe-n_btyyktV6g" isUnique="false" association="_GlHPDTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHO6zIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO7DIxEe-n_btyyktV6g" name="Type" visibility="protected" type="_GlGA4jIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlHO7TIxEe-n_btyyktV6g" name="Rang" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHO7jIxEe-n_btyyktV6g" name="Niveau d'intervention" visibility="public" type="_GlFZ1DIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlHO7zIxEe-n_btyyktV6g" name="Domaine de qualification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHO8DIxEe-n_btyyktV6g" name="émet" memberEnd="_GlHO1DIxEe-n_btyyktV6g _GlHO8TIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHO8TIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHO8DIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHO8jIxEe-n_btyyktV6g" memberEnd="_GlHO1TIxEe-n_btyyktV6g _GlHO8zIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHO8zIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHO8jIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO9DIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHO9TIxEe-n_btyyktV6g" memberEnd="_GlHO1zIxEe-n_btyyktV6g _GlHO9jIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHO9jIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHO9TIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO9zIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHO-DIxEe-n_btyyktV6g" memberEnd="_GlHO2TIxEe-n_btyyktV6g _GlHO-TIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHO-TIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHO-DIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO-jIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHO-zIxEe-n_btyyktV6g" memberEnd="_GlHO2zIxEe-n_btyyktV6g _GlHO_DIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHO_DIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHO-zIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHO_TIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHO_jIxEe-n_btyyktV6g" name="Emet" memberEnd="_GlHO3TIxEe-n_btyyktV6g _GlHO_zIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHO_zIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHO_jIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPADIxEe-n_btyyktV6g" name="Emet" memberEnd="_GlHO3zIxEe-n_btyyktV6g _GlHPATIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPATIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPADIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPAjIxEe-n_btyyktV6g" name="Prend en charge" memberEnd="_GlHO4DIxEe-n_btyyktV6g _GlHPAzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPAzIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPAjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPBDIxEe-n_btyyktV6g" name="Signe" memberEnd="_GlHO4jIxEe-n_btyyktV6g _GlHPBTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPBTIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPBDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPBjIxEe-n_btyyktV6g" name="Signe" memberEnd="_GlHO5DIxEe-n_btyyktV6g _GlHPBzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPBzIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPBjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPCDIxEe-n_btyyktV6g" name="Signe" memberEnd="_GlHO5jIxEe-n_btyyktV6g _GlHPCTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPCTIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPCDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHPCjIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPCzIxEe-n_btyyktV6g" name="Emet" memberEnd="_GlHO6DIxEe-n_btyyktV6g _GlHPDDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPDDIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPCzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPDTIxEe-n_btyyktV6g" name="Signe" memberEnd="_GlHO6jIxEe-n_btyyktV6g _GlHPDjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPDjIxEe-n_btyyktV6g" visibility="public" type="_GlHO0jIxEe-n_btyyktV6g" isUnique="false" association="_GlHPDTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHPDzIxEe-n_btyyktV6g" name="Habilitation">
+        <ownedAttribute xmi:id="_GlHPEDIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPETIxEe-n_btyyktV6g" name="Date de validité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPEjIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPEzIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPFDIxEe-n_btyyktV6g" name="Accréditation" visibility="public" type="_GlFZqjIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHPFTIxEe-n_btyyktV6g" name="Ilot">
+        <ownedAttribute xmi:id="_GlHPFjIxEe-n_btyyktV6g" visibility="public" type="_GlGBizIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlHPGTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHPFzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPGDIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPGTIxEe-n_btyyktV6g" memberEnd="_GlHPFjIxEe-n_btyyktV6g _GlHPGjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPGjIxEe-n_btyyktV6g" visibility="public" type="_GlHPFTIxEe-n_btyyktV6g" isUnique="false" association="_GlHPGTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHPGzIxEe-n_btyyktV6g" name="Liste des documents et données requis fournisseur">
+        <ownedAttribute xmi:id="_GlHPHDIxEe-n_btyyktV6g" visibility="public" type="_GlGoZjIxEe-n_btyyktV6g" isUnique="false" association="_GlHPIzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHPHTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPHjIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPHzIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPIDIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPITIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlHPIjIxEe-n_btyyktV6g" name="Date de validation" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPIzIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlHPHDIxEe-n_btyyktV6g _GlHPJDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPJDIxEe-n_btyyktV6g" visibility="public" type="_GlHPGzIxEe-n_btyyktV6g" isUnique="false" association="_GlHPIzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHPJTIxEe-n_btyyktV6g" name="Livrable">
+        <ownedAttribute xmi:id="_GlHPJjIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPJzIxEe-n_btyyktV6g" name="Référence fournisseur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPKDIxEe-n_btyyktV6g" name="Référence donneur d'ordre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPKTIxEe-n_btyyktV6g" name="Date effective d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPKjIxEe-n_btyyktV6g" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPKzIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlHPLDIxEe-n_btyyktV6g" name="Etat de validité" visibility="public" type="_GlFZwTIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlHPLTIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPLjIxEe-n_btyyktV6g" name="AIP" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPLzIxEe-n_btyyktV6g" name="Classement" visibility="public" type="_GlFZuDIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlHPMDIxEe-n_btyyktV6g" name="Export control" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPMTIxEe-n_btyyktV6g" name="RGPD" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPMjIxEe-n_btyyktV6g" name="PIDU" visibility="public" type="_GlFZ1zIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlHPMzIxEe-n_btyyktV6g" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPNDIxEe-n_btyyktV6g" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPNTIxEe-n_btyyktV6g" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHPNjIxEe-n_btyyktV6g" name="Local">
+        <ownedAttribute xmi:id="_GlHPNzIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHPODIxEe-n_btyyktV6g" name="Lot">
+        <ownedAttribute xmi:id="_GlHPOTIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlHPPTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHPOjIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPOzIxEe-n_btyyktV6g" name="Numéro" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPPDIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlHPPTIxEe-n_btyyktV6g" memberEnd="_GlHPOTIxEe-n_btyyktV6g _GlHPPjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlHPPjIxEe-n_btyyktV6g" visibility="public" type="_GlHPODIxEe-n_btyyktV6g" isUnique="false" association="_GlHPPTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlHPPzIxEe-n_btyyktV6g" name="Marché">
+        <ownedAttribute xmi:id="_GlHPQDIxEe-n_btyyktV6g" visibility="public" type="_GlHPODIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlH14zIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHPQTIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHPQjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPQzIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlH15TIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlHPRDIxEe-n_btyyktV6g" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlH15zIxEe-n_btyyktV6g">
+          <ownedComment xmi:id="_GlHPRTIxEe-n_btyyktV6g">
+            <body>Un marché soumis auprès de plusieurs soumissionnaires peut donner lieu à 0 ou n contrats</body>
+          </ownedComment>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlHPRjIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlHPRzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlHPSDIxEe-n_btyyktV6g" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH14DIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH14TIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA5TIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlH14jIxEe-n_btyyktV6g" name="Numéro marché" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH14zIxEe-n_btyyktV6g" memberEnd="_GlHPQDIxEe-n_btyyktV6g _GlH15DIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH15DIxEe-n_btyyktV6g" visibility="public" type="_GlHPPzIxEe-n_btyyktV6g" isUnique="false" association="_GlH14zIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH15TIxEe-n_btyyktV6g" name="concrétise la signature de" memberEnd="_GlHPQzIxEe-n_btyyktV6g _GlH15jIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH15jIxEe-n_btyyktV6g" visibility="public" type="_GlHPPzIxEe-n_btyyktV6g" isUnique="false" association="_GlH15TIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH15zIxEe-n_btyyktV6g" name="Est contractualisé" memberEnd="_GlHPRDIxEe-n_btyyktV6g _GlH16DIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH16DIxEe-n_btyyktV6g" visibility="public" type="_GlHPPzIxEe-n_btyyktV6g" isUnique="false" association="_GlH15zIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH16TIxEe-n_btyyktV6g" name="Matrice de couverture">
+        <ownedAttribute xmi:id="_GlH16jIxEe-n_btyyktV6g" visibility="public" type="_GlGoZjIxEe-n_btyyktV6g" isUnique="false" association="_GlH1-TIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH16zIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH17DIxEe-n_btyyktV6g" visibility="public" type="_GlHPJTIxEe-n_btyyktV6g" isUnique="false" association="_GlH1-zIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH17TIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH17jIxEe-n_btyyktV6g" name="Référence fournisseur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH17zIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlH18DIxEe-n_btyyktV6g" name="Etat de validité" visibility="public" type="_GlFZwTIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlH18TIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH18jIxEe-n_btyyktV6g" name="Date effective d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH18zIxEe-n_btyyktV6g" name="Référence donneur d'ordre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH19DIxEe-n_btyyktV6g" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH19TIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH19jIxEe-n_btyyktV6g" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH19zIxEe-n_btyyktV6g" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH1-DIxEe-n_btyyktV6g" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH1-TIxEe-n_btyyktV6g" name="Trace" memberEnd="_GlH16jIxEe-n_btyyktV6g _GlH1-jIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH1-jIxEe-n_btyyktV6g" visibility="public" type="_GlH16TIxEe-n_btyyktV6g" isUnique="false" association="_GlH1-TIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH1-zIxEe-n_btyyktV6g" name="Trace" memberEnd="_GlH17DIxEe-n_btyyktV6g _GlH1_DIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH1_DIxEe-n_btyyktV6g" visibility="public" type="_GlH16TIxEe-n_btyyktV6g" isUnique="false" association="_GlH1-zIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH1_TIxEe-n_btyyktV6g" name="Non-Conformité">
+        <ownedComment xmi:id="_GlH1_jIxEe-n_btyyktV6g">
+          <body>Cf MDM de François (Visio envoyé)
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_GlH1_zIxEe-n_btyyktV6g" visibility="public" type="_GlGn9zIxEe-n_btyyktV6g" isUnique="false" association="_GlH2BjIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2ADIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2CjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2ATIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2AjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2AzIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2BDIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA6DIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlH2BTIxEe-n_btyyktV6g" name="Date" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2BjIxEe-n_btyyktV6g" memberEnd="_GlH1_zIxEe-n_btyyktV6g _GlH2BzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2BzIxEe-n_btyyktV6g" visibility="public" type="_GlH1_TIxEe-n_btyyktV6g" isUnique="false" association="_GlH2BjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2CDIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2CTIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2CjIxEe-n_btyyktV6g" memberEnd="_GlH2ADIxEe-n_btyyktV6g _GlH2CzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2CzIxEe-n_btyyktV6g" visibility="public" type="_GlH1_TIxEe-n_btyyktV6g" isUnique="false" association="_GlH2CjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2DDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2DTIxEe-n_btyyktV6g" name="Observation">
+        <ownedAttribute xmi:id="_GlH2DjIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2GDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2DzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2EDIxEe-n_btyyktV6g" visibility="public" type="_GlGoETIxEe-n_btyyktV6g" isUnique="false" association="_GlH2HDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2ETIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2EjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2EzIxEe-n_btyyktV6g" visibility="public" type="_GlHPJTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2HzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2FDIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2FTIxEe-n_btyyktV6g" name="Date de suivi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2FjIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2FzIxEe-n_btyyktV6g" name="Importance" visibility="public" type="_GlFZ0TIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2GDIxEe-n_btyyktV6g" name="est émise sur" memberEnd="_GlH2DjIxEe-n_btyyktV6g _GlH2GTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2GTIxEe-n_btyyktV6g" visibility="public" type="_GlH2DTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2GDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2GjIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2GzIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2HDIxEe-n_btyyktV6g" name="est complétée par" memberEnd="_GlH2EDIxEe-n_btyyktV6g _GlH2HTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2HTIxEe-n_btyyktV6g" visibility="public" type="_GlH2DTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2HDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2HjIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2HzIxEe-n_btyyktV6g" name="Concerne" memberEnd="_GlH2EzIxEe-n_btyyktV6g _GlH2IDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2IDIxEe-n_btyyktV6g" visibility="public" type="_GlH2DTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2HzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2ITIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2IjIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2IzIxEe-n_btyyktV6g" name="Opération">
+        <ownedAttribute xmi:id="_GlH2JDIxEe-n_btyyktV6g" name="Numéro de séquence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2JTIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2JjIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlH2JzIxEe-n_btyyktV6g" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2KDIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2KTIxEe-n_btyyktV6g" name="AIP" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2KjIxEe-n_btyyktV6g" name="Date de début" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2KzIxEe-n_btyyktV6g" name="Date de fin" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2LDIxEe-n_btyyktV6g" name="Opération GC">
+        <generalization xmi:id="_GlH2LTIxEe-n_btyyktV6g" general="_GlH2IzIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2LjIxEe-n_btyyktV6g" visibility="public" type="_GlGonTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2NzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2LzIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2MDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2MTIxEe-n_btyyktV6g" visibility="public" type="_GlGoFTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2OjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2MjIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2MzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2NDIxEe-n_btyyktV6g" visibility="public" type="_GlGn9zIxEe-n_btyyktV6g" isUnique="false" association="_GlH2PTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2NTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2NjIxEe-n_btyyktV6g" name="Catégorie" visibility="public" type="_GlFZrzIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2NzIxEe-n_btyyktV6g" name="nécessite" memberEnd="_GlH2LjIxEe-n_btyyktV6g _GlH2ODIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2ODIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2NzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2OTIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2OjIxEe-n_btyyktV6g" name="s'appuie sur" memberEnd="_GlH2MTIxEe-n_btyyktV6g _GlH2OzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2OzIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2OjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2PDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2PTIxEe-n_btyyktV6g" memberEnd="_GlH2NDIxEe-n_btyyktV6g _GlH2PjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2PjIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2PTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2PzIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2QDIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2QTIxEe-n_btyyktV6g" name="Ordre d'exécution">
+        <ownedAttribute xmi:id="_GlH2QjIxEe-n_btyyktV6g" name="contrat" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlH2STIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2QzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2RDIxEe-n_btyyktV6g" name="commande" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlH2TDIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2RTIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2RjIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2RzIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2SDIxEe-n_btyyktV6g" name="Date" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2STIxEe-n_btyyktV6g" memberEnd="_GlH2QjIxEe-n_btyyktV6g _GlH2SjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2SjIxEe-n_btyyktV6g" visibility="public" type="_GlH2QTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2STIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2SzIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2TDIxEe-n_btyyktV6g" memberEnd="_GlH2RDIxEe-n_btyyktV6g _GlH2TTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2TTIxEe-n_btyyktV6g" visibility="public" type="_GlH2QTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2TDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2TjIxEe-n_btyyktV6g" name="Organisme">
+        <generalization xmi:id="_GlH2TzIxEe-n_btyyktV6g" general="_GlGohTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2UDIxEe-n_btyyktV6g" name="Type organisme" visibility="public" type="_GlGAyjIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2UTIxEe-n_btyyktV6g" name="Point de notification">
+        <ownedAttribute xmi:id="_GlH2UjIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2WzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2UzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2VDIxEe-n_btyyktV6g" visibility="public" type="_GlIddTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2XjIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2VTIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2VjIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA6zIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlH2VzIxEe-n_btyyktV6g" name="Levée" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2WDIxEe-n_btyyktV6g" name="Signataire" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2WTIxEe-n_btyyktV6g" name="Date de signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2WjIxEe-n_btyyktV6g" name="Signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2WzIxEe-n_btyyktV6g" name="caractérise" memberEnd="_GlH2UjIxEe-n_btyyktV6g _GlH2XDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2XDIxEe-n_btyyktV6g" visibility="public" type="_GlH2UTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2WzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2XTIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2XjIxEe-n_btyyktV6g" name="implique (Si point de convocation, cela n’implique pas d’action de surveillance terrain)" memberEnd="_GlH2VDIxEe-n_btyyktV6g _GlH2XzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2XzIxEe-n_btyyktV6g" visibility="public" type="_GlH2UTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2XjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2YDIxEe-n_btyyktV6g" name="Prestation">
+        <ownedAttribute xmi:id="_GlH2YTIxEe-n_btyyktV6g" visibility="public" type="_GlHPODIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlH2azIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2YjIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2YzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2ZDIxEe-n_btyyktV6g" visibility="public" type="_GlIdUDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2bTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2ZTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2ZjIxEe-n_btyyktV6g" visibility="public" type="_GlGn5zIxEe-n_btyyktV6g" isUnique="false" association="_GlH2cTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2ZzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2aDIxEe-n_btyyktV6g" visibility="public" type="_GlH2QTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2czIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2aTIxEe-n_btyyktV6g" name="Titre" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2ajIxEe-n_btyyktV6g" name="Type" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2azIxEe-n_btyyktV6g" memberEnd="_GlH2YTIxEe-n_btyyktV6g _GlH2bDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2bDIxEe-n_btyyktV6g" visibility="public" type="_GlH2YDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2azIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2bTIxEe-n_btyyktV6g" name="se déroule sur" memberEnd="_GlH2ZDIxEe-n_btyyktV6g _GlH2bjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2bjIxEe-n_btyyktV6g" visibility="public" type="_GlH2YDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2bTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2bzIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2cDIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2cTIxEe-n_btyyktV6g" name="peut procèder directement à" memberEnd="_GlH2ZjIxEe-n_btyyktV6g _GlH2cjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2cjIxEe-n_btyyktV6g" visibility="public" type="_GlH2YDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2cTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2czIxEe-n_btyyktV6g" name="induit" memberEnd="_GlH2aDIxEe-n_btyyktV6g _GlH2dDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2dDIxEe-n_btyyktV6g" visibility="public" type="_GlH2YDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2czIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2dTIxEe-n_btyyktV6g" name="Procès Verbal">
+        <ownedAttribute xmi:id="_GlH2djIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2fTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2dzIxEe-n_btyyktV6g" visibility="public" type="_GlGoETIxEe-n_btyyktV6g" isUnique="false" association="_GlH2gDIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2eDIxEe-n_btyyktV6g" visibility="public" type="_GlGn-TIxEe-n_btyyktV6g" isUnique="false" association="_GlH2gjIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2eTIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2ejIxEe-n_btyyktV6g" name="Date d'émission" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2ezIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAwjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlH2fDIxEe-n_btyyktV6g" name="Résultat" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2fTIxEe-n_btyyktV6g" name="atteste" memberEnd="_GlH2djIxEe-n_btyyktV6g _GlH2fjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2fjIxEe-n_btyyktV6g" visibility="public" type="_GlH2dTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2fTIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2fzIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2gDIxEe-n_btyyktV6g" name="mentionne" memberEnd="_GlH2dzIxEe-n_btyyktV6g _GlH2gTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2gTIxEe-n_btyyktV6g" visibility="public" type="_GlH2dTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2gDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2gjIxEe-n_btyyktV6g" name="atteste du" memberEnd="_GlH2eDIxEe-n_btyyktV6g _GlH2gzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2gzIxEe-n_btyyktV6g" visibility="public" type="_GlH2dTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2gjIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2hDIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2hTIxEe-n_btyyktV6g" name="Projet">
+        <ownedComment xmi:id="_GlH2hjIxEe-n_btyyktV6g">
+          <body></body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_GlH2hzIxEe-n_btyyktV6g" visibility="public" type="_GlGBXDIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlH2mjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2iDIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2iTIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2ijIxEe-n_btyyktV6g" visibility="public" type="_GlGBVTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2nDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2izIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2jDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2jTIxEe-n_btyyktV6g" name="tranche" visibility="public" type="_GlIdSTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2njIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2jjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2jzIxEe-n_btyyktV6g" name="organisme" visibility="public" type="_GlH2TjIxEe-n_btyyktV6g" isUnique="false" association="_GlH2oTIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2kDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2kTIxEe-n_btyyktV6g" name="marché" visibility="public" type="_GlHPPzIxEe-n_btyyktV6g" isUnique="false" association="_GlH2pDIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2kjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2kzIxEe-n_btyyktV6g" name="contrat" visibility="public" type="_GlGnwzIxEe-n_btyyktV6g" isUnique="false" association="_GlH2pzIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2lDIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2lTIxEe-n_btyyktV6g" visibility="public" type="_GlGBXDIxEe-n_btyyktV6g" isUnique="false" association="_GlH2qjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlH2ljIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2lzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2mDIxEe-n_btyyktV6g" name="Numéro" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2mTIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2mjIxEe-n_btyyktV6g" memberEnd="_GlH2hzIxEe-n_btyyktV6g _GlH2mzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2mzIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2mjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2nDIxEe-n_btyyktV6g" name="contient" memberEnd="_GlH2ijIxEe-n_btyyktV6g _GlH2nTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2nTIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2nDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2njIxEe-n_btyyktV6g" memberEnd="_GlH2jTIxEe-n_btyyktV6g _GlH2nzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2nzIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2njIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2oDIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2oTIxEe-n_btyyktV6g" memberEnd="_GlH2jzIxEe-n_btyyktV6g _GlH2ojIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2ojIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2oTIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2ozIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2pDIxEe-n_btyyktV6g" memberEnd="_GlH2kTIxEe-n_btyyktV6g _GlH2pTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2pTIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2pDIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2pjIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2pzIxEe-n_btyyktV6g" memberEnd="_GlH2kzIxEe-n_btyyktV6g _GlH2qDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2qDIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2pzIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlH2qTIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlH2qjIxEe-n_btyyktV6g" name="Est associé à " memberEnd="_GlH2lTIxEe-n_btyyktV6g _GlH2qzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlH2qzIxEe-n_btyyktV6g" visibility="public" type="_GlH2hTIxEe-n_btyyktV6g" isUnique="false" association="_GlH2qjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlH2rDIxEe-n_btyyktV6g" name="Rapport de synthèse">
+        <ownedAttribute xmi:id="_GlH2rTIxEe-n_btyyktV6g" visibility="public" type="_GlGBXDIxEe-n_btyyktV6g" isUnique="false" association="_GlIc8DIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlH2rjIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2rzIxEe-n_btyyktV6g" name="Statut" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlH2sDIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIc8DIxEe-n_btyyktV6g" name="porte sur" memberEnd="_GlH2rTIxEe-n_btyyktV6g _GlIc8TIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIc8TIxEe-n_btyyktV6g" visibility="public" type="_GlH2rDIxEe-n_btyyktV6g" isUnique="false" association="_GlIc8DIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIc8jIxEe-n_btyyktV6g" name="Réponse">
+        <ownedAttribute xmi:id="_GlIc8zIxEe-n_btyyktV6g" visibility="public" type="_GlIdNDIxEe-n_btyyktV6g" isUnique="false" association="_GlIc_zIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIc9DIxEe-n_btyyktV6g" visibility="public" type="_GlHPJTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdAjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIc9TIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc9jIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc9zIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc-DIxEe-n_btyyktV6g" name="Justification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc-TIxEe-n_btyyktV6g" name="Prise en compte" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc-jIxEe-n_btyyktV6g" name="Etat de validité" visibility="public" type="_GlFZwTIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlIc-zIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc_DIxEe-n_btyyktV6g" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc_TIxEe-n_btyyktV6g" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIc_jIxEe-n_btyyktV6g" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIc_zIxEe-n_btyyktV6g" name="Porte sur " memberEnd="_GlIc8zIxEe-n_btyyktV6g _GlIdADIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdADIxEe-n_btyyktV6g" visibility="public" type="_GlIc8jIxEe-n_btyyktV6g" isUnique="false" association="_GlIc_zIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdATIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdAjIxEe-n_btyyktV6g" name="Correspond" memberEnd="_GlIc9DIxEe-n_btyyktV6g _GlIdAzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdAzIxEe-n_btyyktV6g" visibility="public" type="_GlIc8jIxEe-n_btyyktV6g" isUnique="false" association="_GlIdAjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdBDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdBTIxEe-n_btyyktV6g" name="Ressource">
+        <ownedAttribute xmi:id="_GlIdBjIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdDzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdBzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdCDIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdCTIxEe-n_btyyktV6g" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdCjIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdCzIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlIdDDIxEe-n_btyyktV6g" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdDTIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdDjIxEe-n_btyyktV6g" name="Détail" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdDzIxEe-n_btyyktV6g" name="réalise" memberEnd="_GlIdBjIxEe-n_btyyktV6g _GlIdEDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdEDIxEe-n_btyyktV6g" visibility="public" type="_GlIdBTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdDzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdETIxEe-n_btyyktV6g" name="Ressource consommable">
+        <generalization xmi:id="_GlIdEjIxEe-n_btyyktV6g" general="_GlIdBTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdEzIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdFDIxEe-n_btyyktV6g" name="Ressource humaine">
+        <generalization xmi:id="_GlIdFTIxEe-n_btyyktV6g" general="_GlIdBTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdFjIxEe-n_btyyktV6g" visibility="public" type="_GlHPDzIxEe-n_btyyktV6g" isUnique="false" association="_GlIdJjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdFzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdGDIxEe-n_btyyktV6g" visibility="public" type="_GlH2UTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdKTIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdGTIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlIdGjIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdGzIxEe-n_btyyktV6g" visibility="public" type="_GlIdZDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdKzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdHDIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdHTIxEe-n_btyyktV6g" name="Entreprise" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdHjIxEe-n_btyyktV6g" name="Rôle" visibility="public" type="_GlGAuDIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlIdHzIxEe-n_btyyktV6g" name="Certification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdIDIxEe-n_btyyktV6g" name="Fonction" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdITIxEe-n_btyyktV6g" name="Trigramme" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdIjIxEe-n_btyyktV6g" name="Prénom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdIzIxEe-n_btyyktV6g" name="Email" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdJDIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdJTIxEe-n_btyyktV6g" name="Téléphone" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdJjIxEe-n_btyyktV6g" name="dispose de" memberEnd="_GlIdFjIxEe-n_btyyktV6g _GlIdJzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdJzIxEe-n_btyyktV6g" visibility="public" type="_GlIdFDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdJjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdKDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdKTIxEe-n_btyyktV6g" name="lève" memberEnd="_GlIdGDIxEe-n_btyyktV6g _GlIdKjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdKjIxEe-n_btyyktV6g" visibility="public" type="_GlIdFDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdKTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdKzIxEe-n_btyyktV6g" name="réalise" memberEnd="_GlIdGzIxEe-n_btyyktV6g _GlIdLDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdLDIxEe-n_btyyktV6g" visibility="public" type="_GlIdFDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdKzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdLTIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlIdLjIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdLzIxEe-n_btyyktV6g" name="Ressource outillage">
+        <generalization xmi:id="_GlIdMDIxEe-n_btyyktV6g" general="_GlIdBTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdMTIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdMjIxEe-n_btyyktV6g" name="Type" visibility="public" type="_GlGA7jIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlIdMzIxEe-n_btyyktV6g" name="Date de validité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdNDIxEe-n_btyyktV6g" name="Revue de surveillance">
+        <ownedAttribute xmi:id="_GlIdNTIxEe-n_btyyktV6g" visibility="public" type="_GlH2DTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdQDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdNjIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlIdNzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdODIxEe-n_btyyktV6g" visibility="public" type="_GlHPJTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdQjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdOTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdOjIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdOzIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdPDIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGA1TIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlIdPTIxEe-n_btyyktV6g" name="Date effective d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdPjIxEe-n_btyyktV6g" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdPzIxEe-n_btyyktV6g" name="Résultat de surveillance" visibility="public" type="_GlGAzTIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdQDIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlIdNTIxEe-n_btyyktV6g _GlIdQTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdQTIxEe-n_btyyktV6g" visibility="public" type="_GlIdNDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdQDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdQjIxEe-n_btyyktV6g" name="Concerne" memberEnd="_GlIdODIxEe-n_btyyktV6g _GlIdQzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdQzIxEe-n_btyyktV6g" visibility="public" type="_GlIdNDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdQjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdRDIxEe-n_btyyktV6g" name="Tâche">
+        <ownedAttribute xmi:id="_GlIdRTIxEe-n_btyyktV6g" visibility="public" type="_GlH2LDIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlIdRzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdRjIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdRzIxEe-n_btyyktV6g" memberEnd="_GlIdRTIxEe-n_btyyktV6g _GlIdSDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdSDIxEe-n_btyyktV6g" visibility="public" type="_GlIdRDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdRzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdSTIxEe-n_btyyktV6g" name="Tranche">
+        <ownedAttribute xmi:id="_GlIdSjIxEe-n_btyyktV6g" visibility="public" type="_GlHPFTIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlIdTjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdSzIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdTDIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdTTIxEe-n_btyyktV6g" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdTjIxEe-n_btyyktV6g" memberEnd="_GlIdSjIxEe-n_btyyktV6g _GlIdTzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdTzIxEe-n_btyyktV6g" visibility="public" type="_GlIdSTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdTjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdUDIxEe-n_btyyktV6g" name="Site">
+        <ownedAttribute xmi:id="_GlIdUTIxEe-n_btyyktV6g" visibility="public" type="_GlIdSTIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlIdVzIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdUjIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdUzIxEe-n_btyyktV6g" name="usine" visibility="public" type="_GlIdeDIxEe-n_btyyktV6g" isUnique="false" aggregation="composite" association="_GlIdWTIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdVDIxEe-n_btyyktV6g" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdVTIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdVjIxEe-n_btyyktV6g" name="Adresse" visibility="public" type="_GlIdnTIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdVzIxEe-n_btyyktV6g" memberEnd="_GlIdUTIxEe-n_btyyktV6g _GlIdWDIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdWDIxEe-n_btyyktV6g" visibility="public" type="_GlIdUDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdVzIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdWTIxEe-n_btyyktV6g" memberEnd="_GlIdUzIxEe-n_btyyktV6g _GlIdWjIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdWjIxEe-n_btyyktV6g" visibility="public" type="_GlIdUDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdWTIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdWzIxEe-n_btyyktV6g" name="Spécification technique">
+        <ownedAttribute xmi:id="_GlIdXDIxEe-n_btyyktV6g" visibility="public" type="_GlGoZjIxEe-n_btyyktV6g" isUnique="false" association="_GlIdYjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdXTIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdXjIxEe-n_btyyktV6g" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdXzIxEe-n_btyyktV6g" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdYDIxEe-n_btyyktV6g" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdYTIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdYjIxEe-n_btyyktV6g" name="Regroupe" memberEnd="_GlIdXDIxEe-n_btyyktV6g _GlIdYzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdYzIxEe-n_btyyktV6g" visibility="public" type="_GlIdWzIxEe-n_btyyktV6g" isUnique="false" association="_GlIdYjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdZDIxEe-n_btyyktV6g" name="Surveillance">
+        <ownedAttribute xmi:id="_GlIdZTIxEe-n_btyyktV6g" visibility="public" type="_GlH2DTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdajIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdZjIxEe-n_btyyktV6g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlIdZzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdaDIxEe-n_btyyktV6g" name="Type" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdaTIxEe-n_btyyktV6g" name="Statut" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdajIxEe-n_btyyktV6g" name="induit" memberEnd="_GlIdZTIxEe-n_btyyktV6g _GlIdazIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdazIxEe-n_btyyktV6g" visibility="public" type="_GlIdZDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdajIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdbDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdbTIxEe-n_btyyktV6g" name="Surveillance Livrables">
+        <generalization xmi:id="_GlIdbjIxEe-n_btyyktV6g" general="_GlIdZDIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdbzIxEe-n_btyyktV6g" visibility="public" type="_GlGBiTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdcjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdcDIxEe-n_btyyktV6g" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdcTIxEe-n_btyyktV6g" name="Résultat" visibility="public" type="_GlGAzTIxEe-n_btyyktV6g" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdcjIxEe-n_btyyktV6g" name="induit" memberEnd="_GlIdbzIxEe-n_btyyktV6g _GlIdczIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdczIxEe-n_btyyktV6g" visibility="public" type="_GlIdbTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdcjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIddDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIddTIxEe-n_btyyktV6g" name="Surveillance Terrain">
+        <generalization xmi:id="_GlIddjIxEe-n_btyyktV6g" general="_GlIdZDIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIddzIxEe-n_btyyktV6g" name="Date de demande" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdeDIxEe-n_btyyktV6g" name="Usine">
+        <ownedAttribute xmi:id="_GlIdeTIxEe-n_btyyktV6g" name="Numéro de SIRET" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdejIxEe-n_btyyktV6g" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdezIxEe-n_btyyktV6g" name="Adresse" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdfDIxEe-n_btyyktV6g" name="Identifiant usine" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GlIdfTIxEe-n_btyyktV6g" name="VISA">
+        <ownedAttribute xmi:id="_GlIdfjIxEe-n_btyyktV6g" visibility="public" type="_GlH2dTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdjDIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdfzIxEe-n_btyyktV6g" visibility="public" type="_GlGn-TIxEe-n_btyyktV6g" isUnique="false" association="_GlIdjjIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdgDIxEe-n_btyyktV6g" visibility="public" type="_GlGoNzIxEe-n_btyyktV6g" isUnique="false" association="_GlIdkDIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdgTIxEe-n_btyyktV6g" visibility="public" type="_GlH16TIxEe-n_btyyktV6g" isUnique="false" association="_GlIdkjIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdgjIxEe-n_btyyktV6g" name="livrable" visibility="public" type="_GlHPJTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdlTIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlIdgzIxEe-n_btyyktV6g"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdhDIxEe-n_btyyktV6g" visibility="public" type="_GlIdNDIxEe-n_btyyktV6g" isUnique="false" association="_GlIdmDIxEe-n_btyyktV6g"/>
+        <ownedAttribute xmi:id="_GlIdhTIxEe-n_btyyktV6g" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdhjIxEe-n_btyyktV6g" name="Prénom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdhzIxEe-n_btyyktV6g" name="Entité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdiDIxEe-n_btyyktV6g" name="Date de signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdiTIxEe-n_btyyktV6g" name="Statut" visibility="public" type="_GlGAxjIxEe-n_btyyktV6g" isUnique="false"/>
+        <ownedAttribute xmi:id="_GlIdijIxEe-n_btyyktV6g" name="Fonction" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GlIdizIxEe-n_btyyktV6g" name="Identifiant signataire" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdjDIxEe-n_btyyktV6g" name="est apposé sur" memberEnd="_GlIdfjIxEe-n_btyyktV6g _GlIdjTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdjTIxEe-n_btyyktV6g" visibility="public" type="_GlIdfTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdjDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdjjIxEe-n_btyyktV6g" name="est apposé sur" memberEnd="_GlIdfzIxEe-n_btyyktV6g _GlIdjzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdjzIxEe-n_btyyktV6g" visibility="public" type="_GlIdfTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdjjIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdkDIxEe-n_btyyktV6g" name="est apposé sur" memberEnd="_GlIdgDIxEe-n_btyyktV6g _GlIdkTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdkTIxEe-n_btyyktV6g" visibility="public" type="_GlIdfTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdkDIxEe-n_btyyktV6g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdkjIxEe-n_btyyktV6g" name="Valide" memberEnd="_GlIdgTIxEe-n_btyyktV6g _GlIdkzIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdkzIxEe-n_btyyktV6g" visibility="public" type="_GlIdfTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdkjIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdlDIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdlTIxEe-n_btyyktV6g" memberEnd="_GlIdgjIxEe-n_btyyktV6g _GlIdljIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdljIxEe-n_btyyktV6g" visibility="public" type="_GlIdfTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdlTIxEe-n_btyyktV6g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GlIdlzIxEe-n_btyyktV6g"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GlIdmDIxEe-n_btyyktV6g" name="Valide" memberEnd="_GlIdhDIxEe-n_btyyktV6g _GlIdmTIxEe-n_btyyktV6g">
+        <ownedEnd xmi:id="_GlIdmTIxEe-n_btyyktV6g" visibility="public" type="_GlIdfTIxEe-n_btyyktV6g" isUnique="false" association="_GlIdmDIxEe-n_btyyktV6g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GlIdmjIxEe-n_btyyktV6g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GlIdmzIxEe-n_btyyktV6g" name="Modèles Communs"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GlIdnDIxEe-n_btyyktV6g" name="Commentaires Communs">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_GlIdnTIxEe-n_btyyktV6g" name="Numéro, Rue, CP, Ville, PAYS"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GlIdnjIxEe-n_btyyktV6g" name="Exigence technique"/>
+    <profileApplication xmi:id="_GnBTUDIxEe-n_btyyktV6g">
+      <eAnnotations xmi:id="_GnBTUTIxEe-n_btyyktV6g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Document%20Publisher.profile.uml#_GlrPhzIxEe-n_btyyktV6g"/>
+      </eAnnotations>
+      <appliedProfile href="Document%20Publisher.profile.uml#_GlrPgDIxEe-n_btyyktV6g"/>
+    </profileApplication>
+    <profileApplication xmi:id="_GnNgkDIxEe-n_btyyktV6g">
+      <eAnnotations xmi:id="_GnOHoDIxEe-n_btyyktV6g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="default.profile.uml#_Gl55BzIxEe-n_btyyktV6g"/>
+      </eAnnotations>
+      <appliedProfile href="default.profile.uml#_Gl55ADIxEe-n_btyyktV6g"/>
+    </profileApplication>
+  </uml:Model>
+  <DocumentPublisher:DocumentPublisherDocumentFolder xmi:id="_GnaU4DIxEe-n_btyyktV6g" base_Package="_GlFZpDIxEe-n_btyyktV6g"/>
+  <DocumentPublisher:DocumentPublisherDocument xmi:id="_GnbjADIxEe-n_btyyktV6g" base_Artifact="_GlFZpTIxEe-n_btyyktV6g" DocumentPublishertargetFile="OPENXML" DocumentPublishertargetDir="doc" DocumentPublishertemplate="AnalysisAndDesign" DocumentPublishername="Doctest" DocumentPublishercontent="REV|TOF|TOT|TOC|CONTENT|" DocumentPublisherstylesheet="$MODULE_DIR/res/style/Modern_blue_fr.docx"/>
+  <default:manifestation xmi:id="_GncxIDIxEe-n_btyyktV6g" base_Dependency="_GlFZqDIxEe-n_btyyktV6g"/>
+</xmi:XMI>

@@ -1,0 +1,18 @@
+<div
+  class="message-inner"
+  [ngClass]="message.role == 'assistant' ? 'bot' : 'user'"
+>
+  <div class="avatar"></div>
+  <div>
+    <div class="text">{{ text }}</div>
+    <div *ngIf="message.attachments?.length" class="file">
+      <mat-icon
+        [matTooltip]="getFileText(message.attachments?.[0]?.file_id || '')"
+        fontIcon="description"
+      ></mat-icon>
+    </div>
+  </div>
+  <div class="delete-container" (click)="onDeleteClick()">
+    <div matTooltip="Delete message" class="delete-icon">x</div>
+  </div>
+</div>

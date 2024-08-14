@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Create assistant</h1>
+<div mat-dialog-content>
+  <div>
+    Edit the config below
+    <span
+      ><a
+        href="https://platform.openai.com/docs/api-reference/assistants/createAssistant"
+        target="_blank"
+        >Checkout the documentation</a
+      ></span
+    >
+  </div>
+  <div *ngIf="parseError" class="error-message">
+    Invalid JSON !
+    <span
+      ><a href="https://jsonlint.com/" target="_blank"
+        >Paste it here to see what's wrong</a
+      ></span
+    >
+  </div>
+
+  <br />
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Config</mat-label>
+      <textarea matInput [(ngModel)]="confString" rows="15"></textarea>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="createAssistant()">Create</button>
+</div>

@@ -1,0 +1,16 @@
+<div class="message-list">
+  <app-message
+    *ngFor="let message of messages"
+    [message]="message"
+  ></app-message>
+</div>
+
+<mat-form-field class="chat-input-field">
+  <textarea
+    matInput
+    type="text"
+    [(ngModel)]="value"
+    (keydown)="onInput($event)"
+    placeholder="Entrez votre message..."
+  ></textarea>
+</mat-form-field>

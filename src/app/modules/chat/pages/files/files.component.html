@@ -1,0 +1,25 @@
+<button mat-raised-button color="primary" (click)="back()">
+  {{ "< Back" }}
+</button>
+
+<div class="config-elm-list">
+  <div
+    *ngFor="let file of files"
+    class="file config-elm-list__element"
+    [matTooltip]="stringify(file)"
+  >
+    <div class="config-elm-list__element__label">{{ file.filename }}</div>
+    <div class="config-elm-list__element__info">{{ file.id }}</div>
+  </div>
+</div>
+
+<button mat-raised-button color="primary" (click)="fileInput.click()">
+  + Import new file
+</button>
+
+<input
+  #fileInput
+  type="file"
+  style="visibility: hidden"
+  (change)="onFileSelected($event)"
+/>

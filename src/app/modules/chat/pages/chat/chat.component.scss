@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  background-color: #d7d0c9;
+  background-image: url("~src/assets/background.png");
+  min-width: 100vw;
+  min-height: 100vh;
+  background-repeat: repeat;
+
+  .processing-indicator {
+    display: flex;
+  }
+
+  .checkbox-container {
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    z-index: 2;
+
+    mat-form-field {
+      min-width: 400px;
+    }
+
+    &__trailing {
+      text-align: end;
+    }
+  }
+
+  button:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
+
+.footer {
+  width: calc(100vw - 4rem);
+  flex-grow: 1;
+  position: absolute;
+  bottom: 1rem;
+  margin-left: 2rem;
+  position: fixed;
+}
+
+.chose-file-label {
+  margin: 0 1rem 0 0.5rem;
+}
+
+.chat-input-field {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.message-list {
+  padding: 140px 2rem 200px 2rem;
+
+  // width: calc(100vw - 4rem);
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+  background: rgb(245, 245, 245);
+}

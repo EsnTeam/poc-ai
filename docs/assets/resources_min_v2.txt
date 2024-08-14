@@ -1,0 +1,1919 @@
+1"1.0" encoding="UTF-8"?>
+<XMI version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DocumentPublisher="http:///schemas/DocumentPublisher/_GlK5MDIxEe-n_btyyktV6g/0" xmlns:default="http:///schemas/default/_GlfpUDIxEe-n_btyyktV6g/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DocumentPublisher/_GlK5MDIxEe-n_btyyktV6g/0 Document%20Publisher.profile.uml#_GlrPhzIxEe-n_btyyktV6g http:///schemas/default/_GlfpUDIxEe-n_btyyktV6g/0 default.profile.uml#_Gl55BzIxEe-n_btyyktV6g">
+  <Model id="2" name="Ressources Communes">
+    <eAnnotations id="3" source="Objing">
+      <contents type="Property" id="4" name="exporterVersion">
+        <defaultValue type="LiteralString" id="5" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <elm type="Package" id="6" name="Documents Communs">
+      <elm type="Artifact" id="7" name="Doctest" clientDependency="10" fileName="C:\Users\D74779\modeliosaas\5.4\ws\Standard_GIFEN\doc\Doctest.docx">
+        <ownedComment id="8">
+          <body></body>
+        </ownedComment>
+        <ownedComment id="9">
+          <body></body>
+        </ownedComment>
+      </elm>
+      <elm type="Dependency" id="10" name="" supplier="2" client="7"/>
+    </elm>
+    <elm type="Package" id="11" name="LOV Communes">
+      <elm type="Enumeration" id="12" name="Accrédit_Type">
+        <ownedLiteral id="13" name="Electrique"/>
+        <ownedLiteral id="14" name="Levage"/>
+        <ownedLiteral id="15" name="Permis Feu"/>
+        <ownedLiteral id="16" name="..."/>
+      </elm>
+      <elm type="Enumeration" id="17" name="Catégories_GénieCivil">
+        <ownedLiteral id="18" name="Levée des préalables"/>
+        <ownedLiteral id="19" name=" Prise en compte des préalables replis de chantier"/>
+        <ownedLiteral id="20" name="Contrôle du DSI de chantier"/>
+        <ownedLiteral id="21" name="Pose DMP"/>
+        <ownedLiteral id="22" name="Pose DDC"/>
+        <ownedLiteral id="23" name="Dépose DMP"/>
+        <ownedLiteral id="24" name="Dépose DDC"/>
+        <ownedLiteral id="25" name="NA"/>
+      </elm>
+      <elm type="Enumeration" id="26" name="Classement_Values">
+        <ownedLiteral id="27" name="C1"/>
+        <ownedLiteral id="28" name="C2"/>
+      </elm>
+      <elm type="Enumeration" id="29" name="Etat">
+        <ownedLiteral id="30" name="BPO"/>
+        <ownedLiteral id="31" name="BPE"/>
+      </elm>
+      <elm type="Enumeration" id="32" name="Etat_Maturité">
+        <ownedLiteral id="33" name="BPO"/>
+        <ownedLiteral id="34" name="BPE"/>
+      </elm>
+      <elm type="Enumeration" id="35" name="Etat_Validité">
+        <ownedLiteral id="36" name="BPO"/>
+        <ownedLiteral id="37" name="BPE"/>
+        <ownedLiteral id="38" name="DES"/>
+        <ownedLiteral id="39" name="CAE"/>
+        <ownedLiteral id="40" name="TQC"/>
+        <ownedLiteral id="41" name="ANNULE"/>
+        <ownedLiteral id="42" name="INF"/>
+        <ownedLiteral id="43" name="BPEE"/>
+      </elm>
+      <elm type="Enumeration" id="44" name="Format_Doc">
+        <ownedLiteral id="45" name="2D"/>
+        <ownedLiteral id="46" name="3D"/>
+      </elm>
+      <elm type="Enumeration" id="47" name="Famille matériel">
+        <ownedLiteral id="48" name="POMPE"/>
+        <ownedLiteral id="49" name="VANNE"/>
+        <ownedLiteral id="50" name="TANK"/>
+      </elm>
+      <elm type="Enumeration" id="51" name="Importance_Values">
+        <ownedLiteral id="52" name="Majeur"/>
+        <ownedLiteral id="53" name="Mineur"/>
+      </elm>
+      <elm type="Enumeration" id="54" name="Niveau">
+        <ownedLiteral id="55" name="Rédacteur"/>
+        <ownedLiteral id="56" name="Vérificateur"/>
+      </elm>
+      <elm type="Enumeration" id="57" name="PIDU_Values">
+        <ownedLiteral id="58" name="1"/>
+        <ownedLiteral id="59" name="2"/>
+        <ownedLiteral id="60" name="3"/>
+        <ownedLiteral id="61" name="4"/>
+      </elm>
+      <elm type="Enumeration" id="62" name="Revue">
+        <ownedLiteral id="63" name="VSO"/>
+        <ownedLiteral id="64" name="VSO-SR"/>
+        <ownedLiteral id="65" name="VAO"/>
+      </elm>
+      <elm type="Enumeration" id="66" name="Rôles">
+        <ownedLiteral id="67" name="Exécutant"/>
+        <ownedLiteral id="68" name="Contrôleur Technique"/>
+        <ownedLiteral id="69" name="Surveillant Titulaire"/>
+        <ownedLiteral id="70" name="Surveillant EDF"/>
+        <ownedLiteral id="71" name=" Surveillant Externe"/>
+      </elm>
+      <elm type="Enumeration" id="72" name="Statut_Contrat">
+        <ownedLiteral id="73" name="Temporaire (en réalisation),"/>
+        <ownedLiteral id="74" name=" Applicable (vérifié)"/>
+        <ownedLiteral id="75" name="En contrôle (terminé mais pas contrôlé)"/>
+      </elm>
+      <elm type="Enumeration" id="76" name="Statut_PV">
+        <ownedLiteral id="77" name="Temporaire (en réalisation)"/>
+        <ownedLiteral id="78" name="Applicable (vérifié)"/>
+        <ownedLiteral id="79" name="En contrôle (terminé mais pas contrôlé)"/>
+      </elm>
+      <elm type="Enumeration" id="80" name="Statut_Values">
+        <ownedLiteral id="81" name="Draft"/>
+        <ownedLiteral id="82" name="Frozen"/>
+        <ownedLiteral id="83" name="Released"/>
+      </elm>
+      <elm type="Enumeration" id="84" name="Organisme">
+        <ownedLiteral id="85" name="Surveillance"/>
+        <ownedLiteral id="86" name="Habilitation"/>
+      </elm>
+      <elm type="Enumeration" id="87" name="Résultat_Surveillance">
+        <ownedLiteral id="88" name="VSO"/>
+        <ownedLiteral id="89" name="VSO SR"/>
+        <ownedLiteral id="90" name="VAO"/>
+        <ownedLiteral id="91" name="NS sans FDS"/>
+        <ownedLiteral id="92" name="NS avec FDS"/>
+        <ownedLiteral id="93" name="PERPB "/>
+        <ownedLiteral id="94" name="PERPP"/>
+      </elm>
+      <elm type="Enumeration" id="95" name="Statut_Revue">
+        <ownedLiteral id="96" name="Démarée"/>
+        <ownedLiteral id="97" name="En cours"/>
+        <ownedLiteral id="98" name="Finalisée"/>
+      </elm>
+      <elm type="Enumeration" id="99" name="Type_Doc">
+        <ownedLiteral id="100" name="Photo"/>
+        <ownedLiteral id="101" name="Scan 3D"/>
+        <ownedLiteral id="102" name="CT"/>
+        <ownedLiteral id="103" name="PV"/>
+        <ownedLiteral id="104" name="Plan"/>
+        <ownedLiteral id="105" name="Relevé topographique"/>
+        <ownedLiteral id="106" name="Norme"/>
+        <ownedLiteral id="107" name="..."/>
+      </elm>
+      <elm type="Enumeration" id="108" name="Type_Fourn">
+        <ownedLiteral id="109" name="Titulaire"/>
+        <ownedLiteral id="110" name="Sous-Traitant"/>
+      </elm>
+      <elm type="Enumeration" id="111" name="Type_Marché">
+        <ownedLiteral id="112" name="Simple"/>
+        <ownedLiteral id="113" name="Cadre"/>
+      </elm>
+      <elm type="Enumeration" id="114" name="Type_NC">
+        <ownedLiteral id="115" name="Mineure"/>
+        <ownedLiteral id="116" name="Majeure"/>
+      </elm>
+      <elm type="Enumeration" id="117" name="Type_Notif">
+        <ownedLiteral id="118" name="Arrêt"/>
+        <ownedLiteral id="119" name="Convocation"/>
+      </elm>
+      <elm type="Enumeration" id="120" name="Type_Outil">
+        <ownedLiteral id="121" name="Temporaire"/>
+        <ownedLiteral id="122" name="Outillage"/>
+      </elm>
+    </elm>
+    <elm type="Class" id="123" name="Attributs Communs">
+      <attr id="124" name="Accréditation" type="12"/>
+      <attr id="125" name="Adresse">
+        <type type="String"/>
+      </attr>
+      <attr id="126" name="Adresse" type="1029"/>
+      <attr id="127" name="AIP">
+        <type type="Boolean"/>
+      </attr>
+      <attr id="128" name="Applicabilité">
+        <type type="String"/>
+      </attr>
+      <attr id="129" name="Approbateur">
+        <type type="String"/>
+      </attr>
+      <attr id="130" name="Catégorie" type="17"/>
+      <attr id="131" name="Certification">
+        <type type="String"/>
+      </attr>
+      <attr id="132" name="Classement" type="26"/>
+      <attr id="133" name="Code">
+        <type type="String"/>
+      </attr>
+      <attr id="134" name="Contact">
+        <type type="String"/>
+      </attr>
+      <attr id="135" name="Confidentialité">
+        <type type="String"/>
+      </attr>
+      <attr id="136" name="Critère d'acceptabilité">
+        <type type="String"/>
+      </attr>
+      <attr id="137" name="Date">
+        <type type="Date"/>
+      </attr>
+      <attr id="138" name="Date de début">
+        <type type="Date"/>
+      </attr>
+      <attr id="139" name="Date de demande">
+        <type type="Date"/>
+      </attr>
+      <attr id="140" name="Date d'édition">
+        <type type="Date"/>
+      </attr>
+      <attr id="141" name="Date d'émission">
+        <type type="Date"/>
+      </attr>
+      <attr id="142" name="Date d'envoi">
+        <type type="Date"/>
+      </attr>
+      <attr id="143" name="Date d'exécution">
+        <type type="Date"/>
+      </attr>
+      <attr id="144" name="Date de fin">
+        <type type="Date"/>
+      </attr>
+      <attr id="145" name="Date de publication">
+        <type type="Date"/>
+      </attr>
+      <attr id="146" name="Date de référence">
+        <type type="Date"/>
+      </attr>
+      <attr id="147" name="Date de signature">
+        <type type="Date"/>
+      </attr>
+      <attr id="148" name="Date de suivi">
+        <type type="Date"/>
+      </attr>
+      <attr id="149" name="Date de validation">
+        <type type="Date"/>
+      </attr>
+      <attr id="150" name="Date de validité">
+        <type type="Date"/>
+      </attr>
+      <attr id="151" name="Date effective d'envoi">
+        <type type="Date"/>
+      </attr>
+      <attr id="152" name="Date prévisionnelle d'envoi">
+        <type type="Date"/>
+      </attr>
+      <attr id="153" name="Description">
+        <type type="String"/>
+      </attr>
+      <attr id="154" name="Détail">
+        <type type="String"/>
+      </attr>
+      <attr id="155" name="Domaine de qualification">
+        <type type="String"/>
+      </attr>
+      <attr id="156" name="EIP">
+        <type type="Boolean"/>
+      </attr>
+      <attr id="157" name="Email">
+        <type type="String"/>
+      </attr>
+      <attr id="158" name="Enoncé">
+        <type type="String"/>
+      </attr>
+      <attr id="159" name="Entité">
+        <type type="String"/>
+      </attr>
+      <attr id="160" name="Entreprise">
+        <type type="String"/>
+      </attr>
+      <attr id="161" name="Etat de validité" type="35"/>
+      <attr id="162" name="Export control">
+        <type type="Boolean"/>
+      </attr>
+      <attr id="163" name="Famille matérielle">
+        <type type="String"/>
+      </attr>
+      <attr id="164" name="Fonction">
+        <type type="String"/>
+      </attr>
+      <attr id="165" name="Format" type="44"/>
+      <attr id="166" name="Identifiant">
+        <type type="String"/>
+      </attr>
+      <attr id="167" name="Identifiant usine">
+        <type type="String"/>
+      </attr>
+      <attr id="168" name="Identifiant signataire">
+        <type type="String"/>
+      </attr>
+      <attr id="169" name="Importance" type="51"/>
+      <attr id="170" name="Justification">
+        <type type="String"/>
+      </attr>
+      <attr id="171" name="Levée">
+        <type type="Boolean"/>
+      </attr>
+      <attr id="172" name="Libellé">
+        <type type="String"/>
+      </attr>
+      <attr id="173" name="Lot de commande">
+        <type type="String"/>
+      </attr>
+      <attr id="174" name="Nom">
+        <type type="String"/>
+      </attr>
+      <attr id="175" name="Numéro">
+        <type type="String"/>
+      </attr>
+      <attr id="176" name="Numéro">
+        <type type="Integer"/>
+      </attr>
+      <attr id="177" name="Numéro de canal">
+        <type type="String"/>
+      </attr>
+      <attr id="178" name="Numéro commande">
+        <type type="String"/>
+      </attr>
+      <attr id="179" name="Numéro de séquence">
+        <type type="Integer"/>
+      </attr>
+      <attr id="180" name="Numéro de série">
+        <type type="String"/>
+      </attr>
+      <attr id="181" name="Numéro de SIREN">
+        <type type="String"/>
+      </attr>
+      <attr id="182" name="Numéro de SIRET">
+        <type type="String"/>
+      </attr>
+      <attr id="183" name="Niveau d'intervention" type="54"/>
+      <attr id="184" name="Numéro marché">
+        <type type="String"/>
+      </attr>
+      <attr id="185" name="Phase industrielle">
+        <type type="String"/>
+      </attr>
+      <attr id="186" name="PIDU" type="57"/>
+      <attr id="187" name="Prénom">
+        <type type="String"/>
+      </attr>
+      <attr id="188" name="Prise en compte">
+        <type type="Boolean"/>
+      </attr>
+      <attr id="189" name="Propriétaire">
+        <type type="String"/>
+      </attr>
+      <attr id="190" name="Quantité">
+        <type type="String"/>
+      </attr>
+      <attr id="191" name="Rang">
+        <type type="Integer"/>
+      </attr>
+      <attr id="192" name="Rédacteur">
+        <type type="String"/>
+      </attr>
+      <attr id="193" name="Référence">
+        <type type="String"/>
+      </attr>
+      <attr id="194" name="Référence donneur d'ordre">
+        <type type="String"/>
+      </attr>
+      <attr id="195" name="Référence fournisseur">
+        <type type="String"/>
+      </attr>
+      <attr id="196" name="Référence industrielle">
+        <type type="String"/>
+      </attr>
+      <attr id="197" name="Résultat">
+        <type type="String"/>
+      </attr>
+      <attr id="198" name="Résultat"/>
+      <attr id="199" name="Résultat de surveillance" type="87"/>
+      <attr id="200" name="Révision">
+        <type type="String"/>
+      </attr>
+      <attr id="201" name="RGPD">
+        <type type="Boolean"/>
+      </attr>
+      <attr id="202" name="Rôle" type="66"/>
+      <attr id="203" name="Signature">
+        <type type="String"/>
+      </attr>
+      <attr id="204" name="Statut">
+        <type type="String"/>
+      </attr>
+      <attr id="205" name="Statut" type="32"/>
+      <attr id="206" name="Statut" type="72"/>
+      <attr id="207" name="Statut" type="76"/>
+      <attr id="208" name="Statut" type="80"/>
+      <attr id="209" name="Statut" type="95"/>
+      <attr id="210" name="Téléphone">
+        <type type="String"/>
+      </attr>
+      <attr id="211" name="Trigramme">
+        <type type="String"/>
+      </attr>
+      <attr id="212" name="Titre">
+        <type type="String"/>
+      </attr>
+      <attr id="213" name="Type">
+        <type type="String"/>
+      </attr>
+      <attr id="214" name="Type" type="99"/>
+      <attr id="215" name="Type" type="108"/>
+      <attr id="216" name="Type" type="111"/>
+      <attr id="217" name="Type" type="114"/>
+      <attr id="218" name="Type" type="117"/>
+      <attr id="219" name="Type organisme" type="84"/>
+      <attr id="220" name="Vérificateur">
+        <type type="String"/>
+      </attr>
+      <attr id="221" name="Version">
+        <type type="String"/>
+      </attr>
+    </elm>
+    <elm type="Package" id="222" name="Objets Métiers Communs">
+      <elm type="Class" id="223" name="Activité">
+        <ownedComment id="224">
+          <ownedComment id="225">
+            <body>Activité : aggrège ordre d'exécution (ordonnancement/chronologie/procédure) des tâches
+
+</body>
+          </ownedComment>
+          <body>Activité : aggrège ordre d'exécution (ordonnancement/chronologie/procédure) des tâches</body>
+        </ownedComment>
+        <attr id="226" type="940" aggregation="composite" association="228">
+          <upperValue type="LiteralUnlimitedNatural" id="227" value="*"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="228" memberEnd="226 229">
+        <ownedEnd id="229" type="223" association="228"/>
+      </elm>
+      <elm type="Class" id="230" name="Affaire">
+        <ownedComment id="231">
+          <body></body>
+        </ownedComment>
+        <attr id="232" type="305" association="240">
+          <upperValue type="LiteralUnlimitedNatural" id="233" value="*"/>
+          <lowerValue type="LiteralInteger" id="234"/>
+        </attr>
+        <attr id="235" type="223" association="243">
+          <upperValue type="LiteralUnlimitedNatural" id="236" value="*"/>
+          <lowerValue type="LiteralInteger" id="237"/>
+        </attr>
+        <attr id="238" name="Numéro">
+          <type type="String"/>
+        </attr>
+        <attr id="239" name="Nom">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="240" name="peut déboucher sur" memberEnd="232 241">
+        <ownedEnd id="241" type="230" association="240">
+          <upperValue type="LiteralUnlimitedNatural" id="242" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="243" memberEnd="235 244">
+        <ownedEnd id="244" type="230" association="243"/>
+      </elm>
+      <elm type="Class" id="245" name="Autorisation">
+        <attr id="246" type="723" association="252">
+          <upperValue type="LiteralUnlimitedNatural" id="247" value="*"/>
+        </attr>
+        <attr id="248" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="249" name="Date de validité">
+          <type type="Date"/>
+        </attr>
+        <attr id="250" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="251" name="Propriétaire">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="252" name="porte sur" memberEnd="246 253">
+        <ownedEnd id="253" type="245" association="252">
+          <upperValue type="LiteralUnlimitedNatural" id="254" value="*"/>
+          <lowerValue type="LiteralInteger" id="255"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="256" name="Avenant">
+        <attr id="257" type="305" association="265"/>
+        <attr id="258" type="305" association="269"/>
+        <attr id="259" name="commande" type="341" association="272">
+          <upperValue type="LiteralUnlimitedNatural" id="260" value="*"/>
+        </attr>
+        <attr id="261" name="Numéro">
+          <type type="String"/>
+        </attr>
+        <attr id="262" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="263" name="Date d'exécution">
+          <type type="Date"/>
+        </attr>
+        <attr id="264" name="Date de signature">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="265" name="met à jour" memberEnd="257 266">
+        <ownedEnd id="266" type="256" association="265">
+          <upperValue type="LiteralUnlimitedNatural" id="267" value="*"/>
+          <lowerValue type="LiteralInteger" id="268"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="269" name="Met à jour" memberEnd="258 270">
+        <ownedEnd id="270" type="256" association="269">
+          <upperValue type="LiteralUnlimitedNatural" id="271" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="272" name="Met à jour" memberEnd="259 273">
+        <ownedEnd id="273" type="256" association="272">
+          <upperValue type="LiteralUnlimitedNatural" id="274" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="275" name="Avis">
+        <attr id="276" name="Statut" type="32"/>
+      </elm>
+      <elm type="Class" id="277" name="Bâtiment">
+        <attr id="278" type="628" aggregation="composite" association="281">
+          <upperValue type="LiteralUnlimitedNatural" id="279" value="*"/>
+        </attr>
+        <attr id="280" name="Code">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="281" memberEnd="278 282">
+        <ownedEnd id="282" type="277" association="281"/>
+      </elm>
+      <elm type="Class" id="283" name="Bordereau d'envoi">
+        <attr id="284" type="858" association="293">
+          <upperValue type="LiteralUnlimitedNatural" id="285" value="*"/>
+        </attr>
+        <attr id="286" type="924" association="296"/>
+        <attr id="287" type="611" association="299">
+          <upperValue type="LiteralUnlimitedNatural" id="288" value="*"/>
+        </attr>
+        <attr id="289" type="656" association="302">
+          <ownedComment id="290">
+            <body>&lt;Saisir le texte de la note ici></body>
+          </ownedComment>
+        </attr>
+        <attr id="291" name="Numéro de canal">
+          <type type="String"/>
+        </attr>
+        <attr id="292" name="Date d'envoi">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="293" name="Concerne" memberEnd="284 294">
+        <ownedEnd id="294" type="283" association="293">
+          <upperValue type="LiteralUnlimitedNatural" id="295" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="296" name="Concerne" memberEnd="286 297">
+        <ownedEnd id="297" type="283" association="296">
+          <upperValue type="LiteralUnlimitedNatural" id="298" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="299" name="Concerne" memberEnd="287 300">
+        <ownedEnd id="300" type="283" association="299">
+          <upperValue type="LiteralUnlimitedNatural" id="301" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="302" name="Concerne" memberEnd="289 303">
+        <ownedEnd id="303" type="283" association="302">
+          <upperValue type="LiteralUnlimitedNatural" id="304" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="305" name="Contrat">
+        <attr id="306" type="256" association="327">
+          <upperValue type="LiteralUnlimitedNatural" id="307" value="*"/>
+          <lowerValue type="LiteralInteger" id="308"/>
+        </attr>
+        <attr id="309" type="812" association="329">
+          <upperValue type="LiteralUnlimitedNatural" id="310" value="*"/>
+        </attr>
+        <attr id="311" type="775" association="332"/>
+        <attr id="312" type="341" association="334">
+          <upperValue type="LiteralUnlimitedNatural" id="313" value="*"/>
+        </attr>
+        <attr id="314" type="256" association="336">
+          <upperValue type="LiteralUnlimitedNatural" id="315" value="*"/>
+          <lowerValue type="LiteralInteger" id="316"/>
+        </attr>
+        <attr id="317" type="812" association="338">
+          <upperValue type="LiteralUnlimitedNatural" id="318" value="*"/>
+        </attr>
+        <attr id="319" name="Numéro">
+          <type type="String"/>
+        </attr>
+        <attr id="320" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="321" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="322" name="Date d'éxécution">
+          <type type="String"/>
+        </attr>
+        <attr id="323" name="Date de signature">
+          <type type="String"/>
+        </attr>
+        <attr id="324" name="Statut" type="72"/>
+        <attr id="325" name="PIDU" type="57"/>
+        <attr id="326" name="Type">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="327" name="donne lieu à" memberEnd="306 328">
+        <ownedEnd id="328" type="305" association="327"/>
+      </elm>
+      <elm type="Association" id="329" name="est associé à" memberEnd="309 330">
+        <ownedEnd id="330" type="305" association="329">
+          <upperValue type="LiteralUnlimitedNatural" id="331" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="332" memberEnd="311 333">
+        <ownedEnd id="333" type="305" association="332"/>
+      </elm>
+      <elm type="Association" id="334" name="Regroupe" memberEnd="312 335">
+        <ownedEnd id="335" type="305" association="334"/>
+      </elm>
+      <elm type="Association" id="336" name="Donne lieu " memberEnd="314 337">
+        <ownedEnd id="337" type="305" association="336"/>
+      </elm>
+      <elm type="Association" id="338" name="Concerne" memberEnd="317 339">
+        <ownedEnd id="339" type="305" association="338">
+          <upperValue type="LiteralUnlimitedNatural" id="340" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="341" name="Commande">
+        <attr id="342" type="528" association="352">
+          <upperValue type="LiteralUnlimitedNatural" id="343" value="*"/>
+          <lowerValue type="LiteralInteger" id="344"/>
+        </attr>
+        <attr id="345" type="630" aggregation="composite" association="355">
+          <upperValue type="LiteralUnlimitedNatural" id="346" value="*"/>
+          <lowerValue type="LiteralInteger" id="347"/>
+        </attr>
+        <attr id="348" name="Numéro commande">
+          <type type="String"/>
+        </attr>
+        <attr id="349" name="Lot de commande">
+          <type type="String"/>
+        </attr>
+        <attr id="350" name="Date d'exécution">
+          <type type="Date"/>
+        </attr>
+        <attr id="351" name="Date de signature">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="352" memberEnd="342 353">
+        <ownedEnd id="353" type="341" association="352">
+          <upperValue type="LiteralUnlimitedNatural" id="354" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="355" memberEnd="345 356">
+        <ownedEnd id="356" type="341" association="355"/>
+      </elm>
+      <elm type="Class" id="357" name="Constat">
+        <attr id="358" name="Référence">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="359" name="Contrôle Technique">
+        <attr id="360" type="723" association="367"/>
+        <attr id="361" type="383" association="371">
+          <lowerValue type="LiteralInteger" id="362"/>
+        </attr>
+        <attr id="363" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="364" name="Date d'émission">
+          <type type="String"/>
+        </attr>
+        <attr id="365" name="Critère d'acceptabilité">
+          <type type="String"/>
+        </attr>
+        <attr id="366" name="Résultat">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="367" name="porte sur" memberEnd="360 368">
+        <ownedEnd id="368" type="359" association="367">
+          <upperValue type="LiteralUnlimitedNatural" id="369" value="*"/>
+          <lowerValue type="LiteralInteger" id="370"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="371" name="mentionne" memberEnd="361 372">
+        <ownedEnd id="372" type="359" association="371">
+          <lowerValue type="LiteralInteger" id="373"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="374" name="Datasheet">
+        <attr id="375" type="468" association="381">
+          <upperValue type="LiteralUnlimitedNatural" id="376" value="*"/>
+        </attr>
+        <attr id="377" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="378" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="379" name="Statut" type="80"/>
+        <attr id="380" name="Révision">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="381" name="Regroupe" memberEnd="375 382">
+        <ownedEnd id="382" type="374" association="381"/>
+      </elm>
+      <elm type="Class" id="383" name="Document">
+        <attr id="384" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="385" name="Type" type="99"/>
+        <attr id="386" name="Format" type="44"/>
+      </elm>
+      <elm type="Class" id="387" name="Document de référence">
+        <generalization id="388" general="383"/>
+        <attr id="389" name="contrat" type="305" association="399">
+          <lowerValue type="LiteralInteger" id="390"/>
+        </attr>
+        <attr id="391" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="392" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="393" name="Statut" type="80"/>
+        <attr id="394" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="395" name="Détail">
+          <type type="String"/>
+        </attr>
+        <attr id="396" name="Confidentialité">
+          <type type="String"/>
+        </attr>
+        <attr id="397" name="Libellé">
+          <type type="String"/>
+        </attr>
+        <attr id="398" name="Type" type="99"/>
+      </elm>
+      <elm type="Association" id="399" memberEnd="389 400">
+        <ownedEnd id="400" type="387" association="399">
+          <lowerValue type="LiteralInteger" id="401"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="402" name="Donneur d'Ordres">
+        <generalization id="403" general="499"/>
+        <attr id="404" type="981" association="413">
+          <upperValue type="LiteralUnlimitedNatural" id="405" value="*"/>
+        </attr>
+        <attr id="406" name="contrat" type="305" association="415">
+          <upperValue type="LiteralUnlimitedNatural" id="407" value="*"/>
+        </attr>
+        <attr id="408" type="256" association="417">
+          <upperValue type="LiteralUnlimitedNatural" id="409" value="*"/>
+        </attr>
+        <attr id="410" type="283" association="419">
+          <upperValue type="LiteralUnlimitedNatural" id="411" value="*"/>
+          <lowerValue type="LiteralInteger" id="412"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="413" name="est responsable de" memberEnd="404 414">
+        <ownedEnd id="414" type="402" association="413"/>
+      </elm>
+      <elm type="Association" id="415" name="Signe" memberEnd="406 416">
+        <ownedEnd id="416" type="402" association="415"/>
+      </elm>
+      <elm type="Association" id="417" name="Signe" memberEnd="408 418">
+        <ownedEnd id="418" type="402" association="417"/>
+      </elm>
+      <elm type="Association" id="419" name="Signe" memberEnd="410 420">
+        <ownedEnd id="420" type="402" association="419"/>
+      </elm>
+      <elm type="Class" id="421" name="Dossier de Suivi">
+        <attr id="422" type="421" aggregation="composite" association="432">
+          <upperValue type="LiteralUnlimitedNatural" id="423" value="*"/>
+        </attr>
+        <attr id="424" type="528" association="434">
+          <upperValue type="LiteralUnlimitedNatural" id="425" value="*"/>
+        </attr>
+        <attr id="426" type="402" association="437"/>
+        <attr id="427" name="Tidtre">
+          <type type="String"/>
+        </attr>
+        <attr id="428" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="429" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="430" name="Date d'édition">
+          <type type="Date"/>
+        </attr>
+        <attr id="431" name="Statut" type="32"/>
+      </elm>
+      <elm type="Association" id="432" memberEnd="422 433">
+        <ownedEnd id="433" type="421" association="432"/>
+      </elm>
+      <elm type="Association" id="434" name="mentionne" memberEnd="424 435">
+        <ownedEnd id="435" type="421" association="434">
+          <upperValue type="LiteralUnlimitedNatural" id="436" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="437" name="mentionne" memberEnd="426 438">
+        <ownedEnd id="438" type="421" association="437">
+          <upperValue type="LiteralUnlimitedNatural" id="439" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="440" name="Dossier technique">
+        <attr id="441" type="374" association="457">
+          <lowerValue type="LiteralInteger" id="442"/>
+        </attr>
+        <attr id="443" type="963" association="459">
+          <upperValue type="LiteralUnlimitedNatural" id="444" value="*"/>
+        </attr>
+        <attr id="445" type="601" association="461"/>
+        <attr id="446" type="341" association="463">
+          <upperValue type="LiteralUnlimitedNatural" id="447" value="*"/>
+        </attr>
+        <attr id="448" type="305" association="466"/>
+        <attr id="449" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="450" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="451" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="452" name="Statut" type="80"/>
+        <attr id="453" name="Rédacteur">
+          <type type="String"/>
+        </attr>
+        <attr id="454" name="Approbateur">
+          <type type="String"/>
+        </attr>
+        <attr id="455" name="Vérificateur">
+          <type type="String"/>
+        </attr>
+        <attr id="456" name="Date de publication">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="457" name="Regroupe" memberEnd="441 458">
+        <ownedEnd id="458" type="440" association="457"/>
+      </elm>
+      <elm type="Association" id="459" name="Regroupe" memberEnd="443 460">
+        <ownedEnd id="460" type="440" association="459"/>
+      </elm>
+      <elm type="Association" id="461" name="Regroupe" memberEnd="445 462">
+        <ownedEnd id="462" type="440" association="461"/>
+      </elm>
+      <elm type="Association" id="463" name="Est effectif pour" memberEnd="446 464">
+        <ownedEnd id="464" type="440" association="463">
+          <upperValue type="LiteralUnlimitedNatural" id="465" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="466" name="Est effectif pour" memberEnd="448 467">
+        <ownedEnd id="467" type="440" association="466"/>
+      </elm>
+      <elm type="Class" id="468" name="Exigence">
+        <attr id="469" type="523" association="481">
+          <upperValue type="LiteralUnlimitedNatural" id="470" value="*"/>
+        </attr>
+        <attr id="471" type="387" association="484">
+          <upperValue type="LiteralUnlimitedNatural" id="472" value="*"/>
+        </attr>
+        <attr id="473" type="723" association="487">
+          <upperValue type="LiteralUnlimitedNatural" id="474" value="*"/>
+        </attr>
+        <attr id="475" name="Identifiant">
+          <type type="String"/>
+        </attr>
+        <attr id="476" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="477" name="Enoncé">
+          <type type="String"/>
+        </attr>
+        <attr id="478" name="Version">
+          <type type="String"/>
+        </attr>
+        <attr id="479" name="Statut">
+          <type type="String"/>
+        </attr>
+        <attr id="480" name="Justification">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="481" name="est associée à" memberEnd="469 482">
+        <ownedEnd id="482" type="468" association="481">
+          <upperValue type="LiteralUnlimitedNatural" id="483" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="484" name="se réfère à" memberEnd="471 485">
+        <ownedEnd id="485" type="468" association="484">
+          <upperValue type="LiteralUnlimitedNatural" id="486" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="487" name="est associée à" memberEnd="473 488">
+        <ownedEnd id="488" type="468" association="487">
+          <upperValue type="LiteralUnlimitedNatural" id="489" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="490" name="Exigence contractuelle">
+        <generalization id="491" general="468"/>
+        <attr id="492" type="305" association="496">
+          <upperValue type="LiteralUnlimitedNatural" id="493" value="*"/>
+          <lowerValue type="LiteralInteger" id="494"/>
+        </attr>
+        <attr id="495" name="Libellé">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="496" name="contraint" memberEnd="492 497">
+        <ownedEnd id="497" type="490" association="496">
+          <upperValue type="LiteralUnlimitedNatural" id="498" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="499" name="Entité Juridique">
+        <attr id="500" type="305" association="512">
+          <upperValue type="LiteralUnlimitedNatural" id="501" value="*"/>
+          <lowerValue type="LiteralInteger" id="502"/>
+        </attr>
+        <attr id="503" type="589" association="516">
+          <upperValue type="LiteralUnlimitedNatural" id="504" value="*"/>
+        </attr>
+        <attr id="505" type="256" association="519">
+          <upperValue type="LiteralUnlimitedNatural" id="506" value="*"/>
+          <lowerValue type="LiteralInteger" id="507"/>
+        </attr>
+        <attr id="508" name="Numéro de SIREN">
+          <type type="String"/>
+        </attr>
+        <attr id="509" name="Nom">
+          <type type="String"/>
+        </attr>
+        <attr id="510" name="Contact">
+          <type type="String"/>
+        </attr>
+        <attr id="511" name="Code">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="512" name="signe" memberEnd="500 513">
+        <ownedEnd id="513" type="499" association="512">
+          <upperValue type="LiteralUnlimitedNatural" id="514" value="*"/>
+          <lowerValue type="LiteralInteger" id="515" value="2"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="516" name="délivre" memberEnd="503 517">
+        <ownedEnd id="517" type="499" association="516">
+          <upperValue type="LiteralUnlimitedNatural" id="518" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="519" name="signe" memberEnd="505 520">
+        <ownedEnd id="520" type="499" association="519">
+          <upperValue type="LiteralUnlimitedNatural" id="521" value="2"/>
+          <lowerValue type="LiteralInteger" id="522" value="2"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="523" name="Equipement">
+        <attr id="524" name="Code">
+          <type type="String"/>
+        </attr>
+        <attr id="525" name="EIP">
+          <type type="Boolean"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="526" name="Exigence Technique">
+        <generalization id="527" general="468"/>
+      </elm>
+      <elm type="Class" id="528" name="Fournisseur">
+        <generalization id="529" general="499"/>
+        <attr id="530" type="997" association="558"/>
+        <attr id="531" name="usine" type="992" association="560">
+          <lowerValue type="LiteralInteger" id="532"/>
+        </attr>
+        <attr id="533" name="contrat" type="305" association="563">
+          <lowerValue type="LiteralInteger" id="534"/>
+        </attr>
+        <attr id="535" name="marché" type="637" association="566">
+          <lowerValue type="LiteralInteger" id="536"/>
+        </attr>
+        <attr id="537" name="organisme" type="757" association="569">
+          <lowerValue type="LiteralInteger" id="538"/>
+        </attr>
+        <attr id="539" type="611" association="572">
+          <upperValue type="LiteralUnlimitedNatural" id="540" value="*"/>
+        </attr>
+        <attr id="541" type="656" association="574"/>
+        <attr id="542" type="630" association="576">
+          <upperValue type="LiteralUnlimitedNatural" id="543" value="*"/>
+        </attr>
+        <attr id="544" type="341" association="578">
+          <upperValue type="LiteralUnlimitedNatural" id="545" value="*"/>
+        </attr>
+        <attr id="546" name="avenant" type="256" association="580">
+          <upperValue type="LiteralUnlimitedNatural" id="547" value="*"/>
+        </attr>
+        <attr id="548" name="contrat" type="305" association="582">
+          <upperValue type="LiteralUnlimitedNatural" id="549" value="*"/>
+        </attr>
+        <attr id="550" name="réponse" type="858" association="585">
+          <upperValue type="LiteralUnlimitedNatural" id="551" value="*"/>
+        </attr>
+        <attr id="552" type="283" association="587">
+          <upperValue type="LiteralUnlimitedNatural" id="553" value="*"/>
+        </attr>
+        <attr id="554" name="Type" type="108"/>
+        <attr id="555" name="Rang">
+          <type type="Integer"/>
+        </attr>
+        <attr id="556" name="Niveau d'intervention" type="54"/>
+        <attr id="557" name="Domaine de qualification">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="558" name="émet" memberEnd="530 559">
+        <ownedEnd id="559" type="528" association="558"/>
+      </elm>
+      <elm type="Association" id="560" memberEnd="531 561">
+        <ownedEnd id="561" type="528" association="560">
+          <lowerValue type="LiteralInteger" id="562"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="563" memberEnd="533 564">
+        <ownedEnd id="564" type="528" association="563">
+          <lowerValue type="LiteralInteger" id="565"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="566" memberEnd="535 567">
+        <ownedEnd id="567" type="528" association="566">
+          <lowerValue type="LiteralInteger" id="568"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="569" memberEnd="537 570">
+        <ownedEnd id="570" type="528" association="569">
+          <lowerValue type="LiteralInteger" id="571"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="572" name="Emet" memberEnd="539 573">
+        <ownedEnd id="573" type="528" association="572"/>
+      </elm>
+      <elm type="Association" id="574" name="Emet" memberEnd="541 575">
+        <ownedEnd id="575" type="528" association="574"/>
+      </elm>
+      <elm type="Association" id="576" name="Prend en charge" memberEnd="542 577">
+        <ownedEnd id="577" type="528" association="576"/>
+      </elm>
+      <elm type="Association" id="578" name="Signe" memberEnd="544 579">
+        <ownedEnd id="579" type="528" association="578"/>
+      </elm>
+      <elm type="Association" id="580" name="Signe" memberEnd="546 581">
+        <ownedEnd id="581" type="528" association="580"/>
+      </elm>
+      <elm type="Association" id="582" name="Signe" memberEnd="548 583">
+        <ownedEnd id="583" type="528" association="582">
+          <upperValue type="LiteralUnlimitedNatural" id="584" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="585" name="Emet" memberEnd="550 586">
+        <ownedEnd id="586" type="528" association="585"/>
+      </elm>
+      <elm type="Association" id="587" name="Signe" memberEnd="552 588">
+        <ownedEnd id="588" type="528" association="587"/>
+      </elm>
+      <elm type="Class" id="589" name="Habilitation">
+        <attr id="590" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="591" name="Date de validité">
+          <type type="Date"/>
+        </attr>
+        <attr id="592" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="593" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="594" name="Accréditation" type="12"/>
+      </elm>
+      <elm type="Class" id="595" name="Ilot">
+        <attr id="596" type="277" aggregation="composite" association="599">
+          <upperValue type="LiteralUnlimitedNatural" id="597" value="*"/>
+        </attr>
+        <attr id="598" name="Code">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="599" memberEnd="596 600">
+        <ownedEnd id="600" type="595" association="599"/>
+      </elm>
+      <elm type="Class" id="601" name="Liste des documents et données requis fournisseur">
+        <attr id="602" type="468" association="609">
+          <upperValue type="LiteralUnlimitedNatural" id="603" value="*"/>
+        </attr>
+        <attr id="604" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="605" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="606" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="607" name="Statut" type="80"/>
+        <attr id="608" name="Date de validation">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="609" name="Regroupe" memberEnd="602 610">
+        <ownedEnd id="610" type="601" association="609"/>
+      </elm>
+      <elm type="Class" id="611" name="Livrable">
+        <attr id="612" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="613" name="Référence fournisseur">
+          <type type="String"/>
+        </attr>
+        <attr id="614" name="Référence donneur d'ordre">
+          <type type="String"/>
+        </attr>
+        <attr id="615" name="Date effective d'envoi">
+          <type type="Date"/>
+        </attr>
+        <attr id="616" name="Date prévisionnelle d'envoi">
+          <type type="Date"/>
+        </attr>
+        <attr id="617" name="Statut" type="80"/>
+        <attr id="618" name="Etat de validité" type="35"/>
+        <attr id="619" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="620" name="AIP">
+          <type type="Boolean"/>
+        </attr>
+        <attr id="621" name="Classement" type="26"/>
+        <attr id="622" name="Export control">
+          <type type="Boolean"/>
+        </attr>
+        <attr id="623" name="RGPD">
+          <type type="Boolean"/>
+        </attr>
+        <attr id="624" name="PIDU" type="57"/>
+        <attr id="625" name="Rédacteur">
+          <type type="String"/>
+        </attr>
+        <attr id="626" name="Approbateur">
+          <type type="String"/>
+        </attr>
+        <attr id="627" name="Vérificateur">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="628" name="Local">
+        <attr id="629" name="Code">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="630" name="Lot">
+        <attr id="631" type="305" aggregation="composite" association="635">
+          <upperValue type="LiteralUnlimitedNatural" id="632" value="*"/>
+        </attr>
+        <attr id="633" name="Numéro">
+          <type type="String"/>
+        </attr>
+        <attr id="634" name="Nom">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="635" memberEnd="631 636">
+        <ownedEnd id="636" type="630" association="635"/>
+      </elm>
+      <elm type="Class" id="637" name="Marché">
+        <attr id="638" type="630" aggregation="composite" association="650">
+          <upperValue type="LiteralUnlimitedNatural" id="639" value="*"/>
+          <lowerValue type="LiteralInteger" id="640"/>
+        </attr>
+        <attr id="641" type="305" association="652"/>
+        <attr id="642" type="305" association="654">
+          <ownedComment id="643">
+            <body>Un marché soumis auprès de plusieurs soumissionnaires peut donner lieu à 0 ou n contrats</body>
+          </ownedComment>
+          <upperValue type="LiteralUnlimitedNatural" id="644" value="*"/>
+          <lowerValue type="LiteralInteger" id="645"/>
+        </attr>
+        <attr id="646" name="Libellé">
+          <type type="String"/>
+        </attr>
+        <attr id="647" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="648" name="Type" type="111"/>
+        <attr id="649" name="Numéro marché">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="650" memberEnd="638 651">
+        <ownedEnd id="651" type="637" association="650"/>
+      </elm>
+      <elm type="Association" id="652" name="concrétise la signature de" memberEnd="641 653">
+        <ownedEnd id="653" type="637" association="652"/>
+      </elm>
+      <elm type="Association" id="654" name="Est contractualisé" memberEnd="642 655">
+        <ownedEnd id="655" type="637" association="654"/>
+      </elm>
+      <elm type="Class" id="656" name="Matrice de couverture">
+        <attr id="657" type="468" association="672">
+          <upperValue type="LiteralUnlimitedNatural" id="658" value="*"/>
+        </attr>
+        <attr id="659" type="611" association="674">
+          <upperValue type="LiteralUnlimitedNatural" id="660" value="*"/>
+        </attr>
+        <attr id="661" name="Référence fournisseur">
+          <type type="String"/>
+        </attr>
+        <attr id="662" name="Statut" type="80"/>
+        <attr id="663" name="Etat de validité" type="35"/>
+        <attr id="664" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="665" name="Date effective d'envoi">
+          <type type="Date"/>
+        </attr>
+        <attr id="666" name="Référence donneur d'ordre">
+          <type type="String"/>
+        </attr>
+        <attr id="667" name="Date prévisionnelle d'envoi">
+          <type type="Date"/>
+        </attr>
+        <attr id="668" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="669" name="Approbateur">
+          <type type="String"/>
+        </attr>
+        <attr id="670" name="Vérificateur">
+          <type type="String"/>
+        </attr>
+        <attr id="671" name="Rédacteur">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="672" name="Trace" memberEnd="657 673">
+        <ownedEnd id="673" type="656" association="672"/>
+      </elm>
+      <elm type="Association" id="674" name="Trace" memberEnd="659 675">
+        <ownedEnd id="675" type="656" association="674"/>
+      </elm>
+      <elm type="Class" id="676" name="Non-Conformité">
+        <ownedComment id="677">
+          <body>Cf MDM de François (Visio envoyé)
+</body>
+        </ownedComment>
+        <attr id="678" type="357" association="685"/>
+        <attr id="679" type="723" association="689">
+          <upperValue type="LiteralUnlimitedNatural" id="680" value="*"/>
+          <lowerValue type="LiteralInteger" id="681"/>
+        </attr>
+        <attr id="682" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="683" name="Type" type="114"/>
+        <attr id="684" name="Date">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="685" memberEnd="678 686">
+        <ownedEnd id="686" type="676" association="685">
+          <upperValue type="LiteralUnlimitedNatural" id="687" value="*"/>
+          <lowerValue type="LiteralInteger" id="688"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="689" memberEnd="679 690">
+        <ownedEnd id="690" type="676" association="689">
+          <upperValue type="LiteralUnlimitedNatural" id="691" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="692" name="Observation">
+        <attr id="693" type="723" association="703">
+          <upperValue type="LiteralUnlimitedNatural" id="694" value="*"/>
+        </attr>
+        <attr id="695" type="383" association="707">
+          <upperValue type="LiteralUnlimitedNatural" id="696" value="*"/>
+          <lowerValue type="LiteralInteger" id="697"/>
+        </attr>
+        <attr id="698" type="611" association="710">
+          <upperValue type="LiteralUnlimitedNatural" id="699" value="*"/>
+        </attr>
+        <attr id="700" name="Date de suivi">
+          <type type="Date"/>
+        </attr>
+        <attr id="701" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="702" name="Importance" type="51"/>
+      </elm>
+      <elm type="Association" id="703" name="est émise sur" memberEnd="693 704">
+        <ownedEnd id="704" type="692" association="703">
+          <upperValue type="LiteralUnlimitedNatural" id="705" value="*"/>
+          <lowerValue type="LiteralInteger" id="706"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="707" name="est complétée par" memberEnd="695 708">
+        <ownedEnd id="708" type="692" association="707">
+          <upperValue type="LiteralUnlimitedNatural" id="709" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="710" name="Concerne" memberEnd="698 711">
+        <ownedEnd id="711" type="692" association="710">
+          <upperValue type="LiteralUnlimitedNatural" id="712" value="*"/>
+          <lowerValue type="LiteralInteger" id="713"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="714" name="Opération">
+        <attr id="715" name="Numéro de séquence">
+          <type type="Integer"/>
+        </attr>
+        <attr id="716" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="717" name="Statut" type="80"/>
+        <attr id="718" name="Libellé">
+          <type type="String"/>
+        </attr>
+        <attr id="719" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="720" name="AIP">
+          <type type="Boolean"/>
+        </attr>
+        <attr id="721" name="Date de début">
+          <type type="Date"/>
+        </attr>
+        <attr id="722" name="Date de fin">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="723" name="Opération GC">
+        <generalization id="724" general="714"/>
+        <attr id="725" type="523" association="734">
+          <upperValue type="LiteralUnlimitedNatural" id="726" value="*"/>
+          <lowerValue type="LiteralInteger" id="727"/>
+        </attr>
+        <attr id="728" type="387" association="737">
+          <upperValue type="LiteralUnlimitedNatural" id="729" value="*"/>
+          <lowerValue type="LiteralInteger" id="730"/>
+        </attr>
+        <attr id="731" type="357" association="740">
+          <upperValue type="LiteralUnlimitedNatural" id="732" value="*"/>
+        </attr>
+        <attr id="733" name="Catégorie" type="17"/>
+      </elm>
+      <elm type="Association" id="734" name="nécessite" memberEnd="725 735">
+        <ownedEnd id="735" type="723" association="734">
+          <upperValue type="LiteralUnlimitedNatural" id="736" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="737" name="s'appuie sur" memberEnd="728 738">
+        <ownedEnd id="738" type="723" association="737">
+          <upperValue type="LiteralUnlimitedNatural" id="739" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="740" memberEnd="731 741">
+        <ownedEnd id="741" type="723" association="740">
+          <upperValue type="LiteralUnlimitedNatural" id="742" value="*"/>
+          <lowerValue type="LiteralInteger" id="743"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="744" name="Ordre d'exécution">
+        <attr id="745" name="contrat" type="305" association="752">
+          <lowerValue type="LiteralInteger" id="746"/>
+        </attr>
+        <attr id="747" name="commande" type="341" aggregation="composite" association="755">
+          <lowerValue type="LiteralInteger" id="748"/>
+        </attr>
+        <attr id="749" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="750" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="751" name="Date">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="752" memberEnd="745 753">
+        <ownedEnd id="753" type="744" association="752">
+          <lowerValue type="LiteralInteger" id="754"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="755" memberEnd="747 756">
+        <ownedEnd id="756" type="744" association="755"/>
+      </elm>
+      <elm type="Class" id="757" name="Organisme">
+        <generalization id="758" general="499"/>
+        <attr id="759" name="Type organisme" type="84"/>
+      </elm>
+      <elm type="Class" id="760" name="Point de notification">
+        <attr id="761" type="723" association="770">
+          <upperValue type="LiteralUnlimitedNatural" id="762" value="*"/>
+        </attr>
+        <attr id="763" type="989" association="773">
+          <lowerValue type="LiteralInteger" id="764"/>
+        </attr>
+        <attr id="765" name="Type" type="117"/>
+        <attr id="766" name="Levée">
+          <type type="Boolean"/>
+        </attr>
+        <attr id="767" name="Signataire">
+          <type type="String"/>
+        </attr>
+        <attr id="768" name="Date de signature">
+          <type type="Date"/>
+        </attr>
+        <attr id="769" name="Signature">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="770" name="caractérise" memberEnd="761 771">
+        <ownedEnd id="771" type="760" association="770">
+          <upperValue type="LiteralUnlimitedNatural" id="772" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="773" name="implique (Si point de convocation, cela n’implique pas d’action de surveillance terrain)" memberEnd="763 774">
+        <ownedEnd id="774" type="760" association="773"/>
+      </elm>
+      <elm type="Class" id="775" name="Prestation">
+        <attr id="776" type="630" aggregation="composite" association="786">
+          <upperValue type="LiteralUnlimitedNatural" id="777" value="*"/>
+          <lowerValue type="LiteralInteger" id="778"/>
+        </attr>
+        <attr id="779" type="952" association="788">
+          <upperValue type="LiteralUnlimitedNatural" id="780" value="*"/>
+        </attr>
+        <attr id="781" type="341" association="792">
+          <upperValue type="LiteralUnlimitedNatural" id="782" value="*"/>
+        </attr>
+        <attr id="783" type="744" association="794"/>
+        <attr id="784" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="785" name="Type">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="786" memberEnd="776 787">
+        <ownedEnd id="787" type="775" association="786"/>
+      </elm>
+      <elm type="Association" id="788" name="se déroule sur" memberEnd="779 789">
+        <ownedEnd id="789" type="775" association="788">
+          <upperValue type="LiteralUnlimitedNatural" id="790" value="*"/>
+          <lowerValue type="LiteralInteger" id="791"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="792" name="peut procèder directement à" memberEnd="781 793">
+        <ownedEnd id="793" type="775" association="792"/>
+      </elm>
+      <elm type="Association" id="794" name="induit" memberEnd="783 795">
+        <ownedEnd id="795" type="775" association="794"/>
+      </elm>
+      <elm type="Class" id="796" name="Procès Verbal">
+        <attr id="797" type="723" association="804"/>
+        <attr id="798" type="383" association="807"/>
+        <attr id="799" type="359" association="809"/>
+        <attr id="800" name="Référence">
+          <type type="Date"/>
+        </attr>
+        <attr id="801" name="Date d'émission">
+          <type type="Date"/>
+        </attr>
+        <attr id="802" name="Statut" type="76"/>
+        <attr id="803" name="Résultat">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="804" name="atteste" memberEnd="797 805">
+        <ownedEnd id="805" type="796" association="804">
+          <lowerValue type="LiteralInteger" id="806"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="807" name="mentionne" memberEnd="798 808">
+        <ownedEnd id="808" type="796" association="807"/>
+      </elm>
+      <elm type="Association" id="809" name="atteste du" memberEnd="799 810">
+        <ownedEnd id="810" type="796" association="809">
+          <lowerValue type="LiteralInteger" id="811"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="812" name="Projet">
+        <ownedComment id="813">
+          <body></body>
+        </ownedComment>
+        <attr id="814" type="230" aggregation="composite" association="833">
+          <upperValue type="LiteralUnlimitedNatural" id="815" value="*"/>
+          <lowerValue type="LiteralInteger" id="816"/>
+        </attr>
+        <attr id="817" type="223" association="835">
+          <upperValue type="LiteralUnlimitedNatural" id="818" value="*"/>
+          <lowerValue type="LiteralInteger" id="819"/>
+        </attr>
+        <attr id="820" name="tranche" type="945" association="837">
+          <lowerValue type="LiteralInteger" id="821"/>
+        </attr>
+        <attr id="822" name="organisme" type="757" association="840">
+          <lowerValue type="LiteralInteger" id="823"/>
+        </attr>
+        <attr id="824" name="marché" type="637" association="843">
+          <lowerValue type="LiteralInteger" id="825"/>
+        </attr>
+        <attr id="826" name="contrat" type="305" association="846">
+          <lowerValue type="LiteralInteger" id="827"/>
+        </attr>
+        <attr id="828" type="230" association="849">
+          <upperValue type="LiteralUnlimitedNatural" id="829" value="*"/>
+          <lowerValue type="LiteralInteger" id="830"/>
+        </attr>
+        <attr id="831" name="Numéro">
+          <type type="Integer"/>
+        </attr>
+        <attr id="832" name="Nom">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="833" memberEnd="814 834">
+        <ownedEnd id="834" type="812" association="833"/>
+      </elm>
+      <elm type="Association" id="835" name="contient" memberEnd="817 836">
+        <ownedEnd id="836" type="812" association="835"/>
+      </elm>
+      <elm type="Association" id="837" memberEnd="820 838">
+        <ownedEnd id="838" type="812" association="837">
+          <lowerValue type="LiteralInteger" id="839"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="840" memberEnd="822 841">
+        <ownedEnd id="841" type="812" association="840">
+          <lowerValue type="LiteralInteger" id="842"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="843" memberEnd="824 844">
+        <ownedEnd id="844" type="812" association="843">
+          <lowerValue type="LiteralInteger" id="845"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="846" memberEnd="826 847">
+        <ownedEnd id="847" type="812" association="846">
+          <lowerValue type="LiteralInteger" id="848"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="849" name="Est associé à " memberEnd="828 850">
+        <ownedEnd id="850" type="812" association="849"/>
+      </elm>
+      <elm type="Class" id="851" name="Rapport de synthèse">
+        <attr id="852" type="230" association="856"/>
+        <attr id="853" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="854" name="Statut">
+          <type type="String"/>
+        </attr>
+        <attr id="855" name="Révision">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="856" name="porte sur" memberEnd="852 857">
+        <ownedEnd id="857" type="851" association="856"/>
+      </elm>
+      <elm type="Class" id="858" name="Réponse">
+        <attr id="859" type="924" association="871"/>
+        <attr id="860" type="611" association="874">
+          <upperValue type="LiteralUnlimitedNatural" id="861" value="*"/>
+        </attr>
+        <attr id="862" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="863" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="864" name="Justification">
+          <type type="String"/>
+        </attr>
+        <attr id="865" name="Prise en compte">
+          <type type="Boolean"/>
+        </attr>
+        <attr id="866" name="Etat de validité" type="35"/>
+        <attr id="867" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="868" name="Rédacteur">
+          <type type="String"/>
+        </attr>
+        <attr id="869" name="Approbateur">
+          <type type="String"/>
+        </attr>
+        <attr id="870" name="Vérificateur">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="871" name="Porte sur " memberEnd="859 872">
+        <ownedEnd id="872" type="858" association="871">
+          <upperValue type="LiteralUnlimitedNatural" id="873" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="874" name="Correspond" memberEnd="860 875">
+        <ownedEnd id="875" type="858" association="874">
+          <upperValue type="LiteralUnlimitedNatural" id="876" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="877" name="Ressource">
+        <attr id="878" type="723" association="887">
+          <upperValue type="LiteralUnlimitedNatural" id="879" value="*"/>
+        </attr>
+        <attr id="880" name="Nom">
+          <type type="String"/>
+        </attr>
+        <attr id="881" name="Description">
+          <type type="String"/>
+        </attr>
+        <attr id="882" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="883" name="Statut" type="80"/>
+        <attr id="884" name="Libellé">
+          <type type="String"/>
+        </attr>
+        <attr id="885" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="886" name="Détail">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="887" name="réalise" memberEnd="878 888">
+        <ownedEnd id="888" type="877" association="887"/>
+      </elm>
+      <elm type="Class" id="889" name="Ressource consommable">
+        <generalization id="890" general="877"/>
+        <attr id="891" name="Titre">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="892" name="Ressource humaine">
+        <generalization id="893" general="877"/>
+        <attr id="894" type="589" association="910">
+          <upperValue type="LiteralUnlimitedNatural" id="895" value="*"/>
+        </attr>
+        <attr id="896" type="760" association="913">
+          <upperValue type="LiteralUnlimitedNatural" id="897" value="*"/>
+          <lowerValue type="LiteralInteger" id="898"/>
+        </attr>
+        <attr id="899" type="972" association="915">
+          <upperValue type="LiteralUnlimitedNatural" id="900" value="*"/>
+        </attr>
+        <attr id="901" name="Entreprise">
+          <type type="String"/>
+        </attr>
+        <attr id="902" name="Rôle" type="66"/>
+        <attr id="903" name="Certification">
+          <type type="String"/>
+        </attr>
+        <attr id="904" name="Fonction">
+          <type type="String"/>
+        </attr>
+        <attr id="905" name="Trigramme">
+          <type type="String"/>
+        </attr>
+        <attr id="906" name="Prénom">
+          <type type="String"/>
+        </attr>
+        <attr id="907" name="Email">
+          <type type="String"/>
+        </attr>
+        <attr id="908" name="Nom">
+          <type type="String"/>
+        </attr>
+        <attr id="909" name="Téléphone">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="910" name="dispose de" memberEnd="894 911">
+        <ownedEnd id="911" type="892" association="910">
+          <upperValue type="LiteralUnlimitedNatural" id="912" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="913" name="lève" memberEnd="896 914">
+        <ownedEnd id="914" type="892" association="913"/>
+      </elm>
+      <elm type="Association" id="915" name="réalise" memberEnd="899 916">
+        <ownedEnd id="916" type="892" association="915">
+          <upperValue type="LiteralUnlimitedNatural" id="917" value="*"/>
+          <lowerValue type="LiteralInteger" id="918"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="919" name="Ressource outillage">
+        <generalization id="920" general="877"/>
+        <attr id="921" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="922" name="Type" type="120"/>
+        <attr id="923" name="Date de validité">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="924" name="Revue de surveillance">
+        <attr id="925" type="692" association="936">
+          <upperValue type="LiteralUnlimitedNatural" id="926" value="*"/>
+          <lowerValue type="LiteralInteger" id="927"/>
+        </attr>
+        <attr id="928" type="611" association="938">
+          <upperValue type="LiteralUnlimitedNatural" id="929" value="*"/>
+        </attr>
+        <attr id="930" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="931" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="932" name="Statut" type="95"/>
+        <attr id="933" name="Date effective d'envoi">
+          <type type="Date"/>
+        </attr>
+        <attr id="934" name="Date prévisionnelle d'envoi">
+          <type type="Date"/>
+        </attr>
+        <attr id="935" name="Résultat de surveillance" type="87"/>
+      </elm>
+      <elm type="Association" id="936" name="Regroupe" memberEnd="925 937">
+        <ownedEnd id="937" type="924" association="936"/>
+      </elm>
+      <elm type="Association" id="938" name="Concerne" memberEnd="928 939">
+        <ownedEnd id="939" type="924" association="938"/>
+      </elm>
+      <elm type="Class" id="940" name="Tâche">
+        <attr id="941" type="723" aggregation="composite" association="943">
+          <upperValue type="LiteralUnlimitedNatural" id="942" value="*"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="943" memberEnd="941 944">
+        <ownedEnd id="944" type="940" association="943"/>
+      </elm>
+      <elm type="Class" id="945" name="Tranche">
+        <attr id="946" type="595" aggregation="composite" association="950">
+          <upperValue type="LiteralUnlimitedNatural" id="947" value="*"/>
+        </attr>
+        <attr id="948" name="Code">
+          <type type="String"/>
+        </attr>
+        <attr id="949" name="Libellé">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="950" memberEnd="946 951">
+        <ownedEnd id="951" type="945" association="950"/>
+      </elm>
+      <elm type="Class" id="952" name="Site">
+        <attr id="953" type="945" aggregation="composite" association="959">
+          <upperValue type="LiteralUnlimitedNatural" id="954" value="*"/>
+        </attr>
+        <attr id="955" name="usine" type="992" aggregation="composite" association="961"/>
+        <attr id="956" name="Code">
+          <type type="String"/>
+        </attr>
+        <attr id="957" name="Nom">
+          <type type="String"/>
+        </attr>
+        <attr id="958" name="Adresse" type="1029"/>
+      </elm>
+      <elm type="Association" id="959" memberEnd="953 960">
+        <ownedEnd id="960" type="952" association="959"/>
+      </elm>
+      <elm type="Association" id="961" memberEnd="955 962">
+        <ownedEnd id="962" type="952" association="961"/>
+      </elm>
+      <elm type="Class" id="963" name="Spécification technique">
+        <attr id="964" type="468" association="970">
+          <upperValue type="LiteralUnlimitedNatural" id="965" value="*"/>
+        </attr>
+        <attr id="966" name="Référence">
+          <type type="String"/>
+        </attr>
+        <attr id="967" name="Révision">
+          <type type="String"/>
+        </attr>
+        <attr id="968" name="Titre">
+          <type type="String"/>
+        </attr>
+        <attr id="969" name="Statut" type="80"/>
+      </elm>
+      <elm type="Association" id="970" name="Regroupe" memberEnd="964 971">
+        <ownedEnd id="971" type="963" association="970"/>
+      </elm>
+      <elm type="Class" id="972" name="Surveillance">
+        <attr id="973" type="692" association="978">
+          <upperValue type="LiteralUnlimitedNatural" id="974" value="*"/>
+          <lowerValue type="LiteralInteger" id="975"/>
+        </attr>
+        <attr id="976" name="Type">
+          <type type="String"/>
+        </attr>
+        <attr id="977" name="Statut">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="978" name="induit" memberEnd="973 979">
+        <ownedEnd id="979" type="972" association="978">
+          <upperValue type="LiteralUnlimitedNatural" id="980" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="981" name="Surveillance Livrables">
+        <generalization id="982" general="972"/>
+        <attr id="983" type="275" association="986">
+          <upperValue type="LiteralUnlimitedNatural" id="984" value="*"/>
+        </attr>
+        <attr id="985" name="Résultat" type="87"/>
+      </elm>
+      <elm type="Association" id="986" name="induit" memberEnd="983 987">
+        <ownedEnd id="987" type="981" association="986">
+          <upperValue type="LiteralUnlimitedNatural" id="988" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Class" id="989" name="Surveillance Terrain">
+        <generalization id="990" general="972"/>
+        <attr id="991" name="Date de demande">
+          <type type="Date"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="992" name="Usine">
+        <attr id="993" name="Numéro de SIRET">
+          <type type="String"/>
+        </attr>
+        <attr id="994" name="Libellé">
+          <type type="String"/>
+        </attr>
+        <attr id="995" name="Adresse">
+          <type type="String"/>
+        </attr>
+        <attr id="996" name="Identifiant usine">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Class" id="997" name="VISA">
+        <attr id="998" type="796" association="1012"/>
+        <attr id="999" type="359" association="1014"/>
+        <attr id="1000" type="421" association="1016"/>
+        <attr id="1001" type="656" association="1018"/>
+        <attr id="1002" name="livrable" type="611" association="1021">
+          <lowerValue type="LiteralInteger" id="1003"/>
+        </attr>
+        <attr id="1004" type="924" association="1024"/>
+        <attr id="1005" name="Nom">
+          <type type="String"/>
+        </attr>
+        <attr id="1006" name="Prénom">
+          <type type="String"/>
+        </attr>
+        <attr id="1007" name="Entité">
+          <type type="String"/>
+        </attr>
+        <attr id="1008" name="Date de signature">
+          <type type="Date"/>
+        </attr>
+        <attr id="1009" name="Statut" type="80"/>
+        <attr id="1010" name="Fonction">
+          <type type="String"/>
+        </attr>
+        <attr id="1011" name="Identifiant signataire">
+          <type type="String"/>
+        </attr>
+      </elm>
+      <elm type="Association" id="1012" name="est apposé sur" memberEnd="998 1013">
+        <ownedEnd id="1013" type="997" association="1012"/>
+      </elm>
+      <elm type="Association" id="1014" name="est apposé sur" memberEnd="999 1015">
+        <ownedEnd id="1015" type="997" association="1014"/>
+      </elm>
+      <elm type="Association" id="1016" name="est apposé sur" memberEnd="1000 1017">
+        <ownedEnd id="1017" type="997" association="1016"/>
+      </elm>
+      <elm type="Association" id="1018" name="Valide" memberEnd="1001 1019">
+        <ownedEnd id="1019" type="997" association="1018">
+          <upperValue type="LiteralUnlimitedNatural" id="1020" value="*"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="1021" memberEnd="1002 1022">
+        <ownedEnd id="1022" type="997" association="1021">
+          <lowerValue type="LiteralInteger" id="1023"/>
+        </ownedEnd>
+      </elm>
+      <elm type="Association" id="1024" name="Valide" memberEnd="1004 1025">
+        <ownedEnd id="1025" type="997" association="1024">
+          <upperValue type="LiteralUnlimitedNatural" id="1026" value="*"/>
+        </ownedEnd>
+      </elm>
+    </elm>
+    <elm type="Package" id="1027" name="Modèles Communs"/>
+    <elm type="Package" id="1028" name="Commentaires Communs">
+      <elm type="PrimitiveType" id="1029" name="Numéro, Rue, CP, Ville, PAYS"/>
+    </elm>
+    <elm type="Class" id="1030" name="Exigence technique"/>
+    <profileApplication id="1031">
+      <eAnnotations id="1032" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references type="ecore:EPackage" href="Document%20Publisher.profile.uml#_GlrPhzIxEe-n_btyyktV6g"/>
+      </eAnnotations>
+      <appliedProfile href="Document%20Publisher.profile.uml#_GlrPgDIxEe-n_btyyktV6g"/>
+    </profileApplication>
+    <profileApplication id="1033">
+      <eAnnotations id="1034" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references type="ecore:EPackage" href="default.profile.uml#_Gl55BzIxEe-n_btyyktV6g"/>
+      </eAnnotations>
+      <appliedProfile href="default.profile.uml#_Gl55ADIxEe-n_btyyktV6g"/>
+    </profileApplication>
+  </Model>
+  <DocumentPublisher:DocumentPublisherDocumentFolder id="1035" base_Package="6"/>
+  <DocumentPublisher:DocumentPublisherDocument id="1036" base_Artifact="7" DocumentPublishertargetFile="OPENXML" DocumentPublishertargetDir="doc" DocumentPublishertemplate="AnalysisAndDesign" DocumentPublishername="Doctest" DocumentPublishercontent="REV|TOF|TOT|TOC|CONTENT|" DocumentPublisherstylesheet="$MODULE_DIR/res/style/Modern_blue_fr.docx"/>
+  <default:manifestation id="1037" base_Dependency="10"/>
+</XMI>

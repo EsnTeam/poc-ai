@@ -1,0 +1,18 @@
+<button mat-raised-button color="primary" (click)="back()">
+  {{ "< Back" }}
+</button>
+
+<div class="config-elm-list">
+  <div
+    *ngFor="let thread of threads"
+    class="thread config-elm-list__element clickable"
+    (click)="goToChatView(thread)"
+  >
+    <div class="config-elm-list__element__label">{{ thread.id }}</div>
+    <div class="config-elm-list__element__info"></div>
+  </div>
+</div>
+
+<button mat-raised-button color="primary" (click)="createThread()">
+  + Nouveau thread
+</button>

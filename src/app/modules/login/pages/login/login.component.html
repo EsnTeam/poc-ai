@@ -1,0 +1,12 @@
+<div class="password-form">
+  <mat-form-field class="chat-input-field">
+    <!-- <mat-label></mat-label> -->
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="value"
+      placeholder="Mot de passe ?"
+      (keydown)="onInput($event)"
+    />
+  </mat-form-field>
+</div>

@@ -1,0 +1,10 @@
+.config-elm-list {
+  padding: 3rem;
+  &__element {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border: 1px solid #e3e8ef;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+  }
+}
