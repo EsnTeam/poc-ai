@@ -8,8 +8,15 @@
     *ngFor="let file of files"
     class="file config-elm-list__element"
     [matTooltip]="stringify(file)"
+    [ngClass]="{ clickable: file.purpose == 'assistants_output' }"
+    (click)="file.purpose == 'assistants_output' ? downloadFile(file.id) : null"
   >
-    <div class="config-elm-list__element__label">{{ file.filename }}</div>
+    <div class="config-elm-list__element__label">
+      {{ file.filename }}
+      <span *ngIf="file.purpose == 'assistants_output'" class="title-precision"
+        >(Created by assistant)</span
+      >
+    </div>
     <div class="config-elm-list__element__info">{{ file.id }}</div>
   </div>
 </div>

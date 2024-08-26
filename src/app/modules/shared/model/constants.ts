@@ -1,9 +1,17 @@
-export const ASSISTANTS: { main: string } = {
+export const ASSISTANTS: {
+  main: string;
+  noTool4o: string;
+  basic4ov2: string;
+  noTool4oMini: string;
+} = {
   main: 'asst_cJnqTodNOv0T24dsRwoYa9H8',
+  noTool4o: 'asst_xnYheIkZ9IhgmTybcte8AZHt',
+  noTool4oMini: 'asst_EKumrNC1Cd33s4vVlAk8LB4p',
+  basic4ov2: 'asst_3731TcebBSorttcxm9ySldVI',
 };
 
 export const THREADS: { main: string } = {
-  main: 'thread_YbeyHQKYDOskCqBq4SxumgYZ',
+  main: 'thread_v3NX49Qu4OJcQKNyFluQPj9H',
 };
 
 export const FILES: {

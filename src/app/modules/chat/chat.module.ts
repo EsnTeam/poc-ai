@@ -10,6 +10,8 @@ import { ThreadsComponent } from './pages/threads/threads.component';
 import { FilesComponent } from './pages/files/files.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AssistantEditionDialogComponent } from './components/assistant-edition-dialog/assistant-edition-dialog.component';
+import { DemoComponent } from './pages/demo/demo.component';
+import { AttributeSelectorComponent } from './components/attribute-selector/attribute-selector.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AssistantEditionDialogComponent } from './components/assistant-edition-
     FilesComponent,
     HomeComponent,
     AssistantEditionDialogComponent,
+    DemoComponent,
+    AttributeSelectorComponent,
   ],
   imports: [CommonModule, ChatRoutingModule, SharedModule],
 })

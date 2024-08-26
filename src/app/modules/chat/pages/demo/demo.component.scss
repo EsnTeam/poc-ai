@@ -1,0 +1,15 @@
+.attribute-selector {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 90px;
+}
+
+:host {
+  padding-top: 150px;
+
+  .button-inner {
+    display: flex;
+    gap: 0.5rem;
+  }
+}

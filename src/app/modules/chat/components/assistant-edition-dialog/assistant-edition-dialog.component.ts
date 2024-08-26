@@ -13,7 +13,8 @@ export class AssistantEditionDialogComponent {
     "name": "XXXXXXXX[EDIT THIS]",
     "instructions": "You are a helpful assistant.",
     "tools": [
-      {"type": "file_search"}
+      {"type": "file_search"},
+      {"type": "code_interpreter"}
     ],
     "model": "gpt-4o"
   }`;

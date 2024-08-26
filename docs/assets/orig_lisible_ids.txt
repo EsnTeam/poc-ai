@@ -1,0 +1,1919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DocumentPublisher="http:///schemas/DocumentPublisher/_GlK5MDIxEe-n_btyyktV6g/0" xmlns:default="http:///schemas/default/_GlfpUDIxEe-n_btyyktV6g/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DocumentPublisher/_GlK5MDIxEe-n_btyyktV6g/0 Document%20Publisher.profile.uml#_GlrPhzIxEe-n_btyyktV6g http:///schemas/default/_GlfpUDIxEe-n_btyyktV6g/0 default.profile.uml#_Gl55BzIxEe-n_btyyktV6g">
+  <uml:Model xmi:id="2" name="Ressources Communes">
+    <eAnnotations xmi:id="3" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="4" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="5" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="6" name="Documents Communs">
+      <packagedElement xmi:type="uml:Artifact" xmi:id="7" name="Doctest" clientDependency="10" fileName="C:\Users\D74779\modeliosaas\5.4\ws\Standard_GIFEN\doc\Doctest.docx">
+        <ownedComment xmi:id="8">
+          <body></body>
+        </ownedComment>
+        <ownedComment xmi:id="9">
+          <body></body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="10" name="" supplier="2" client="7"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="11" name="LOV Communes">
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="12" name="Accrédit_Type">
+        <ownedLiteral xmi:id="13" name="Electrique"/>
+        <ownedLiteral xmi:id="14" name="Levage"/>
+        <ownedLiteral xmi:id="15" name="Permis Feu"/>
+        <ownedLiteral xmi:id="16" name="..."/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="17" name="Catégories_GénieCivil">
+        <ownedLiteral xmi:id="18" name="Levée des préalables"/>
+        <ownedLiteral xmi:id="19" name=" Prise en compte des préalables replis de chantier"/>
+        <ownedLiteral xmi:id="20" name="Contrôle du DSI de chantier"/>
+        <ownedLiteral xmi:id="21" name="Pose DMP"/>
+        <ownedLiteral xmi:id="22" name="Pose DDC"/>
+        <ownedLiteral xmi:id="23" name="Dépose DMP"/>
+        <ownedLiteral xmi:id="24" name="Dépose DDC"/>
+        <ownedLiteral xmi:id="25" name="NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="26" name="Classement_Values">
+        <ownedLiteral xmi:id="27" name="C1"/>
+        <ownedLiteral xmi:id="28" name="C2"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="29" name="Etat">
+        <ownedLiteral xmi:id="30" name="BPO"/>
+        <ownedLiteral xmi:id="31" name="BPE"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="32" name="Etat_Maturité">
+        <ownedLiteral xmi:id="33" name="BPO"/>
+        <ownedLiteral xmi:id="34" name="BPE"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="35" name="Etat_Validité">
+        <ownedLiteral xmi:id="36" name="BPO"/>
+        <ownedLiteral xmi:id="37" name="BPE"/>
+        <ownedLiteral xmi:id="38" name="DES"/>
+        <ownedLiteral xmi:id="39" name="CAE"/>
+        <ownedLiteral xmi:id="40" name="TQC"/>
+        <ownedLiteral xmi:id="41" name="ANNULE"/>
+        <ownedLiteral xmi:id="42" name="INF"/>
+        <ownedLiteral xmi:id="43" name="BPEE"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="44" name="Format_Doc">
+        <ownedLiteral xmi:id="45" name="2D"/>
+        <ownedLiteral xmi:id="46" name="3D"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="47" name="Famille matériel">
+        <ownedLiteral xmi:id="48" name="POMPE"/>
+        <ownedLiteral xmi:id="49" name="VANNE"/>
+        <ownedLiteral xmi:id="50" name="TANK"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="51" name="Importance_Values">
+        <ownedLiteral xmi:id="52" name="Majeur"/>
+        <ownedLiteral xmi:id="53" name="Mineur"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="54" name="Niveau">
+        <ownedLiteral xmi:id="55" name="Rédacteur"/>
+        <ownedLiteral xmi:id="56" name="Vérificateur"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="57" name="PIDU_Values">
+        <ownedLiteral xmi:id="58" name="1"/>
+        <ownedLiteral xmi:id="59" name="2"/>
+        <ownedLiteral xmi:id="60" name="3"/>
+        <ownedLiteral xmi:id="61" name="4"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="62" name="Revue">
+        <ownedLiteral xmi:id="63" name="VSO"/>
+        <ownedLiteral xmi:id="64" name="VSO-SR"/>
+        <ownedLiteral xmi:id="65" name="VAO"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="66" name="Rôles">
+        <ownedLiteral xmi:id="67" name="Exécutant"/>
+        <ownedLiteral xmi:id="68" name="Contrôleur Technique"/>
+        <ownedLiteral xmi:id="69" name="Surveillant Titulaire"/>
+        <ownedLiteral xmi:id="70" name="Surveillant EDF"/>
+        <ownedLiteral xmi:id="71" name=" Surveillant Externe"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="72" name="Statut_Contrat">
+        <ownedLiteral xmi:id="73" name="Temporaire (en réalisation),"/>
+        <ownedLiteral xmi:id="74" name=" Applicable (vérifié)"/>
+        <ownedLiteral xmi:id="75" name="En contrôle (terminé mais pas contrôlé)"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="76" name="Statut_PV">
+        <ownedLiteral xmi:id="77" name="Temporaire (en réalisation)"/>
+        <ownedLiteral xmi:id="78" name="Applicable (vérifié)"/>
+        <ownedLiteral xmi:id="79" name="En contrôle (terminé mais pas contrôlé)"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="80" name="Statut_Values">
+        <ownedLiteral xmi:id="81" name="Draft"/>
+        <ownedLiteral xmi:id="82" name="Frozen"/>
+        <ownedLiteral xmi:id="83" name="Released"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="84" name="Organisme">
+        <ownedLiteral xmi:id="85" name="Surveillance"/>
+        <ownedLiteral xmi:id="86" name="Habilitation"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="87" name="Résultat_Surveillance">
+        <ownedLiteral xmi:id="88" name="VSO"/>
+        <ownedLiteral xmi:id="89" name="VSO SR"/>
+        <ownedLiteral xmi:id="90" name="VAO"/>
+        <ownedLiteral xmi:id="91" name="NS sans FDS"/>
+        <ownedLiteral xmi:id="92" name="NS avec FDS"/>
+        <ownedLiteral xmi:id="93" name="PERPB "/>
+        <ownedLiteral xmi:id="94" name="PERPP"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="95" name="Statut_Revue">
+        <ownedLiteral xmi:id="96" name="Démarée"/>
+        <ownedLiteral xmi:id="97" name="En cours"/>
+        <ownedLiteral xmi:id="98" name="Finalisée"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="99" name="Type_Doc">
+        <ownedLiteral xmi:id="100" name="Photo"/>
+        <ownedLiteral xmi:id="101" name="Scan 3D"/>
+        <ownedLiteral xmi:id="102" name="CT"/>
+        <ownedLiteral xmi:id="103" name="PV"/>
+        <ownedLiteral xmi:id="104" name="Plan"/>
+        <ownedLiteral xmi:id="105" name="Relevé topographique"/>
+        <ownedLiteral xmi:id="106" name="Norme"/>
+        <ownedLiteral xmi:id="107" name="..."/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="108" name="Type_Fourn">
+        <ownedLiteral xmi:id="109" name="Titulaire"/>
+        <ownedLiteral xmi:id="110" name="Sous-Traitant"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="111" name="Type_Marché">
+        <ownedLiteral xmi:id="112" name="Simple"/>
+        <ownedLiteral xmi:id="113" name="Cadre"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="114" name="Type_NC">
+        <ownedLiteral xmi:id="115" name="Mineure"/>
+        <ownedLiteral xmi:id="116" name="Majeure"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="117" name="Type_Notif">
+        <ownedLiteral xmi:id="118" name="Arrêt"/>
+        <ownedLiteral xmi:id="119" name="Convocation"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="120" name="Type_Outil">
+        <ownedLiteral xmi:id="121" name="Temporaire"/>
+        <ownedLiteral xmi:id="122" name="Outillage"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="123" name="Attributs Communs">
+      <ownedAttribute xmi:id="124" name="Accréditation" visibility="public" type="12" isUnique="false"/>
+      <ownedAttribute xmi:id="125" name="Adresse" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="126" name="Adresse" visibility="public" type="1029" isUnique="false"/>
+      <ownedAttribute xmi:id="127" name="AIP" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="128" name="Applicabilité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="129" name="Approbateur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="130" name="Catégorie" visibility="public" type="17" isUnique="false"/>
+      <ownedAttribute xmi:id="131" name="Certification" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="132" name="Classement" visibility="public" type="26" isUnique="false"/>
+      <ownedAttribute xmi:id="133" name="Code" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="134" name="Contact" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="135" name="Confidentialité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="136" name="Critère d'acceptabilité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="137" name="Date" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="138" name="Date de début" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="139" name="Date de demande" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="140" name="Date d'édition" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="141" name="Date d'émission" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="142" name="Date d'envoi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="143" name="Date d'exécution" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="144" name="Date de fin" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="145" name="Date de publication" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="146" name="Date de référence" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="147" name="Date de signature" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="148" name="Date de suivi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="149" name="Date de validation" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="150" name="Date de validité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="151" name="Date effective d'envoi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="152" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="153" name="Description" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="154" name="Détail" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="155" name="Domaine de qualification" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="156" name="EIP" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="157" name="Email" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="158" name="Enoncé" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="159" name="Entité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="160" name="Entreprise" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="161" name="Etat de validité" visibility="public" type="35" isUnique="false"/>
+      <ownedAttribute xmi:id="162" name="Export control" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="163" name="Famille matérielle" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="164" name="Fonction" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="165" name="Format" visibility="public" type="44" isUnique="false"/>
+      <ownedAttribute xmi:id="166" name="Identifiant" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="167" name="Identifiant usine" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="168" name="Identifiant signataire" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="169" name="Importance" visibility="public" type="51" isUnique="false"/>
+      <ownedAttribute xmi:id="170" name="Justification" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="171" name="Levée" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="172" name="Libellé" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="173" name="Lot de commande" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="174" name="Nom" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="175" name="Numéro" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="176" name="Numéro" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="177" name="Numéro de canal" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="178" name="Numéro commande" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="179" name="Numéro de séquence" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="180" name="Numéro de série" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="181" name="Numéro de SIREN" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="182" name="Numéro de SIRET" visibility="protected" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="183" name="Niveau d'intervention" visibility="public" type="54" isUnique="false"/>
+      <ownedAttribute xmi:id="184" name="Numéro marché" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="185" name="Phase industrielle" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="186" name="PIDU" visibility="public" type="57" isUnique="false"/>
+      <ownedAttribute xmi:id="187" name="Prénom" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="188" name="Prise en compte" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="189" name="Propriétaire" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="190" name="Quantité" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="191" name="Rang" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="192" name="Rédacteur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="193" name="Référence" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="194" name="Référence donneur d'ordre" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="195" name="Référence fournisseur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="196" name="Référence industrielle" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="197" name="Résultat" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="198" name="Résultat" visibility="public" isUnique="false"/>
+      <ownedAttribute xmi:id="199" name="Résultat de surveillance" visibility="public" type="87" isUnique="false"/>
+      <ownedAttribute xmi:id="200" name="Révision" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="201" name="RGPD" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="202" name="Rôle" visibility="public" type="66" isUnique="false"/>
+      <ownedAttribute xmi:id="203" name="Signature" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="204" name="Statut" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="205" name="Statut" visibility="public" type="32" isUnique="false"/>
+      <ownedAttribute xmi:id="206" name="Statut" visibility="public" type="72" isUnique="false"/>
+      <ownedAttribute xmi:id="207" name="Statut" visibility="public" type="76" isUnique="false"/>
+      <ownedAttribute xmi:id="208" name="Statut" visibility="public" type="80" isUnique="false"/>
+      <ownedAttribute xmi:id="209" name="Statut" visibility="public" type="95" isUnique="false"/>
+      <ownedAttribute xmi:id="210" name="Téléphone" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="211" name="Trigramme" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="212" name="Titre" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="213" name="Type" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="214" name="Type" visibility="public" type="99" isUnique="false"/>
+      <ownedAttribute xmi:id="215" name="Type" visibility="protected" type="108" isUnique="false"/>
+      <ownedAttribute xmi:id="216" name="Type" visibility="public" type="111" isUnique="false"/>
+      <ownedAttribute xmi:id="217" name="Type" visibility="public" type="114" isUnique="false"/>
+      <ownedAttribute xmi:id="218" name="Type" visibility="public" type="117" isUnique="false"/>
+      <ownedAttribute xmi:id="219" name="Type organisme" visibility="public" type="84" isUnique="false"/>
+      <ownedAttribute xmi:id="220" name="Vérificateur" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="221" name="Version" visibility="public" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="222" name="Objets Métiers Communs">
+      <packagedElement xmi:type="uml:Class" xmi:id="223" name="Activité">
+        <ownedComment xmi:id="224">
+          <ownedComment xmi:id="225">
+            <body>Activité : aggrège ordre d'exécution (ordonnancement/chronologie/procédure) des tâches
+
+</body>
+          </ownedComment>
+          <body>Activité : aggrège ordre d'exécution (ordonnancement/chronologie/procédure) des tâches</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="226" visibility="public" type="940" isUnique="false" aggregation="composite" association="228">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="227" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="228" memberEnd="226 229">
+        <ownedEnd xmi:id="229" visibility="public" type="223" isUnique="false" association="228"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="230" name="Affaire">
+        <ownedComment xmi:id="231">
+          <body></body>
+        </ownedComment>
+        <ownedAttribute xmi:id="232" visibility="public" type="305" isUnique="false" association="240">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="233" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="234"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="235" visibility="public" type="223" isUnique="false" association="243">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="236" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="237"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="238" name="Numéro" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="239" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="240" name="peut déboucher sur" memberEnd="232 241">
+        <ownedEnd xmi:id="241" visibility="public" type="230" isUnique="false" association="240">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="242" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="243" memberEnd="235 244">
+        <ownedEnd xmi:id="244" visibility="public" type="230" isUnique="false" association="243"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="245" name="Autorisation">
+        <ownedAttribute xmi:id="246" visibility="public" type="723" isUnique="false" association="252">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="247" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="248" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="249" name="Date de validité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="250" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="251" name="Propriétaire" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="252" name="porte sur" memberEnd="246 253">
+        <ownedEnd xmi:id="253" visibility="public" type="245" isUnique="false" association="252">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="254" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="255"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="256" name="Avenant">
+        <ownedAttribute xmi:id="257" visibility="public" type="305" isUnique="false" association="265"/>
+        <ownedAttribute xmi:id="258" visibility="public" type="305" isUnique="false" association="269"/>
+        <ownedAttribute xmi:id="259" name="commande" visibility="public" type="341" isUnique="false" association="272">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="260" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="261" name="Numéro" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="262" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="263" name="Date d'exécution" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="264" name="Date de signature" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="265" name="met à jour" memberEnd="257 266">
+        <ownedEnd xmi:id="266" visibility="public" type="256" isUnique="false" association="265">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="267" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="268"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="269" name="Met à jour" memberEnd="258 270">
+        <ownedEnd xmi:id="270" visibility="public" type="256" isUnique="false" association="269">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="271" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="272" name="Met à jour" memberEnd="259 273">
+        <ownedEnd xmi:id="273" visibility="public" type="256" isUnique="false" association="272">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="274" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="275" name="Avis">
+        <ownedAttribute xmi:id="276" name="Statut" visibility="public" type="32" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="277" name="Bâtiment">
+        <ownedAttribute xmi:id="278" visibility="public" type="628" isUnique="false" aggregation="composite" association="281">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="279" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="280" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="281" memberEnd="278 282">
+        <ownedEnd xmi:id="282" visibility="public" type="277" isUnique="false" association="281"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="283" name="Bordereau d'envoi">
+        <ownedAttribute xmi:id="284" visibility="public" type="858" isUnique="false" association="293">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="285" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="286" visibility="public" type="924" isUnique="false" association="296"/>
+        <ownedAttribute xmi:id="287" visibility="public" type="611" isUnique="false" association="299">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="288" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="289" visibility="public" type="656" isUnique="false" association="302">
+          <ownedComment xmi:id="290">
+            <body>&lt;Saisir le texte de la note ici></body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="291" name="Numéro de canal" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="292" name="Date d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="293" name="Concerne" memberEnd="284 294">
+        <ownedEnd xmi:id="294" visibility="public" type="283" isUnique="false" association="293">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="295" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="296" name="Concerne" memberEnd="286 297">
+        <ownedEnd xmi:id="297" visibility="public" type="283" isUnique="false" association="296">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="298" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="299" name="Concerne" memberEnd="287 300">
+        <ownedEnd xmi:id="300" visibility="public" type="283" isUnique="false" association="299">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="301" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="302" name="Concerne" memberEnd="289 303">
+        <ownedEnd xmi:id="303" visibility="public" type="283" isUnique="false" association="302">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="304" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="305" name="Contrat">
+        <ownedAttribute xmi:id="306" visibility="public" type="256" isUnique="false" association="327">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="307" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="308"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="309" visibility="public" type="812" isUnique="false" association="329">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="310" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="311" visibility="public" type="775" isUnique="false" association="332"/>
+        <ownedAttribute xmi:id="312" visibility="public" type="341" isUnique="false" association="334">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="313" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="314" visibility="public" type="256" isUnique="false" association="336">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="315" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="316"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="317" visibility="public" type="812" isUnique="false" association="338">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="318" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="319" name="Numéro" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="320" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="321" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="322" name="Date d'éxécution" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="323" name="Date de signature" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="324" name="Statut" visibility="public" type="72" isUnique="false"/>
+        <ownedAttribute xmi:id="325" name="PIDU" visibility="public" type="57" isUnique="false"/>
+        <ownedAttribute xmi:id="326" name="Type" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="327" name="donne lieu à" memberEnd="306 328">
+        <ownedEnd xmi:id="328" visibility="public" type="305" isUnique="false" association="327"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="329" name="est associé à" memberEnd="309 330">
+        <ownedEnd xmi:id="330" visibility="public" type="305" isUnique="false" association="329">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="331" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="332" memberEnd="311 333">
+        <ownedEnd xmi:id="333" visibility="public" type="305" isUnique="false" association="332"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="334" name="Regroupe" memberEnd="312 335">
+        <ownedEnd xmi:id="335" visibility="public" type="305" isUnique="false" association="334"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="336" name="Donne lieu " memberEnd="314 337">
+        <ownedEnd xmi:id="337" visibility="public" type="305" isUnique="false" association="336"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="338" name="Concerne" memberEnd="317 339">
+        <ownedEnd xmi:id="339" visibility="public" type="305" isUnique="false" association="338">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="340" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="341" name="Commande">
+        <ownedAttribute xmi:id="342" visibility="public" type="528" isUnique="false" association="352">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="343" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="344"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="345" visibility="public" type="630" isUnique="false" aggregation="composite" association="355">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="346" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="347"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="348" name="Numéro commande" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="349" name="Lot de commande" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="350" name="Date d'exécution" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="351" name="Date de signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="352" memberEnd="342 353">
+        <ownedEnd xmi:id="353" visibility="public" type="341" isUnique="false" association="352">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="354" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="355" memberEnd="345 356">
+        <ownedEnd xmi:id="356" visibility="public" type="341" isUnique="false" association="355"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="357" name="Constat">
+        <ownedAttribute xmi:id="358" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="359" name="Contrôle Technique">
+        <ownedAttribute xmi:id="360" visibility="public" type="723" isUnique="false" association="367"/>
+        <ownedAttribute xmi:id="361" visibility="public" type="383" isUnique="false" association="371">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="362"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="363" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="364" name="Date d'émission" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="365" name="Critère d'acceptabilité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="366" name="Résultat" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="367" name="porte sur" memberEnd="360 368">
+        <ownedEnd xmi:id="368" visibility="public" type="359" isUnique="false" association="367">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="369" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="370"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="371" name="mentionne" memberEnd="361 372">
+        <ownedEnd xmi:id="372" visibility="public" type="359" isUnique="false" association="371">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="373"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="374" name="Datasheet">
+        <ownedAttribute xmi:id="375" visibility="public" type="468" isUnique="false" association="381">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="376" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="377" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="378" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="379" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="380" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="381" name="Regroupe" memberEnd="375 382">
+        <ownedEnd xmi:id="382" visibility="public" type="374" isUnique="false" association="381"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="383" name="Document">
+        <ownedAttribute xmi:id="384" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="385" name="Type" visibility="public" type="99" isUnique="false"/>
+        <ownedAttribute xmi:id="386" name="Format" visibility="public" type="44" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="387" name="Document de référence">
+        <generalization xmi:id="388" general="383"/>
+        <ownedAttribute xmi:id="389" name="contrat" visibility="public" type="305" isUnique="false" association="399">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="390"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="391" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="392" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="393" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="394" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="395" name="Détail" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="396" name="Confidentialité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="397" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="398" name="Type" visibility="public" type="99" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="399" memberEnd="389 400">
+        <ownedEnd xmi:id="400" visibility="public" type="387" isUnique="false" association="399">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="401"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="402" name="Donneur d'Ordres">
+        <generalization xmi:id="403" general="499"/>
+        <ownedAttribute xmi:id="404" visibility="public" type="981" isUnique="false" association="413">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="405" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="406" name="contrat" visibility="public" type="305" isUnique="false" association="415">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="407" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="408" visibility="public" type="256" isUnique="false" association="417">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="409" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="410" visibility="public" type="283" isUnique="false" association="419">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="411" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="412"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="413" name="est responsable de" memberEnd="404 414">
+        <ownedEnd xmi:id="414" visibility="public" type="402" isUnique="false" association="413"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="415" name="Signe" memberEnd="406 416">
+        <ownedEnd xmi:id="416" visibility="public" type="402" isUnique="false" association="415"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="417" name="Signe" memberEnd="408 418">
+        <ownedEnd xmi:id="418" visibility="public" type="402" isUnique="false" association="417"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="419" name="Signe" memberEnd="410 420">
+        <ownedEnd xmi:id="420" visibility="public" type="402" isUnique="false" association="419"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="421" name="Dossier de Suivi">
+        <ownedAttribute xmi:id="422" visibility="public" type="421" isUnique="false" aggregation="composite" association="432">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="423" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="424" visibility="public" type="528" isUnique="false" association="434">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="425" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="426" visibility="public" type="402" isUnique="false" association="437"/>
+        <ownedAttribute xmi:id="427" name="Tidtre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="428" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="429" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="430" name="Date d'édition" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="431" name="Statut" visibility="public" type="32" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="432" memberEnd="422 433">
+        <ownedEnd xmi:id="433" visibility="public" type="421" isUnique="false" association="432"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="434" name="mentionne" memberEnd="424 435">
+        <ownedEnd xmi:id="435" visibility="public" type="421" isUnique="false" association="434">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="436" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="437" name="mentionne" memberEnd="426 438">
+        <ownedEnd xmi:id="438" visibility="public" type="421" isUnique="false" association="437">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="439" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="440" name="Dossier technique">
+        <ownedAttribute xmi:id="441" visibility="public" type="374" isUnique="false" association="457">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="442"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="443" visibility="public" type="963" isUnique="false" association="459">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="444" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="445" visibility="public" type="601" isUnique="false" association="461"/>
+        <ownedAttribute xmi:id="446" visibility="public" type="341" isUnique="false" association="463">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="447" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="448" visibility="public" type="305" isUnique="false" association="466"/>
+        <ownedAttribute xmi:id="449" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="450" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="451" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="452" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="453" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="454" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="455" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="456" name="Date de publication" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="457" name="Regroupe" memberEnd="441 458">
+        <ownedEnd xmi:id="458" visibility="public" type="440" isUnique="false" association="457"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="459" name="Regroupe" memberEnd="443 460">
+        <ownedEnd xmi:id="460" visibility="public" type="440" isUnique="false" association="459"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="461" name="Regroupe" memberEnd="445 462">
+        <ownedEnd xmi:id="462" visibility="public" type="440" isUnique="false" association="461"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="463" name="Est effectif pour" memberEnd="446 464">
+        <ownedEnd xmi:id="464" visibility="public" type="440" isUnique="false" association="463">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="465" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="466" name="Est effectif pour" memberEnd="448 467">
+        <ownedEnd xmi:id="467" visibility="public" type="440" isUnique="false" association="466"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="468" name="Exigence">
+        <ownedAttribute xmi:id="469" visibility="public" type="523" isUnique="false" association="481">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="470" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="471" visibility="public" type="387" isUnique="false" association="484">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="472" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="473" visibility="public" type="723" isUnique="false" association="487">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="474" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="475" name="Identifiant" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="476" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="477" name="Enoncé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="478" name="Version" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="479" name="Statut" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="480" name="Justification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="481" name="est associée à" memberEnd="469 482">
+        <ownedEnd xmi:id="482" visibility="public" type="468" isUnique="false" association="481">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="483" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="484" name="se réfère à" memberEnd="471 485">
+        <ownedEnd xmi:id="485" visibility="public" type="468" isUnique="false" association="484">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="486" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="487" name="est associée à" memberEnd="473 488">
+        <ownedEnd xmi:id="488" visibility="public" type="468" isUnique="false" association="487">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="489" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="490" name="Exigence contractuelle">
+        <generalization xmi:id="491" general="468"/>
+        <ownedAttribute xmi:id="492" visibility="public" type="305" isUnique="false" association="496">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="493" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="494"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="495" name="Libellé" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="496" name="contraint" memberEnd="492 497">
+        <ownedEnd xmi:id="497" visibility="public" type="490" isUnique="false" association="496">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="498" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="499" name="Entité Juridique">
+        <ownedAttribute xmi:id="500" visibility="public" type="305" isUnique="false" association="512">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="501" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="502"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="503" visibility="public" type="589" isUnique="false" association="516">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="504" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="505" visibility="public" type="256" isUnique="false" association="519">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="506" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="507"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="508" name="Numéro de SIREN" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="509" name="Nom" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="510" name="Contact" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="511" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="512" name="signe" memberEnd="500 513">
+        <ownedEnd xmi:id="513" visibility="public" type="499" isUnique="false" association="512">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="514" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="515" value="2"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="516" name="délivre" memberEnd="503 517">
+        <ownedEnd xmi:id="517" visibility="public" type="499" isUnique="false" association="516">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="518" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="519" name="signe" memberEnd="505 520">
+        <ownedEnd xmi:id="520" visibility="public" type="499" isUnique="false" association="519">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="521" value="2"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="522" value="2"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="523" name="Equipement">
+        <ownedAttribute xmi:id="524" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="525" name="EIP" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="526" name="Exigence Technique">
+        <generalization xmi:id="527" general="468"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="528" name="Fournisseur">
+        <generalization xmi:id="529" general="499"/>
+        <ownedAttribute xmi:id="530" visibility="public" type="997" isUnique="false" association="558"/>
+        <ownedAttribute xmi:id="531" name="usine" visibility="public" type="992" isUnique="false" association="560">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="532"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="533" name="contrat" visibility="public" type="305" isUnique="false" association="563">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="534"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="535" name="marché" visibility="public" type="637" isUnique="false" association="566">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="536"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="537" name="organisme" visibility="public" type="757" isUnique="false" association="569">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="538"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="539" visibility="public" type="611" isUnique="false" association="572">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="540" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="541" visibility="public" type="656" isUnique="false" association="574"/>
+        <ownedAttribute xmi:id="542" visibility="public" type="630" isUnique="false" association="576">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="543" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="544" visibility="public" type="341" isUnique="false" association="578">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="545" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="546" name="avenant" visibility="public" type="256" isUnique="false" association="580">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="547" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="548" name="contrat" visibility="public" type="305" isUnique="false" association="582">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="549" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="550" name="réponse" visibility="public" type="858" isUnique="false" association="585">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="551" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="552" visibility="public" type="283" isUnique="false" association="587">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="553" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="554" name="Type" visibility="protected" type="108" isUnique="false"/>
+        <ownedAttribute xmi:id="555" name="Rang" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="556" name="Niveau d'intervention" visibility="public" type="54" isUnique="false"/>
+        <ownedAttribute xmi:id="557" name="Domaine de qualification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="558" name="émet" memberEnd="530 559">
+        <ownedEnd xmi:id="559" visibility="public" type="528" isUnique="false" association="558"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="560" memberEnd="531 561">
+        <ownedEnd xmi:id="561" visibility="public" type="528" isUnique="false" association="560">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="562"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="563" memberEnd="533 564">
+        <ownedEnd xmi:id="564" visibility="public" type="528" isUnique="false" association="563">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="565"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="566" memberEnd="535 567">
+        <ownedEnd xmi:id="567" visibility="public" type="528" isUnique="false" association="566">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="568"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="569" memberEnd="537 570">
+        <ownedEnd xmi:id="570" visibility="public" type="528" isUnique="false" association="569">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="571"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="572" name="Emet" memberEnd="539 573">
+        <ownedEnd xmi:id="573" visibility="public" type="528" isUnique="false" association="572"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="574" name="Emet" memberEnd="541 575">
+        <ownedEnd xmi:id="575" visibility="public" type="528" isUnique="false" association="574"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="576" name="Prend en charge" memberEnd="542 577">
+        <ownedEnd xmi:id="577" visibility="public" type="528" isUnique="false" association="576"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="578" name="Signe" memberEnd="544 579">
+        <ownedEnd xmi:id="579" visibility="public" type="528" isUnique="false" association="578"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="580" name="Signe" memberEnd="546 581">
+        <ownedEnd xmi:id="581" visibility="public" type="528" isUnique="false" association="580"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="582" name="Signe" memberEnd="548 583">
+        <ownedEnd xmi:id="583" visibility="public" type="528" isUnique="false" association="582">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="584" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="585" name="Emet" memberEnd="550 586">
+        <ownedEnd xmi:id="586" visibility="public" type="528" isUnique="false" association="585"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="587" name="Signe" memberEnd="552 588">
+        <ownedEnd xmi:id="588" visibility="public" type="528" isUnique="false" association="587"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="589" name="Habilitation">
+        <ownedAttribute xmi:id="590" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="591" name="Date de validité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="592" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="593" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="594" name="Accréditation" visibility="public" type="12" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="595" name="Ilot">
+        <ownedAttribute xmi:id="596" visibility="public" type="277" isUnique="false" aggregation="composite" association="599">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="597" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="598" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="599" memberEnd="596 600">
+        <ownedEnd xmi:id="600" visibility="public" type="595" isUnique="false" association="599"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="601" name="Liste des documents et données requis fournisseur">
+        <ownedAttribute xmi:id="602" visibility="public" type="468" isUnique="false" association="609">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="603" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="604" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="605" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="606" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="607" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="608" name="Date de validation" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="609" name="Regroupe" memberEnd="602 610">
+        <ownedEnd xmi:id="610" visibility="public" type="601" isUnique="false" association="609"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="611" name="Livrable">
+        <ownedAttribute xmi:id="612" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="613" name="Référence fournisseur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="614" name="Référence donneur d'ordre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="615" name="Date effective d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="616" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="617" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="618" name="Etat de validité" visibility="public" type="35" isUnique="false"/>
+        <ownedAttribute xmi:id="619" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="620" name="AIP" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="621" name="Classement" visibility="public" type="26" isUnique="false"/>
+        <ownedAttribute xmi:id="622" name="Export control" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="623" name="RGPD" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="624" name="PIDU" visibility="public" type="57" isUnique="false"/>
+        <ownedAttribute xmi:id="625" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="626" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="627" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="628" name="Local">
+        <ownedAttribute xmi:id="629" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="630" name="Lot">
+        <ownedAttribute xmi:id="631" visibility="public" type="305" isUnique="false" aggregation="composite" association="635">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="632" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="633" name="Numéro" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="634" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="635" memberEnd="631 636">
+        <ownedEnd xmi:id="636" visibility="public" type="630" isUnique="false" association="635"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="637" name="Marché">
+        <ownedAttribute xmi:id="638" visibility="public" type="630" isUnique="false" aggregation="composite" association="650">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="639" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="640"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="641" visibility="public" type="305" isUnique="false" association="652"/>
+        <ownedAttribute xmi:id="642" visibility="public" type="305" isUnique="false" association="654">
+          <ownedComment xmi:id="643">
+            <body>Un marché soumis auprès de plusieurs soumissionnaires peut donner lieu à 0 ou n contrats</body>
+          </ownedComment>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="644" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="645"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="646" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="647" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="648" name="Type" visibility="public" type="111" isUnique="false"/>
+        <ownedAttribute xmi:id="649" name="Numéro marché" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="650" memberEnd="638 651">
+        <ownedEnd xmi:id="651" visibility="public" type="637" isUnique="false" association="650"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="652" name="concrétise la signature de" memberEnd="641 653">
+        <ownedEnd xmi:id="653" visibility="public" type="637" isUnique="false" association="652"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="654" name="Est contractualisé" memberEnd="642 655">
+        <ownedEnd xmi:id="655" visibility="public" type="637" isUnique="false" association="654"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="656" name="Matrice de couverture">
+        <ownedAttribute xmi:id="657" visibility="public" type="468" isUnique="false" association="672">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="658" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="659" visibility="public" type="611" isUnique="false" association="674">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="660" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="661" name="Référence fournisseur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="662" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="663" name="Etat de validité" visibility="public" type="35" isUnique="false"/>
+        <ownedAttribute xmi:id="664" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="665" name="Date effective d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="666" name="Référence donneur d'ordre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="667" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="668" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="669" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="670" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="671" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="672" name="Trace" memberEnd="657 673">
+        <ownedEnd xmi:id="673" visibility="public" type="656" isUnique="false" association="672"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="674" name="Trace" memberEnd="659 675">
+        <ownedEnd xmi:id="675" visibility="public" type="656" isUnique="false" association="674"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="676" name="Non-Conformité">
+        <ownedComment xmi:id="677">
+          <body>Cf MDM de François (Visio envoyé)
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="678" visibility="public" type="357" isUnique="false" association="685"/>
+        <ownedAttribute xmi:id="679" visibility="public" type="723" isUnique="false" association="689">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="680" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="681"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="682" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="683" name="Type" visibility="public" type="114" isUnique="false"/>
+        <ownedAttribute xmi:id="684" name="Date" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="685" memberEnd="678 686">
+        <ownedEnd xmi:id="686" visibility="public" type="676" isUnique="false" association="685">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="687" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="688"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="689" memberEnd="679 690">
+        <ownedEnd xmi:id="690" visibility="public" type="676" isUnique="false" association="689">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="691" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="692" name="Observation">
+        <ownedAttribute xmi:id="693" visibility="public" type="723" isUnique="false" association="703">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="694" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="695" visibility="public" type="383" isUnique="false" association="707">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="696" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="697"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="698" visibility="public" type="611" isUnique="false" association="710">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="699" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="700" name="Date de suivi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="701" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="702" name="Importance" visibility="public" type="51" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="703" name="est émise sur" memberEnd="693 704">
+        <ownedEnd xmi:id="704" visibility="public" type="692" isUnique="false" association="703">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="705" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="706"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="707" name="est complétée par" memberEnd="695 708">
+        <ownedEnd xmi:id="708" visibility="public" type="692" isUnique="false" association="707">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="709" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="710" name="Concerne" memberEnd="698 711">
+        <ownedEnd xmi:id="711" visibility="public" type="692" isUnique="false" association="710">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="712" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="713"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="714" name="Opération">
+        <ownedAttribute xmi:id="715" name="Numéro de séquence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="716" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="717" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="718" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="719" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="720" name="AIP" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="721" name="Date de début" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="722" name="Date de fin" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="723" name="Opération GC">
+        <generalization xmi:id="724" general="714"/>
+        <ownedAttribute xmi:id="725" visibility="public" type="523" isUnique="false" association="734">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="726" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="727"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="728" visibility="public" type="387" isUnique="false" association="737">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="729" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="730"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="731" visibility="public" type="357" isUnique="false" association="740">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="732" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="733" name="Catégorie" visibility="public" type="17" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="734" name="nécessite" memberEnd="725 735">
+        <ownedEnd xmi:id="735" visibility="public" type="723" isUnique="false" association="734">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="736" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="737" name="s'appuie sur" memberEnd="728 738">
+        <ownedEnd xmi:id="738" visibility="public" type="723" isUnique="false" association="737">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="739" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="740" memberEnd="731 741">
+        <ownedEnd xmi:id="741" visibility="public" type="723" isUnique="false" association="740">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="742" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="743"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="744" name="Ordre d'exécution">
+        <ownedAttribute xmi:id="745" name="contrat" visibility="public" type="305" isUnique="false" association="752">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="746"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="747" name="commande" visibility="public" type="341" isUnique="false" aggregation="composite" association="755">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="748"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="749" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="750" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="751" name="Date" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="752" memberEnd="745 753">
+        <ownedEnd xmi:id="753" visibility="public" type="744" isUnique="false" association="752">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="754"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="755" memberEnd="747 756">
+        <ownedEnd xmi:id="756" visibility="public" type="744" isUnique="false" association="755"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="757" name="Organisme">
+        <generalization xmi:id="758" general="499"/>
+        <ownedAttribute xmi:id="759" name="Type organisme" visibility="public" type="84" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="760" name="Point de notification">
+        <ownedAttribute xmi:id="761" visibility="public" type="723" isUnique="false" association="770">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="762" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="763" visibility="public" type="989" isUnique="false" association="773">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="764"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="765" name="Type" visibility="public" type="117" isUnique="false"/>
+        <ownedAttribute xmi:id="766" name="Levée" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="767" name="Signataire" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="768" name="Date de signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="769" name="Signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="770" name="caractérise" memberEnd="761 771">
+        <ownedEnd xmi:id="771" visibility="public" type="760" isUnique="false" association="770">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="772" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="773" name="implique (Si point de convocation, cela n’implique pas d’action de surveillance terrain)" memberEnd="763 774">
+        <ownedEnd xmi:id="774" visibility="public" type="760" isUnique="false" association="773"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="775" name="Prestation">
+        <ownedAttribute xmi:id="776" visibility="public" type="630" isUnique="false" aggregation="composite" association="786">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="777" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="778"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="779" visibility="public" type="952" isUnique="false" association="788">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="780" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="781" visibility="public" type="341" isUnique="false" association="792">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="782" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="783" visibility="public" type="744" isUnique="false" association="794"/>
+        <ownedAttribute xmi:id="784" name="Titre" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="785" name="Type" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="786" memberEnd="776 787">
+        <ownedEnd xmi:id="787" visibility="public" type="775" isUnique="false" association="786"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="788" name="se déroule sur" memberEnd="779 789">
+        <ownedEnd xmi:id="789" visibility="public" type="775" isUnique="false" association="788">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="790" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="791"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="792" name="peut procèder directement à" memberEnd="781 793">
+        <ownedEnd xmi:id="793" visibility="public" type="775" isUnique="false" association="792"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="794" name="induit" memberEnd="783 795">
+        <ownedEnd xmi:id="795" visibility="public" type="775" isUnique="false" association="794"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="796" name="Procès Verbal">
+        <ownedAttribute xmi:id="797" visibility="public" type="723" isUnique="false" association="804"/>
+        <ownedAttribute xmi:id="798" visibility="public" type="383" isUnique="false" association="807"/>
+        <ownedAttribute xmi:id="799" visibility="public" type="359" isUnique="false" association="809"/>
+        <ownedAttribute xmi:id="800" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="801" name="Date d'émission" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="802" name="Statut" visibility="public" type="76" isUnique="false"/>
+        <ownedAttribute xmi:id="803" name="Résultat" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="804" name="atteste" memberEnd="797 805">
+        <ownedEnd xmi:id="805" visibility="public" type="796" isUnique="false" association="804">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="806"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="807" name="mentionne" memberEnd="798 808">
+        <ownedEnd xmi:id="808" visibility="public" type="796" isUnique="false" association="807"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="809" name="atteste du" memberEnd="799 810">
+        <ownedEnd xmi:id="810" visibility="public" type="796" isUnique="false" association="809">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="811"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="812" name="Projet">
+        <ownedComment xmi:id="813">
+          <body></body>
+        </ownedComment>
+        <ownedAttribute xmi:id="814" visibility="public" type="230" isUnique="false" aggregation="composite" association="833">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="815" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="816"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="817" visibility="public" type="223" isUnique="false" association="835">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="818" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="819"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="820" name="tranche" visibility="public" type="945" isUnique="false" association="837">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="821"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="822" name="organisme" visibility="public" type="757" isUnique="false" association="840">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="823"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="824" name="marché" visibility="public" type="637" isUnique="false" association="843">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="825"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="826" name="contrat" visibility="public" type="305" isUnique="false" association="846">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="827"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="828" visibility="public" type="230" isUnique="false" association="849">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="829" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="830"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="831" name="Numéro" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="832" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="833" memberEnd="814 834">
+        <ownedEnd xmi:id="834" visibility="public" type="812" isUnique="false" association="833"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="835" name="contient" memberEnd="817 836">
+        <ownedEnd xmi:id="836" visibility="public" type="812" isUnique="false" association="835"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="837" memberEnd="820 838">
+        <ownedEnd xmi:id="838" visibility="public" type="812" isUnique="false" association="837">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="839"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="840" memberEnd="822 841">
+        <ownedEnd xmi:id="841" visibility="public" type="812" isUnique="false" association="840">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="842"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="843" memberEnd="824 844">
+        <ownedEnd xmi:id="844" visibility="public" type="812" isUnique="false" association="843">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="845"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="846" memberEnd="826 847">
+        <ownedEnd xmi:id="847" visibility="public" type="812" isUnique="false" association="846">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="848"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="849" name="Est associé à " memberEnd="828 850">
+        <ownedEnd xmi:id="850" visibility="public" type="812" isUnique="false" association="849"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="851" name="Rapport de synthèse">
+        <ownedAttribute xmi:id="852" visibility="public" type="230" isUnique="false" association="856"/>
+        <ownedAttribute xmi:id="853" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="854" name="Statut" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="855" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="856" name="porte sur" memberEnd="852 857">
+        <ownedEnd xmi:id="857" visibility="public" type="851" isUnique="false" association="856"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="858" name="Réponse">
+        <ownedAttribute xmi:id="859" visibility="public" type="924" isUnique="false" association="871"/>
+        <ownedAttribute xmi:id="860" visibility="public" type="611" isUnique="false" association="874">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="861" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="862" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="863" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="864" name="Justification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="865" name="Prise en compte" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="866" name="Etat de validité" visibility="public" type="35" isUnique="false"/>
+        <ownedAttribute xmi:id="867" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="868" name="Rédacteur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="869" name="Approbateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="870" name="Vérificateur" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="871" name="Porte sur " memberEnd="859 872">
+        <ownedEnd xmi:id="872" visibility="public" type="858" isUnique="false" association="871">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="873" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="874" name="Correspond" memberEnd="860 875">
+        <ownedEnd xmi:id="875" visibility="public" type="858" isUnique="false" association="874">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="876" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="877" name="Ressource">
+        <ownedAttribute xmi:id="878" visibility="public" type="723" isUnique="false" association="887">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="879" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="880" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="881" name="Description" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="882" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="883" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="884" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="885" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="886" name="Détail" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="887" name="réalise" memberEnd="878 888">
+        <ownedEnd xmi:id="888" visibility="public" type="877" isUnique="false" association="887"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="889" name="Ressource consommable">
+        <generalization xmi:id="890" general="877"/>
+        <ownedAttribute xmi:id="891" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="892" name="Ressource humaine">
+        <generalization xmi:id="893" general="877"/>
+        <ownedAttribute xmi:id="894" visibility="public" type="589" isUnique="false" association="910">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="895" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="896" visibility="public" type="760" isUnique="false" association="913">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="897" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="898"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="899" visibility="public" type="972" isUnique="false" association="915">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="900" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="901" name="Entreprise" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="902" name="Rôle" visibility="public" type="66" isUnique="false"/>
+        <ownedAttribute xmi:id="903" name="Certification" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="904" name="Fonction" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="905" name="Trigramme" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="906" name="Prénom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="907" name="Email" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="908" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="909" name="Téléphone" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="910" name="dispose de" memberEnd="894 911">
+        <ownedEnd xmi:id="911" visibility="public" type="892" isUnique="false" association="910">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="912" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="913" name="lève" memberEnd="896 914">
+        <ownedEnd xmi:id="914" visibility="public" type="892" isUnique="false" association="913"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="915" name="réalise" memberEnd="899 916">
+        <ownedEnd xmi:id="916" visibility="public" type="892" isUnique="false" association="915">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="917" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="918"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="919" name="Ressource outillage">
+        <generalization xmi:id="920" general="877"/>
+        <ownedAttribute xmi:id="921" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="922" name="Type" visibility="public" type="120" isUnique="false"/>
+        <ownedAttribute xmi:id="923" name="Date de validité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="924" name="Revue de surveillance">
+        <ownedAttribute xmi:id="925" visibility="public" type="692" isUnique="false" association="936">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="926" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="927"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="928" visibility="public" type="611" isUnique="false" association="938">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="929" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="930" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="931" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="932" name="Statut" visibility="public" type="95" isUnique="false"/>
+        <ownedAttribute xmi:id="933" name="Date effective d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="934" name="Date prévisionnelle d'envoi" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="935" name="Résultat de surveillance" visibility="public" type="87" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="936" name="Regroupe" memberEnd="925 937">
+        <ownedEnd xmi:id="937" visibility="public" type="924" isUnique="false" association="936"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="938" name="Concerne" memberEnd="928 939">
+        <ownedEnd xmi:id="939" visibility="public" type="924" isUnique="false" association="938"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="940" name="Tâche">
+        <ownedAttribute xmi:id="941" visibility="public" type="723" isUnique="false" aggregation="composite" association="943">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="942" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="943" memberEnd="941 944">
+        <ownedEnd xmi:id="944" visibility="public" type="940" isUnique="false" association="943"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="945" name="Tranche">
+        <ownedAttribute xmi:id="946" visibility="public" type="595" isUnique="false" aggregation="composite" association="950">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="947" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="948" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="949" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="950" memberEnd="946 951">
+        <ownedEnd xmi:id="951" visibility="public" type="945" isUnique="false" association="950"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="952" name="Site">
+        <ownedAttribute xmi:id="953" visibility="public" type="945" isUnique="false" aggregation="composite" association="959">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="954" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="955" name="usine" visibility="public" type="992" isUnique="false" aggregation="composite" association="961"/>
+        <ownedAttribute xmi:id="956" name="Code" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="957" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="958" name="Adresse" visibility="public" type="1029" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="959" memberEnd="953 960">
+        <ownedEnd xmi:id="960" visibility="public" type="952" isUnique="false" association="959"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="961" memberEnd="955 962">
+        <ownedEnd xmi:id="962" visibility="public" type="952" isUnique="false" association="961"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="963" name="Spécification technique">
+        <ownedAttribute xmi:id="964" visibility="public" type="468" isUnique="false" association="970">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="965" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="966" name="Référence" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="967" name="Révision" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="968" name="Titre" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="969" name="Statut" visibility="public" type="80" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="970" name="Regroupe" memberEnd="964 971">
+        <ownedEnd xmi:id="971" visibility="public" type="963" isUnique="false" association="970"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="972" name="Surveillance">
+        <ownedAttribute xmi:id="973" visibility="public" type="692" isUnique="false" association="978">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="974" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="975"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="976" name="Type" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="977" name="Statut" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="978" name="induit" memberEnd="973 979">
+        <ownedEnd xmi:id="979" visibility="public" type="972" isUnique="false" association="978">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="980" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="981" name="Surveillance Livrables">
+        <generalization xmi:id="982" general="972"/>
+        <ownedAttribute xmi:id="983" visibility="public" type="275" isUnique="false" association="986">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="984" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="985" name="Résultat" visibility="public" type="87" isUnique="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="986" name="induit" memberEnd="983 987">
+        <ownedEnd xmi:id="987" visibility="public" type="981" isUnique="false" association="986">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="988" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="989" name="Surveillance Terrain">
+        <generalization xmi:id="990" general="972"/>
+        <ownedAttribute xmi:id="991" name="Date de demande" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="992" name="Usine">
+        <ownedAttribute xmi:id="993" name="Numéro de SIRET" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="994" name="Libellé" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="995" name="Adresse" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="996" name="Identifiant usine" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="997" name="VISA">
+        <ownedAttribute xmi:id="998" visibility="public" type="796" isUnique="false" association="1012"/>
+        <ownedAttribute xmi:id="999" visibility="public" type="359" isUnique="false" association="1014"/>
+        <ownedAttribute xmi:id="1000" visibility="public" type="421" isUnique="false" association="1016"/>
+        <ownedAttribute xmi:id="1001" visibility="public" type="656" isUnique="false" association="1018"/>
+        <ownedAttribute xmi:id="1002" name="livrable" visibility="public" type="611" isUnique="false" association="1021">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="1003"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="1004" visibility="public" type="924" isUnique="false" association="1024"/>
+        <ownedAttribute xmi:id="1005" name="Nom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="1006" name="Prénom" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="1007" name="Entité" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="1008" name="Date de signature" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="1009" name="Statut" visibility="public" type="80" isUnique="false"/>
+        <ownedAttribute xmi:id="1010" name="Fonction" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="1011" name="Identifiant signataire" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="1012" name="est apposé sur" memberEnd="998 1013">
+        <ownedEnd xmi:id="1013" visibility="public" type="997" isUnique="false" association="1012"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="1014" name="est apposé sur" memberEnd="999 1015">
+        <ownedEnd xmi:id="1015" visibility="public" type="997" isUnique="false" association="1014"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="1016" name="est apposé sur" memberEnd="1000 1017">
+        <ownedEnd xmi:id="1017" visibility="public" type="997" isUnique="false" association="1016"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="1018" name="Valide" memberEnd="1001 1019">
+        <ownedEnd xmi:id="1019" visibility="public" type="997" isUnique="false" association="1018">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="1020" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="1021" memberEnd="1002 1022">
+        <ownedEnd xmi:id="1022" visibility="public" type="997" isUnique="false" association="1021">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="1023"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="1024" name="Valide" memberEnd="1004 1025">
+        <ownedEnd xmi:id="1025" visibility="public" type="997" isUnique="false" association="1024">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="1026" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="1027" name="Modèles Communs"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="1028" name="Commentaires Communs">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="1029" name="Numéro, Rue, CP, Ville, PAYS"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="1030" name="Exigence technique"/>
+    <profileApplication xmi:id="1031">
+      <eAnnotations xmi:id="1032" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Document%20Publisher.profile.uml#_GlrPhzIxEe-n_btyyktV6g"/>
+      </eAnnotations>
+      <appliedProfile href="Document%20Publisher.profile.uml#_GlrPgDIxEe-n_btyyktV6g"/>
+    </profileApplication>
+    <profileApplication xmi:id="1033">
+      <eAnnotations xmi:id="1034" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="default.profile.uml#_Gl55BzIxEe-n_btyyktV6g"/>
+      </eAnnotations>
+      <appliedProfile href="default.profile.uml#_Gl55ADIxEe-n_btyyktV6g"/>
+    </profileApplication>
+  </uml:Model>
+  <DocumentPublisher:DocumentPublisherDocumentFolder xmi:id="1035" base_Package="6"/>
+  <DocumentPublisher:DocumentPublisherDocument xmi:id="1036" base_Artifact="7" DocumentPublishertargetFile="OPENXML" DocumentPublishertargetDir="doc" DocumentPublishertemplate="AnalysisAndDesign" DocumentPublishername="Doctest" DocumentPublishercontent="REV|TOF|TOT|TOC|CONTENT|" DocumentPublisherstylesheet="$MODULE_DIR/res/style/Modern_blue_fr.docx"/>
+  <default:manifestation xmi:id="1037" base_Dependency="10"/>
+</xmi:XMI>

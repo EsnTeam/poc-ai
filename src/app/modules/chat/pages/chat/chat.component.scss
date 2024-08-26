@@ -15,22 +15,6 @@
     flex-wrap: nowrap;
   }
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    position: fixed;
-    z-index: 2;
-
-    mat-form-field {
-      min-width: 400px;
-    }
-
-    &__trailing {
-      text-align: end;
-    }
-  }
-
   button:not(:first-child) {
     margin-left: 1rem;
   }

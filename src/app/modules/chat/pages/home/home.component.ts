@@ -20,4 +20,7 @@ export class HomeComponent {
   public goToFiles() {
     this.router.navigate([`/poc-ai/files`]);
   }
+  public goToDemo() {
+    this.router.navigate([`/poc-ai/demo`]);
+  }
 }

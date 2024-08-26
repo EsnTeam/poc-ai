@@ -9,6 +9,8 @@
       <mat-icon
         [matTooltip]="getFileText(message.attachments?.[0]?.file_id || '')"
         fontIcon="description"
+        [ngClass]="{ clickable: message.role == 'assistant' }"
+        (click)="message.role == 'assistant' ? downloadFile(message.attachments?.[0]?.file_id || '') : null"
       ></mat-icon>
     </div>
   </div>

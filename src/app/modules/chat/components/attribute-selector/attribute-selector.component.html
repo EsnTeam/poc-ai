@@ -1,0 +1,116 @@
+<div *ngIf="objectSchema" class="attribute-selector">
+  <table class="attribute-selector__table">
+    <ng-container *ngFor="let att of objectSchema.attributes">
+      <tr
+        class="attribute-selector__attribute"
+        [ngClass]="{
+          'not-included': !att.isIncluded && !att.isSubObjectIncluded
+        }"
+      >
+        <!-- display -->
+        <ng-container *ngIf="!currentlyEditing.includes(att.uuid)">
+          <td class="attribute-selector__attribute__label">
+            <mat-icon
+              fontIcon="edit"
+              class="clickable"
+              (click)="editMode(att.uuid, true)"
+            ></mat-icon>
+          </td>
+
+          <td class="attribute-selector__attribute__label">
+            {{ att.name }}
+            <span *ngIf="!att.name" class="unknown-attr">Pas de nom</span>
+          </td>
+
+          <td class="attribute-selector__attribute__type">{{ att.type }}</td>
+
+          <td class="attribute-selector__attribute__generated">
+            {{ att.suggestedFieldName }}
+          </td>
+
+          <td class="attribute-selector__attribute__checkbox">
+            <span class="chose-file-label">{{
+              att.isMandatory ? "Obligatoire" : "Non-obligatoire"
+            }}</span>
+          </td>
+
+          <td class="attribute-selector__attribute__checkbox">
+            <span class="chose-file-label">{{
+              att.isMultivalued ? "Multivalue" : "Monovalue"
+            }}</span>
+          </td>
+        </ng-container>
+
+        <!-- edition -->
+        <ng-container *ngIf="!!currentlyEditing.includes(att.uuid)">
+          <td class="attribute-selector__attribute__label">
+            <mat-icon
+              fontIcon="check"
+              class="clickable"
+              (click)="editMode(att.uuid, false)"
+            ></mat-icon>
+          </td>
+
+          <td class="attribute-selector__attribute__label">
+            <input mat-input [(ngModel)]="att.name" type="text" />
+          </td>
+
+          <td class="attribute-selector__attribute__type">
+            <input mat-input [(ngModel)]="att.type" type="text" />
+          </td>
+
+          <td class="attribute-selector__attribute__generated">
+            <!-- <input mat-input [(ngModel)]="att.suggestedFieldName" type="text" /> -->
+            {{ att.suggestedFieldName }}
+          </td>
+
+          <td class="attribute-selector__attribute__checkbox">
+            <input [(ngModel)]="att.isMandatory" type="checkbox" />
+            <span class="chose-file-label">Obligatoire</span>
+          </td>
+
+          <td class="attribute-selector__attribute__checkbox">
+            <input [(ngModel)]="att.isMultivalued" type="checkbox" />
+            <span class="chose-file-label">Multivalued</span>
+          </td>
+        </ng-container>
+
+        <td class="attribute-selector__attribute__checkbox">
+          <ng-container>
+            <input
+              [(ngModel)]="att.isIncluded"
+              type="checkbox"
+              (change)="onIncludeClick(att, $event)"
+            />
+            <span class="chose-file-label"
+              >Inclure
+              <span *ngIf="!att.isPrimitiveType">la référence</span></span
+            >
+          </ng-container>
+        </td>
+        <td class="attribute-selector__attribute__checkbox">
+          <ng-container
+            *ngIf="!att.isPrimitiveType && !parents.includes(att.type)"
+          >
+            <input
+              [(ngModel)]="att.isSubObjectIncluded"
+              (change)="onIncludeAllClick(att, $event)"
+              type="checkbox"
+            />
+            <span class="chose-file-label">Inclure le sous-objet</span>
+          </ng-container>
+        </td>
+      </tr>
+      <tr *ngIf="att.isSubObjectIncluded">
+        <td></td>
+        <td [attr.colspan]="totalColumns - 1" class="sub-object-wrapper">
+          <!-- test -->
+          <app-attribute-selector
+            [objectName]="att.type"
+            [parents]="parents.concat([objectName])"
+          ></app-attribute-selector>
+        </td>
+      </tr>
+    </ng-container>
+  </table>
+</div>

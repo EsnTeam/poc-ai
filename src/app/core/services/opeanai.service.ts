@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
 import { KeyService } from './key.service';
+import { z } from 'zod';
+import { zodResponseFormat } from 'openai/helpers/zod';
 
 // import * as fs from 'fs';
 
 // Import chatgpt-api module
 import OpenAI from 'openai';
 import { EsnThreadManagementService } from './thread-management.service';
+import { PocUtils } from 'src/app/modules/shared/utils/utils';
+import { ToastrService } from 'ngx-toastr';
+import { MODELS_PRICING } from 'src/app/modules/shared/model/constants';
+import { Assistant } from 'openai/resources/beta/assistants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EsnOpenaiService {
   public openai: OpenAI;
+  public assistants: Assistant[] = [];
   constructor(
     public keyService: KeyService,
-    public threadMgmtService: EsnThreadManagementService
+    public threadMgmtService: EsnThreadManagementService,
+    private toastr: ToastrService
   ) {
     this.keyService.keyInit$.subscribe((key) => {
       if (!!key) {
@@ -24,6 +32,7 @@ export class EsnOpenaiService {
         });
       }
     });
+    this.listAssistants().then((data) => (this.assistants = data));
   }
 
   public listAssistants() {
@@ -79,7 +88,7 @@ export class EsnOpenaiService {
         attachments: [
           {
             file_id: fileId, //txtRCFileId,
-            tools: [{ type: 'file_search' }],
+            tools: [{ type: 'file_search' }, { type: 'code_interpreter' }],
           },
         ],
       })
@@ -98,11 +107,37 @@ export class EsnOpenaiService {
       .then((x) => x);
   }
 
-  public runThread(assistantId: string, threadId: string) {
+  public runThread(
+    assistantId: string,
+    threadId: string,
+    format?: any,
+    jsonFormat?: boolean
+  ) {
+    // const format = z.object({
+    //   results: z.array(
+    //     z.object({
+    //       id: z.string(),
+    //       name: z.string(),
+    //       type: z.string(),
+    //       association: z.string(),
+    //     })
+    //   ),
+    // });
+
+    const runConf = {
+      assistant_id: assistantId,
+      // response_format: zodResponseFormat(format, 'format'),
+    } as any;
+
+    if (jsonFormat) {
+      runConf.response_format = { type: 'json_object' };
+    }
+    if (format) {
+      runConf.response_format = zodResponseFormat(format, 'format');
+    }
+
     return this.openai.beta.threads.runs
-      .create(threadId, {
-        assistant_id: assistantId,
-      })
+      .create(threadId, runConf)
       .then((x) => x);
   }
 
@@ -114,6 +149,20 @@ export class EsnOpenaiService {
 
   public listFiles() {
     return this.openai.files.list().then((x) => x.data);
+  }
+
+  public async clearThread(threadId: string) {
+    const list = await this.listMessages(threadId);
+    const promises = [] as any[];
+
+    list.data
+      .map((d) => d.id)
+      .forEach((id, index) => {
+        // if (list.data.length - index > 2) {
+        promises.push(this.deleteMessage(id, threadId));
+        // }
+      });
+    await Promise.all(promises);
   }
 
   public async createFile(selectedFile: any) {
@@ -132,5 +181,84 @@ export class EsnOpenaiService {
     } catch (error) {
       console.error('Error uploading file:', error);
     }
+  }
+
+  public async downloadFile(fileId: string) {
+    const fileContent = await this.openai.files.content(fileId).then((x) => x);
+
+    // const bufferView = new Uint8Array(await fileContent.arrayBuffer());
+    // const string = new TextDecoder().decode(bufferView);
+
+    // const str2 = Buffer.from(bufferView).toString('utf-8');
+
+    console.log({ fileContent });
+
+    var blob, url;
+    blob = new Blob([await fileContent.arrayBuffer()], {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    });
+    url = window.URL.createObjectURL(blob);
+
+    const fileType = 'XLSX/XLS';
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `test.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
+  public async waitForSuccess(
+    runId: string,
+    threadId: string,
+    showUsage: boolean = true
+  ) {
+    let status = 'queued';
+    let runVal;
+    while (status == 'queued' || status == 'in_progress') {
+      await PocUtils.sleep(1000);
+      runVal = await this.retreiveRun(threadId, runId);
+      status = runVal.status;
+      console.log({ runVal });
+    }
+
+    if (showUsage) {
+      const inputToks = runVal?.usage?.prompt_tokens || 0;
+      const outputToks = runVal?.usage?.completion_tokens || 0;
+
+      let cost: any =
+        (inputToks / 1000000) *
+          this.getPricePerMInputTokens(runVal?.assistant_id!) +
+        (outputToks / 1000000) *
+          this.getPricePerMOutputTokens(runVal?.assistant_id!);
+
+      if (cost < 0.0001) {
+        cost = '< 0.0001';
+      } else {
+        cost = Math.trunc(cost * 10000) / 10000;
+      }
+
+      const message = `Input: ${inputToks} tokens
+Output: ${outputToks} tokens
+Cost: ${cost}$`;
+      this.toastr.success(message, 'Usage', { disableTimeOut: true });
+    }
+  }
+
+  public getPricePerMInputTokens(assistantId: string) {
+    const modelPricing =
+      MODELS_PRICING[
+        this.assistants.find((a) => a.id == assistantId)?.model as 'gpt-4o'
+      ];
+    return modelPricing.input;
+  }
+
+  public getPricePerMOutputTokens(assistantId: string) {
+    const modelPricing =
+      MODELS_PRICING[
+        this.assistants.find((a) => a.id == assistantId)?.model as 'gpt-4o'
+      ];
+    return modelPricing.output;
   }
 }

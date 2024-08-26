@@ -44,10 +44,15 @@ export class FilesComponent {
       return;
     }
 
-    this.oaiService.createFile(this.selectedFile);
+    await this.oaiService.createFile(this.selectedFile);
+    this.refresh();
   }
 
   public stringify(o: any) {
     return JSON.stringify(o, null, 4);
+  }
+
+  public downloadFile(fileId: string) {
+    this.oaiService.downloadFile(fileId);
   }
 }

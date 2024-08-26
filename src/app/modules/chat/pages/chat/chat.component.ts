@@ -8,6 +8,7 @@ import { Assistant } from 'openai/resources/beta/assistants';
 import { Message } from 'openai/resources/beta/threads/messages';
 import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
 import { EsnAiSnapshotService } from 'src/app/core/services/snapshot.service';
+import { UmlProcessingService } from 'src/app/core/services/uml-processing.service';
 import { EsnAiUserConfigService } from 'src/app/core/services/user-config.service';
 import {
   ASSISTANTS,
@@ -48,7 +49,8 @@ export class ChatComponent {
     public locationStrategy: LocationStrategy,
     private toastr: ToastrService,
     public userConfigService: EsnAiUserConfigService,
-    public snapshotService: EsnAiSnapshotService
+    public snapshotService: EsnAiSnapshotService,
+    public umlService: UmlProcessingService
   ) {}
 
   async ngOnInit() {
@@ -89,6 +91,7 @@ export class ChatComponent {
   }
 
   public async callTest() {
+    this.umlService.processUML('a');
     // this.retreiveThread();
     // this.retreiveFile();
     // await this.createMessageWithFile('What is this file ?');
@@ -109,17 +112,6 @@ export class ChatComponent {
       showUsage: this.showUsage,
       autoRunThread: this.autoRunThread,
     });
-  }
-
-  public async createThread() {
-    const emptyThread = await this.openai.beta.threads.create({
-      tool_resources: {
-        file_search: {
-          vector_store_ids: [VECTOR_STORES.main],
-        },
-      },
-    });
-    console.log(emptyThread);
   }
 
   public async createVectorStore() {

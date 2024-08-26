@@ -5,6 +5,7 @@ import { AssistantsComponent } from './pages/assistants/assistants.component';
 import { ThreadsComponent } from './pages/threads/threads.component';
 import { FilesComponent } from './pages/files/files.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DemoComponent } from './pages/demo/demo.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
   {
     path: 'files',
     component: FilesComponent,
+    children: [],
+  },
+  {
+    path: 'demo',
+    component: DemoComponent,
     children: [],
   },
 

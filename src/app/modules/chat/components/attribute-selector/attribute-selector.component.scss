@@ -1,0 +1,29 @@
+:host {
+  flex-grow: 1;
+  .sub-object-wrapper {
+    margin-left: 100px;
+    // display: flex;
+  }
+  .attribute-selector__table {
+    width: 100%;
+  }
+
+  td {
+    // border: 1px solid #cdd5df;
+    border-top: 1px solid #cdd5df;
+  }
+
+  .unknown-attr {
+    color: #9aa4b2;
+    font-style: italic;
+  }
+
+  .not-included {
+    opacity: 0.4;
+  }
+
+  .attribute-selector__attribute__generated {
+    // color: #84adff;
+    color: #528bff;
+  }
+}

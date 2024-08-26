@@ -1,0 +1,54 @@
+<div class="header">
+  <div class="header__leading">
+    <button mat-raised-button color="primary" (click)="back()">
+      {{ "< Back" }}
+    </button>
+
+    <button mat-raised-button color="primary" (click)="getObjectsSchemas()">
+      Test
+    </button>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="suggestFieldNames()"
+      [disabled]="suggestNameOngoing || generateJsonsOngoing"
+    >
+      <div class="button-inner">
+        <mat-spinner *ngIf="suggestNameOngoing" diameter="20"></mat-spinner>
+        Suggérer des noms de champs
+      </div>
+    </button>
+    <button mat-raised-button color="primary" (click)="openThread()">
+      Voir le thread
+    </button>
+
+    <button mat-raised-button color="primary" (click)="generateCI()">
+      Generer le CI
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="generateJSONSchema()"
+      [disabled]="suggestNameOngoing || generateJsonsOngoing"
+    >
+      <div class="button-inner">
+        <mat-spinner *ngIf="generateJsonsOngoing" diameter="20"></mat-spinner>
+        Generer les Json Schema / UI
+      </div>
+    </button>
+  </div>
+</div>
+
+<div class="attribute-selector">
+  <div class="attribute-selector__title">
+    <input mat-input [(ngModel)]="objectName" type="text" />
+    <button mat-raised-button color="primary" (click)="search()">
+      Chercher
+    </button>
+  </div>
+  <app-attribute-selector
+    *ngIf="!searchOngoing"
+    [objectName]="objectName"
+  ></app-attribute-selector>
+</div>

@@ -3,6 +3,7 @@ import {
   Message,
   TextContentBlock,
 } from 'openai/resources/beta/threads/messages';
+import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
 
 @Component({
   selector: 'app-message',
@@ -14,6 +15,8 @@ export class MessageComponent {
   @Input() message!: Message;
   @Input() files: any[];
   @Output() delete: EventEmitter<void> = new EventEmitter();
+
+  constructor(public oaiService: EsnOpenaiService) {}
 
   get text() {
     return (this.message.content[0] as TextContentBlock).text.value;
@@ -28,5 +31,9 @@ export class MessageComponent {
 
   public onDeleteClick() {
     this.delete.emit();
+  }
+
+  public downloadFile(fileId: string) {
+    this.oaiService.downloadFile(fileId);
   }
 }
