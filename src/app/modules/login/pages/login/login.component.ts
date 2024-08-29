@@ -27,7 +27,7 @@ export class LoginComponent {
   public onSubmit() {
     this.cookieService.set('key-encryption-pass', this.value);
     this.keyService.init();
-    this.router.navigate(['/chat/talk']);
+    this.router.navigate(['/llm']);
   }
 
   public onInput(e: any) {
