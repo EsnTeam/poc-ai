@@ -39,19 +39,25 @@ export class EsnOpenaiService {
     return this.openai.beta.assistants.list().then((x) => x.data);
   }
 
-  public listThreads() {
+  public async listThreads() {
     const ids = this.threadMgmtService.getThreadIds();
     const threadsPromises: Promise<any>[] = [];
 
     console.log({ ids });
 
     ids.forEach((id) => {
-      threadsPromises.push(
-        this.openai.beta.threads.retrieve(id).then((x) => x)
-      );
+      try {
+        threadsPromises.push(
+          this.openai.beta.threads
+            .retrieve(id)
+            .then((x) => x)
+            .catch((e) => {})
+        );
+      } catch (err) {}
     });
     console.log('asdfqsdlkf');
-    return Promise.all(threadsPromises);
+    const resp = await Promise.all(threadsPromises);
+    return resp.filter((x) => x);
   }
 
   public async createAssistant(config: any) {
