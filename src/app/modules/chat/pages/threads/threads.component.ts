@@ -27,11 +27,11 @@ export class ThreadsComponent {
     this.loading = false;
   }
   public goToChatView(thread: Thread) {
-    this.router.navigate([`/poc-ai/threads/${thread.id}/chat`]);
+    this.router.navigate([`/llm/threads/${thread.id}/chat`]);
   }
 
   public back() {
-    this.router.navigate([`/poc-ai/home`]);
+    this.router.navigate([`/llm/home`]);
   }
 
   public async createThread() {

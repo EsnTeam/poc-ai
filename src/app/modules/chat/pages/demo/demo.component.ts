@@ -78,7 +78,7 @@ export class DemoComponent {
   }
 
   public back() {
-    this.router.navigate([`/poc-ai/`]);
+    this.router.navigate([`/llm/`]);
   }
 
   public generateCI() {
@@ -87,7 +87,7 @@ export class DemoComponent {
   }
 
   public openThread() {
-    const url = `${this.locationStrategy.getBaseHref()}poc-ai/threads/${
+    const url = `${this.locationStrategy.getBaseHref()}llm/threads/${
       THREADS.main
     }/chat`;
     window.open(url, '_blank');

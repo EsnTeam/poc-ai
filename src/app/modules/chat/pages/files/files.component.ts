@@ -24,7 +24,7 @@ export class FilesComponent {
   }
 
   public back() {
-    this.router.navigate([`/poc-ai/home`]);
+    this.router.navigate([`/llm/home`]);
   }
 
   public onFileSelected(event: Event): void {

@@ -4,7 +4,7 @@ import { PasswordExistGuard } from './core/guards/password.guard';
 
 const routes: Routes = [
   {
-    path: 'poc-ai',
+    path: 'llm',
     loadChildren: () =>
       import('./modules/chat/chat.module').then((m) => m.ChatModule),
     canActivate: [PasswordExistGuard],
@@ -15,7 +15,7 @@ const routes: Routes = [
       import('./modules/login/login.module').then((m) => m.LoginModule),
   },
 
-  { path: '**', redirectTo: 'poc-ai' },
+  { path: '**', redirectTo: 'llm' },
 ];
 
 @NgModule({

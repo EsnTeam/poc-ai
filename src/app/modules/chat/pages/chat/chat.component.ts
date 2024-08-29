@@ -19,7 +19,7 @@ import {
 } from 'src/app/modules/shared/model/constants';
 
 //what are the names and types of the <attr> of <elm> with name contrat ?
-// https://esnteam.github.io/poc-ai/poc-ai/
+// https://esnteam.github.io/poc-ai/llm/
 
 @Component({
   selector: 'app-chat',
@@ -283,16 +283,16 @@ Cost: ${cost}$`;
   }
 
   public back() {
-    this.router.navigate([`/poc-ai/threads`]);
+    this.router.navigate([`/llm/threads`]);
   }
 
   public onManageFilesClick() {
-    const url = `${this.locationStrategy.getBaseHref()}poc-ai/files`;
+    const url = `${this.locationStrategy.getBaseHref()}llm/files`;
     window.open(url, '_blank');
   }
 
   public onManageAssistantsClick() {
-    const url = `${this.locationStrategy.getBaseHref()}poc-ai/assistants`;
+    const url = `${this.locationStrategy.getBaseHref()}llm/assistants`;
     window.open(url, '_blank');
   }
 

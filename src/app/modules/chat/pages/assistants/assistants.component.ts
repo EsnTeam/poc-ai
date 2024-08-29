@@ -25,7 +25,7 @@ export class AssistantsComponent {
   }
 
   public goToDetailView(assistant: Assistant) {
-    // this.router.navigate([`/poc-ai/assistants/${assistant.id}/threads`]);
+    // this.router.navigate([`/llm/assistants/${assistant.id}/threads`]);
   }
 
   public async refresh() {
@@ -35,7 +35,7 @@ export class AssistantsComponent {
   }
 
   public back() {
-    this.router.navigate([`/poc-ai/home`]);
+    this.router.navigate([`/llm/home`]);
   }
 
   public stringify(o: any) {

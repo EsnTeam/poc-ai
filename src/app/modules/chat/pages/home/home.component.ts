@@ -10,17 +10,17 @@ export class HomeComponent {
   constructor(public router: Router) {}
 
   public goToThreads() {
-    this.router.navigate([`/poc-ai/threads`]);
+    this.router.navigate([`/llm/threads`]);
   }
 
   public goToAssistants() {
-    this.router.navigate([`/poc-ai/assistants`]);
+    this.router.navigate([`/llm/assistants`]);
   }
 
   public goToFiles() {
-    this.router.navigate([`/poc-ai/files`]);
+    this.router.navigate([`/llm/files`]);
   }
   public goToDemo() {
-    this.router.navigate([`/poc-ai/demo`]);
+    this.router.navigate([`/llm/demo`]);
   }
 }
