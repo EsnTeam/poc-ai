@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { KeyService } from 'src/app/core/services/key.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss', '../config-page.scss'],
 })
 export class HomeComponent {
-  constructor(public router: Router) {}
+  public profileName: string = '';
+  constructor(public router: Router, public keyService: KeyService) {}
 
+  ngOnInit() {
+    this.keyService.profileName$.subscribe((n) => (this.profileName = n));
+  }
   public goToThreads() {
     this.router.navigate([`/llm/threads`]);
   }
@@ -22,5 +27,9 @@ export class HomeComponent {
   }
   public goToDemo() {
     this.router.navigate([`/llm/demo`]);
+  }
+
+  public logout() {
+    this.keyService.resetPassword();
   }
 }

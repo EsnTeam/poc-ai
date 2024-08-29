@@ -30,6 +30,8 @@ export const VECTOR_STORES: { main: string } = {
 
 export const THREADS_COOKIE_NAME = 'esn-opeanai-threads';
 export const CONFIG_COOKIE_NAME = 'esn-ai-user-config';
+export const PASSWORD_COOKIE_NAME = 'key-encryption-pass';
+export const API_KEY_COOKIE_NAME = 'esn-oai-api-key';
 
 export const MODELS_PRICING = {
   'gpt-4o': {

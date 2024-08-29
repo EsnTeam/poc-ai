@@ -9,4 +9,15 @@
       (keydown)="onInput($event)"
     />
   </mat-form-field>
+
+  <mat-form-field class="chat-input-field">
+    <!-- <mat-label></mat-label> -->
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="apiKey"
+      placeholder="Ou clé API ?"
+      (keydown)="onCustomKeyInput($event)"
+    />
+  </mat-form-field>
 </div>

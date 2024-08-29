@@ -1,0 +1,11 @@
+:host {
+  .home-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+      margin-left: 1rem;
+    }
+  }
+}

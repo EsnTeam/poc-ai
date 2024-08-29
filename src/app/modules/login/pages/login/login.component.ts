@@ -3,6 +3,10 @@ import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { DipnnController } from 'src/app/core/services/dipnn-controller.service';
 import { KeyService } from 'src/app/core/services/key.service';
+import {
+  API_KEY_COOKIE_NAME,
+  PASSWORD_COOKIE_NAME,
+} from 'src/app/modules/shared/model/constants';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +15,7 @@ import { KeyService } from 'src/app/core/services/key.service';
 })
 export class LoginComponent {
   public value: string = '';
+  public apiKey: string = '';
 
   constructor(
     public cookieService: CookieService,
@@ -25,7 +30,7 @@ export class LoginComponent {
   }
 
   public onSubmit() {
-    this.cookieService.set('key-encryption-pass', this.value);
+    this.cookieService.set(PASSWORD_COOKIE_NAME, this.value);
     this.keyService.init();
     this.router.navigate(['/llm']);
   }
@@ -33,6 +38,19 @@ export class LoginComponent {
   public onInput(e: any) {
     if (e.key == 'Enter') {
       this.onSubmit();
+    }
+  }
+
+  public onCustomKeySubmit() {
+    this.cookieService.set(API_KEY_COOKIE_NAME, this.apiKey);
+    this.keyService.init();
+    console.log('qsdf');
+    this.router.navigate(['/llm']);
+  }
+
+  public onCustomKeyInput(e: any) {
+    if (e.key == 'Enter') {
+      this.onCustomKeySubmit();
     }
   }
 }
