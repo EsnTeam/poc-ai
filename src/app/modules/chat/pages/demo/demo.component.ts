@@ -87,7 +87,7 @@ export class DemoComponent {
   }
 
   public openThread() {
-    const url = `${this.locationStrategy.getBaseHref()}llm/threads/${
+    const url = `${this.locationStrategy.getBaseHref()}#/llm/threads/${
       THREADS.main
     }/chat`;
     window.open(url, '_blank');
