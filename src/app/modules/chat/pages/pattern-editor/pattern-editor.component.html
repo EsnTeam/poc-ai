@@ -7,7 +7,7 @@
       <span *ngIf="!patternNameEditionMode" class="pattern-name">{{
         pattern.name
       }}</span>
-      <mat-form-field *ngIf="patternNameEditionMode" class="pattern-name">
+      <mat-form-field *ngIf="patternNameEditionMode">
         <mat-label>Pattern name</mat-label>
         <input type="text" matInput [(ngModel)]="pattern.name" />
       </mat-form-field>

@@ -16,8 +16,8 @@ import {
   templateUrl: './pattern-step.component.html',
   styleUrls: ['./pattern-step.component.scss'],
   host: {
-    '[class.pattern-step--ongoing]': `state?.state ==  'ONGOING'`,
-    '[class.pattern-step--success]': `state?.state ==  'SUCCESS'`,
+    '[class.pattern-step--ongoing]': `state?.state ==  'ONGOING' && !step.pause`,
+    '[class.pattern-step--success]': `state?.state ==  'SUCCESS' && !step.pause`,
     '[class.pattern-step--paused]': `step.pause`,
   },
 })
