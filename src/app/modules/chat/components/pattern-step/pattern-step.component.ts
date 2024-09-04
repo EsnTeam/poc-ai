@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Assistant } from 'openai/resources/beta/assistants';
-import { FirebaseController } from 'src/app/core/services/firebase-controller.service';
 import { DataStoreService } from 'src/app/core/services/store.service';
 import {
   PatternStep,
@@ -24,8 +23,12 @@ import {
 export class PatternStepComponent {
   @Input() step: PatternStep;
   @Input() state: PatternStepExecutionState;
+  @Input() isFirst: boolean = true;
+  @Input() isLast: boolean = true;
   @Output() delete: EventEmitter<void> = new EventEmitter<void>();
   @Output() update: EventEmitter<void> = new EventEmitter<void>();
+  @Output() moveUp: EventEmitter<void> = new EventEmitter<void>();
+  @Output() moveDown: EventEmitter<void> = new EventEmitter<void>();
   public editionMode: boolean = false;
   public assistants: Assistant[] = [];
   public formatLabels = RUN_FORMAT_LABELS;
@@ -33,10 +36,7 @@ export class PatternStepComponent {
   public actionTypes = Object.keys(StepActionType) as StepActionType[];
   public actionTypeLabels = STEP_ACTION_LABELS;
 
-  constructor(
-    public storeService: DataStoreService,
-    public firebaseController: FirebaseController
-  ) {}
+  constructor(public storeService: DataStoreService) {}
 
   async ngOnInit() {
     if (!this.isStepValid) {
@@ -59,6 +59,14 @@ export class PatternStepComponent {
 
   public deleteClick() {
     this.delete.emit();
+  }
+
+  public onMoveUp() {
+    this.moveUp.emit();
+  }
+
+  public onMoveDown() {
+    this.moveDown.emit();
   }
 
   get assistantSelected() {

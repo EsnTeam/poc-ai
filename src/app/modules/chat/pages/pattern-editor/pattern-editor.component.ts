@@ -154,10 +154,33 @@ export class PatternEditorComponent {
 
   public async onPatternNameEditClick() {
     if (this.patternNameEditionMode) {
-      await lastValueFrom(
-        this.firebaseController.updatePattern(this.pattern.id!, this.pattern)
-      );
+      await this.updatePattern();
     }
     this.patternNameEditionMode = !this.patternNameEditionMode;
+  }
+
+  public moveUp(step: PatternStep) {
+    const startingIndex = this.pattern.steps.findIndex((s) => s == step);
+    this.move(this.pattern.steps, startingIndex, startingIndex - 1);
+    this.updatePattern();
+  }
+
+  public moveDown(step: PatternStep) {
+    const startingIndex = this.pattern.steps.findIndex((s) => s == step);
+    this.move(this.pattern.steps, startingIndex, startingIndex + 1);
+    this.updatePattern();
+  }
+
+  public move(input: any[], from: number, to: number) {
+    let numberOfDeletedElm = 1;
+    const elm = input.splice(from, numberOfDeletedElm)[0];
+    numberOfDeletedElm = 0;
+    input.splice(to, numberOfDeletedElm, elm);
+  }
+
+  public async updatePattern() {
+    await lastValueFrom(
+      this.firebaseController.updatePattern(this.pattern.id!, this.pattern)
+    );
   }
 }

@@ -103,6 +103,14 @@
 </div>
 
 <div class="patter-step__trailing">
+  <div class="move-buttons-container">
+    <div *ngIf="!isFirst" class="move-icon-container" (click)="onMoveUp()">
+      <mat-icon fontIcon="arrow_drop_up"></mat-icon>
+    </div>
+    <div *ngIf="!isLast" class="move-icon-container" (click)="onMoveDown()">
+      <mat-icon fontIcon="arrow_drop_down"></mat-icon>
+    </div>
+  </div>
   <button size="sm" mat-icon-button (click)="togglePause()">
     <mat-icon [fontIcon]="step.pause ? 'play_arrow' : 'pause'"></mat-icon>
   </button>

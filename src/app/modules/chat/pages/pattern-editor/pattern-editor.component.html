@@ -48,11 +48,15 @@
 <ng-container *ngIf="pattern">
   <div class="step-container">
     <app-pattern-step
-      *ngFor="let step of pattern.steps"
+      *ngFor="let step of pattern.steps; let index = index"
       [state]="executionState[step.stepId]"
       [step]="step"
+      [isFirst]="!index"
+      [isLast]="index == pattern.steps.length - 1"
       (update)="onUpdate()"
       (delete)="onDelete(step)"
+      (moveUp)="moveUp(step)"
+      (moveDown)="moveDown(step)"
     ></app-pattern-step>
   </div>
 

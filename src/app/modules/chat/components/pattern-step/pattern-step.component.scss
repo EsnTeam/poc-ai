@@ -53,4 +53,14 @@
   .btn-wrapper {
     // cursor: pointer;
   }
+
+  .patter-step__trailing {
+    display: flex;
+    align-items: center;
+  }
+
+  .move-icon-container {
+    cursor: pointer;
+    height: 24px;
+  }
 }
