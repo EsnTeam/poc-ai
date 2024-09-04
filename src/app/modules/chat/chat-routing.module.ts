@@ -6,6 +6,8 @@ import { ThreadsComponent } from './pages/threads/threads.component';
 import { FilesComponent } from './pages/files/files.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DemoComponent } from './pages/demo/demo.component';
+import { PatternsComponent } from './pages/patterns/patterns.component';
+import { PatternEditorComponent } from './pages/pattern-editor/pattern-editor.component';
 
 const routes: Routes = [
   {
@@ -32,6 +34,16 @@ const routes: Routes = [
   {
     path: 'files',
     component: FilesComponent,
+    children: [],
+  },
+  {
+    path: 'patterns',
+    component: PatternsComponent,
+    children: [],
+  },
+  {
+    path: 'patterns/:patternId',
+    component: PatternEditorComponent,
     children: [],
   },
   {

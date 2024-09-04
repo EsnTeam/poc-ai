@@ -1,0 +1,25 @@
+<button mat-raised-button color="primary" (click)="back()">
+  {{ "< Back" }}
+</button>
+
+<div class="config-elm-list">
+  <mat-spinner *ngIf="loading" diameter="40"></mat-spinner>
+  <div
+    *ngFor="let pattern of patterns"
+    class="config-elm-list__element clickable"
+    (click)="goToDetailView(pattern.id!)"
+  >
+    <div class="config-elm-list__element__label">{{ pattern.name }}</div>
+    <!-- <div class="config-elm-list__element__info">{{ assistant.model }}</div> -->
+  </div>
+</div>
+
+<div class="config-footer-actions-container">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="openPatternCreationModal()"
+  >
+    + New pattern
+  </button>
+</div>

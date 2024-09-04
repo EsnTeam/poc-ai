@@ -1,0 +1,120 @@
+<div class="pattern-step__leading">
+  <div class="step-icon">
+    <ng-container *ngIf="!state?.state">
+      <ng-container [ngSwitch]="step.type">
+        <mat-icon *ngSwitchCase="'MESSAGE'" fontIcon="chat-bubble"></mat-icon>
+        <mat-icon *ngSwitchCase="'RUN'" fontIcon="psychology"></mat-icon>
+        <mat-icon *ngSwitchCase="'ACTION'" fontIcon="settings"></mat-icon>
+      </ng-container>
+    </ng-container>
+
+    <mat-spinner *ngIf="state?.state == 'ONGOING'" diameter="20"></mat-spinner>
+
+    <mat-icon *ngIf="state?.state == 'SUCCESS'" fontIcon="check"></mat-icon>
+  </div>
+  <div class="patter-step__body">
+    <!-- MESSAGE -->
+    <ng-container *ngIf="step.type == 'MESSAGE'">
+      <div *ngIf="editionMode">
+        <mat-form-field class="full-width">
+          <mat-label>Message</mat-label>
+          <textarea matInput [(ngModel)]="step.prompt" rows="15"></textarea>
+        </mat-form-field>
+      </div>
+      <div *ngIf="!editionMode" class="action-display">
+        Add message: <span class="prompt-display">"{{ step.prompt }}"</span>
+      </div>
+    </ng-container>
+
+    <!-- RUN -->
+    <ng-container *ngIf="step.type == 'RUN'">
+      <div *ngIf="editionMode">
+        <mat-form-field class="full-width">
+          <mat-label>Select an assistant</mat-label>
+
+          <mat-select [(ngModel)]="step.assistantId">
+            <mat-option
+              ng-size="8"
+              *ngFor="let assistant of assistants"
+              [value]="assistant.id"
+              >{{ assistant.name }} ({{ assistant.model }})</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Force response format</mat-label>
+
+          <mat-select [(ngModel)]="step.runFormat">
+            <mat-option ng-size="8" [value]="''">Don't force</mat-option>
+            <mat-option
+              ng-size="8"
+              *ngFor="let format of formatLabelsEntries"
+              [value]="format[0]"
+              >{{ format[1] }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div *ngIf="!editionMode" class="run-display">
+        <div>
+          Run with:
+          <span *ngIf="assistantSelected"
+            >{{ assistantSelected?.name }} ({{
+              assistantSelected?.model
+            }})</span
+          ><span *ngIf="!assistantSelected">...</span>
+        </div>
+        <div *ngIf="step.runFormat">
+          Force format: {{ formatLabels[step.runFormat] }}
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- ACTION -->
+    <ng-container *ngIf="step.type == 'ACTION'">
+      <div *ngIf="editionMode">
+        <mat-form-field class="full-width">
+          <mat-label>Select an action type</mat-label>
+
+          <mat-select [(ngModel)]="step.actionType">
+            <mat-option
+              ng-size="8"
+              *ngFor="let type of actionTypes"
+              [value]="type"
+              >{{ actionTypeLabels[type] }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field *ngIf="step.actionType == 'DOWNLOAD'">
+          <mat-label>File name</mat-label>
+          <input matInput [(ngModel)]="step.fileName" />
+        </mat-form-field>
+      </div>
+      <div *ngIf="!editionMode" class="run-display">
+        <div>
+          {{ actionTypeLabels[step.actionType!] }}
+          <span *ngIf="step.actionType == 'DOWNLOAD'">
+            "{{ step.fileName }}"</span
+          >
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="patter-step__trailing">
+  <button size="sm" mat-icon-button (click)="togglePause()">
+    <mat-icon [fontIcon]="step.pause ? 'play_arrow' : 'pause'"></mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    [disabled]="editionMode && !isStepValid"
+    (click)="toggleEditionMode()"
+  >
+    <mat-icon [fontIcon]="editionMode ? 'check' : 'edit'"></mat-icon>
+  </button>
+
+  <button mat-icon-button (click)="deleteClick()">
+    <mat-icon fontIcon="delete"></mat-icon>
+  </button>
+</div>

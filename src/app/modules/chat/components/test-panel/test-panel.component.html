@@ -1,0 +1,80 @@
+<div class="test-panel__header">
+  <div class="header-row">
+    <button mat-raised-button color="primary" (click)="onCloseClick()">
+      Close pannel
+    </button>
+    <div class="header-element">
+      <mat-form-field>
+        <mat-label>Test data</mat-label>
+        <mat-select [(ngModel)]="selectedTestData">
+          <mat-option
+            ng-size="8"
+            *ngFor="let data of testData"
+            [value]="data"
+            >{{ data.name }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onImportClick()"
+        [disabled]="!selectedTestData"
+      >
+        Import
+      </button>
+    </div>
+  </div>
+
+  <div class="header-row">
+    <mat-form-field>
+      <mat-label>Thread</mat-label>
+
+      <mat-select [(ngModel)]="threadId" (ngModelChange)="onThreadChange()">
+        <mat-option ng-size="8" *ngFor="let id of threadIds" [value]="id">{{
+          id
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!inputText1"
+      (click)="onExecuteClick()"
+    >
+      Execute pattern
+    </button>
+  </div>
+</div>
+
+<div class="test-panel__body">
+  <mat-form-field class="full-width">
+    <mat-label>Input ##1</mat-label>
+    <textarea
+      matInput
+      type="text"
+      [(ngModel)]="inputText1"
+      rows="15"
+    ></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Input ##2</mat-label>
+    <input type="text" matInput [(ngModel)]="inputText2" />
+  </mat-form-field>
+</div>
+
+<div class="test-pannel__footer">
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="!selectedTestData"
+    (click)="onOverrideClick()"
+  >
+    Save data
+  </button>
+  <button mat-raised-button color="primary" (click)="onSaveNewClick()">
+    Save as new data
+  </button>
+</div>

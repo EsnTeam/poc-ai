@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content>
+  <mat-form-field class="text-field">
+    <mat-label>{{ data.textFiedlLabel }}</mat-label>
+    <input type="text" matInput [(ngModel)]="textFieldValue" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="onConfirm()">{{ data.confirmLabel }}</button>
+</div>

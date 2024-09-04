@@ -5,6 +5,7 @@ import { CursorPage } from 'openai/pagination';
 import { Assistant } from 'openai/resources/beta/assistants';
 import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
 import { AssistantEditionDialogComponent } from '../../components/assistant-edition-dialog/assistant-edition-dialog.component';
+import { DataStoreService } from 'src/app/core/services/store.service';
 
 @Component({
   selector: 'app-assistants',
@@ -17,7 +18,8 @@ export class AssistantsComponent {
   constructor(
     public oaiService: EsnOpenaiService,
     public router: Router,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public storeService: DataStoreService
   ) {}
 
   async ngOnInit() {
@@ -30,7 +32,7 @@ export class AssistantsComponent {
 
   public async refresh() {
     this.loading = true;
-    this.assistants = await this.oaiService.listAssistants();
+    this.assistants = await this.storeService.getAssistants();
     this.loading = false;
   }
 
@@ -48,8 +50,9 @@ export class AssistantsComponent {
         width: '70vw',
         height: '80vh',
       })
-      .componentInstance.updated.subscribe(() => {
+      .componentInstance.updated.subscribe(async () => {
         console.log('UPDATED');
+        await this.storeService.refreshAssistants();
         this.refresh();
       });
   }

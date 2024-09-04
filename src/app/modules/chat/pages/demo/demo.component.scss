@@ -2,11 +2,15 @@
   background-color: white;
   border-radius: 8px;
   padding: 1rem;
-  margin-top: 90px;
 }
 
 :host {
   padding-top: 150px;
+
+  .header {
+    display: block;
+    position: relative;
+  }
 
   .button-inner {
     display: flex;

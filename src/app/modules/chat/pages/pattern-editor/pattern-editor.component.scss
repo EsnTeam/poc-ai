@@ -1,0 +1,39 @@
+:host {
+  max-height: 100vh;
+  overflow: auto;
+
+  .header-element {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pattern-editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .config-footer-actions-container {
+    margin-bottom: 5rem;
+  }
+
+  .ongoing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .test-panel-container {
+    z-index: 999;
+    border-left: 1px solid #cdd5df;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+  }
+}

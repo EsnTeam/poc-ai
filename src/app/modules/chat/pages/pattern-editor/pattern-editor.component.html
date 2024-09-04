@@ -1,0 +1,76 @@
+<div class="pattern-editor-header">
+  <div class="header-element">
+    <button mat-raised-button color="primary" (click)="back()">
+      {{ "< Back" }}
+    </button>
+    <div class="pattern-name-container" *ngIf="pattern">
+      <span *ngIf="!patternNameEditionMode" class="pattern-name">{{
+        pattern.name
+      }}</span>
+      <mat-form-field *ngIf="patternNameEditionMode" class="pattern-name">
+        <mat-label>Pattern name</mat-label>
+        <input type="text" matInput [(ngModel)]="pattern.name" />
+      </mat-form-field>
+      <button mat-icon-button (click)="onPatternNameEditClick()">
+        <mat-icon
+          [fontIcon]="patternNameEditionMode ? 'check' : 'edit'"
+        ></mat-icon>
+      </button>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!lastRanThreadId"
+      (click)="openThread()"
+    >
+      Open thread
+    </button>
+
+    <button mat-raised-button color="primary" (click)="duplicatePattern()">
+      Duplicate pattern
+    </button>
+
+    <div
+      class="ongoing-indicator"
+      *ngIf="executionState['clearThread']?.state == 'ONGOING'"
+    >
+      <mat-spinner diameter="30"></mat-spinner>
+      <span>Clearing thread</span>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="openTestPanel()">
+    Test pannel
+  </button>
+</div>
+
+<ng-container *ngIf="pattern">
+  <div class="step-container">
+    <app-pattern-step
+      *ngFor="let step of pattern.steps"
+      [state]="executionState[step.stepId]"
+      [step]="step"
+      (update)="onUpdate()"
+      (delete)="onDelete(step)"
+    ></app-pattern-step>
+  </div>
+
+  <div class="config-footer-actions-container">
+    <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">
+      + Add step
+    </button>
+  </div>
+</ng-container>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="addStep(stepTypes.MESSAGE)">Message</button>
+  <button mat-menu-item (click)="addStep(stepTypes.RUN)">Run</button>
+  <button mat-menu-item (click)="addStep(stepTypes.ACTION)">Action</button>
+</mat-menu>
+
+<div class="test-panel-container" [@openingAnimation]="testPanelOpened">
+  <app-test-panel
+    (close)="closeTestPanel()"
+    (execute)="onExecuteClick($event)"
+  ></app-test-panel>
+</div>

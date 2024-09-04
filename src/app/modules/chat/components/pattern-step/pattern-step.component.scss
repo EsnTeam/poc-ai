@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+
+  &.pattern-step--ongoing {
+    background-color: #eff4ff;
+    border-color: #b2ccff;
+    .step-icon {
+      color: #155eef;
+    }
+  }
+
+  &.pattern-step--success {
+    background-color: #ecfdf3;
+    border-color: #a6f4c5;
+    .step-icon {
+      color: #039855;
+    }
+  }
+
+  &.pattern-step--paused {
+    opacity: 0.5;
+  }
+
+  .step-icon {
+    color: #155eef;
+  }
+
+  .pattern-step__leading {
+    display: flex;
+    gap: 1rem;
+    flex-grow: 1;
+  }
+
+  .patter-step__body {
+    flex-grow: 1;
+    .full-width {
+      width: -webkit-fill-available;
+    }
+  }
+
+  .prompt-display {
+    white-space: pre-wrap;
+    color: #4b5565;
+    // font-style: italic;
+  }
+
+  .btn-wrapper {
+    // cursor: pointer;
+  }
+}

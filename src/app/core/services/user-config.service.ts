@@ -16,6 +16,7 @@ export interface EsnAiUserConfig {
   assistantId?: string;
   showUsage?: boolean;
   autoRunThread?: boolean;
+  threadId?: string;
 }
 
 @Injectable({

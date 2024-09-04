@@ -8,7 +8,7 @@
       Test
     </button>
 
-    <button
+    <!-- <button
       mat-raised-button
       color="primary"
       (click)="suggestFieldNames()"
@@ -18,15 +18,19 @@
         <mat-spinner *ngIf="suggestNameOngoing" diameter="20"></mat-spinner>
         Suggérer des noms de champs
       </div>
-    </button>
+    </button> -->
     <button mat-raised-button color="primary" (click)="openThread()">
       Voir le thread
+    </button>
+
+    <button mat-raised-button color="primary" (click)="openSaveDataModal()">
+      Save as test data
     </button>
 
     <button mat-raised-button color="primary" (click)="generateCI()">
       Generer le CI
     </button>
-    <button
+    <!-- <button
       mat-raised-button
       color="primary"
       (click)="generateJSONSchema()"
@@ -35,6 +39,41 @@
       <div class="button-inner">
         <mat-spinner *ngIf="generateJsonsOngoing" diameter="20"></mat-spinner>
         Generer les Json Schema / UI
+      </div>
+    </button> -->
+
+    <mat-form-field>
+      <mat-label>Execute pattern</mat-label>
+
+      <mat-select [(ngModel)]="selectedPatternId">
+        <mat-option
+          ng-size="8"
+          *ngFor="let pattern of patterns"
+          [value]="pattern.id"
+          >{{ pattern.name }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Thread</mat-label>
+
+      <mat-select [(ngModel)]="threadId" (ngModelChange)="onThreadChange()">
+        <mat-option ng-size="8" *ngFor="let id of threadIds" [value]="id">{{
+          id
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!selectedPatternId || execPatternOngoing"
+      (click)="executePattern()"
+    >
+      <div class="button-inner">
+        <mat-spinner *ngIf="execPatternOngoing" diameter="20"></mat-spinner>
+        Executer
       </div>
     </button>
   </div>

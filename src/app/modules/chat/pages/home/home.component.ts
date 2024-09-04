@@ -29,6 +29,10 @@ export class HomeComponent {
     this.router.navigate([`/llm/demo`]);
   }
 
+  public goToPatterns() {
+    this.router.navigate([`/llm/patterns`]);
+  }
+
   public logout() {
     this.keyService.resetPassword();
   }
