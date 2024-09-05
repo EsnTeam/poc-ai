@@ -36,13 +36,15 @@
           </mat-form-field>
         </div>
       </div>
-      <div *ngIf="!editionMode" class="action-display">
-        Add message: <span class="prompt-display">"{{ step.prompt }}"</span>
-      </div>
-      <div *ngIf="step.attachedFileId">
-        Attached file:
-        <span class="prompt-display">{{ step.attachedFileId }}</span>
-      </div>
+      <ng-container *ngIf="!editionMode">
+        <div class="action-display">
+          Add message: <span class="prompt-display">"{{ step.prompt }}"</span>
+        </div>
+        <div *ngIf="step.attachedFileId">
+          Attached file:
+          <span class="prompt-display">{{ step.attachedFileId }}</span>
+        </div>
+      </ng-container>
     </ng-container>
 
     <!-- RUN -->
