@@ -9,14 +9,10 @@ import { LocationStrategy } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Thread } from 'openai/resources/beta/threads/threads';
 import { lastValueFrom } from 'rxjs';
 import { FirebaseController } from 'src/app/core/services/firebase-controller.service';
-import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
 import { PatternExecutionService } from 'src/app/core/services/pattern-execution.service';
-import { EsnThreadManagementService } from 'src/app/core/services/thread-management.service';
 import { EsnAiUserConfigService } from 'src/app/core/services/user-config.service';
-import { THREADS } from 'src/app/modules/shared/model/constants';
 import {
   Pattern,
   PatternStep,

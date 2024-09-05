@@ -14,6 +14,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ToastrModule } from 'ngx-toastr';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 const importAndExport = [
   MatFormFieldModule,
   MatInputModule,
@@ -26,6 +28,7 @@ const importAndExport = [
   MatDialogModule,
   MatProgressSpinnerModule,
   MatMenuModule,
+  MatCheckboxModule,
 ];
 
 @NgModule({

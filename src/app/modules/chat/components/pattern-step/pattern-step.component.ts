@@ -29,6 +29,7 @@ export class PatternStepComponent {
   @Output() update: EventEmitter<void> = new EventEmitter<void>();
   @Output() moveUp: EventEmitter<void> = new EventEmitter<void>();
   @Output() moveDown: EventEmitter<void> = new EventEmitter<void>();
+  public isFileAttached: boolean = false;
   public editionMode: boolean = false;
   public assistants: Assistant[] = [];
   public formatLabels = RUN_FORMAT_LABELS;
@@ -43,11 +44,19 @@ export class PatternStepComponent {
       this.editionMode = true;
     }
     this.assistants = await this.storeService.getAssistants();
+    this.isFileAttached = !!this.step.attachedFileId;
+    console.log(this.isFileAttached);
   }
 
   public togglePause() {
     this.step.pause = !this.step.pause;
     this.update.emit();
+  }
+
+  public onFileAttachChange() {
+    if (!this.isFileAttached) {
+      this.step.attachedFileId = '';
+    }
   }
 
   public toggleEditionMode() {

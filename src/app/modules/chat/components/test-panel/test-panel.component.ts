@@ -24,6 +24,7 @@ export class TestPanelComponent {
 
   public inputText1: string;
   public inputText2: string;
+  public inputText3: string;
 
   constructor(
     public firebaseController: FirebaseController,
@@ -67,10 +68,15 @@ export class TestPanelComponent {
   public onImportClick() {
     this.inputText1 = this.selectedTestData?.inputs[0]!;
     this.inputText2 = this.selectedTestData?.inputs[1]!;
+    this.inputText3 = this.selectedTestData?.inputs[2]!;
   }
 
   public async onOverrideClick() {
-    this.selectedTestData!.inputs = [this.inputText1, this.inputText2];
+    this.selectedTestData!.inputs = [
+      this.inputText1,
+      this.inputText2,
+      this.inputText3,
+    ];
 
     await lastValueFrom(
       this.firebaseController.updateTestData(
@@ -85,12 +91,15 @@ export class TestPanelComponent {
   }
 
   public onExecuteClick() {
-    this.execute.emit([[this.inputText1, this.inputText2], this.threadId]);
+    this.execute.emit([
+      [this.inputText1, this.inputText2, this.inputText3],
+      this.threadId,
+    ]);
     this.onCloseClick();
   }
 
   public openSaveDataModal() {
-    const inputs = [this.inputText1, this.inputText2];
+    const inputs = [this.inputText1, this.inputText2, this.inputText3];
 
     this.dialog
       .open(ModalInputTextConfirmComponent, {

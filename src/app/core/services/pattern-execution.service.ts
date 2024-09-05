@@ -113,10 +113,18 @@ export class PatternExecutionService {
     inputs: string[],
     threadId: string
   ) {
-    await this.oaiService.createMessage(
-      this.replaceVariablesInString(step.prompt!, inputs),
-      threadId
-    );
+    if (step.attachedFileId) {
+      await this.oaiService.createMessageWithFile(
+        this.replaceVariablesInString(step.prompt!, inputs),
+        threadId,
+        this.replaceVariablesInString(step.attachedFileId!, inputs)
+      );
+    } else {
+      await this.oaiService.createMessage(
+        this.replaceVariablesInString(step.prompt!, inputs),
+        threadId
+      );
+    }
   }
 
   public async executeRunStep(step: PatternStep, threadId: string) {

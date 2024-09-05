@@ -20,9 +20,28 @@
           <mat-label>Message</mat-label>
           <textarea matInput [(ngModel)]="step.prompt" rows="15"></textarea>
         </mat-form-field>
+
+        <div class="attach-file-container">
+          <mat-checkbox
+            #attachFileCheckbox
+            [(ngModel)]="isFileAttached"
+            [checked]="isFileAttached"
+            (change)="onFileAttachChange()"
+            class="checkbox-elm"
+            >Attach a file</mat-checkbox
+          >
+          <mat-form-field class="full-width" *ngIf="attachFileCheckbox.checked">
+            <mat-label>File ID</mat-label>
+            <input matInput [(ngModel)]="step.attachedFileId" />
+          </mat-form-field>
+        </div>
       </div>
       <div *ngIf="!editionMode" class="action-display">
         Add message: <span class="prompt-display">"{{ step.prompt }}"</span>
+      </div>
+      <div *ngIf="step.attachedFileId">
+        Attached file:
+        <span class="prompt-display">{{ step.attachedFileId }}</span>
       </div>
     </ng-container>
 

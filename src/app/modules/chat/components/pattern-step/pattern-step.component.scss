@@ -63,4 +63,17 @@
     cursor: pointer;
     height: 24px;
   }
+
+  .attach-file-container {
+    display: flex;
+    gap: 1rem;
+
+    .checkbox-elm {
+      width: 150px;
+    }
+  }
+
+  .attached-file-icon {
+    font-size: 14px;
+  }
 }

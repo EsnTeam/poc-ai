@@ -11,6 +11,7 @@ export interface PatternStep {
 
   //Message
   prompt?: string;
+  attachedFileId?: string;
 
   //Run
   assistantId?: string;

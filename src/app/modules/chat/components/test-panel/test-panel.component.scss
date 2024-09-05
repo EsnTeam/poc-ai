@@ -1,6 +1,8 @@
 :host {
   display: block;
   padding: 1rem;
+  height: calc(100vh - 2rem);
+  overflow: scroll;
 
   z-index: 999;
 

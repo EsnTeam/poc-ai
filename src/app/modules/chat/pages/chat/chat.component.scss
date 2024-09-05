@@ -39,6 +39,8 @@
 }
 
 .message-list {
+  display: flex;
+  flex-direction: column-reverse;
   padding: 140px 2rem 200px 2rem;
 
   // width: calc(100vw - 4rem);

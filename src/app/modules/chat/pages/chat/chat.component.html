@@ -77,7 +77,7 @@
 <div class="view container">
   <div class="message-list">
     <app-message
-      *ngFor="let message of messages.reverse()"
+      *ngFor="let message of messages"
       [message]="message"
       [files]="files"
       (delete)="onDeleteMessage(message)"

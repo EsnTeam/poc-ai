@@ -6,11 +6,13 @@
   <mat-spinner *ngIf="loading" diameter="40"></mat-spinner>
   <div
     *ngFor="let pattern of patterns"
-    class="config-elm-list__element clickable"
+    class="config-elm-list__element clickable pattern-card"
     (click)="goToDetailView(pattern.id!)"
   >
     <div class="config-elm-list__element__label">{{ pattern.name }}</div>
-    <!-- <div class="config-elm-list__element__info">{{ assistant.model }}</div> -->
+    <!-- <button mat-icon-button>
+      <mat-icon fontIcon="delete" (click)="openDeletionModal()"></mat-icon>
+    </button> -->
   </div>
 </div>
 
