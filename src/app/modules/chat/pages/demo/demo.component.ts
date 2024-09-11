@@ -16,6 +16,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { PocUtils } from 'src/app/modules/shared/utils/utils';
 import { EsnThreadManagementService } from 'src/app/core/services/thread-management.service';
 import { EsnAiUserConfigService } from 'src/app/core/services/user-config.service';
+import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
+import { EsnExcelParsingService } from 'src/app/core/services/excel-parsing.service';
 
 @Component({
   selector: 'app-demo',
@@ -33,6 +35,11 @@ export class DemoComponent {
   public threadId: string = THREADS.main;
   public threadIds: string[] = [];
 
+  public files: any[];
+  public selectedFile: File | null = null;
+  public uploadedFile: any;
+  public uploadFileOngoing: boolean = false;
+
   constructor(
     public umlService: UmlProcessingService,
     public router: Router,
@@ -42,12 +49,19 @@ export class DemoComponent {
     public firebaseController: FirebaseController,
     public dialog: MatDialog,
     public threadsService: EsnThreadManagementService,
-    public userConfigService: EsnAiUserConfigService
+    public userConfigService: EsnAiUserConfigService,
+    public excelParsingService: EsnExcelParsingService,
+    public oaiService: EsnOpenaiService
   ) {}
 
   async ngOnInit() {
     this.initThread();
     this.patterns = await lastValueFrom(this.firebaseController.getPatterns());
+
+    const input = document.getElementById('input');
+    input?.addEventListener('change', () => {
+      this.excelParsingService.parse((input as any)['files'][0]);
+    });
   }
 
   public getObjectsSchemas() {
@@ -74,7 +88,8 @@ export class DemoComponent {
 
     await this.patternService.executePattern(
       this.selectedPatternId,
-      [JSON.stringify(schemas, null, 2), schemas[0].name],
+      [JSON.stringify(this.excelParsingService.parsedData, null, 2)],
+      // [JSON.stringify(schemas, null, 2), schemas[0].name],
       THREADS.main
     );
 
@@ -128,10 +143,37 @@ export class DemoComponent {
     window.open(url, '_blank');
   }
 
+  public onFileSelected(event: Event): void {
+    console.log({ event });
+
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFile = input.files[0];
+      this.uploadFile();
+    }
+  }
+
+  async uploadFile(): Promise<void> {
+    if (!this.selectedFile) {
+      console.log({ fileSel: this.selectedFile });
+      console.error('No file selected!');
+      return;
+    }
+    this.uploadFileOngoing = true;
+
+    this.uploadedFile = await this.oaiService.createFile(this.selectedFile);
+    console.log({ laaaaa: this.uploadedFile });
+    this.uploadFileOngoing = false;
+  }
+
   public openSaveDataModal() {
     const schemas = this.getObjectsSchemas();
 
-    const inputs = [JSON.stringify(schemas, null, 2), schemas[0].name];
+    const inputs = [
+      JSON.stringify(schemas, null, 2),
+      schemas[0].name,
+      this.uploadedFile?.id,
+    ];
 
     this.dialog
       .open(ModalInputTextConfirmComponent, {

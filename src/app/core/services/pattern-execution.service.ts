@@ -159,9 +159,22 @@ export class PatternExecutionService {
         return await this.downloadLastResponse(threadId, step.fileName!);
       case StepActionType.ADD_FIELD_TO_DATA:
         return await this.addFieldNames(threadId);
+      case StepActionType.REPLACE_DATA:
+        return await this.replaceData(threadId);
       default:
         return true;
     }
+  }
+
+  public async replaceData(threadId: string) {
+    const jsonVal = JSON.parse(
+      (
+        (await this.oaiService.listMessages(threadId)).data[0]
+          .content[0] as TextContentBlock
+      ).text.value
+    );
+
+    this.umlService.loadedObjects = jsonVal;
   }
 
   public async addFieldNames(threadId: string) {

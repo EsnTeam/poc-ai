@@ -1,3 +1,5 @@
+import { ObjectSchema } from '../model/object-schema';
+
 export class PocUtils {
   public static generateRandomUuid(): string {
     let s4 = () => {
@@ -10,5 +12,12 @@ export class PocUtils {
 
   public static async sleep(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  public static getSchemaNamed(
+    name: string,
+    schemas: ObjectSchema[]
+  ): ObjectSchema {
+    return schemas.find((f) => f.name == name)!;
   }
 }

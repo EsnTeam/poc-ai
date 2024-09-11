@@ -31,11 +31,13 @@ export enum PatternStepType {
 export enum StepActionType {
   DOWNLOAD = 'DOWNLOAD',
   ADD_FIELD_TO_DATA = 'ADD_FIELD_TO_DATA',
+  REPLACE_DATA = 'REPLACE_DATA',
 }
 
 export const STEP_ACTION_LABELS: { [key in StepActionType]: string } = {
   DOWNLOAD: `Download last response as a file`,
   ADD_FIELD_TO_DATA: `Update Data with the suggested field names`,
+  REPLACE_DATA: `Import last response as object data`,
 };
 
 export enum RunFormatEnum {

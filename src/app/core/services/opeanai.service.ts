@@ -95,6 +95,7 @@ export class EsnOpenaiService {
           {
             file_id: fileId, //txtRCFileId,
             tools: [{ type: 'file_search' }, { type: 'code_interpreter' }],
+            // tools: [{ type: 'code_interpreter' }],
           },
         ],
       })
@@ -172,21 +173,15 @@ export class EsnOpenaiService {
   }
 
   public async createFile(selectedFile: any) {
-    try {
-      const formData = new FormData();
-      formData.append('file', selectedFile, selectedFile['name'] as any);
+    const formData = new FormData();
+    formData.append('file', selectedFile, selectedFile['name'] as any);
 
-      const file = await this.openai.files
-        .create({
-          file: formData.get('file') as File,
-          purpose: 'assistants',
-        })
-        .then((x) => x);
-
-      console.log(file);
-    } catch (error) {
-      console.error('Error uploading file:', error);
-    }
+    return await this.openai.files
+      .create({
+        file: formData.get('file') as File,
+        purpose: 'assistants',
+      })
+      .then((x) => x);
   }
 
   public async downloadFile(fileId: string) {

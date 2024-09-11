@@ -77,6 +77,25 @@
       </div>
     </button>
   </div>
+
+  <input type="file" id="input" />
+
+  <div class="file-select-container">
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="uploadFileOngoing"
+      (click)="fileInput.click()"
+    >
+      <div class="button-inner">
+        <mat-spinner *ngIf="uploadFileOngoing" diameter="20"></mat-spinner>
+        Importer un fichier
+      </div>
+    </button>
+    <span class="filename"
+      >&nbsp;&nbsp;&nbsp;&nbsp;{{ uploadedFile?.filename }}</span
+    >
+  </div>
 </div>
 
 <div class="attribute-selector">
@@ -91,3 +110,10 @@
     [objectName]="objectName"
   ></app-attribute-selector>
 </div>
+
+<input
+  #fileInput
+  type="file"
+  style="visibility: hidden"
+  (change)="onFileSelected($event)"
+/>

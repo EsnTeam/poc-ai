@@ -4,6 +4,7 @@ import {
   ObjectSchema,
   ObjectSchemaAttribute,
 } from 'src/app/modules/shared/model/object-schema';
+import { PocUtils } from 'src/app/modules/shared/utils/utils';
 import * as XLSX from 'xlsx-js-style';
 
 @Injectable({
@@ -33,18 +34,11 @@ export class EsnExcelService {
   public async generateCI(schemas: ObjectSchema[]) {
     const wb = XLSX.utils.book_new();
 
-    const schemaDepth = this.calculateSchemaDepth(schemas[0].name, schemas);
+    // const schemaDepth = this.calculateSchemaDepth(schemas[0].name, schemas);
 
-    const [headerRows, headerMerges] = this.createHeaderRows(
-      schemaDepth,
-      schemas[0].name
-    );
+    const [headerRows, headerMerges] = this.createHeaderRows(schemas[0].name);
 
-    const [rows, merges] = this.createCiRows(
-      schemas,
-      schemaDepth,
-      headerRows.length
-    );
+    const [rows, merges] = this.createCiRows(schemas, headerRows.length);
 
     // STEP 3: Create worksheet with rows; Add worksheet to workbook
     const ws = XLSX.utils.aoa_to_sheet([
@@ -68,78 +62,60 @@ export class EsnExcelService {
     );
   }
 
-  public createCiRows(
-    schemas: ObjectSchema[],
-    schemaDepth: number,
-    nbHeaderRows: number
-  ) {
+  public createCiRows(schemas: ObjectSchema[], nbHeaderRows: number) {
     const rows = [] as any;
     let merges = [] as any;
 
-    schemas[0].attributes.forEach((attr) => {
-      this.fillAttributeRows(
-        attr,
-        schemaDepth,
-        schemas,
-        nbHeaderRows,
-        1,
-        rows,
-        merges,
-        true
-      );
+    const objects = this.getObjectsWithHierarchy(schemas, schemas[0], []);
+
+    objects.forEach((obj) => {
+      const [newRows, newMerges] = this.createObjectLines(obj, rows.length + 2);
+      rows.push(...newRows);
+      merges.push(...newMerges);
     });
 
     return [rows, merges];
   }
 
-  public fillAttributeRows(
-    attribute: ObjectSchemaAttribute,
-    schemaDepth: number,
-    schemas: ObjectSchema[],
-    nbHeaderRows: number,
-    attributeDepth: number,
-    rows: any[],
-    merges: any[],
-    isNotFirstAttribute: boolean
-  ) {
-    const [r, m] = this.getAttributeRow(
-      schemas,
-      attribute,
-      attributeDepth,
-      schemaDepth,
-      rows.length + nbHeaderRows
-    );
-
-    if (isNotFirstAttribute) {
-      rows.push(r);
-      if (m.length) {
-        merges.push(...m);
-      }
-    }
-    if (attribute.isSubObjectIncluded) {
-      const schema2 = schemas.find((s) => s.name == attribute.type);
-      schema2?.attributes.forEach((attr2, index) => {
-        this.fillAttributeRows(
-          attr2,
-          schemaDepth,
-          schemas,
-          nbHeaderRows,
-          attributeDepth + 1,
-          rows,
-          merges,
-          !!index
-        );
-      });
-    }
+  public getCiColNames() {
+    return [
+      [`Libellé métier`],
+      [`Objet`, `Description Objet Métier`, `Attribut`, `Description Attribut`],
+      [
+        `Objet CI`,
+        `Cardinalité de l'objet`,
+        `Attribut CI`,
+        `Titre de l'attribut CI`,
+        `Cardinalité Attribut (unique / multiples)`,
+        `Obligatoire / Non Obligatoire`,
+        `Type`,
+        `Format`,
+      ],
+      [`Parent`, `Structure`],
+    ];
   }
 
-  public getAttributeRow(
-    schemas: ObjectSchema[],
-    attr: ObjectSchemaAttribute,
-    depth: number,
-    totalSchemaDepth: number,
-    rowNumber: number
-  ) {
+  public createObjectLines(
+    obj: {
+      obj: ObjectSchema;
+      parents: string[];
+      cardinality?: string;
+      suggestedFieldName?: string;
+    },
+    nbRows: number
+  ): any[][] {
+    let attributes = obj.obj.attributes.filter((a) => !a.isSubObjectIncluded);
+    if (!attributes.length) {
+      attributes = [
+        {
+          name: '/',
+          type: '/',
+          isMandatory: false,
+          isMultivalued: false,
+          uuid: '/',
+        },
+      ];
+    }
     const valAlignment = {
       vertical: 'center',
       horizontal: 'left',
@@ -172,130 +148,161 @@ export class EsnExcelService {
       ...valStyle,
     };
 
-    const attributesNextDepth = [];
-    let att = attr;
-    while (att.isSubObjectIncluded) {
-      let firstAttSubObj = schemas.find((s) => s.name == att.type)
-        ?.attributes[0] as any;
-      attributesNextDepth.push(firstAttSubObj);
-      att = firstAttSubObj;
+    const structStyleSchemaStyle = {
+      fill: { fgColor: { rgb: 'faeadb' } },
+      ...valStyle,
+    };
+
+    const sectionStyle = {
+      ...valStyle,
+      alignment: {
+        vertical: 'center',
+        horizontal: 'left',
+        wrapText: true,
+      },
+      fill: { fgColor: { rgb: '000000' } },
+      font: { color: { rgb: 'ffffff' } },
+    };
+
+    const rows = [] as any[];
+    const merges = [];
+    if (obj.parents.length < 2) {
+      rows.push([
+        {
+          v: `${obj.obj.name}${!obj.parents.length ? ' (Objet racine)' : ''}`,
+          s: sectionStyle,
+        },
+        ...this.emptyCells(
+          this.getCiColNames().flat().length - 1,
+          sectionStyle
+        ),
+      ]);
+
+      merges.push({
+        s: { r: nbRows, c: 0 },
+        e: { r: nbRows, c: this.getCiColNames().flat().length - 1 },
+      });
     }
 
-    const rows = [
-      ...this.emptyCells((depth - 1) * 2, valStyle),
+    attributes.forEach((a) => {
+      rows.push([
+        { v: a.name, s: valStyle },
+        ...this.makeCells(
+          [obj.obj.name, obj.obj.name, a.name, a.name],
+          mdmStyle
+        ),
+        ...this.makeCells(
+          [
+            obj.suggestedFieldName || ' ', // Objet CI
+            obj.cardinality || '/', // Cardinalité de l'objet `${a.isMandatory ? 1 : 0}, ${a.isMultivalued ? 'N' : 1}`
+            a.suggestedFieldName || ' ', // Attribut CI
+            a.suggestedFieldName || ' ', // Titre de l'attribut CI
+            a.name == '/' ? ' ' : a.isMultivalued ? 'Multiple' : 'Unique', // Cardinalité Attribut
+            a.name == '/'
+              ? ' '
+              : a.isMandatory
+              ? 'Obligatoire'
+              : 'Non obligatoire', // Obligatoire / Non obligatoire
+            a.type, // Type
+            ' ', // Format
+          ],
+          jsonSchemaStyle
+        ),
 
-      ...[attr]
-        .concat(attributesNextDepth)
-        .map((att, index) => [
-          {
-            v: att.name,
-            s: depth + index > 1 ? mdmStyle : valStyle,
-          },
-          {
-            v: att.name,
-            s: mdmStyle,
-          },
-        ])
-        .flat(),
-      ...this.emptyCells(
-        (totalSchemaDepth - depth - attributesNextDepth.length) * 2,
-        mdmStyle
-      ),
-      ...this.emptyCells((depth - 1) * 2, jsonSchemaStyle),
+        ...this.makeCells(
+          [
+            obj.parents.length
+              ? obj.parents[obj.parents.length - 1]
+              : 'Aucun\n(Objet racine)', // Parent
+            this.makeStructureString(obj.parents, obj.obj.name), // Structure
+          ],
+          structStyleSchemaStyle
+        ),
+      ]);
+    });
 
-      ...[attr]
-        .concat(attributesNextDepth)
-        .map((att) => [
-          {
-            v: att.suggestedFieldName || att.name,
-            s: jsonSchemaStyle,
-          },
-          {
-            v: `${att.isMandatory ? 1 : 0}, ${attr.isMultivalued ? 'N' : 1}`,
-            s: jsonSchemaStyle,
-          },
-        ])
-        .flat(),
+    merges.push(
+      ...this.mergeCells(
+        [
+          'Objet',
+          `Description Objet Métier`,
+          `Objet CI`,
+          `Cardinalité de l'objet`,
+          `Parent`,
+          `Structure`,
+        ],
+        nbRows + +(obj.parents.length < 2),
+        attributes.length
+      )
+    );
+    return [rows, merges];
+  }
 
-      ...this.emptyCells(
-        (totalSchemaDepth - depth - attributesNextDepth.length) * 2,
-        jsonSchemaStyle
-      ),
-      {
-        v: [attr].concat(attributesNextDepth)[attributesNextDepth.length].type,
-        s: jsonSchemaStyle,
-      },
-      {
-        v: ``,
-        s: jsonSchemaStyle,
-      },
-    ];
+  public mergeCells(colNames: string[], startRow: number, rowSpan: number) {
+    return colNames.map((name) => ({
+      s: { r: startRow, c: this.getColNumber(name) },
+      e: { r: startRow + rowSpan - 1, c: this.getColNumber(name) },
+    }));
+  }
 
-    const merges = [] as any[];
+  public getColNumber(colName: string) {
+    return this.getCiColNames()
+      .flat()
+      .findIndex((c) => c == colName);
+  }
 
-    [attr].concat(attributesNextDepth).forEach((att, index) => {
-      const attSpan = this.getAttributeSpan(att, schemas);
-      if (attSpan > 1) {
-        merges.push(
-          ...[
-            {
-              s: { r: rowNumber, c: (depth + index - 1) * 2 },
-              e: {
-                r: rowNumber + attSpan - 1,
-                c: (depth + index - 1) * 2,
-              },
-            },
-            {
-              s: { r: rowNumber, c: (depth + index - 1) * 2 + 1 },
-              e: {
-                r: rowNumber + attSpan - 1,
-                c: (depth + index - 1) * 2 + 1,
-              },
-            },
+  public makeStructureString(parents: string[], objName: string) {
+    if (!parents.length) {
+      return ' ';
+    }
+    const hierarchy = parents.concat(objName);
+    let structStr = '';
+    for (let i = 0; i < hierarchy.length; i++) {
+      structStr = structStr + hierarchy[i];
+      if (i < hierarchy.length - 1) {
+        structStr =
+          structStr +
+          '\n' +
+          Array(i).fill('      ').join('') +
+          ' |\n' +
+          Array(i).fill('      ').join('') +
+          ' |- ';
+      }
+    }
 
-            {
-              s: {
-                r: rowNumber,
-                c: (totalSchemaDepth + depth + index - 1) * 2,
-              },
-              e: {
-                r: rowNumber + attSpan - 1,
-                c: (totalSchemaDepth + depth + index - 1) * 2,
-              },
-            },
-            {
-              s: {
-                r: rowNumber,
-                c: (totalSchemaDepth + depth + index - 1) * 2 + 1,
-              },
-              e: {
-                r: rowNumber + attSpan - 1,
-                c: (totalSchemaDepth + depth + index - 1) * 2 + 1,
-              },
-            },
-          ]
+    return structStr;
+  }
+
+  public getObjectsWithHierarchy(
+    schemas: ObjectSchema[],
+    currentObj: ObjectSchema,
+    parents: string[],
+    cardinality?: string,
+    suggestedFieldName?: string
+  ) {
+    console.log({ currentObj, parents });
+    const objets = [
+      { obj: currentObj, parents, cardinality, suggestedFieldName },
+    ] as any[];
+
+    currentObj.attributes.forEach((a) => {
+      if (a.isSubObjectIncluded) {
+        objets.push(
+          ...this.getObjectsWithHierarchy(
+            schemas,
+            PocUtils.getSchemaNamed(a.type, schemas),
+            parents.concat([currentObj.name]),
+            `${a.isMandatory ? 1 : 0}, ${a.isMultivalued ? 'N' : 1}`,
+            a.suggestedFieldName
+          )
         );
       }
     });
 
-    return [rows, merges];
+    return objets;
   }
 
-  public getAttributeSpan(
-    att: ObjectSchemaAttribute,
-    schemas: ObjectSchema[]
-  ): any {
-    if (!att.isSubObjectIncluded) {
-      return 1;
-    }
-    const schema = schemas.find((s) => s.name == att.type);
-    return schema?.attributes.reduce(
-      (acc, curr) => acc + this.getAttributeSpan(curr, schemas),
-      0
-    );
-  }
-
-  public createHeaderRows(schemaDepth: number, objectName: string) {
+  public createHeaderRows(objectName: string) {
     const headerAlignment = {
       vertical: 'center',
       horizontal: 'center',
@@ -328,6 +335,11 @@ export class EsnExcelService {
       fill: { fgColor: { rgb: 'abe3fc' } },
       ...headerStyle,
     };
+
+    const strucutreStyle = {
+      fill: { fgColor: { rgb: 'f5c242' } },
+      ...headerStyle,
+    };
     let headerRow1 = [
       {
         v: 'Libellé métier',
@@ -337,69 +349,25 @@ export class EsnExcelService {
         v: 'MDM',
         s: greenStyle,
       },
-      ...this.emptyCells(schemaDepth * 2 - 2, headerStyle),
+      ...this.emptyCells(this.getCiColNames()[1].length - 1, headerStyle),
       {
         v: 'Json Schema',
         s: blueStyle,
       },
-      ...this.emptyCells(schemaDepth * 2 + 2, headerStyle),
+      ...this.emptyCells(this.getCiColNames()[2].length - 1, headerStyle),
+      {
+        v: 'Structure',
+        s: strucutreStyle,
+      },
+      ...this.emptyCells(this.getCiColNames()[3].length - 1, strucutreStyle),
     ];
 
     let headerRow2 = [
       ...this.emptyCells(1, headerStyle),
-      {
-        v: 'Description Objet Métier',
-        s: greenStyle,
-      },
+      ...this.makeCells(this.getCiColNames()[1], greenStyle),
+      ...this.makeCells(this.getCiColNames()[2], blueStyle),
+      ...this.makeCells(this.getCiColNames()[3], strucutreStyle),
     ] as any[];
-
-    for (let i = 2; i < schemaDepth + 1; i++) {
-      headerRow2.push(
-        {
-          v: `Attribut niv ${i}`,
-          s: greenStyle,
-        },
-        {
-          v: `Description Attribut niv ${i}`,
-          s: greenStyle,
-        }
-      );
-    }
-
-    headerRow2.push(
-      {
-        v: `Objet CI`,
-        s: blueStyle,
-      },
-      {
-        v: `Cardinalité Attribut CI`,
-        s: blueStyle,
-      }
-    );
-
-    for (let i = 2; i < schemaDepth + 1; i++) {
-      headerRow2.push(
-        {
-          v: `Attribut CI niv ${i}`,
-          s: blueStyle,
-        },
-        {
-          v: `Cardinalité Attribut CI niv ${i}`,
-          s: blueStyle,
-        }
-      );
-    }
-
-    headerRow2.push(
-      {
-        v: `Type`,
-        s: blueStyle,
-      },
-      {
-        v: `Format`,
-        s: blueStyle,
-      }
-    );
 
     const row3Style = {
       ...headerStyle,
@@ -417,17 +385,41 @@ export class EsnExcelService {
         v: `Contrat d'interface ${objectName}`,
         s: row3Style,
       },
-      this.emptyCells(schemaDepth * 4 + 1, row3Style),
+      this.emptyCells(this.getCiColNames().flat().length, row3Style),
     ];
 
     const merges = [
       { s: { r: 0, c: 0 }, e: { r: 1, c: 0 } },
-      { s: { r: 0, c: 1 }, e: { r: 0, c: schemaDepth * 2 - 1 } },
-      { s: { r: 0, c: schemaDepth * 2 }, e: { r: 0, c: schemaDepth * 4 + 1 } },
-      { s: { r: 2, c: 0 }, e: { r: 2, c: schemaDepth * 4 + 1 } },
+      { s: { r: 0, c: 1 }, e: { r: 0, c: this.getCiColNames()[1].length } },
+      {
+        s: { r: 0, c: this.getCiColNames()[1].length + 1 },
+        e: {
+          r: 0,
+          c: this.getCiColNames()[1].length + this.getCiColNames()[2].length,
+        },
+      },
+      {
+        s: {
+          r: 0,
+          c:
+            this.getCiColNames()[1].length + this.getCiColNames()[2].length + 1,
+        },
+
+        e: {
+          r: 0,
+          c:
+            this.getCiColNames()[1].length +
+            this.getCiColNames()[2].length +
+            this.getCiColNames()[3].length,
+        },
+      },
+      // {
+      //   s: { r: 2, c: 0 },
+      //   e: { r: 2, c: this.getCiColNames().flat().length - 1 },
+      // },
     ];
 
-    return [[headerRow1, headerRow2, headerRow3], merges];
+    return [[headerRow1, headerRow2], merges];
   }
 
   public emptyCells(nb: number, style: any) {
@@ -436,5 +428,17 @@ export class EsnExcelService {
       s: style,
     };
     return Array(nb).fill(emptyCell);
+  }
+
+  public makeCells(contents: string[], style: any) {
+    const cells = [] as any[];
+    contents.forEach((c) =>
+      cells.push({
+        v: c,
+        s: style,
+      })
+    );
+
+    return cells;
   }
 }
