@@ -84,16 +84,25 @@ export class DemoComponent {
 
   public async executePattern() {
     this.execPatternOngoing = true;
-    const schemas = this.getObjectsSchemas();
 
     await this.patternService.executePattern(
       this.selectedPatternId,
-      [JSON.stringify(this.excelParsingService.parsedData, null, 2)],
-      // [JSON.stringify(schemas, null, 2), schemas[0].name],
-      THREADS.main
+      this.getInputs(),
+      this.threadId
     );
 
     this.execPatternOngoing = false;
+  }
+
+  public getInputs() {
+    this.execPatternOngoing = true;
+    const schemas = this.getObjectsSchemas();
+
+    return [
+      JSON.stringify(schemas, null, 2),
+      schemas[0].name,
+      JSON.stringify(this.excelParsingService.parsedData, null, 2),
+    ];
   }
 
   public async suggestFieldNames() {
@@ -169,11 +178,7 @@ export class DemoComponent {
   public openSaveDataModal() {
     const schemas = this.getObjectsSchemas();
 
-    const inputs = [
-      JSON.stringify(schemas, null, 2),
-      schemas[0].name,
-      this.uploadedFile?.id,
-    ];
+    const inputs = this.getInputs();
 
     this.dialog
       .open(ModalInputTextConfirmComponent, {

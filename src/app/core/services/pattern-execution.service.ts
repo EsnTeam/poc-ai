@@ -174,7 +174,7 @@ export class PatternExecutionService {
       ).text.value
     );
 
-    this.umlService.loadedObjects = jsonVal;
+    this.umlService.loadedObjects = jsonVal.data;
   }
 
   public async addFieldNames(threadId: string) {
