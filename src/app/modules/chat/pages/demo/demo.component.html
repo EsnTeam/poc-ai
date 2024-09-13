@@ -42,6 +42,18 @@
       </div>
     </button> -->
 
+    <div class="file-select-container">
+      <button mat-raised-button color="primary" (click)="inputFile.click()">
+        <div class="button-inner">
+          <mat-spinner *ngIf="uploadFileOngoing" diameter="20"></mat-spinner>
+          Importer un CI
+        </div>
+      </button>
+      <span class="filename"
+        >&nbsp;&nbsp;&nbsp;&nbsp;{{ inputFile?.files?.[0]?.name }}</span
+      >
+    </div>
+
     <mat-form-field class="pattern-field">
       <mat-label>Execute pattern</mat-label>
 
@@ -78,7 +90,7 @@
     </button>
   </div>
 
-  <input type="file" id="input" />
+  <input #inputFile type="file" id="input" style="visibility: hidden" />
 
   <!-- <div class="file-select-container">
     <button
@@ -111,9 +123,9 @@
   ></app-attribute-selector>
 </div>
 
-<input
+<!-- <input
   #fileInput
   type="file"
   style="visibility: hidden"
   (change)="onFileSelected($event)"
-/>
+/> -->

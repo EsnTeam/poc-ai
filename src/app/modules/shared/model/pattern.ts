@@ -20,6 +20,8 @@ export interface PatternStep {
   //action
   actionType?: StepActionType;
   fileName?: string;
+  inputFormat?: InputFormattingEnum;
+  inputNb?: number;
 }
 
 export enum PatternStepType {
@@ -32,13 +34,23 @@ export enum StepActionType {
   DOWNLOAD = 'DOWNLOAD',
   ADD_FIELD_TO_DATA = 'ADD_FIELD_TO_DATA',
   REPLACE_DATA = 'REPLACE_DATA',
+  FORMAT_INPUT = 'FORMAT_INPUT',
 }
 
 export const STEP_ACTION_LABELS: { [key in StepActionType]: string } = {
   DOWNLOAD: `Download last response as a file`,
   ADD_FIELD_TO_DATA: `Update Data with the suggested field names`,
   REPLACE_DATA: `Import last response as object data`,
+  FORMAT_INPUT: `Format input`,
 };
+
+export enum InputFormattingEnum {
+  FLAT_TO_NESTED = 'FLAT_TO_NESTED',
+}
+export const INPUT_FORMATTING_LABELS: { [key in InputFormattingEnum]: string } =
+  {
+    FLAT_TO_NESTED: `Flat raw data to nested`,
+  };
 
 export enum RunFormatEnum {
   JSON = 'JSON',

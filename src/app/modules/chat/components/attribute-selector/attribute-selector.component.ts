@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChange, SimpleChanges } from '@angular/core';
 import { UmlProcessingService } from 'src/app/core/services/uml-processing.service';
 import {
   ObjectSchema,
@@ -21,8 +21,11 @@ export class AttributeSelectorComponent {
 
   constructor(public umlService: UmlProcessingService) {}
 
-  async ngOnInit() {
-    this.objectSchema = await this.umlService.processUML(this.objectName);
+  async ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+    if (!!changes['objectName']) {
+      this.objectSchema = await this.umlService.processUML(this.objectName);
+    }
   }
 
   public onIncludeAllClick(att: ObjectSchemaAttribute, e: any) {

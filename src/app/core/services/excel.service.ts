@@ -11,6 +11,7 @@ import * as XLSX from 'xlsx-js-style';
   providedIn: 'root',
 })
 export class EsnExcelService {
+  public i18nCols: string[] = [];
   public calculateSchemaDepth(
     schemaName: string,
     schemas: ObjectSchema[]
@@ -33,6 +34,8 @@ export class EsnExcelService {
 
   public async generateCI(schemas: ObjectSchema[]) {
     const wb = XLSX.utils.book_new();
+
+    this.initI18nCols(schemas);
 
     // const schemaDepth = this.calculateSchemaDepth(schemas[0].name, schemas);
 
@@ -60,6 +63,23 @@ export class EsnExcelService {
       new Blob([wbOut], { type: 'application/octet-stream' }),
       'Contrat_interface.xlsx'
     );
+  }
+
+  public initI18nCols(schemas: ObjectSchema[]) {
+    const i18nLanguages = Object.keys(schemas[0].attributes[0]?.label || {});
+    const langs = i18nLanguages.filter((l) => l != 'fr');
+    this.i18nCols = [];
+    langs.forEach((l) => {
+      this.i18nCols.push(
+        ...[
+          `Label Objet ${l}`,
+          `Description Objet ${l}`,
+          `Label Attribut ${l}`,
+          `Description Attribut ${l}`,
+        ]
+      );
+    });
+    console.log({ i18nCols: this.i18nCols });
   }
 
   public createCiRows(schemas: ObjectSchema[], nbHeaderRows: number) {
@@ -92,6 +112,7 @@ export class EsnExcelService {
         `Format`,
       ],
       [`Parent`, `Structure`],
+      this.i18nCols,
     ];
   }
 
@@ -340,6 +361,10 @@ export class EsnExcelService {
       fill: { fgColor: { rgb: 'f5c242' } },
       ...headerStyle,
     };
+    const i18nStyle = {
+      fill: { fgColor: { rgb: '68349a' } },
+      ...headerStyle,
+    };
     let headerRow1 = [
       {
         v: 'Libellé métier',
@@ -360,6 +385,15 @@ export class EsnExcelService {
         s: strucutreStyle,
       },
       ...this.emptyCells(this.getCiColNames()[3].length - 1, strucutreStyle),
+      ...(!!this.i18nCols.length
+        ? [
+            {
+              v: 'i18n',
+              s: i18nStyle,
+            },
+          ]
+        : []),
+      ...this.emptyCells(this.getCiColNames()[4].length - 1, i18nStyle),
     ];
 
     let headerRow2 = [
@@ -413,16 +447,36 @@ export class EsnExcelService {
             this.getCiColNames()[3].length,
         },
       },
-      // {
-      //   s: { r: 2, c: 0 },
-      //   e: { r: 2, c: this.getCiColNames().flat().length - 1 },
-      // },
     ];
+
+    if (!!this.i18nCols.length) {
+      merges.push({
+        s: {
+          r: 0,
+          c:
+            this.getCiColNames()[1].length +
+            this.getCiColNames()[2].length +
+            this.getCiColNames()[3].length +
+            1,
+        },
+        e: {
+          r: 0,
+          c:
+            this.getCiColNames()[1].length +
+            this.getCiColNames()[2].length +
+            this.getCiColNames()[3].length +
+            this.getCiColNames()[4].length,
+        },
+      });
+    }
 
     return [[headerRow1, headerRow2], merges];
   }
 
   public emptyCells(nb: number, style: any) {
+    if (nb < 1) {
+      return [];
+    }
     const emptyCell = {
       v: ' ',
       s: style,

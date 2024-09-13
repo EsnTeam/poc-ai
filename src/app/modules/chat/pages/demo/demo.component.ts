@@ -58,6 +58,13 @@ export class DemoComponent {
     this.initThread();
     this.patterns = await lastValueFrom(this.firebaseController.getPatterns());
 
+    this.patternService.objectName$.subscribe((val) => {
+      if (val) {
+        this.objectName = val;
+        console.log('new obj name ', this.objectName);
+      }
+    });
+
     const input = document.getElementById('input');
     input?.addEventListener('change', () => {
       this.excelParsingService.parse((input as any)['files'][0]);

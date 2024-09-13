@@ -110,12 +110,42 @@
           <mat-label>File name</mat-label>
           <input matInput [(ngModel)]="step.fileName" />
         </mat-form-field>
+
+        <div
+          *ngIf="step.actionType == 'FORMAT_INPUT'"
+          class="format-input-fields-container"
+        >
+          <mat-form-field>
+            <mat-select [(ngModel)]="step.inputNb">
+              <mat-option
+                ng-size="8"
+                *ngFor="let num of [0, 1, 2, 3, 4]"
+                [value]="num"
+                >##{{ num + 1 }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select [(ngModel)]="step.inputFormat">
+              <mat-option
+                ng-size="8"
+                *ngFor="let format of formattingEnum"
+                [value]="format"
+                >{{ formattingLabels[format] }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
       </div>
       <div *ngIf="!editionMode" class="run-display">
         <div>
           {{ actionTypeLabels[step.actionType!] }}
           <span *ngIf="step.actionType == 'DOWNLOAD'">
             "{{ step.fileName }}"</span
+          >
+          <span *ngIf="step.actionType == 'FORMAT_INPUT'">
+            ##{{ step.inputNb! + 1 }}:
+            {{ formattingLabels[step.inputFormat!] }}</span
           >
         </div>
       </div>

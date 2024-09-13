@@ -17,6 +17,7 @@ import { HttpClient } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 import { ObjectSchema } from 'src/app/modules/shared/model/object-schema';
 import { PocUtils } from 'src/app/modules/shared/utils/utils';
+import { epic55ObjectSchema } from 'src/assets/data/epic-55';
 const { XMLParser, XMLBuilder, XMLValidator } = require('fast-xml-parser');
 
 const NAME_ATT = '@_name';

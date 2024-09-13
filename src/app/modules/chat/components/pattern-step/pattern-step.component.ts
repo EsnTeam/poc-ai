@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Assistant } from 'openai/resources/beta/assistants';
 import { DataStoreService } from 'src/app/core/services/store.service';
 import {
+  INPUT_FORMATTING_LABELS,
+  InputFormattingEnum,
   PatternStep,
   PatternStepExecutionState,
   PatternStepType,
@@ -36,6 +38,10 @@ export class PatternStepComponent {
   public formatLabelsEntries = Object.entries(RUN_FORMAT_LABELS);
   public actionTypes = Object.keys(StepActionType) as StepActionType[];
   public actionTypeLabels = STEP_ACTION_LABELS;
+  public formattingLabels = INPUT_FORMATTING_LABELS;
+  public formattingEnum = Object.keys(
+    InputFormattingEnum
+  ) as InputFormattingEnum[];
 
   constructor(public storeService: DataStoreService) {}
 

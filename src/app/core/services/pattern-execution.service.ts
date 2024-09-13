@@ -17,7 +17,10 @@ import { EsnOpenaiService } from './opeanai.service';
 import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, lastValueFrom } from 'rxjs';
-import { ObjectSchema } from 'src/app/modules/shared/model/object-schema';
+import {
+  ObjectSchema,
+  ObjectSchemaAttribute,
+} from 'src/app/modules/shared/model/object-schema';
 import { PocUtils } from 'src/app/modules/shared/utils/utils';
 import { PROMPTS } from 'src/app/modules/shared/prompts/prompts';
 const { XMLParser, XMLBuilder, XMLValidator } = require('fast-xml-parser');
@@ -27,6 +30,7 @@ import { TextContentBlock } from 'openai/resources/beta/threads/messages';
 import { saveAs } from 'file-saver';
 import {
   ExecutionStateEnum,
+  InputFormattingEnum,
   Pattern,
   PatternStep,
   PatternStepExecutionState,
@@ -45,6 +49,7 @@ export class PatternExecutionService {
   public executionState$: BehaviorSubject<{
     [key in string]: PatternStepExecutionState;
   }> = new BehaviorSubject({});
+  public objectName$: BehaviorSubject<string> = new BehaviorSubject('');
   constructor(
     public oaiService: EsnOpenaiService,
     public httpClient: HttpClient,
@@ -102,7 +107,7 @@ export class PatternExecutionService {
       case PatternStepType.RUN:
         return this.executeRunStep(step, threadId);
       case PatternStepType.ACTION:
-        return this.executeActionStep(step, threadId);
+        return this.executeActionStep(step, threadId, inputs);
       default:
         return true;
     }
@@ -153,7 +158,11 @@ export class PatternExecutionService {
     await this.oaiService.waitForSuccess(run.id, threadId, true);
   }
 
-  public async executeActionStep(step: PatternStep, threadId: string) {
+  public async executeActionStep(
+    step: PatternStep,
+    threadId: string,
+    inputs: string[]
+  ) {
     switch (step.actionType) {
       case StepActionType.DOWNLOAD:
         return await this.downloadLastResponse(threadId, step.fileName!);
@@ -161,9 +170,51 @@ export class PatternExecutionService {
         return await this.addFieldNames(threadId);
       case StepActionType.REPLACE_DATA:
         return await this.replaceData(threadId);
+      case StepActionType.FORMAT_INPUT:
+        return await this.formatInput(step, inputs);
       default:
         return true;
     }
+  }
+
+  public formatInput(step: PatternStep, inputs: string[]) {
+    const inputNb = step.inputNb;
+
+    inputs[step.inputNb!] = this.transformInput(
+      inputs[step.inputNb!],
+      step.inputFormat!
+    );
+  }
+
+  public transformInput(str: string, formatting: InputFormattingEnum) {
+    switch (formatting) {
+      case InputFormattingEnum.FLAT_TO_NESTED:
+        return this.flatToNested(str);
+      default:
+        return str;
+    }
+  }
+
+  public flatToNested(str: string) {
+    const input = JSON.parse(str);
+    this.nestAttributes(input[0].attributes, input);
+
+    return JSON.stringify(input[0], null, 2);
+  }
+
+  public nestAttributes(
+    attributes: ObjectSchemaAttribute[],
+    schemas: ObjectSchema[]
+  ) {
+    if (attributes.every((att) => !att.isSubObjectIncluded)) {
+      return;
+    }
+    attributes.forEach((att: any) => {
+      if (att.isSubObjectIncluded) {
+        att.attributes = PocUtils.getSchemaNamed(att.type, schemas).attributes;
+        this.nestAttributes(att.attributes, schemas);
+      }
+    });
   }
 
   public async replaceData(threadId: string) {
@@ -174,7 +225,18 @@ export class PatternExecutionService {
       ).text.value
     );
 
+    jsonVal.data.forEach((obj: ObjectSchema) => {
+      obj.attributes.forEach((att) => {
+        if (att.isPrimitiveType) {
+          att.isIncluded = true;
+        } else {
+          att.isSubObjectIncluded = true;
+        }
+      });
+    });
+
     this.umlService.loadedObjects = jsonVal.data;
+    this.objectName$.next(jsonVal.data[0].name);
   }
 
   public async addFieldNames(threadId: string) {
