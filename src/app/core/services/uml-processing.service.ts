@@ -28,12 +28,13 @@ const ID_ATT = '@_xmi:id';
 })
 export class UmlProcessingService {
   public loadedObjects: ObjectSchema[] = [];
+  public loadedUMLString: string = '';
   constructor(
     public oaiService: EsnOpenaiService,
     public httpClient: HttpClient
   ) {}
 
-  public async processUML(objectName: string) {
+  public async processUML(objectName?: string) {
     const schema = this.loadedObjects.find((o) => o.name == objectName);
     if (schema) {
       return schema;
@@ -46,6 +47,24 @@ export class UmlProcessingService {
 
   public resetLoadedObjects() {
     this.loadedObjects = [];
+  }
+
+  public loadUmlString(str: string) {
+    this.loadedUMLString = str;
+    this.resetLoadedObjects();
+  }
+
+  public async isParsingOk() {
+    if (!this.loadedUMLString) {
+      return false;
+    }
+    try {
+      await this.processUML();
+    } catch (err) {
+      console.log(err);
+      return false;
+    }
+    return true;
   }
 
   public unloadIfNeeded(name: string) {
@@ -65,12 +84,16 @@ export class UmlProcessingService {
     const umlText = await this.getUMLText();
     const parsedJson = this.umlTextToJson(umlText);
 
-    const packageElements = parsedJson['xmi:XMI']['uml:Model'].packagedElement;
+    const packageElements =
+      parsedJson['xmi:XMI']?.['uml:Model']?.packagedElement ||
+      parsedJson['uml:Model']?.packagedElement;
     console.log(packageElements);
 
     const elm = this.findElementNameInParsedJson(
       packageElements,
-      (o: any) => o?.[NAME_ATT] == objectName,
+      (o: any) =>
+        (!objectName && !!o?.[NAME_ATT] && !!o?.['ownedAttribute']) ||
+        (!!objectName && o?.[NAME_ATT] == objectName),
       'packagedElement'
     );
     console.log({ elm });
@@ -81,10 +104,13 @@ export class UmlProcessingService {
   }
 
   public async getUMLText() {
-    return lastValueFrom(
-      this.httpClient.get('assets/orig_lisible_ids.txt', {
-        responseType: 'text',
-      })
+    return (
+      this.loadedUMLString ||
+      lastValueFrom(
+        this.httpClient.get('assets/orig_lisible_ids.txt', {
+          responseType: 'text',
+        })
+      )
     );
   }
 
@@ -103,7 +129,7 @@ export class UmlProcessingService {
       attributes: [] as any[],
     };
 
-    umlJson.ownedAttribute.forEach((att: any) => {
+    umlJson.ownedAttribute?.forEach((att: any) => {
       const [type, isPrimitiveType] = this.getType(
         att.type || att['@_type'],
         baseUmlJson

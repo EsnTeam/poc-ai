@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  width: 100%;
+
+  .sidenav-content {
+    flex-grow: 1;
+    margin-right: 360px;
+  }
+}

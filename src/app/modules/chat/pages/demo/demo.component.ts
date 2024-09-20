@@ -25,6 +25,7 @@ import { EsnExcelParsingService } from 'src/app/core/services/excel-parsing.serv
   styleUrls: ['./demo.component.scss', '../config-page.scss'],
 })
 export class DemoComponent {
+  public parsingOk?: boolean = undefined;
   public objectName = 'Contrat';
   public searchOngoing: boolean = false;
   public suggestNameOngoing: boolean = false;
@@ -68,6 +69,25 @@ export class DemoComponent {
     const input = document.getElementById('input');
     input?.addEventListener('change', () => {
       this.excelParsingService.parse((input as any)['files'][0]);
+    });
+  }
+
+  ngAfterViewInit() {
+    const input = document.getElementById('input-uml');
+    input?.addEventListener('change', () => {
+      const file = (input as any)['files'][0];
+      console.log(file);
+
+      var reader = new FileReader();
+      reader.readAsText(file, 'UTF-8');
+      reader.onload = async (evt: any) => {
+        const content = evt['target'].result;
+        this.umlService.loadUmlString(content);
+        this.parsingOk = await this.umlService.isParsingOk();
+        if (this.parsingOk) {
+          this.objectName = this.umlService.loadedObjects[0].name;
+        }
+      };
     });
   }
 

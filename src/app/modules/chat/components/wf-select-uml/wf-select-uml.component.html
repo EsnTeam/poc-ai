@@ -1,0 +1,26 @@
+<div class="step-card">
+  <div class="step-card__text">Choisissez un fichier UML</div>
+  <div class="file-select-container">
+    <button mat-raised-button color="primary" (click)="inputFile.click()">
+      <div class="button-inner">
+        <!-- <mat-spinner *ngIf="uploadFileOngoing" diameter="20"></mat-spinner> -->
+        Importer
+      </div>
+    </button>
+    <span class="filename"
+      >&nbsp;&nbsp;&nbsp;&nbsp;{{ inputFile?.files?.[0]?.name }}</span
+    >
+  </div>
+  <div *ngIf="parsingOk" class="step-card__section">
+    <div class="step-card__text">Import du fichier réussi</div>
+    <button mat-raised-button color="primary" (click)="goToNextStep()">
+      <div class="button-inner">Continuer</div>
+    </button>
+  </div>
+
+  <div *ngIf="parsingOk === false" class="step-card__section">
+    <div class="step-card__text">Fichier non reconnu</div>
+  </div>
+</div>
+
+<input #inputFile type="file" id="input" style="visibility: hidden" />

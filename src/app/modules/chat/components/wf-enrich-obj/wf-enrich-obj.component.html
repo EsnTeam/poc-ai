@@ -1,0 +1,15 @@
+<div class="step-card">
+  <div class="step-card__text">Sélectionnez un pattern d'enrichissement</div>
+  <mat-form-field class="pattern-field">
+    <mat-label>Sélectionnez un pattern d'enrichissement</mat-label>
+
+    <mat-select [(ngModel)]="selectedPatternId">
+      <mat-option
+        ng-size="8"
+        *ngFor="let pattern of patterns"
+        [value]="pattern.id"
+        >{{ pattern.name }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+</div>

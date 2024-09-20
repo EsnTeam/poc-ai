@@ -1,0 +1,27 @@
+<mat-spinner *ngIf="!session" diameter="20"></mat-spinner>
+<ng-container *ngIf="!!session">
+  <div class="sidenav-content">
+    <app-workflow-header
+      text="Transformer un modèle en CI"
+    ></app-workflow-header>
+    <ng-container [ngSwitch]="session.activeStepId">
+      <app-wf-select-uml
+        *ngSwitchCase="'select-uml'"
+        fontIcon="chat-bubble"
+      ></app-wf-select-uml>
+      <app-wf-select-obj
+        *ngSwitchCase="'select-obj'"
+        fontIcon="psychology"
+      ></app-wf-select-obj>
+      <app-wf-enrich-obj
+        *ngSwitchCase="'enrich-obj'"
+        fontIcon="settings"
+      ></app-wf-enrich-obj>
+      <app-wf-generate-ci
+        *ngSwitchCase="'generate-ci'"
+        fontIcon="settings"
+      ></app-wf-generate-ci>
+    </ng-container>
+  </div>
+  <app-workflow-sidenav [session]="session"></app-workflow-sidenav>
+</ng-container>

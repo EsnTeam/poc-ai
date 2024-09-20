@@ -1,0 +1,21 @@
+<div class="step-card">
+  <div class="step-card__text">
+    Chercher un objet dans le modèle UML et Choisissez les propriétés à inclure
+  </div>
+  <div class="attribute-selector">
+    <div class="attribute-selector__title">
+      <input mat-input [(ngModel)]="objectName" type="text" />
+      <button mat-raised-button color="primary" (click)="search()">
+        Chercher
+      </button>
+    </div>
+    <app-attribute-selector
+      *ngIf="!searchOngoing"
+      [objectName]="objectName"
+    ></app-attribute-selector>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="goToNextStep()">
+    <div class="button-inner">Continuer</div>
+  </button>
+</div>

@@ -71,4 +71,5 @@ export enum ExecutionStateEnum {
   SUCCESS = 'SUCCESS',
   ONGOING = 'ONGOING',
   FAIL = 'FAIL',
+  NOT_EXECUTED = 'NOT_EXECUTED',
 }

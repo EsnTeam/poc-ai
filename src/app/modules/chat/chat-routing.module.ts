@@ -8,6 +8,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { DemoComponent } from './pages/demo/demo.component';
 import { PatternsComponent } from './pages/patterns/patterns.component';
 import { PatternEditorComponent } from './pages/pattern-editor/pattern-editor.component';
+import { DemoV2HomeComponent } from './pages/demo-v2-home/demo-v2-home.component';
+import { UmlToCiWorkflowComponent } from './pages/uml-to-ci-workflow/uml-to-ci-workflow.component';
+import { WfSelectUmlComponent } from './components/wf-select-uml/wf-select-uml.component';
+import { WfSelectObjComponent } from './components/wf-select-obj/wf-select-obj.component';
+import { WfEnrichObjComponent } from './components/wf-enrich-obj/wf-enrich-obj.component';
+import { WfGenerateCiComponent } from './components/wf-generate-ci/wf-generate-ci.component';
 
 const routes: Routes = [
   {
@@ -51,6 +57,19 @@ const routes: Routes = [
     component: DemoComponent,
     children: [],
   },
+
+  {
+    path: 'demo-v2/uml-to-ci/:sessionId',
+    component: UmlToCiWorkflowComponent,
+    children: [],
+  },
+
+  {
+    path: 'demo-v2/home',
+    component: DemoV2HomeComponent,
+    children: [],
+  },
+  { path: 'demo-v2', redirectTo: 'demo-v2/home', pathMatch: 'full' },
 
   { path: '**', redirectTo: 'home' },
 ];

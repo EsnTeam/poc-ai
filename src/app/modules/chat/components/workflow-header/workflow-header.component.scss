@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  height: 66px;
+  background-color: yellow;
+  width: 100%;
+
+  .workflow-header__leading {
+    display: flex;
+  }
+}
