@@ -27,6 +27,7 @@ import { EsnExcelParsingService } from 'src/app/core/services/excel-parsing.serv
 export class DemoComponent {
   public parsingOk?: boolean = undefined;
   public objectName = 'Contrat';
+  public objectSearchName = 'Contrat';
   public searchOngoing: boolean = false;
   public suggestNameOngoing: boolean = false;
   public generateJsonsOngoing: boolean = false;
@@ -159,6 +160,7 @@ export class DemoComponent {
 
   public search() {
     this.searchOngoing = true;
+    this.objectName = this.objectSearchName;
     this.umlService.resetLoadedObjects();
     setTimeout(() => (this.searchOngoing = false));
   }
