@@ -1,0 +1,74 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+@use "../../../themes/scroll";
+
+@mixin color($theme) {
+  $palettes: "primary", "accent", "error", "success", "neutral";
+
+  $color-app-background: map.get($theme, "generic", "color-app-background");
+  $color-divider-darker: map.get($theme, "generic", "color-divider-darker");
+  $color-text-heading-neutral: map.get($theme, "generic", "color-text-heading-neutral");
+  $color-text-body-neutral: map.get($theme, "generic", "color-text-body-neutral");
+  $is-dark: helpers.is-dark-mode($theme);
+  
+  .mat-mdc-dialog-container {
+    color: $color-text-body-neutral;
+
+    .mdc-dialog__surface {
+      background: $color-app-background;
+    }
+
+    .esn-dialog-header {
+      h1, h2, h3, h4, h5, h6 {
+        color: $color-text-heading-neutral;
+      }
+
+      &.with-divider {
+        border-bottom: 1px solid $color-divider-darker;
+      }
+
+      &.informative {
+        @each $palette in $palettes {
+          &-#{$palette} {
+            background-color:
+            if($is-dark,
+            helpers.get-color-from-theme($theme, $palette, 700),
+            helpers.get-color-from-theme($theme, $palette, 200)
+            )
+          }
+        }
+        &-transparent {
+         background-color: transparent; 
+        }
+      }
+    }
+
+    .esn-dialog-footer{
+      &.with-divider {
+        border-top: 1px solid $color-divider-darker;
+      }
+    }
+  }
+}
+
+@mixin style($theme) {
+  .esn-dialog-content {
+    @include scroll.scrollbar($theme);
+  }
+}
+
+@mixin typography($theme) {
+  .esn-dialog-header {
+    font-family: helpers.get-title-typography($theme);
+  }
+
+  .esn-dialog-content {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include style($theme);
+  @include typography($theme);
+}

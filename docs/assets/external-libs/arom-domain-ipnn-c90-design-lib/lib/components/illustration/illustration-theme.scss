@@ -1,0 +1,14 @@
+@use "../../../themes/helpers";
+@use "../../../themes/palettes";
+@use "sass:map";
+@use "sass:list";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+
+
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}

@@ -1,0 +1,47 @@
+@use "src/assets/scss/variables" as utils;
+
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-secondary {
+  font-family: "WorkSans-Light", sans-serif;
+  font-size: 14px;
+  color: $light-secondary-text;
+}
+
+.text-error {
+  color: utils.$error;
+}
+
+.cursor-default {
+  cursor: default
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.destructive {
+  .esn-icon {
+    color: var(--color-red) !important;
+  }
+}
+
+.hidden-from-view {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute !important;
+}

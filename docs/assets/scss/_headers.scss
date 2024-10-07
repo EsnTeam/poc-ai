@@ -1,0 +1,82 @@
+@use "src/assets/scss/text";
+@import "src/assets/scss/variables";
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  align-items: center;
+  @media all and (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
+  &__info {
+    display: flex;
+  }
+
+  &__avatar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50% 8px;
+  }
+
+  &__caption {
+    @include text.body("Regular", "sm");
+    color: var(--color-text-neutral-subtitle);
+    margin-bottom: 0.25rem;
+  }
+
+  &__title {
+    @include text.title("SemiBold", "xs");
+    color: var(--color-text-neutral-heading);
+  }
+
+  &__subtitle {
+    @include text.body("Regular", "sm");
+    color: var(--color-text-neutral-subtitle);
+    margin-top: 0.25rem;
+  }
+
+  &__status {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__actions {
+    margin-left: auto;
+    @media all and (max-width: $breakpoint-mobile) {
+      margin-top: 1rem;
+      margin-left: unset;
+    }
+  }
+}
+
+.section-header {
+  display: flex;
+  margin-bottom: 1.5rem;
+
+  &__title {
+    @include text.body("SemiBold", "lg");
+    color: var(--color-text-neutral-heading);
+  }
+
+  &__subtitle {
+    @include text.body("Regular", "sm");
+    color: var(--color-text-neutral-subtitle);
+    margin-top: 0.25rem;
+  }
+
+  &__actions {
+    margin-left: auto;
+
+    > * {
+      margin-left: 1rem;
+    }
+  }
+}

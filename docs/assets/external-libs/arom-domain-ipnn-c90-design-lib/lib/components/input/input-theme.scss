@@ -1,0 +1,300 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+
+$mat-text-field: ".mdc-text-field";
+
+@mixin color($theme) {
+  $neutral-palette: helpers.get-palette-from-theme($theme, "neutral");
+  $is-dark: helpers.is-dark-mode($theme);
+
+  @include _set-color($neutral-palette, $is-dark);
+
+  .esn-input {
+    margin-bottom: 1.5rem;
+
+    &.esn-input-light {
+      @include _set-color($neutral-palette, false);
+    }
+    &.esn-input-dark {
+      @include _set-color($neutral-palette, true);
+    }
+    &:not(.esn-input-light):not(.esn-input-dark) {
+      $is-dark: helpers.is-dark-mode($theme);
+      @include _set-color($neutral-palette, $is-dark);
+    }
+
+    .mat-mdc-form-field-icon-suffix {
+      esn-icon {
+        color: map.get($neutral-palette, if($is-dark, 300, 500));
+      }
+    }
+  }
+
+  $background-color: if(
+    $is-dark,
+    helpers.get-color-from-theme($theme, "neutral", 700),
+    white
+  );
+  $hover-color: if($is-dark, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.054));
+
+  .mat-datepicker-content {
+    background-color: $background-color;
+  }
+
+  ngx-mat-datetime-content {
+    .mat-calendar-period-button {
+      background: transparent;
+      color: if($is-dark, white, black);
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+
+    .mat-calendar-previous-button,
+    .mat-calendar-next-button {
+      background-color: transparent;
+      color: if($is-dark, white, #757575);
+      &:hover {
+        .mat-button-ripple.mat-ripple,
+        .mat-button-focus-overlay {
+          background-color: $hover-color;
+        }
+      }
+    }
+
+    .ngx-mat-timepicker-tbody,
+    .actions {
+      button {
+        &:not(.mat-button-disabled) {
+          background: $background-color;
+          color: helpers.get-color-from-theme($theme, "primary", 500);
+          &:hover {
+            background-color: $hover-color;
+          }
+        }
+      }
+    }
+
+    .time-container::before {
+      background-color: if(
+        $is-dark,
+        rgba(255, 255, 255, 0.12),
+        rgba(0, 0, 0, 0.05)
+      );
+    }
+  }
+
+  // Number input
+  $primary-color: helpers.get-color-from-theme($theme, "primary", 500);
+  $error-color: helpers.get-color-from-theme($theme, "error", 500);
+
+  .esn-input-number {
+    .esn-input-number-counter-button {
+      background: $primary-color;
+      .esn-icon {
+        color: white;
+      }
+    }
+
+    .esn-input-number-counter-button.esn-input-number-counter-button--disabled {
+      background: helpers.get-color-from-theme($theme, "neutral", 100);
+      .esn-icon {
+        color: helpers.get-color-from-theme($theme, "neutral", 400);
+      }
+    }
+
+    &:not(:hover):not(.esn-input-number--focused):not(.esn-input-number--error)
+      .esn-input-number-counter-button {
+      border: 1.5px solid map.get($neutral-palette, if($is-dark, 600, 200));
+    }
+
+    &:hover:not(.esn-input-number--focused):not(.esn-input-number--error) {
+      @include _input-number-btn-border-style(
+        1.5px solid map.get($neutral-palette, 400)
+      );
+      @include _border-style {
+        border-color: map.get($neutral-palette, 400) !important;
+      }
+    }
+    &--focused {
+      @include _input-number-btn-border-style(2px solid $primary-color);
+    }
+    &--error {
+      @include _input-number-btn-border-style(1px solid $error-color);
+    }
+  }
+}
+
+@mixin _set-color($neutral-palette, $is-dark) {
+  @include _set-outline-color($neutral-palette, $is-dark);
+  @include _set-fill-color($neutral-palette, $is-dark);
+  @include _set-underline-color($neutral-palette, $is-dark);
+  @include _set-hint-color($neutral-palette, $is-dark);
+}
+
+@mixin _set-outline-color($neutral-palette, $is-dark) {
+  &.esn-input-outline {
+    .mdc-text-field {
+      @include _border-style {
+        background: if($is-dark, transparent, map.get($neutral-palette, 25));
+      }
+
+      &:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(
+          .mdc-text-field--invalid
+        ) {
+        @include _border-style {
+          border-color: map.get($neutral-palette, if($is-dark, 600, 200));
+          border-width: 1.5px;
+        }
+
+        &:hover {
+          @include _border-style {
+            border-color: map.get($neutral-palette, 400);
+          }
+        }
+
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 400, 500));
+        }
+      }
+
+      &--disabled {
+        @include _border-style {
+          background: if($is-dark, transparent, map.get($neutral-palette, 50));
+          border-color: map.get($neutral-palette, if($is-dark, 800, 100));
+        }
+
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 500, 400));
+        }
+      }
+    }
+  }
+}
+
+@mixin _set-fill-color($neutral-palette, $is-dark) {
+  &.esn-input-fill {
+    .mdc-text-field {
+      &:not(.mdc-text-field--invalid) {
+        @include _border-style {
+          background: map.get($neutral-palette, if($is-dark, 700, 100));
+          border-width: 0;
+        }
+      }
+
+      &:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(
+          .mdc-text-field--invalid
+        ) {
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 300, 600));
+        }
+      }
+
+      &--disabled {
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 500, 100));
+        }
+      }
+    }
+  }
+}
+
+@mixin _set-underline-color($neutral-palette, $is-dark) {
+  &.esn-input-underline {
+    .mdc-text-field {
+      background-color: transparent;
+
+      .mat-mdc-form-field-focus-overlay {
+        background-color: map.get($neutral-palette, if($is-dark, 700, 300));
+      }
+
+      &:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(
+          .mdc-text-field--invalid
+        ) {
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 400, 500));
+        }
+      }
+
+      .mdc-line-ripple::before {
+        border-bottom-color: map.get($neutral-palette, if($is-dark, 600, 300));
+      }
+    }
+  }
+}
+
+@mixin _set-hint-color($neutral-palette, $is-dark) {
+  .mat-mdc-form-field-hint {
+    color: map.get($neutral-palette, if($is-dark, 400, 500));
+  }
+
+  .mat-form-field-disabled {
+    .mat-mdc-form-field-hint {
+      color: map.get($neutral-palette, if($is-dark, 500, 400));
+    }
+  }
+}
+
+@mixin _border-style() {
+  .mdc-notched-outline {
+    &__leading,
+    &__notch,
+    &__trailing {
+      @content;
+    }
+  }
+}
+
+@mixin _input-number-btn-border-style($style) {
+  .esn-input-number-counter-button {
+    border-top: $style;
+    border-bottom: $style;
+    &.plus-button {
+      border-right: $style;
+    }
+    &.minus-button {
+      border-left: $style;
+    }
+  }
+}
+
+@mixin style($theme) {
+  $border-radius-default: 8px;
+  $border-radius-override: helpers.get-value-from-component(
+    $theme,
+    "input",
+    "input-border-radius"
+  );
+  $border-radius: if(
+    $border-radius-override,
+    $border-radius-override,
+    $border-radius-default
+  );
+
+  .esn-input .mdc-text-field--outlined .mdc-notched-outline {
+    &__leading {
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+    }
+    &__trailing {
+      border-top-right-radius: $border-radius-default;
+      border-bottom-right-radius: $border-radius-default;
+    }
+  }
+}
+
+@mixin typography($theme) {
+  .esn-input {
+    font-family: helpers.get-body-typography($theme);
+  }
+
+  .ngx-mat-timepicker-tbody {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include style($theme);
+  @include typography($theme);
+}

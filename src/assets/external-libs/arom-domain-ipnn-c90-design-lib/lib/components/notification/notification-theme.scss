@@ -1,0 +1,75 @@
+@use "../../../themes/helpers";
+@use "sass:map";
+@use "sass:color";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+  $background: if($is-dark, map.get($theme, "color", "neutral", 800), white);
+  $color-text: map.get($theme, "generic", "color-text-body-neutral");
+  $color-subtitle: map.get($theme, "generic", "color-text-subtitle-neutral");
+  .esn-notification {
+    color: $color-text;
+    .esn-data__header {
+      background-color: if(
+        $is-dark,
+        map.get($theme, "color", "neutral", 700),
+        map.get($theme, "color", "neutral", 100)
+      );
+    }
+
+    &.esn-notification-read {
+      .esn-data__header {
+        background-color: $background;
+      }
+    }
+
+    .esn-notification-date {
+      color: if(
+        $is-dark,
+        map.get($theme, "color", "neutral", 300),
+        map.get($theme, "color", "neutral", 500)
+      );
+    }
+
+    .esn-notification-not-read-point {
+      background-color: map.get($theme, "color", "primary", 300);
+    }
+  }
+
+  .esn-notification-drawer-inner {
+    $color-divider: map.get($theme, "generic", "color-divider");
+    border-left: $color-divider;
+    background-color: $background;
+
+
+
+    .esn-notification-drawer-title {
+      color: $color-text;
+    }
+
+    .esn-notification-drawer-mark-all-as-read-container {
+      background-color: $background;
+      border-top: 1px solid $color-divider;
+      border-bottom: 1px solid $color-divider;
+    }
+    :not(.esn-notification-drawer-body-has-unread){
+      .mat-mdc-tab-body-wrapper{
+        border-top: 1px solid $color-divider;
+      }
+    }
+
+  }
+
+  .esn-notification-center {
+    .esn-notification-center-title {
+      color: $color-text;
+    }
+    .esn-notification-center-subtitle {
+      color: $color-subtitle;
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}

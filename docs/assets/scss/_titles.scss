@@ -1,0 +1,39 @@
+@use "src/assets/scss/variables" as utils;
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-transform: none;
+  align-items: center;
+
+  &--1 {
+  }
+
+  &--2 {
+    font-weight: bolder;
+    font-size: 16px;
+    min-height: 24px;
+  }
+
+  &--3 {
+    font-weight: bolder;
+    font-size: 14px;
+    min-height: 22px;
+  }
+
+  &__badge {
+    &--2 {
+      @include badge();
+    }
+
+    &--3 {
+      @include badge("22px", "14px");
+    }
+
+    &--light {
+      background-color: utils.$bg-card--accent;
+      color: utils.$text-muted;
+    }
+  }
+}

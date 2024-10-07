@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+@use "../../../themes/palettes";
+@use "../../../themes/typography";
+@use "./radio-private.export.scss";
+
+$prefix: ".esn-radio-button";
+
+@mixin color($theme) {
+  $palettes: "primary", "accent", "error", "success", "neutral";
+  @each $palette in $palettes {
+    #{$prefix}-#{$palette} {
+      @include radio-private.private-radio-color($theme, helpers.get-color-from-theme($theme, $palette, 600),helpers.get-color-from-theme($theme, $palette, 300));
+    }
+  }
+}
+
+@mixin typography($theme) {
+  #{$prefix} {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

@@ -1,0 +1,236 @@
+@use "src/assets/scss/text";
+@use "src/assets/scss/variables" as utils;
+
+.data {
+  &:not(:last-of-type) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__simple {
+    label {
+      @include text.body("Regular", "sm");
+      color: var(--color-text-neutral-subtitle);
+    }
+
+    p {
+      @include text.body("Medium", "md");
+      color: var(--color-text-neutral-body);
+      margin: 0.25rem 0;
+    }
+  }
+
+  &__text {
+    label {
+      @include text.body("Medium", "md");
+      color: var(--color-text-neutral-body);
+    }
+
+    p {
+      @include text.body("Regular", "md");
+      color: var(--color-text-neutral-subtitle);
+      margin: 0.25rem 0;
+    }
+  }
+
+  &--with-icon {
+    display: flex;
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+
+  &__number {
+    @include text.title("Medium", "sm");
+    color: var(--color-text-primary-heading);
+  }
+
+  &__text {
+    @include text.body("Regular", "xs");
+    color: var(--color-text-neutral-body);
+    margin-left: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+
+    > div:nth-child(2) {
+      margin-top: -0.25rem;
+    }
+  }
+}
+
+/*.badge {
+  @include text.body("Medium", "sm");
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 1.75rem;
+  color: currentColor;
+  padding: 0 1rem;
+  margin-right: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: currentColor;
+    opacity: 0.1;
+    border-radius: 40px;
+  }
+
+  &__status {
+    @include text.body("Regular", "xs");
+    background: currentColor;
+    margin-left: 0.5rem;
+    padding: 0 0.5rem;
+    border-radius: 15px;
+
+    > span {
+      color: white;
+    }
+  }
+
+  &--error {
+    color: var(--color-red);
+  }
+  &--warning {
+    color: var(--color-orange);
+  }
+
+  .esn-icon {
+    margin-right: 0.5rem;
+  }
+}*/
+
+.info-msg {
+  @include text.body("Regular", "sm");
+  display: flex;
+
+  .esn-icon {
+    margin-top: -0.2rem;
+    margin-right: 0.75rem;
+    color: var(--color-primary);
+  }
+
+  &--warning {
+    .esn-icon {
+      color: var(--color-orange);
+    }
+  }
+  &--error {
+    .esn-icon {
+      color: var(--color-red);
+    }
+  }
+  &--success {
+    .esn-icon {
+      color: var(--color-green);
+    }
+  }
+}
+
+.info-block {
+  color: var(--color-blue-darker);
+  background: var(--color-blue-lightest);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+
+  p {
+    color: var(--color-blue-darkr);
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:not(:first-of-type) {
+      margin-top: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  ul li {
+    margin-left: 0;
+  }
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 1.5rem;
+    color: var(--color-blue);
+    background: var(--color-blue-lighter);
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 3.2rem;
+      width: 3.2rem;
+      background: currentColor;
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    @include text.body("Regular", "sm");
+    padding-top: 0.6rem;
+  }
+
+  &--warning {
+    color: var(--color-orange-darker);
+    background: var(--color-orange-lightest);
+
+    p {
+      color: var(--color-orange-darker);
+    }
+  }
+
+  &--warning &__icon {
+    color: var(--color-orange);
+    background: var(--color-orange-lighter);
+  }
+
+  &--error {
+    color: var(--color-red-darker);
+    background: var(--color-red-lightest);
+
+    p {
+      color: var(--color-red-darker);
+    }
+  }
+
+  &--error &__icon {
+    color: var(--color-red);
+    background: var(--color-red-lighter);
+  }
+
+  &--bis {
+    color: var(--color-text-neutral-body);
+    background: var(--color-background-neutral-2);
+
+    p {
+      color: var(--color-text-neutral-body);
+    }
+  }
+
+  &--bis &__icon {
+    color: var(--color-icon);
+    background: var(--color-background-neutral-3);
+  }
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

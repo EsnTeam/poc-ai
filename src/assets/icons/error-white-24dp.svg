@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-error-white-24dp">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="error-white-24dp" clip-path="url(#clip-error-white-24dp)">
+    <rect id="Rectangle_3062" data-name="Rectangle 3062" width="24" height="24" fill="none"/>
+    <path id="Tracé_1899" data-name="Tracé 1899" d="M12,8v4m0,4h.01M22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

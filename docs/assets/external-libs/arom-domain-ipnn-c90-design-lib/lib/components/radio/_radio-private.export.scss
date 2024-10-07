@@ -1,0 +1,65 @@
+@use '@material/radio/radio-theme' as mdc-radio-theme;
+@use '@material/theme/theme-color' as mdc-theme-color;
+@use 'sass:map';
+@use "../../../themes/helpers";
+
+$private-radio-theme-config: map.merge(mdc-radio-theme.$light-theme, (
+  // Exclude the styles we don't need.
+  selected-focus-state-layer-color: null,
+  selected-focus-state-layer-opacity: null,
+  selected-hover-state-layer-color: null,
+  selected-hover-state-layer-opacity: null,
+  selected-pressed-state-layer-color: null,
+  selected-pressed-state-layer-opacity: null,
+  unselected-focus-icon-color: null,
+  unselected-focus-state-layer-color: null,
+  unselected-focus-state-layer-opacity: null,
+  unselected-hover-state-layer-color: null,
+  unselected-hover-state-layer-opacity: null,
+  unselected-pressed-state-layer-color: null,
+  unselected-pressed-state-layer-opacity: null,
+));
+
+@mixin private-radio-color($color-config, $color-palette,$color-palette-lighter) {
+  //$foreground: map.get($color-config, foreground);
+  $is-dark: helpers.is-dark-mode($color-config);
+
+  $neutral: helpers.get-color-from-theme($color-config, 'neutral', 600);
+  $neutral-lighter: helpers.get-color-from-theme($color-config, 'neutral', 400);
+  $neutral-lightest: helpers.get-color-from-theme($color-config, 'neutral', 200);
+  $on-surface: if($is-dark, $neutral-lighter, $neutral) !default;
+  $text-color: if($is-dark, #FFFFFF, #333333) !default;
+
+  $active-border-color: if(
+      $is-dark,
+      $neutral-lightest,
+      $neutral
+  );
+  & .mdc-form-field {
+    color: #{$text-color}!important;
+  }
+  & {
+    @include mdc-radio-theme.theme((
+      // The disabled colors don't use the `rgba` version, because
+      // MDC applies a separate opacity to disabled buttons.
+      disabled-selected-icon-color: $on-surface,
+      disabled-unselected-icon-color: $on-surface,
+      unselected-focus-icon-color: $active-border-color,
+      unselected-hover-icon-color: $active-border-color,
+      unselected-icon-color: $on-surface,
+      unselected-pressed-icon-color: $on-surface,
+      selected-focus-icon-color: $color-palette,
+      selected-hover-icon-color: $color-palette,
+      selected-icon-color: $color-palette,
+      selected-pressed-icon-color: $color-palette,
+    ));
+
+    --esn-mdc-radio-ripple-color: #{$active-border-color};
+     //MDC should set the disabled color on the label, but doesn't, so we do it here instead.
+    .mdc-radio--disabled + label {
+      color: #{$neutral-lighter}!important;
+    }
+
+    --esn-mdc-radio-checked-ripple-color: #{$color-palette};
+  }
+}

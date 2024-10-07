@@ -1,0 +1,236 @@
+// TODO: Priority Low:    Allow consumers to override text rules
+// TODO: Priority Low:    Override Angular Material Theme typography config with our custom ESN Design System values
+// TODO: Priority Low:    Override Angular Material Theme foreground and background with our custom ESN Design System values
+// TODO: Priority Medium: Clean Esn Property inside Global Theme Object
+// TODO: Priority Medium: Add theme objects validation
+
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./typography";
+@use "./helpers";
+@use "../lib/components/button/button-theme" as button;
+@use "../lib/components/loader/loader-theme" as loader;
+@use "../lib/components/toaster/toaster-theme" as toaster;
+@use "../lib/components/badge/badge-theme" as badge;
+@use "../lib/components/empty-state/empty-state-theme" as empty-state;
+@use "../lib/components/breadcrumb/breadcrumb-theme" as breadcrumb;
+@use "../lib/components/table/table-theme" as table;
+@use "../lib/components/dialog/dialog-theme" as dialog;
+@use "../lib/components/checkbox/checkbox-theme" as checkbox;
+@use "../lib/components/input/input-theme" as input;
+@use "../lib/components/sidenav/sidenav-theme" as sidenav;
+@use "../lib/components/slide-toggle/slide-toggle-theme" as slide-toggle;
+@use "../lib/components/icon/icon-theme" as icon;
+@use "../lib/components/select/select/select-theme" as select;
+@use "../lib/components/paginator/paginator-theme" as paginator;
+@use "../lib/components/progress-bar/progress-bar-theme" as progressBar;
+@use "../lib/components/divider/divider-theme" as divider;
+@use "../lib/components/menu/menu-theme" as menu;
+@use "../lib/components/radio/radio-theme" as radio;
+@use "../lib/components/expansion/expansion-theme" as expansion;
+@use "../lib/components/rail/rail-theme" as rail;
+@use "../lib/components/autocomplete-select/base/autocomplete-select-base-theme" as autocompleteSelectBase;
+@use "../lib/components/file-input/file-input-theme.scss" as fileInput;
+@use "../lib/components/stepper/stepper-theme" as stepper;
+@use "../lib/components/error-state/error-state-theme" as error-state;
+@use "../lib/components/notification/notification-theme" as notification;;
+@use "../lib/components/app-bar/app-bar-theme" as app-bar;
+@use "../lib/components/selectable-card/selectable-card-theme" as selectable-card;
+@use "../lib/components/illustration/illustration-theme" as illustration;
+@use "../lib/components/upload-progress-toaster/upload-progress-toaster-theme" as upload-progress-toaster;
+@use "../lib/components/code-snippet/code-snippet-theme" as code-snippet;
+@use "../lib/components/lib-example/lib-example-theme" as lib-example;
+@use "../lib/components/confirmation-dialog/confirmation-dialog-theme" as confirmation-dialog;
+
+
+
+
+// https://github.com/angular/components/blob/main/guides/duplicate-theming-styles.md
+// I think that the warning is because we're using more than 2 themes, deactivating it
+mat.$theme-ignore-duplication-warnings: true;
+
+@mixin core() {
+  @include mat.core();
+  @include typography.declare-fonts();
+}
+
+@function create-theme($esn-theme-config) {
+  $material-theme: _create-material-theme($esn-theme-config);
+  $esn-theme: _create-esn-theme($esn-theme-config);
+
+  @return (
+    material: $material-theme,
+    esn: $esn-theme
+  );
+}
+
+@mixin all-component-themes($theme, $color-change: false, $typography-change: false) {
+  $material-theme: map.get($theme, "material");
+  $esn-theme: map.get($theme, "esn");
+
+  @include typography.set-body-font($esn-theme);
+
+
+  @if($color-change) {
+    @include mat.all-component-colors($material-theme);
+  }
+  @if($typography-change) {
+    @include mat.all-component-typographies($material-theme);
+  }
+  @if(not $color-change and not $typography-change) {
+    @include mat.all-component-themes($material-theme);
+  }
+
+  @include button.theme($esn-theme);
+  @include loader.theme($esn-theme);
+  @include toaster.theme($esn-theme);
+  @include badge.theme($esn-theme);
+  @include empty-state.theme($esn-theme);
+  @include breadcrumb.theme($esn-theme);
+  @include table.theme($esn-theme);
+  @include dialog.theme($esn-theme);
+  @include checkbox.theme($esn-theme);
+  @include input.theme($esn-theme);
+  @include sidenav.theme($esn-theme);
+  @include slide-toggle.theme($esn-theme);
+  @include icon.theme($esn-theme);
+  @include select.theme($esn-theme);
+  @include paginator.theme($esn-theme);
+  @include progressBar.theme($esn-theme);
+  @include divider.theme($esn-theme);
+  @include menu.theme($esn-theme);
+  @include expansion.theme($esn-theme);
+  @include radio.theme($esn-theme);
+  @include rail.theme($esn-theme);
+  @include autocompleteSelectBase.theme($esn-theme);
+  @include fileInput.theme($esn-theme);
+  @include stepper.theme($esn-theme);
+  @include error-state.theme($esn-theme);
+  @include notification.theme($esn-theme);
+  @include app-bar.theme($esn-theme);
+  @include selectable-card.theme($esn-theme);
+  @include illustration.theme($esn-theme);
+  @include upload-progress-toaster.theme($esn-theme);
+  @include code-snippet.theme($esn-theme);
+  @include lib-example.theme($esn-theme);
+  @include confirmation-dialog.theme($esn-theme);
+}
+
+@function _create-esn-theme($esn-theme-config) {
+  $is-dark: map.get($esn-theme-config, "is-dark");
+
+  $generic: (
+    color-divider: map.get($esn-theme-config, "color", "neutral", if($is-dark, 700, 100)),
+    color-divider-contrast: map.get($esn-theme-config, "color", "neutral", if($is-dark, 100, 700)),
+    color-divider-darker: map.get($esn-theme-config, "color", "neutral", if($is-dark, 600, 200)),
+    color-divider-darker-contrast: map.get($esn-theme-config, "color", "neutral", if($is-dark, 200, 600)),
+    color-icon: map.get($esn-theme-config, "color", "neutral", if($is-dark, 500, 400)),
+    color-icon-contrast: map.get($esn-theme-config, "color", "neutral", if($is-dark, 400, 500)),
+    color-text-heading-neutral: map.get($esn-theme-config, "color", "neutral", if($is-dark, 25, 900)),
+    color-text-heading-neutral-contrast: map.get($esn-theme-config, "color", "neutral", if($is-dark, 900, 25)),
+    color-text-body-neutral: map.get($esn-theme-config, "color", "neutral", if($is-dark, 100, 700)),
+    color-text-body-neutral-contrast: map.get($esn-theme-config, "color", "neutral", if($is-dark, 700, 100)),
+    color-text-subtitle-neutral: map.get($esn-theme-config, "color", "neutral", if($is-dark, 400, 500)),
+    color-text-subtitle-neutral-contrast: map.get($esn-theme-config, "color", "neutral", if($is-dark, 500, 400)),
+    color-text-heading-primary: map.get($esn-theme-config, "color", "primary", if($is-dark, 25, 900)),
+    color-text-heading-primary-contrast: map.get($esn-theme-config, "color", "primary", if($is-dark, 900, 25)),
+    color-text-body-primary: map.get($esn-theme-config, "color", "primary", if($is-dark, 100, 700)),
+    color-text-body-primary-contrast: map.get($esn-theme-config, "color", "primary", if($is-dark, 700, 100)),
+    color-text-subtitle-primary: map.get($esn-theme-config, "color", "primary", if($is-dark, 400, 500)),
+    color-text-subtitle-primary-contrast: map.get($esn-theme-config, "color", "primary", if($is-dark, 500, 400)),
+    color-text-heading-default: map.get($esn-theme-config, "color", "neutral", if($is-dark, 25, 900)),
+    color-text-heading-default-contrast: map.get($esn-theme-config, "color", "neutral", if($is-dark, 900, 25)),
+    color-app-background: map.get($esn-theme-config, "color", "neutral", if($is-dark, 900, 50))
+  );
+  $overriden-generic: map.get($esn-theme-config, generic);
+
+  @if ($overriden-generic) {
+    $generic: map.merge($generic, $overriden-generic);
+  }
+
+  @return map.set($esn-theme-config, "generic", $generic);
+}
+
+
+@function _create-material-theme($esn-theme-config) {
+  $mat-theme-config: (
+    color:      _convert-esn-to-material-colors-config($esn-theme-config),
+    typography: _convert-esn-to-material-typography-config($esn-theme-config)
+  );
+
+  @return if(
+    map.get($esn-theme-config, is-dark),
+    mat.define-dark-theme($mat-theme-config),
+    mat.define-light-theme($mat-theme-config)
+  );
+}
+
+@function _convert-esn-to-material-colors-config($esn-theme-config) {
+  $esn-primary: map.get(map.get($esn-theme-config, "color"), "primary");
+  $esn-accent:  map.get(map.get($esn-theme-config, "color"), "accent");
+  $esn-warn:    map.get(map.get($esn-theme-config, "color"), "error");
+
+  @return (
+    primary: mat.define-palette($esn-primary),
+    accent:  mat.define-palette($esn-accent),
+    warn:    mat.define-palette($esn-warn)
+  );
+}
+
+@function _convert-esn-to-material-typography-config($esn-theme-config) {
+  $esn-title: map.get(map.get($esn-theme-config, "typography"), "title");
+  $esn-body:  map.get(map.get($esn-theme-config, "typography"), "body");
+
+  @return mat.define-typography-config(
+    $font-family:   $esn-body,
+    $headline-1:    mat.define-typography-level(6rem, 6rem, 400, $font-family: $esn-title),
+    $headline-2:    mat.define-typography-level(3.75rem, 3.75rem, 300, $font-family: $esn-title),
+    $headline-3:    mat.define-typography-level(3rem, 3.125rem, 400, $font-family: $esn-title),
+    $headline-4:    mat.define-typography-level(2.125rem, 2.5rem, 400, $font-family: $esn-title),
+    $headline-5:    mat.define-typography-level(1.5rem, 2rem, 500, $font-family: $esn-title),
+    $headline-6:    mat.define-typography-level(112px, 112px, 300, $font-family: $esn-title),
+    $subtitle-1:    mat.define-typography-level(1rem, 1.75rem, 400, $font-family: $esn-body),
+    $subtitle-2:    mat.define-typography-level(0.875rem, 1.375rem, 500, $font-family: $esn-body),
+    $body-1:        mat.define-typography-level(1rem, 1.5rem, 400, $font-family: $esn-body),
+    $body-2:        mat.define-typography-level(0.875rem, 1.25rem, 400, $font-family: $esn-body),
+    $caption:       mat.define-typography-level(0.75rem, 1.25rem, 400, $font-family: $esn-body),
+    $button:        mat.define-typography-level(0.875rem, 2.25rem, 500, $font-family: $esn-body),
+    $overline:      mat.define-typography-level(0.75rem, 2rem, 500, $font-family: $esn-body)
+  )
+};
+
+@function define-typography-level(
+  $font-size,
+  $line-height: $font-size,
+  $font-weight: 400,
+  $font-family: null,
+  $letter-spacing: normal) {
+
+  @return (
+    font-size: $font-size,
+    line-height: $line-height,
+    font-weight: $font-weight,
+    font-family: $font-family,
+    letter-spacing: $letter-spacing
+  );
+}
+
+@mixin css-variables($theme) {
+  $colors: map.get($theme, "esn", "color");
+  $generics: map.get($theme, "esn", "generic");
+  $theme-name: map.get($theme, "esn", "name");
+
+  @at-root .#{$theme-name}{
+    @each $palette, $color in $colors {
+      @each $hue, $value in $color {
+        @if type-of($value) != 'map' {
+          --color-#{$palette}-#{$hue}: #{$value};
+        }
+      }
+    }
+
+    @each $key, $value in $generics {
+      --#{$key}: #{$value};
+    }
+  }
+}

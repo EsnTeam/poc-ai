@@ -1,0 +1,108 @@
+@use "../../../themes/helpers";
+@use "../../../themes/palettes";
+@use "sass:map";
+
+@mixin color($theme) {
+  $is-dark-global: helpers.is-dark-mode($theme);
+  $is-dark-sidenav: helpers.get-value-from-component(
+    $theme,
+    "sidenav",
+    "is-dark"
+  );
+  $is-dark: $is-dark-sidenav or $is-dark-global;
+
+  $overriden-palette: helpers.get-value-from-component(
+    $theme,
+    "sidenav",
+    "palette"
+  );
+
+  $palette: if(
+      $overriden-palette == null,
+      helpers.get-palette-from-theme($theme, 'neutral'),
+      $overriden-palette
+    );
+  esn-sidenav-container {
+    esn-sidenav{
+      border-right: 1px solid map.get($theme, "color", "neutral", if($is-dark, 700, 25));
+
+      background-color: if(
+        $is-dark,
+        map.get($palette, 900),
+        map.get($palette, 25)
+      ) !important;
+
+      color:  map.get($theme, "color", "neutral", if($is-dark, 300, 500)) !important;
+
+
+      .esn-sidenav-button{
+        .esn-icon {
+          color: map.get($palette, 400),;
+        }
+
+        button{
+          color: if(
+            $is-dark,
+            map.get($palette, 100),
+            map.get($palette, 700)
+          )  !important;
+
+          background-color: if(
+            $is-dark,
+            map.get($palette, 900),
+            map.get($palette, 25)
+          )  !important;
+        }
+        &--active{
+          button{
+            background-color: if(
+              $is-dark,
+              map.get($palette, 700),
+              map.get($palette, 100)
+            ) !important;
+          }
+        }
+      }
+
+
+    }
+    esn-sidenav-content{
+      background-color: map.get(
+        $theme,
+        "generic",
+        "color-app-background"
+      ) !important;
+
+      .esn-sidenav-toggle-button > button {
+        background-color: transparent !important;
+        color: map.get($theme, "generic", "color-text-subtitle-neutral");
+      }
+    }
+  }
+  .esn-sidenav-header{
+    h1, h2, h3, h4, h5{
+      color:  map.get($theme, "color", "neutral", if($is-dark, 25, 900)) !important;
+    }
+  }
+
+
+}
+
+
+@mixin typography($theme) {
+  esn-sidenav{
+      font-family: helpers.get-body-typography($theme);
+      font-size: 0.75rem;
+    }
+
+}
+
+@mixin style($theme) {
+
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+  @include style($theme);
+}

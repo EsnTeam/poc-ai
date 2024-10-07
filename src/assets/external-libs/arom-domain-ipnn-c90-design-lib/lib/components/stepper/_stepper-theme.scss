@@ -1,0 +1,164 @@
+@use 'sass:map';
+@use 'sass:math';
+@use "../../../themes/helpers";
+
+@mixin color($theme) {
+  $foreground: map.get($theme, foreground);
+  $background: map.get($theme, background);
+
+  $is-dark: helpers.is-dark-mode($theme);
+
+  $primary: helpers.get-color-from-theme($theme, 'primary', 600);
+  $primary-light: helpers.get-color-from-theme($theme, 'primary', 500);
+  $accent: helpers.get-color-from-theme($theme, 'accent', 600);
+  $accent-light: helpers.get-color-from-theme($theme, 'accent', 500);
+  $warn: helpers.get-color-from-theme($theme, 'error', 600);
+  $warn-light: helpers.get-color-from-theme($theme, 'error', 500);
+  $success: helpers.get-color-from-theme($theme, 'success', 600);
+  $success-light: helpers.get-color-from-theme($theme, 'success', 500);
+  $neutral: helpers.get-color-from-theme($theme, 'neutral', 300);
+  $neutral-light: helpers.get-color-from-theme($theme, 'neutral', 200);
+
+  .esn-step-header {
+    &.cdk-keyboard-focused,
+    &.cdk-program-focused,
+    &:hover:not([aria-disabled]),
+    &:hover[aria-disabled='false'] {
+      & .esn-step-icon {
+        background-color: $primary-light;
+        border-color: $primary-light;
+        color: white;
+      }
+
+      & .esn-step-icon-selected{
+        background-color: $primary;
+        border-color: $primary;
+        color: white;
+      }
+
+      & .esn-step-icon-state-done,
+      & .esn-step-icon-state-edit {
+        background-color: $success;
+        border-color: $success;
+        color: white;
+      }
+
+      & .esn-step-icon-state-error {
+        background-color: $warn;
+        border-color: $warn;
+        color: white;
+      }
+    }
+
+    &:hover[aria-disabled='true'] {
+      cursor: default;
+    }
+
+    // On touch devices the :hover state will linger on the element after a tap.
+    // Reset it via `@media` after the declaration, because the media query isn't
+    // supported by all browsers yet.
+    @media (hover: none) {
+      &:hover {
+        background: none;
+      }
+    }
+
+    .esn-step-label,
+    .esn-step-label-active,
+    .esn-step-optional {
+      color: $neutral-light;
+      font-family: helpers.get-title-typography($theme);
+    }
+
+    .esn-step-icon {
+      // TODO(josephperrott): Update to using a corrected disabled-text contrast
+      // instead of secondary-text.
+      width: 40px;
+      height: 40px;
+      border: solid 2px $neutral-light;
+      color:  $neutral-light;
+    }
+
+    .esn-step-icon-selected {
+      background-color: $primary-light;
+      border-color: $primary-light;
+      color: white;
+    }
+
+    .esn-step-icon-state-done,
+    .esn-step-icon-state-edit {
+      background-color: $success-light;
+      border-color: $success-light;
+      color: white;
+    }
+
+    .esn-step-icon-state-error {
+      background-color: $warn-light;
+      border-color: $warn-light;
+      color: white;
+    }
+
+    .esn-step-label-error {
+      color: $warn-light;
+      & .esn-step-optional {
+        color: $warn-light;
+      }
+    }
+
+    .esn-step-label-selected {
+      font-family: helpers.get-title-typography($theme);
+      color: if($is-dark, white, black);
+    }
+  }
+
+  .esn-stepper-horizontal, .esn-stepper-vertical {
+    background-color: transparent;
+  }
+
+  .esn-stepper-vertical-line {
+    min-height: 16px;
+  }
+  .esn-stepper-vertical-line::before {
+    border-left-color: $neutral-light;
+    border-left-width: 3px;
+    border-radius: 8px;
+    height: 100%;
+    left: -15px;
+  }
+
+  .esn-horizontal-stepper-header::before,
+  .esn-stepper-horizontal-line {
+    border-top-color: $neutral-light;
+    border-top-width: 3px;
+    border-radius: 8px;
+  }
+
+  .esn-step-header:has(.esn-step-icon-state-edit) + .esn-stepper-vertical-line::before {
+    border-left-color: $success-light;
+  }
+
+  .esn-step-header:has(.esn-step-icon-state-error) + .esn-stepper-vertical-line::before {
+    border-left-color: $warn-light;
+  }
+
+  .esn-step-header:has(.esn-step-icon-state-edit) + .esn-stepper-horizontal-line {
+    border-top-color: $success-light;
+  }
+
+  .esn-step-header:has(.esn-step-icon-state-error) + .esn-stepper-horizontal-line {
+    border-top-color: $warn-light;
+  }
+
+  .esn-vertical-stepper-header {
+    height: 44px;
+    padding: 8px 0;
+  }
+
+  .esn-step-icon-content {
+    font-family: helpers.get-title-typography($theme);
+  }
+}
+
+@mixin theme($theme-or-color-config) {
+      @include color($theme-or-color-config);
+}

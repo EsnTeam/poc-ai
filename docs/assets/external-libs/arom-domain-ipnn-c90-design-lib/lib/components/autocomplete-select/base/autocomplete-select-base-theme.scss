@@ -1,0 +1,61 @@
+@use "sass:map";
+@use "../../../../themes/helpers";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+
+  .esn-autocomplete-select-base {
+    color: map.get($theme, "generic", "color-text-body-neutral");
+
+    &__close-icon {
+      color: map.get($theme, "generic", "color-icon");
+      &:hover,:active {
+        color: map.get($theme, "generic", "color-text-body-neutral");
+      }
+    }
+    .mat-mdc-standard-chip {
+      padding-left: 0;
+      padding-right: 0;
+
+      --mdc-chip-elevated-container-color: transparent !important;
+      --mdc-chip-elevated-disabled-container-color: transparent !important;
+      --mdc-chip-label-text-color: transparent !important;
+      --mdc-chip-disabled-label-text-color: transparent !important;
+      --mdc-chip-with-icon-icon-color: transparent !important;
+      --mdc-chip-with-icon-disabled-icon-color: transparent !important;
+      --mdc-chip-with-trailing-icon-disabled-trailing-icon-color: transparent !important;
+      --mdc-chip-with-trailing-icon-trailing-icon-color: transparent !important;
+      --mdc-chip-with-icon-selected-icon-color: transparent !important;
+    }
+
+    .mat-mdc-chip .mat-mdc-chip-focus-overlay {
+      opacity: 0 !important;
+    }
+
+    
+  }
+
+  .esn-autocomplete-select-option-error-info{
+    color: helpers.get-color-from-theme($theme, "error", 500),
+  }
+
+  .mat-mdc-autocomplete-panel {
+    background-color: if(
+      $is-dark,
+      helpers.get-color-from-theme($theme, "neutral", 700),
+      white
+    );
+  }
+}
+
+@mixin style($theme) {
+}
+
+@mixin typography($theme) {
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include style($theme);
+  @include typography($theme);
+}

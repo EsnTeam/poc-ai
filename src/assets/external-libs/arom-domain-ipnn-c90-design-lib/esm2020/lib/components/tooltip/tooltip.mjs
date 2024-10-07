@@ -1,0 +1,32 @@
+import { Inject, Injectable } from '@angular/core';
+import { _MatTooltipBase, MAT_TOOLTIP_DEFAULT_OPTIONS, MAT_TOOLTIP_SCROLL_STRATEGY } from "@angular/material/tooltip";
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/cdk/overlay";
+import * as i2 from "@angular/cdk/scrolling";
+import * as i3 from "@angular/cdk/platform";
+import * as i4 from "@angular/cdk/a11y";
+import * as i5 from "@angular/cdk/bidi";
+export const ESN_TOOLTIP_SCROLL_STRATEGY = MAT_TOOLTIP_SCROLL_STRATEGY;
+export const ESN_TOOLTIP_DEFAULT_OPTIONS = MAT_TOOLTIP_DEFAULT_OPTIONS;
+const MIN_VIEWPORT_TOOLTIP_THRESHOLD = 8;
+export class EsnTooltip extends _MatTooltipBase {
+    constructor(overlay, elementRef, scrollDispatcher, viewContainerRef, ngZone, platform, ariaDescriber, focusMonitor, scrollStrategy, dir, defaultOptions) {
+        super(overlay, elementRef, scrollDispatcher, viewContainerRef, ngZone, platform, ariaDescriber, focusMonitor, scrollStrategy, dir, defaultOptions, document);
+        this._viewportMargin = MIN_VIEWPORT_TOOLTIP_THRESHOLD;
+    }
+    setMessage(msg) {
+        this.message = msg;
+    }
+}
+EsnTooltip.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnTooltip, deps: [{ token: i1.Overlay }, { token: i0.ElementRef }, { token: i2.ScrollDispatcher }, { token: i0.ViewContainerRef }, { token: i0.NgZone }, { token: i3.Platform }, { token: i4.AriaDescriber }, { token: i4.FocusMonitor }, { token: ESN_TOOLTIP_SCROLL_STRATEGY }, { token: i5.Directionality }, { token: ESN_TOOLTIP_DEFAULT_OPTIONS }], target: i0.ɵɵFactoryTarget.Injectable });
+EsnTooltip.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnTooltip });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnTooltip, decorators: [{
+            type: Injectable
+        }], ctorParameters: function () { return [{ type: i1.Overlay }, { type: i0.ElementRef }, { type: i2.ScrollDispatcher }, { type: i0.ViewContainerRef }, { type: i0.NgZone }, { type: i3.Platform }, { type: i4.AriaDescriber }, { type: i4.FocusMonitor }, { type: undefined, decorators: [{
+                    type: Inject,
+                    args: [ESN_TOOLTIP_SCROLL_STRATEGY]
+                }] }, { type: i5.Directionality }, { type: undefined, decorators: [{
+                    type: Inject,
+                    args: [ESN_TOOLTIP_DEFAULT_OPTIONS]
+                }] }]; } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL2Fyb20tZG9tYWluLWlwbm4tYzkwLWRlc2lnbi1saWIvc3JjL2xpYi9jb21wb25lbnRzL3Rvb2x0aXAvdG9vbHRpcC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQWEsTUFBTSxFQUFFLFVBQVUsRUFBMkIsTUFBTSxlQUFlLENBQUM7QUFDdkYsT0FBTyxFQUNMLGVBQWUsRUFDZiwyQkFBMkIsRUFDM0IsMkJBQTJCLEVBRzVCLE1BQU0sMkJBQTJCLENBQUM7Ozs7Ozs7QUFPbkMsTUFBTSxDQUFDLE1BQU0sMkJBQTJCLEdBQUcsMkJBQTJCLENBQUM7QUFDdkUsTUFBTSxDQUFDLE1BQU0sMkJBQTJCLEdBQUcsMkJBQTJCLENBQUM7QUFDdkUsTUFBTSw4QkFBOEIsR0FBRyxDQUFDLENBQUM7QUFJekMsTUFBTSxPQUFPLFVBQVcsU0FBUSxlQUFpQztJQUcvRCxZQUFZLE9BQWdCLEVBQ2hCLFVBQW1DLEVBQ25DLGdCQUFrQyxFQUNsQyxnQkFBa0MsRUFDbEMsTUFBYyxFQUFFLFFBQWtCLEVBQ2xDLGFBQTRCLEVBQzVCLFlBQTBCLEVBQ1csY0FBOEIsRUFDbkUsR0FBbUIsRUFDa0IsY0FBd0M7UUFFdkYsS0FBSyxDQUNILE9BQU8sRUFDUCxVQUFVLEVBQ1YsZ0JBQWdCLEVBQ2hCLGdCQUFnQixFQUNoQixNQUFNLEVBQ04sUUFBUSxFQUNSLGFBQWEsRUFDYixZQUFZLEVBQ1osY0FBYyxFQUNkLEdBQUcsRUFDSCxjQUFjLEVBQ2QsUUFBUSxDQUNULENBQUM7UUFDRixJQUFJLENBQUMsZUFBZSxHQUFHLDhCQUE4QixDQUFDO0lBRXhELENBQUM7SUFFRCxVQUFVLENBQUMsR0FBVztRQUNwQixJQUFJLENBQUMsT0FBTyxHQUFHLEdBQUcsQ0FBQztJQUNyQixDQUFDOzt3R0FsQ1UsVUFBVSwwT0FVRCwyQkFBMkIsMkNBRTNCLDJCQUEyQjs0R0FacEMsVUFBVTs0RkFBVixVQUFVO2tCQUR0QixVQUFVOzswQkFXSSxNQUFNOzJCQUFDLDJCQUEyQjs7MEJBRWxDLE1BQU07MkJBQUMsMkJBQTJCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtFbGVtZW50UmVmLCBJbmplY3QsIEluamVjdGFibGUsIE5nWm9uZSwgVmlld0NvbnRhaW5lclJlZn0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7XHJcbiAgX01hdFRvb2x0aXBCYXNlLFxyXG4gIE1BVF9UT09MVElQX0RFRkFVTFRfT1BUSU9OUyxcclxuICBNQVRfVE9PTFRJUF9TQ1JPTExfU1RSQVRFR1ksXHJcbiAgTWF0VG9vbHRpcERlZmF1bHRPcHRpb25zLFxyXG4gIFRvb2x0aXBDb21wb25lbnRcclxufSBmcm9tIFwiQGFuZ3VsYXIvbWF0ZXJpYWwvdG9vbHRpcFwiO1xyXG5pbXBvcnQge0NvbXBvbmVudFR5cGUsIE92ZXJsYXksIFNjcm9sbFN0cmF0ZWd5fSBmcm9tIFwiQGFuZ3VsYXIvY2RrL292ZXJsYXlcIjtcclxuaW1wb3J0IHtTY3JvbGxEaXNwYXRjaGVyfSBmcm9tIFwiQGFuZ3VsYXIvY2RrL3Njcm9sbGluZ1wiO1xyXG5pbXBvcnQge1BsYXRmb3JtfSBmcm9tIFwiQGFuZ3VsYXIvY2RrL3BsYXRmb3JtXCI7XHJcbmltcG9ydCB7QXJpYURlc2NyaWJlciwgRm9jdXNNb25pdG9yfSBmcm9tIFwiQGFuZ3VsYXIvY2RrL2ExMXlcIjtcclxuaW1wb3J0IHtEaXJlY3Rpb25hbGl0eX0gZnJvbSBcIkBhbmd1bGFyL2Nkay9iaWRpXCI7XHJcblxyXG5leHBvcnQgY29uc3QgRVNOX1RPT0xUSVBfU0NST0xMX1NUUkFURUdZID0gTUFUX1RPT0xUSVBfU0NST0xMX1NUUkFURUdZO1xyXG5leHBvcnQgY29uc3QgRVNOX1RPT0xUSVBfREVGQVVMVF9PUFRJT05TID0gTUFUX1RPT0xUSVBfREVGQVVMVF9PUFRJT05TO1xyXG5jb25zdCBNSU5fVklFV1BPUlRfVE9PTFRJUF9USFJFU0hPTEQgPSA4O1xyXG5cclxuXHJcbkBJbmplY3RhYmxlKClcclxuZXhwb3J0IGNsYXNzIEVzblRvb2x0aXAgZXh0ZW5kcyBfTWF0VG9vbHRpcEJhc2U8VG9vbHRpcENvbXBvbmVudD4ge1xyXG4gIHByb3RlY3RlZCByZWFkb25seSBfdG9vbHRpcENvbXBvbmVudDogQ29tcG9uZW50VHlwZTxUb29sdGlwQ29tcG9uZW50PjtcclxuXHJcbiAgY29uc3RydWN0b3Iob3ZlcmxheTogT3ZlcmxheSxcclxuICAgICAgICAgICAgICBlbGVtZW50UmVmOiBFbGVtZW50UmVmPEhUTUxFbGVtZW50PixcclxuICAgICAgICAgICAgICBzY3JvbGxEaXNwYXRjaGVyOiBTY3JvbGxEaXNwYXRjaGVyLFxyXG4gICAgICAgICAgICAgIHZpZXdDb250YWluZXJSZWY6IFZpZXdDb250YWluZXJSZWYsXHJcbiAgICAgICAgICAgICAgbmdab25lOiBOZ1pvbmUsIHBsYXRmb3JtOiBQbGF0Zm9ybSxcclxuICAgICAgICAgICAgICBhcmlhRGVzY3JpYmVyOiBBcmlhRGVzY3JpYmVyLFxyXG4gICAgICAgICAgICAgIGZvY3VzTW9uaXRvcjogRm9jdXNNb25pdG9yLFxyXG4gICAgICAgICAgICAgIEBJbmplY3QoRVNOX1RPT0xUSVBfU0NST0xMX1NUUkFURUdZKSBzY3JvbGxTdHJhdGVneTogU2Nyb2xsU3RyYXRlZ3ksXHJcbiAgICAgICAgICAgICAgZGlyOiBEaXJlY3Rpb25hbGl0eSxcclxuICAgICAgICAgICAgICBASW5qZWN0KEVTTl9UT09MVElQX0RFRkFVTFRfT1BUSU9OUykgZGVmYXVsdE9wdGlvbnM6IE1hdFRvb2x0aXBEZWZhdWx0T3B0aW9ucyxcclxuICApIHtcclxuICAgIHN1cGVyKFxyXG4gICAgICBvdmVybGF5LFxyXG4gICAgICBlbGVtZW50UmVmLFxyXG4gICAgICBzY3JvbGxEaXNwYXRjaGVyLFxyXG4gICAgICB2aWV3Q29udGFpbmVyUmVmLFxyXG4gICAgICBuZ1pvbmUsXHJcbiAgICAgIHBsYXRmb3JtLFxyXG4gICAgICBhcmlhRGVzY3JpYmVyLFxyXG4gICAgICBmb2N1c01vbml0b3IsXHJcbiAgICAgIHNjcm9sbFN0cmF0ZWd5LFxyXG4gICAgICBkaXIsXHJcbiAgICAgIGRlZmF1bHRPcHRpb25zLFxyXG4gICAgICBkb2N1bWVudFxyXG4gICAgKTtcclxuICAgIHRoaXMuX3ZpZXdwb3J0TWFyZ2luID0gTUlOX1ZJRVdQT1JUX1RPT0xUSVBfVEhSRVNIT0xEO1xyXG5cclxuICB9XHJcblxyXG4gIHNldE1lc3NhZ2UobXNnOiBzdHJpbmcpIHtcclxuICAgIHRoaXMubWVzc2FnZSA9IG1zZztcclxuICB9XHJcbn1cclxuIl19

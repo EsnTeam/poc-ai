@@ -1,0 +1,53 @@
+@use "../../../themes/helpers";
+@use "../../../themes/palettes";
+@use "sass:map";
+
+@mixin color($theme) {
+
+  $is-dark: helpers.is-dark-mode($theme);
+  $color-divider: map.get($theme, "generic", "color-divider");
+
+  .esn-expansion-panel {
+      background-color: helpers.get-color-from-theme($theme, "neutral", if($is-dark, 800, 25));
+
+      &:not(:last-of-type):not(.mat-expanded) {
+          border-bottom: 1px solid $color-divider;
+      }
+  
+      .mat-expansion-panel-body {
+          border-top: 1px solid $color-divider;
+      }
+  }
+  
+}
+
+
+@mixin typography($theme) {
+ 
+  .mat-expansion-panel-header {
+    font-family: helpers.get-body-typography($theme);
+    min-height: 4.5rem;
+    height: auto!important;
+  }
+
+  .mat-expansion-panel-body {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin style($theme) {
+  
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+  @include style($theme);
+}
+
+
+
+
+
+
+

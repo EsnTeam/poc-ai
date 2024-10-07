@@ -1,0 +1,78 @@
+import { AfterViewInit, ChangeDetectorRef, ElementRef, EventEmitter, Injector, OnChanges, OnDestroy, OnInit, QueryList, SimpleChanges, TemplateRef } from '@angular/core';
+import { MatFormField, MatFormFieldAppearance } from "@angular/material/form-field";
+import { ControlValueAccessor, FormControl } from "@angular/forms";
+import { MatSelectChange } from "@angular/material/select";
+import { EsnOption } from "../option/option.component";
+import { EsnOptionGroup } from "../option-group/option-group.component";
+import { EsnSelectTrigger } from "../select-trigger/select-trigger.component";
+import * as i0 from "@angular/core";
+export interface ProjectionRefModel {
+    value: any;
+    viewValue: TemplateRef<any>;
+    disabled: boolean;
+}
+export declare class EsnSelect implements OnInit, OnChanges, OnDestroy, ControlValueAccessor, AfterViewInit {
+    private _injector;
+    protected _parentFormField: MatFormField;
+    private cdr;
+    elementRef: ElementRef;
+    optionsList: QueryList<EsnOption>;
+    optionGroupsList: QueryList<EsnOptionGroup>;
+    customTrigger: EsnSelectTrigger;
+    appearance: 'fill' | 'outline' | 'underline';
+    label: string;
+    placeholder: string;
+    disabled: boolean;
+    required: boolean;
+    multiple: boolean;
+    hint: string;
+    disableRipple: boolean;
+    tabIndex: number;
+    error: string | {
+        [key: string]: string;
+    };
+    size: 'sm' | 'md';
+    theme: 'dark' | 'light' | null;
+    focus: EventEmitter<void>;
+    blur: EventEmitter<void>;
+    selectionChange: EventEmitter<any>;
+    openedChange: EventEmitter<boolean>;
+    formField: MatFormField;
+    observer: ResizeObserver;
+    _matAppearance: MatFormFieldAppearance;
+    control: FormControl;
+    private onChangeSub;
+    private parentControl;
+    errorMessage: string;
+    private defaultError?;
+    private errorsList;
+    options: ProjectionRefModel[];
+    optionGroups: {
+        label: any;
+        options: ProjectionRefModel[];
+        disabled: boolean;
+        viewValue: TemplateRef<any>;
+    }[];
+    constructor(_injector: Injector, _parentFormField: MatFormField, cdr: ChangeDetectorRef, elementRef: ElementRef);
+    ngOnChanges(changes: SimpleChanges): void;
+    ngOnInit(): void;
+    onChange: any;
+    onTouch: any;
+    writeValue(value: any): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(onTouched: Function): void;
+    setDisabledState(isDisabled: boolean): void;
+    private handleMatAppearance;
+    private updateDisableState;
+    private assignErrors;
+    computeErrorMessage(): void;
+    ngOnDestroy(): void;
+    ngAfterViewInit(): void;
+    _selectionChange($event: MatSelectChange): void;
+    _openedChange($event: boolean): void;
+    subscribeToChanges(): void;
+    private initData;
+    _getNotchWidth(): string | null;
+    static ɵfac: i0.ɵɵFactoryDeclaration<EsnSelect, [null, { optional: true; }, null, null]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<EsnSelect, "esn-select", never, { "disabled": "disabled"; "disableRipple": "disableRipple"; "tabIndex": "tabIndex"; "appearance": "appearance"; "label": "label"; "placeholder": "placeholder"; "required": "required"; "multiple": "multiple"; "hint": "hint"; "error": "error"; "size": "size"; "theme": "theme"; }, { "focus": "focus"; "blur": "blur"; "selectionChange": "selectionChange"; "openedChange": "openedChange"; }, ["customTrigger", "optionsList", "optionGroupsList"], never, false, never>;
+}

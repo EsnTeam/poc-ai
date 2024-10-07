@@ -1,4 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@use "src/assets/external-libs/arom-domain-ipnn-c90-design-lib" as esn;
+@use "src/assets/scss/_modals";
+@use "src/assets/scss/themes";
+
+/* You can add global styles to this file, and also import other style files */
 @import "src/assets/scss/_shared.scss";
+
+@import "src/assets/scss/variables";
+@import "src/assets/scss/_utils";
+@import "src/assets/scss/_shared";
+@import "src/assets/scss/_text";
+@import "src/assets/scss/_form-fields";
+@import "src/assets/scss/_toaster";
+@import "src/assets/scss/_modals";
+@import "src/assets/scss/_headers";
+@import "src/assets/scss/_tabs";
+@import "src/assets/scss/_cards";
+@import "src/assets/scss/_data";
+@import "src/assets/scss/_tag";
+@import "src/assets/scss/_badge";
+@import "src/assets/scss/_rotating";
+@import "src/assets/scss/_accordions";
+@import "src/assets/scss/_layout";
+@import "src/assets/scss/_tables";
+@import "src/assets/scss/_titles";
+// @import "node_modules/jsoneditor/dist/jsoneditor.min.css";
+
+@include esn.core();
+
+.theme-light {
+  @include esn.css-variables(esn.create-theme(themes.$xd-light-theme-config));
+  @include esn.all-component-themes(
+    esn.create-theme(themes.$xd-light-theme-config)
+  );
+}
+d
 
 /* You can add global styles to this file, and also import other style files */
 html,

@@ -1,0 +1,126 @@
+@use "sass:map";
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("~src/assets/fonts/Inter-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("~src/assets/fonts/Inter-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("~src/assets/fonts/Inter-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("~src/assets/fonts/Inter-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$text-sizes: (
+  xs: (
+    font-size: 0.75rem,
+    line-height: 1.125rem,
+  ),
+  sm: (
+    font-size: 0.875rem,
+    line-height: 1.25rem,
+  ),
+  md: (
+    font-size: 1rem,
+    line-height: 1.5rem,
+  ),
+  lg: (
+    font-size: 1.125rem,
+    line-height: 1.75rem,
+  ),
+  xl: (
+    font-size: 1.25rem,
+    line-height: 1.875rem,
+  ),
+);
+
+$display-sizes: (
+  xs: (
+    font-size: 1.5rem,
+    line-height: 2rem,
+  ),
+  sm: (
+    font-size: 1.875rem,
+    line-height: 2.375rem,
+  ),
+  md: (
+    font-size: 2.25rem,
+    line-height: 2.75rem,
+  ),
+  lg: (
+    font-size: 3rem,
+    line-height: 3.75rem,
+  ),
+  xl: (
+    font-size: 3.75rem,
+    line-height: 4.625rem,
+  ),
+);
+
+@mixin body($weight: "Regular", $size: "md") {
+  font-family: "Inter-#{$weight}", "sans-serif";
+  font-size: map.get((map.get($text-sizes, $size)), font-size);
+  line-height: map.get((map.get($text-sizes, $size)), line-height);
+}
+
+@mixin title($weight: "Regular", $size: "xs") {
+  font-family: "Inter-#{$weight}", "sans-serif";
+  font-size: map.get((map.get($display-sizes, $size)), font-size);
+  line-height: map.get((map.get($display-sizes, $size)), line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter-SemiBold, sans-serif;
+  color: var(--color-text-neutral-heading);
+  font-weight: normal;
+
+  .text-container & {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .count {
+    color: var(--color-text-neutral-subtitle);
+    margin-left: 0.5rem;
+  }
+}
+
+p {
+  @include body("Regular", "sm");
+  color: var(--color-text-neutral-body);
+
+  .text-container & {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+  }
+
+  &:empty {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.text-container {
+  margin-bottom: 1.5rem;
+}

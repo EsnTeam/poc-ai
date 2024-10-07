@@ -1,0 +1,85 @@
+@use "../../../themes/helpers";
+@use "sass:map";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+
+  .esn-selectable-card {
+    position: relative;
+    background: if($is-dark, map.get($theme, "color", "neutral", 700), white);
+    color: map.get($theme, "color", "neutral", if($is-dark, 300, 500));
+    border: 1.5px solid
+      map.get($theme, "color", "neutral", if($is-dark, 600, 100));
+
+    &.esn-selectable-card--selected {
+      $color-selected: map.get(
+        $theme,
+        "color",
+        "primary",
+        if($is-dark, 300, 600)
+      );
+      border: 1.5px solid $color-selected;
+      color: $color-selected;
+      .esn-selectable-card__illustration {
+        .esn-illustration {
+          path:not([fill="#fff"]),
+          circle:not([fill="#fff"]),
+          line:not([fill="#fff"]) {
+            filter: invert(46%) sepia(91%) saturate(1604%) hue-rotate(201deg)
+              brightness(100%) contrast(102%);
+          }
+        }
+
+        .esn-icon {
+          color: map.get($theme, "color", "primary", if($is-dark, 300, 600));
+        }
+      }
+    }
+
+    &.esn-selectable-card--radio-mode {
+      &.esn-selectable-card--selected {
+        $color-selected: map.get(
+          $theme,
+          "color",
+          "primary",
+          if($is-dark, 300, 600)
+        );
+
+        border: 1.5px solid $color-selected;
+        color: map.get($theme, "color", "neutral", if($is-dark, 50, 900));
+        background: map.get($theme, "color", "primary", if($is-dark, 900, 50));
+        .esn-selectable-card__dot {
+          color: $color-selected;
+          border: none;
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          & .esn-icon {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+
+    &__dot {
+      content: "";
+      border: 1px solid
+        map.get($theme, "color", "neutral", if($is-dark, 600, 100));
+      border-radius: 50%;
+      width: 0.875rem;
+      height: 0.875rem;
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+    }
+  }
+}
+
+@mixin typography($theme) {
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

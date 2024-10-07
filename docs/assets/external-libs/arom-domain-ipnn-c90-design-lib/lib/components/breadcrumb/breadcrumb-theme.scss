@@ -1,0 +1,14 @@
+@use "sass:map";
+
+@mixin color($theme) {
+  .esn-breadcrumb{
+    &__seperator {
+      color: map.get($theme, "generic", "color-icon");
+    }
+  }
+}
+
+
+@mixin theme($theme) {
+  @include color($theme);
+}

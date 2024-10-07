@@ -1,0 +1,46 @@
+@use 'src/assets/scss/text';
+
+.mat-table {
+  width: 100%;
+
+  .mat-cell {
+    @include text.body("Medium", "sm");
+    color: var(--color-text-neutral-body) !important;
+  }
+
+  .mat-column-action {
+    width: 0;
+    white-space: nowrap;
+  }
+
+  mat-row,
+  mat-header-row,
+  mat-footer-row,
+  th.mat-header-cell,
+  td.mat-cell,
+  td.mat-footer-cell {
+    border-bottom-color: var(--color-divider);
+  }
+
+  th {
+    @include text.body("Regular", "xs");
+    color: var(--color-text-neutral-subtitle);
+  }
+
+  tr.mat-header-row {
+    height: 48px;
+  }
+
+  .mat-row {
+    &:not(.mat-header-row) {
+        &:hover {
+            background: var(--color-background-neutral-1);
+        }
+    }
+  }
+}
+
+.mat-paginator-container {
+    @include text.body("Regular", "xs");
+    color: var(--color-text-neutral-body);
+}

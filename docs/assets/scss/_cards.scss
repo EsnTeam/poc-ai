@@ -1,0 +1,153 @@
+@use "src/assets/scss/text";
+
+.card {
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--color-divider);
+  position: relative;
+  transition: 0.2s linear;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &--secondary {
+    border: none;
+    background-color: var(--color-background-primary-1)
+  }
+}
+
+.datacard {
+  $this: &;
+
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid var(--color-divider);
+
+  &__section {
+    padding: 1rem 1.5rem;
+
+    &:empty {
+      display: none;
+    }
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    &--actions {
+      border-top: 1px solid var(--color-divider);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      min-height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+
+      .info-msg {
+        color: var(--color-text-neutral-subtitle);
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__main-info {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__avatar {
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+
+  &__title {
+    @include text.body("Medium", "md");
+    color: var(--color-text-neutral-body);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__caption {
+    @include text.body("Regular", "xs");
+    color: var(--color-text-neutral-subtitle);
+    margin-bottom: 0.25rem;
+  }
+
+  &__subtitle {
+    @include text.body("Regular", "sm");
+    color: var(--color-text-neutral-subtitle);
+    margin-top: 0.25rem;
+  }
+
+  &__main-action {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    
+    &:hover::after {
+      box-shadow: 0 0 3px var(--color-primary);
+    }
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  &--list {
+    background: var(--color-app-background);
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--color-divider);
+
+    #{$this}__main-action {    
+      &:hover::after {
+        border-radius: 0;
+        background: var(--color-primary-1);
+        box-shadow: none;
+        opacity: 0.04;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-document_ppt-colored-48dp_3">
+      <rect width="48" height="48"/>
+    </clipPath>
+  </defs>
+  <g id="document_ppt-colored-48dp_3" data-name="document_ppt-colored-48dp – 3" clip-path="url(#clip-document_ppt-colored-48dp_3)">
+    <g id="icon_-_ppt_document" data-name="icon - ppt document">
+      <rect id="Box" width="48" height="48" fill="none"/>
+      <g id="ppt" transform="translate(7.736 4.085)">
+        <path id="Tracé_1283" data-name="Tracé 1283" d="M21.964.308A.964.964,0,0,0,21.272,0H5.734A5.256,5.256,0,0,0,.5,5.224V34.606A5.256,5.256,0,0,0,5.734,39.83H26.822a5.256,5.256,0,0,0,5.234-5.224V11.275a1.036,1.036,0,0,0-.279-.673ZM22.243,3.4l6.571,6.9H24.543A2.291,2.291,0,0,1,22.243,8Zm4.579,34.51H5.734a3.332,3.332,0,0,1-3.31-3.3V5.224a3.332,3.332,0,0,1,3.31-3.3H20.319V8a4.209,4.209,0,0,0,4.224,4.214h5.59V34.606A3.326,3.326,0,0,1,26.822,37.906Zm0,0" fill="#a8afbc"/>
+        <rect id="Rectangle_1871" data-name="Rectangle 1871" width="36" height="12" rx="2" transform="translate(-1.736 17.915)" fill="#ff804f"/>
+        <path id="Tracé_1569" data-name="Tracé 1569" d="M-6.877-2.358V0H-8.146V-6.354h2.313a2.385,2.385,0,0,1,1.7.54,1.922,1.922,0,0,1,.571,1.467A1.869,1.869,0,0,1-4.154-2.9a2.4,2.4,0,0,1-1.679.54Zm.909-1.017q1.116,0,1.116-.972a.967.967,0,0,0-.261-.729,1.2,1.2,0,0,0-.855-.252h-.909v1.953Zm5.3,1.017V0H-1.935V-6.354H.378a2.385,2.385,0,0,1,1.7.54,1.922,1.922,0,0,1,.571,1.467A1.869,1.869,0,0,1,2.057-2.9a2.4,2.4,0,0,1-1.679.54ZM.243-3.375q1.116,0,1.116-.972A.967.967,0,0,0,1.1-5.076a1.2,1.2,0,0,0-.855-.252H-.666v1.953ZM8.6-6.354v1.008H6.841V0H5.572V-5.346H3.826V-6.354Z" transform="translate(16.264 26.915)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

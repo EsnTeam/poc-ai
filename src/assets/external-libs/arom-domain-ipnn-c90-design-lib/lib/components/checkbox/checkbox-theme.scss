@@ -1,0 +1,66 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+@use "../../../themes/typography";
+
+$prefix: ".esn-checkbox";
+$mat-selector: ".mat-mdc-checkbox";
+$mat-checked-selector: ".mat-mdc-checkbox-checked";
+$mat-input-selector: ".mdc-checkbox__native-control";
+$mat-background-selector: ".mdc-checkbox__background";
+$mat-ripple-selector: ".mdc-checkbox__ripple";
+$mat-checkbox-selector: ".mdc-checkbox";
+
+@mixin color($theme) {
+  $palettes: "primary", "accent", "error", "success", "neutral";
+
+  #{$prefix} {
+    @each $palette in $palettes {
+      &#{$prefix}-#{$palette} {
+        #{$mat-selector} {
+          #{$mat-checkbox-selector}:hover {
+            #{$mat-input-selector} {
+              &:enabled ~ {
+                #{$mat-background-selector} {
+                  border-color: helpers.get-color-from-theme($theme, $palette, 500);
+                  background: helpers.get-color-from-theme($theme, $palette, 500);
+                }
+              }
+            }
+          }
+          #{$mat-input-selector} {
+            &:enabled ~ {
+              #{$mat-background-selector} {
+                border-color: helpers.get-color-from-theme($theme, $palette, 600);
+                background: helpers.get-color-from-theme($theme, $palette, 600);
+              }
+              #{$mat-ripple-selector} {
+                background: helpers.get-color-from-theme($theme, $palette, 300);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #{$mat-selector} {
+      label {
+        color: map.get($theme, "generic", "color-text-body-neutral");
+
+        [subtitle] {
+          color: map.get($theme, "generic", "color-text-subtitle-neutral");
+        }
+      }
+    }
+  }
+}
+
+@mixin typography($theme) {
+  #{$prefix} {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

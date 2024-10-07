@@ -1,0 +1,18 @@
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { MAT_SELECT_TRIGGER } from "@angular/material/select";
+import * as i0 from "@angular/core";
+export class EsnSelectTrigger {
+    get viewValue() {
+        return this.optTempVar;
+    }
+}
+EsnSelectTrigger.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnSelectTrigger, deps: [], target: i0.ɵɵFactoryTarget.Component });
+EsnSelectTrigger.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "15.2.10", type: EsnSelectTrigger, selector: "esn-select-trigger", providers: [{ provide: MAT_SELECT_TRIGGER, useExisting: EsnSelectTrigger }], viewQueries: [{ propertyName: "optTempVar", first: true, predicate: TemplateRef, descendants: true }], ngImport: i0, template: "<ng-template>\r\n  <ng-content></ng-content>\r\n</ng-template>\r\n\r\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnSelectTrigger, decorators: [{
+            type: Component,
+            args: [{ selector: 'esn-select-trigger', providers: [{ provide: MAT_SELECT_TRIGGER, useExisting: EsnSelectTrigger }], template: "<ng-template>\r\n  <ng-content></ng-content>\r\n</ng-template>\r\n\r\n" }]
+        }], propDecorators: { optTempVar: [{
+                type: ViewChild,
+                args: [TemplateRef]
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VsZWN0LXRyaWdnZXIuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvYXJvbS1kb21haW4taXBubi1jOTAtZGVzaWduLWxpYi9zcmMvbGliL2NvbXBvbmVudHMvc2VsZWN0L3NlbGVjdC10cmlnZ2VyL3NlbGVjdC10cmlnZ2VyLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL2Fyb20tZG9tYWluLWlwbm4tYzkwLWRlc2lnbi1saWIvc3JjL2xpYi9jb21wb25lbnRzL3NlbGVjdC9zZWxlY3QtdHJpZ2dlci9zZWxlY3QtdHJpZ2dlci5jb21wb25lbnQuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFFLFdBQVcsRUFBRSxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7QUFDaEUsT0FBTyxFQUFDLGtCQUFrQixFQUFDLE1BQU0sMEJBQTBCLENBQUM7O0FBUTVELE1BQU0sT0FBTyxnQkFBZ0I7SUFFM0IsSUFBSSxTQUFTO1FBQ1gsT0FBTyxJQUFJLENBQUMsVUFBVSxDQUFDO0lBQ3pCLENBQUM7OzhHQUpVLGdCQUFnQjtrR0FBaEIsZ0JBQWdCLDZDQUZoQixDQUFDLEVBQUMsT0FBTyxFQUFFLGtCQUFrQixFQUFFLFdBQVcsRUFBRSxnQkFBZ0IsRUFBQyxDQUFDLHNFQUc5RCxXQUFXLGdEQ1Z4Qix3RUFJQTs0RkRLYSxnQkFBZ0I7a0JBTjVCLFNBQVM7K0JBQ0Usb0JBQW9CLGFBR25CLENBQUMsRUFBQyxPQUFPLEVBQUUsa0JBQWtCLEVBQUUsV0FBVyxrQkFBa0IsRUFBQyxDQUFDOzhCQUdqRCxVQUFVO3NCQUFqQyxTQUFTO3VCQUFDLFdBQVciLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudCwgVGVtcGxhdGVSZWYsIFZpZXdDaGlsZH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7TUFUX1NFTEVDVF9UUklHR0VSfSBmcm9tIFwiQGFuZ3VsYXIvbWF0ZXJpYWwvc2VsZWN0XCI7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICBzZWxlY3RvcjogJ2Vzbi1zZWxlY3QtdHJpZ2dlcicsXHJcbiAgdGVtcGxhdGVVcmw6ICcuL3NlbGVjdC10cmlnZ2VyLmNvbXBvbmVudC5odG1sJyxcclxuICBzdHlsZVVybHM6IFsnLi9zZWxlY3QtdHJpZ2dlci5jb21wb25lbnQuc2NzcyddLFxyXG4gIHByb3ZpZGVyczogW3twcm92aWRlOiBNQVRfU0VMRUNUX1RSSUdHRVIsIHVzZUV4aXN0aW5nOiBFc25TZWxlY3RUcmlnZ2VyfV1cclxufSlcclxuZXhwb3J0IGNsYXNzIEVzblNlbGVjdFRyaWdnZXIge1xyXG4gIEBWaWV3Q2hpbGQoVGVtcGxhdGVSZWYpIG9wdFRlbXBWYXI6IFRlbXBsYXRlUmVmPGFueT47XHJcbiAgZ2V0IHZpZXdWYWx1ZSgpOiBUZW1wbGF0ZVJlZjxhbnk+IHtcclxuICAgIHJldHVybiB0aGlzLm9wdFRlbXBWYXI7XHJcbiAgfVxyXG5cclxufVxyXG5cclxuIiwiPG5nLXRlbXBsYXRlPlxyXG4gIDxuZy1jb250ZW50PjwvbmctY29udGVudD5cclxuPC9uZy10ZW1wbGF0ZT5cclxuXHJcbiJdfQ==

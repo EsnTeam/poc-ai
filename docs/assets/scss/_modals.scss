@@ -1,0 +1,126 @@
+@use "src/assets/scss/text";
+
+@mixin scrollbar(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  ::-webkit-scrollbar {
+    width: $size !important;
+    height: $size !important;
+    border-radius: 14px !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color !important;
+    border-radius: 4px !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color !important;
+    border-radius: 4px !important;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color !important;
+    scrollbar-track-color: $background-color !important;
+  }
+}
+
+.fullscreen-dialog {
+  width: 100vw;
+  max-width: none !important;
+  height: 100vh;
+
+  .mat-dialog-container {
+    color: var(--color-text-neutral-body);
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .dialog-close-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .dialog {
+    &__header {
+      margin-bottom: 1rem;
+    }
+
+    &__content {
+      max-height: auto;
+      overflow: none;
+    }
+
+    &__actions {
+      border-top: 1px solid var(--color-divider);
+      background: var(--color-background-neutral-1);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.mat-dialog-container {
+  background: var(--color-app-background) !important;
+  padding: 0 !important;
+
+  .mat-progress-bar {
+    // margin-top: -24px;
+    // margin-left: -24px;
+    // margin-bottom: 19px;
+    width: 100%;
+  }
+}
+
+.dialog {
+  @include scrollbar(0.5rem, #b9c0d4, var(--color-app-background));
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  &__close-button {
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  &__title {
+    @include text.body("SemiBold", "xl");
+    color: var(--color-text-primary-heading);
+    &__black {
+      color: var(--color-text-neutral-heading);
+    }
+  }
+
+  &__content {
+    padding: 0.5rem 1.5rem;
+    max-height: 65vh;
+    overflow: auto;
+  }
+
+  &__actions {
+    > div {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: 3rem;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    esn-button {
+      min-width: 9rem;
+    }
+  }
+}

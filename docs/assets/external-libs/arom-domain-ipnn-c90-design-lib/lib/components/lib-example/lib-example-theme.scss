@@ -1,0 +1,29 @@
+@use "../../../themes/helpers";
+@use "sass:map";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+  .esn-app-bar {
+    background-color: if(
+      $is-dark,
+      map.get($theme, "color", "neutral", 700),
+      white
+    );
+  }
+}
+
+
+@mixin typography($theme) {
+  font-family: helpers.get-body-typography($theme);
+  
+}
+
+@mixin style($theme) {
+
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+  @include style($theme);
+}

@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+@import '/node_modules/highlight.js/styles/intellij-light.css';
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+  .esn-code-snippet{
+    filter: if($is-dark, invert(1), none);
+  }
+  @if $is-dark {
+    @import '/node_modules/highlight.js/styles/vs2015.css';
+  } 
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}

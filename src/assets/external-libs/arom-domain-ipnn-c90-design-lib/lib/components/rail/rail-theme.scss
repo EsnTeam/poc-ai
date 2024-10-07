@@ -1,0 +1,51 @@
+@use "../../../themes/helpers";
+@use "sass:map";
+@use "sass:color";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+  $rail-background: if($is-dark,color.adjust(map.get($theme, "color", "neutral", 900), $lightness: -50%), #FFFFFF);
+
+  .rail {
+    height: 100%;
+    background: $rail-background;
+    width: 4.5rem;
+    border-right: 1px solid map.get($theme, "generic", "color-divider");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .rail__logo {
+      background-size: 100%;
+      width: 3rem;
+      height: 3rem;
+      margin: 2rem auto;
+    }
+
+    .rail__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: helpers.get-color-from-theme($theme, "neutral", 400);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+      &--active,
+      &:hover {
+        color: helpers.get-color-from-theme($theme, "primary", 600);
+        background: helpers.get-color-from-theme($theme, "primary", 100);
+        cursor: pointer;
+      }
+    }
+
+    [bottom-content] {
+      position: absolute;
+      bottom: 1rem;
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}

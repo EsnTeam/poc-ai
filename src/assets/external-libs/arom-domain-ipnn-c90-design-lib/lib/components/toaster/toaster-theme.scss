@@ -1,0 +1,32 @@
+@use "../../../themes/helpers";
+@forward "./_toaster.export.scss";
+
+@mixin color($theme) {
+  $palettes: "success", "error", "warning", "info";
+
+  .ngx-toastr {
+    background-color: helpers.get-color-from-theme($theme, 'neutral', 800);
+    color: helpers.get-color-from-theme($theme, 'neutral', 25);
+  }
+
+  @each $palette in $palettes {
+    .toast-#{$palette} {
+      background-color: helpers.get-color-from-theme($theme, $palette, 800);
+    }
+  }
+
+  .toast-close-button {
+    color: helpers.get-color-from-theme($theme, 'neutral', 25);
+  }
+}
+
+@mixin typography($theme) {
+  .ngx-toastr {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

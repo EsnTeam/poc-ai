@@ -1,0 +1,108 @@
+@use 'src/assets/scss/palettes';
+@use "sass:map";
+
+//////////////////////////////
+////        THEMES        ////
+//////////////////////////////
+
+//// Light theme
+$xd-light-theme-config: (
+  name: "theme-light",
+  color: (
+    primary: palettes.$xd-primary,
+    accent: palettes.$xd-secondary,
+    error: palettes.$xd-error,
+    warning: palettes.$xd-warning,
+    success: palettes.$xd-success,
+    info: palettes.$xd-info,
+    neutral: palettes.$xd-neutral,
+  ),
+  typography: (
+    title: "Poppins",
+    body: "Inter",
+  ),
+  is-dark: false,
+);
+
+///////////////////////////////
+////         UTILS         ////
+///////////////////////////////
+
+//// Light utils (default)
+$utils-theme--light: (
+  // Dominant
+  primary: map.get(palettes.$xd-primary, 500),
+  secondary: map.get(palettes.$xd-secondary, 500),
+  // Status
+  error: map.get(palettes.$xd-error, 500),
+  error-light: map.get(palettes.$xd-error, 200),
+  info: map.get(palettes.$xd-info, 500),
+  success: map.get(palettes.$xd-success, 500),
+  warning: map.get(palettes.$xd-warning, 500),
+  default: map.get(palettes.$xd-default, 500),
+  // Background dominant
+  bg-primary: #DAE6FC,
+  bg-secondary: #FEE6DE,
+  // Background status
+  bg-error: #FEEEEE,
+  bg-info: #FFFFFF,
+  bg-success: map.get(palettes.$xd-success, 500),
+  bg-warning: #FDF2E4,
+  bg-default: #A4AAC6,
+  // Background container
+  bg-body: #FFFFFF,
+  bg-body--accent: map.get(palettes.$xd-neutral, 50),
+  bg-navbar: #FFFFFF,
+  bg-card: #FFFFFF,
+  bg-card--accent: #F0F1F8,
+  bg-modal-content: map.get(palettes.$xd-neutral, 50),
+  bg-modal-blur: #2F3F5766,
+  bg-drawer-content: linear-gradient(138deg, #F6F6FC, #F0F2FB),
+  bg-drawer-blur: #2F3F5766,
+  bg-input: #FCFCFC,
+  // Fonts
+  text-primary: map.get(palettes.$xd-accent, 500),
+  text-secondary: map.get(palettes.$xd-secondary, 500),
+  text-black: #121926,
+  text-white: #FFFFFF,
+  text-muted: #4B5565,
+  text-light: #F5F8FF,
+  text-dark: #121926,
+  text-accent: #3D4D93,
+  text-neutral: map.get(palettes.$xd-neutral, 700),
+  // Select
+  select-info: map.get(palettes.$xd-info, 300),
+  // Shadows
+  shadow: #4B55650A,
+  shadow-light: #646E8805,
+  shadow-dark: #13263C14,
+  shadow-blue-dark: #3A59B026,
+  // Divider
+  divider: map.get(palettes.$xd-neutral, 200),
+);
+
+//// Dark utils
+$utils-theme--dark: (); // Set utils variables for dark mode
+
+//////////////////////////////
+////   UTILS GENERATION   ////
+//////////////////////////////
+
+//// Generator
+@mixin generateUtilsCustomProperties($theme-color) {
+  @each $name, $color in $theme-color {
+    --color-#{$name}: #{$color};
+  }
+}
+
+//// Light utils
+:root {
+  @include generateUtilsCustomProperties($utils-theme--light)
+}
+
+//// Dark utils
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include generateUtilsCustomProperties($utils-theme--dark)
+  }
+}

@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+
+@mixin color($theme) {
+  .error-state {
+    color : map.get($theme, "generic", "color-text-subtitle-neutral");
+  }
+}
+
+@mixin typography($theme) {
+  .error-state {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

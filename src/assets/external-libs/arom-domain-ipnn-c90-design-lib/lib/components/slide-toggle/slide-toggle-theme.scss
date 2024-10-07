@@ -1,0 +1,69 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+
+@mixin color($theme) {
+  $colors: "primary", "accent", "success", "error", "warning", "info", "neutral";
+  $is-dark: helpers.is-dark-mode($theme);
+
+  @each $paletteName in $colors{
+    
+    .esn-slide-toggle-#{$paletteName} {
+      .mat-mdc-slide-toggle {
+        $color1: helpers.get-color-from-theme($theme, $paletteName, if($is-dark, 700, 300));
+        $color2: helpers.get-color-from-theme($theme, $paletteName,  if($is-dark, 400, 600));
+        $color3: helpers.get-color-from-theme($theme, $paletteName,  if($is-dark, 25, 900));
+        --mdc-switch-selected-focus-state-layer-color: #{$color2};
+        --mdc-switch-selected-handle-color: #{$color2};
+        --mdc-switch-selected-hover-state-layer-color: #{$color2};
+        --mdc-switch-selected-pressed-state-layer-color: #{$color2};
+        --mdc-switch-selected-focus-handle-color: #{$color3};
+        --mdc-switch-selected-hover-handle-color: #{$color3};
+        --mdc-switch-selected-pressed-handle-color: #{$color3};
+        --mdc-switch-selected-focus-track-color: #{$color1};
+        --mdc-switch-selected-hover-track-color: #{$color1};
+        --mdc-switch-selected-pressed-track-color: #{$color1};
+        --mdc-switch-selected-track-color: #{$color1};
+      }
+    }
+
+    
+    .esn-slide-toggle-background-#{$paletteName} {
+      .mat-mdc-slide-toggle {
+        padding: 0.75rem 1rem;
+        background: helpers.get-color-from-theme($theme, $paletteName, if($is-dark, 500, 100));
+        border-radius: 0.5rem;
+      }
+
+      $color1: helpers.get-color-from-theme($theme, $paletteName, if($is-dark, 100, 500));
+      $color2: helpers.get-color-from-theme($theme, $paletteName,  if($is-dark, 25, 600));
+      & .mdc-form-field {
+        & label {
+          & div {
+            color: #{$color2};
+          }
+          & div[label] {
+            color: #{$color2};
+          }
+          & div[subtitle] {
+            color: #{$color1};
+          }
+          
+        }
+      }
+    }
+
+    .esn-slide-toggle-disabled {
+      & .mdc-form-field {
+        & label {
+          & div {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}

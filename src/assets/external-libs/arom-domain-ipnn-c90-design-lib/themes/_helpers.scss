@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "sass:color";
+@use "./palettes" as palettes;
+
+@function get-color-from-theme($theme, $palette, $hue: 500) {
+  @return map.get($theme, "color", $palette, $hue);
+}
+
+@function get-palette-from-theme($theme, $palette) {
+  @return map.get($theme, "color", $palette);
+}
+
+
+@function get-value-from-component($theme, $component, $value) {
+  @return map.get($theme, "components", $component, $value);
+}
+
+@function get-title-typography($theme) {
+  @return map.get($theme, "typography", "title");
+}
+
+@function get-body-typography($theme) {
+  @return map.get($theme, "typography", "body");
+}
+
+@function is-dark-mode($theme) {
+  @return map.get($theme, "is-dark");
+}
+
+@function lighten-color($color) {
+  $modifiedColor: color.scale($color, $lightness: 5%, $saturation: -10%);
+  @return color.adjust($modifiedColor, $hue: -20deg);
+}
+
+@function darken-color($color) {
+  $modifiedColor: color.scale($color, $lightness: -20%, $saturation: -20%);
+  @return color.adjust($modifiedColor, $hue: 15deg);
+}
+
+@function divider-color($theme) {
+  @return map.get($theme, "generic", "color-divider-darker");
+}
+
+@function get-background($theme) {
+  @return map.get($theme, "esn", "background", 'background');
+}

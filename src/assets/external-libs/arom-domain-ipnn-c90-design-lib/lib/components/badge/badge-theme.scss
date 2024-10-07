@@ -1,0 +1,110 @@
+@use "../../../themes/helpers";
+@use "../../../themes/palettes";
+@use "sass:map";
+
+@mixin color($theme) {
+  $types: "flat", "stroked", "light";
+  $is-dark: helpers.is-dark-mode($theme);
+  $shades: "lighter", "darker";
+  $palettes: (
+    "primary": helpers.get-palette-from-theme($theme, "primary"),
+    "accent": helpers.get-palette-from-theme($theme, "accent"),
+    "error": helpers.get-palette-from-theme($theme, "error"),
+    "success": helpers.get-palette-from-theme($theme, "success"),
+    "warning": helpers.get-palette-from-theme($theme, "warning"),
+    "info": helpers.get-palette-from-theme($theme, "info"),
+    "neutral": helpers.get-palette-from-theme($theme, "neutral"),
+    "purple": palettes.$purple-palette,
+  );
+
+  @each $palette-name, $palette in $palettes {
+    .esn-badge-#{$palette-name} {
+      @each $type in $types {
+        &.esn-badge-#{$type} {
+          @include set-color($type, $palette, $is-dark);
+
+          @each $shade in $shades {
+            &.esn-badge-#{$shade} {
+              @include set-color($type, $palette, $is-dark, $shade);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .esn-badge-bicolor {
+    &.esn-badge-light {
+      $neutral-dark-text-color: helpers.get-color-from-theme($theme, "neutral", 700);
+      $neutral-light-text-color: helpers.get-color-from-theme($theme, "neutral", 300);
+      color: if($is-dark, $neutral-light-text-color, $neutral-dark-text-color) !important;
+    }
+  }
+}
+
+@mixin set-color($type, $palette, $is-dark, $shade: null) {
+  $dark-hue: 700;
+  $light-hue: 100;
+
+  @if ($shade == "lighter") {
+    $dark-hue: $dark-hue - 100;
+    $light-hue: $light-hue - 100;
+  } @else if ($shade == "darker") {
+    $dark-hue: $dark-hue + 100;
+    $light-hue: $light-hue + 100;
+  }
+  
+  $color-darker: map.get($palette, $dark-hue);
+  $color-lighter: map.get($palette, $light-hue);
+
+  @if ($type == "flat") {
+    background: $color-darker;
+    color: white;
+  }
+
+  @if ($type == "stroked") {
+    background-color: transparent;
+    color: if($is-dark, $color-lighter, $color-darker);
+    border-width: 1px;
+    border-style: solid;
+    border-color: if($is-dark, $color-lighter, $color-darker);
+  }
+
+  @if ($type == "light") {
+    color: if($is-dark, $color-lighter, $color-darker);
+
+    //$background: if($is-dark, transparentize($color-darker, $transparency), $color-lighter);
+    $background: if($is-dark, transparentize($color-darker, 0.3), $color-lighter);
+    background-color: $background;
+  }
+}
+
+@mixin typography($theme) {
+  .esn-badge {
+    font-family: helpers.get-title-typography($theme);
+  }
+}
+
+@mixin style($theme) {
+  $border-radius-default: 6px;
+  $border-radius-override: helpers.get-value-from-component(
+    $theme,
+    "badge",
+    "badge-border-radius"
+  );
+  $border-radius: if(
+    $border-radius-override,
+    $border-radius-override,
+    $border-radius-default
+  );
+
+  .esn-badge {
+    border-radius: $border-radius;
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+  @include style($theme);
+}

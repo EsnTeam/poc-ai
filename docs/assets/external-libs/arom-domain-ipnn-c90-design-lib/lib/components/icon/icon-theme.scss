@@ -1,0 +1,114 @@
+@use "../../../themes/helpers";
+@use "../../../themes/palettes";
+@use "sass:map";
+@use "sass:list";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+
+  .esn-icon-bg {
+    // The feature of giving the possibility to the user to force a component instance's mode (dark|light)
+    // along all defined themes, is being currently done at component's level by adding a class.
+    // This will result in generated the same CSS for this component, and each component that would use this approach
+    // 9 times ! ( 3 themes x 3 (always-dark, always-light, and none))
+    // - No alternative to better implement the feature has been found for the moment
+    // - Alternatives exist at the implementation level though
+    // TODO: study the performance impact and consider other alternatives.
+    &--always-dark {
+      @include _handle-color($theme, true);
+    }
+    &--always-light {
+      @include _handle-color($theme, false);
+    }
+    &:not(.esn-icon-bg--always-light):not(.esn-icon-bg--always-dark) {
+      @include _handle-color($theme, $is-dark);
+    }
+  }
+}
+
+@mixin _handle-color($theme, $is-dark) {
+  $types: "flat", "stroked", "mono", "duo", "basic";
+  $shades: "lighter", "darker";
+  $palettes: (
+    "primary": helpers.get-palette-from-theme($theme, "primary"),
+    "accent": helpers.get-palette-from-theme($theme, "accent"),
+    "error": helpers.get-palette-from-theme($theme, "error"),
+    "success": helpers.get-palette-from-theme($theme, "success"),
+    "warning": helpers.get-palette-from-theme($theme, "warning"),
+    "info": helpers.get-palette-from-theme($theme, "info"),
+    "neutral": helpers.get-palette-from-theme($theme, "neutral"),
+    "purple": palettes.$purple-palette,
+  );
+
+  @each $palette-name, $palette in $palettes {
+    &.esn-icon-bg--#{$palette-name} {
+      @each $type in $types {
+        &.esn-icon-bg--#{$type} {
+          @include _set-color($theme, $type, $palette, $is-dark);
+
+          @each $shade in $shades {
+            &.esn-icon-bg--#{$shade} {
+              @include _set-color($theme, $type, $palette, $is-dark, $shade);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin _set-color($theme, $type, $palette, $is-dark, $shade: null) {
+  $light-hues: 300 600 800;
+  $dark-hues: 500 300 100;
+  $hues: if($is-dark, $dark-hues, $light-hues);
+  $hue-index: 2;
+
+  @if ($shade == "darker") {
+    $hue-index: 3;
+  } @else if ($shade == "lighter") {
+    $hue-index: 1;
+  }
+
+  @if ($type == "flat") {
+    color: #fff;
+    background: map.get($palette, list.nth($light-hues, $hue-index));
+  } @else if ($type == "stroked") {
+    $stroke-color: map.get($palette, list.nth($hues, $hue-index));
+    color: $stroke-color;
+    border-color:  $stroke-color;
+  } @else if ($type == "basic") {
+    background: if($is-dark, #000, #fff);
+    color: map.get($palette, list.nth($hues, $hue-index));
+  } @else {
+    $light-bg-hues: 50 100 200;
+    $dark-bg-opacities: 0.1 0.3 0.5;
+    $neutral-palette: helpers.get-palette-from-theme($theme, "neutral");
+    $color: null;
+    $background: null;
+    
+    @if ($type == "mono") {
+      $color: map.get($palette, list.nth($hues, $hue-index));
+    }
+
+    @if ($type == "duo") {
+      $color: map.get($neutral-palette, if($is-dark, 50, 600));
+    }
+
+    @if ($is-dark) {
+      $background: transparentize(
+        map.get($palette, list.nth($light-hues, 2)),
+        1 - list.nth($dark-bg-opacities, $hue-index)
+      );
+    } @else {
+      $background: map.get($palette, list.nth($light-bg-hues, $hue-index));
+    }
+
+
+    background: $background;
+    color: $color;
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}

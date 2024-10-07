@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+  $color-divider: map.get($theme, "generic", "color-divider-darker");
+  .esn-file-input {
+    color: map.get($theme, "generic", "color-text-body-neutral");
+    background-color: if(
+      $is-dark,
+      helpers.get-color-from-theme($theme, "neutral", 800),
+      white
+    );
+    border: 2px dashed $color-divider;
+    &.esn-file-input-disabled{
+      border: 1px solid $color-divider;
+    }
+  }
+
+  .esn-file-selector{
+    .browse{
+      color: helpers.get-color-from-theme($theme, "primary", 500),;
+    }
+  }
+
+  .esn-file-item {
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-divider;
+    }
+    .document-size{
+      color: map.get($theme, "generic", "color-text-subtitle-neutral");
+    }
+  }
+}
+
+@mixin style($theme) {
+}
+
+@mixin typography($theme) {
+  .esn-file-input,
+  .esn-file-item,
+  .esn-file-selector {
+    font-family: helpers.get-body-typography($theme);
+  }
+
+  
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include style($theme);
+  @include typography($theme);
+}

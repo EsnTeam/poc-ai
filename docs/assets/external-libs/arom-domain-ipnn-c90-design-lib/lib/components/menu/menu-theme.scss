@@ -1,0 +1,55 @@
+@use "sass:map";
+@use '@material/ripple/index' as mdc-ripple;
+@use "../../../themes/helpers";
+@use "../../../themes/typography";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+
+
+  .esn-mdc-menu-content{
+    background-color: if(
+      $is-dark,
+      helpers.get-color-from-theme($theme, "neutral", 700),
+      white
+    );
+  }
+  .esn-mdc-menu-item[disabled] {
+    &,
+    .esn-mdc-menu-submenu-icon,
+    .esn-icon-no-color {
+      color: map.get($theme, "generic", "color-text-body-neutral");
+    }
+  }
+
+  .esn-mdc-menu-item .esn-icon-no-color,
+  .esn-mdc-menu-submenu-icon {
+    color: map.get($theme, "generic", "color-text-body-neutral");
+  }
+
+  .esn-mdc-menu-item:hover,
+  .esn-mdc-menu-item.cdk-program-focused,
+  .esn-mdc-menu-item.cdk-keyboard-focused,
+  .esn-mdc-menu-item-highlighted {
+    &:not([disabled]) {
+      $color: map.get($theme, "generic", "color-text-body-neutral");
+      background: rgba($color, mdc-ripple.states-opacity($color, hover));
+    }
+  }
+}
+
+@mixin typography($theme) {
+  .esn-mdc-menu-content {
+    font-family: helpers.get-body-typography($theme);
+
+    &,
+    .esn-mdc-menu-item .mdc-list-item__primary-text {
+      font-family: helpers.get-body-typography($theme);
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

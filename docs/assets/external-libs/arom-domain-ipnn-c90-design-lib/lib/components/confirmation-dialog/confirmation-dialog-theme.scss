@@ -1,0 +1,20 @@
+@use "../../../themes/helpers";
+
+@mixin color($theme) {
+  .esn-confirmation-dialog{
+    &__title{
+      color:  helpers.get-color-from-theme($theme, 'neutral', 900),
+    }
+  }
+
+}
+
+@mixin style($theme) {}
+
+@mixin typography($theme) {}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include style($theme);
+  @include typography($theme);
+}

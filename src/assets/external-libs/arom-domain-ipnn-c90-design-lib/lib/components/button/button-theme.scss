@@ -1,0 +1,87 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+
+$prefix: ".esn-btn";
+$mat-selector: ".mdc-button";
+$mat-disabled-selector: ".mdc-button:disabled";
+$mat-overlay-selector: ".mat-mdc-button-persistent-ripple:before";
+$mat-label-selector: ".mdc-button__label"; 
+
+@mixin color($theme) {
+  $palettes: "primary", "accent", "error", "success", "neutral";
+  $types: "basic", "flat", "stroked", "link", "light";
+  $is-dark: helpers.is-dark-mode($theme);
+
+  @each $type in $types {
+    #{$prefix}-#{$type} {
+      @each $palette in $palettes {
+        &#{$prefix}-#{$palette} {
+          #{$mat-selector}:not(#{$mat-disabled-selector}) {
+            $color-darker: helpers.get-color-from-theme($theme, $palette, 600);
+            $color-lighter: helpers.get-color-from-theme($theme, $palette, 300);
+            $color-override: helpers.get-value-from-component($theme, "button", "btn-#{$type}-#{$palette}");
+
+            $color-darker: if($color-override, $color-override, $color-darker);
+            $color-lighter: if($color-override, $color-override, $color-lighter);
+
+            @if ($type == 'flat') {
+              background: $color-darker;
+            } 
+            
+            @if ($type == 'light') {
+              color: if($is-dark, $color-lighter, $color-darker);
+              background-color: transparentize($color-darker, 0.95);
+            }
+
+            @if ($type == 'basic' or $type == 'link' or $type == 'stroked') {
+              color: if($is-dark, $color-lighter, $color-darker);
+              border-color: if($is-dark, $color-lighter, $color-darker);
+            }
+
+            #{$mat-overlay-selector} {
+              background-color: $color-darker;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #{$prefix} {
+    #{$mat-selector}#{$mat-disabled-selector} {
+      $dark-mode-disabled-color: helpers.get-color-from-theme($theme, 'neutral', 500);
+      $light-mode-disabled-color: helpers.get-color-from-theme($theme, 'neutral', 400);
+      color: if($is-dark, $dark-mode-disabled-color, $light-mode-disabled-color);
+      opacity: if($is-dark, 1, 0.7);
+      pointer-events: none;
+    }
+
+    &-flat #{$mat-selector}#{$mat-disabled-selector} {
+      $dark-mode-disabled-background: helpers.get-color-from-theme($theme, 'neutral', 700);
+      $light-mode-disabled-background: helpers.get-color-from-theme($theme, 'neutral', 200);
+      background-color: if($is-dark, $dark-mode-disabled-background, $light-mode-disabled-background);
+      pointer-events: none;
+    }
+  } 
+}
+
+@mixin style($theme) {
+  $border-radius-default: 10px;
+  $border-radius-override: helpers.get-value-from-component($theme, "button", "btn-border-radius");
+  $border-radius: if($border-radius-override, $border-radius-override, $border-radius-default);
+
+  #{$prefix} #{$mat-selector} {
+    border-radius: $border-radius;
+
+    #{$mat-label-selector} {
+      display: flex;
+      align-items: center;
+    } 
+
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include style($theme);
+}

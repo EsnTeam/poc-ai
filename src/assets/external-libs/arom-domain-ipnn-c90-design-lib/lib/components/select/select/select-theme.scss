@@ -1,0 +1,200 @@
+@use "sass:map";
+@use "../../../../themes/helpers";
+@use "../../../../themes/typography";
+
+$mat-text-field: ".mdc-text-field";
+$select-prefix: '.esn-select';
+$option-prefix: '.esn-option';
+
+@mixin color($theme) {
+$neutral-palette: helpers.get-palette-from-theme($theme, "neutral");
+
+  #{$option-prefix} {
+    &-sm {
+        @include typography.body("Medium", "sm");
+
+    }
+    &-md {
+        @include typography.body("Medium", "md");
+    }
+  }
+
+  #{$select-prefix} {
+    &.esn-select-light {
+      @include _set-color($neutral-palette, false);
+    }
+
+    &.esn-select-dark {
+      @include _set-color($neutral-palette, true);
+    }
+
+    &:not(.esn-select-light):not(.esn-select-dark) {
+      $is-dark: helpers.is-dark-mode($theme);
+      @include _set-color($neutral-palette, $is-dark);
+    }
+
+    &-sm {
+      & .mdc-floating-label, .mat-mdc-select-value {
+        @include typography.body("Medium", "sm");
+      }
+
+    }
+    &-md {
+      & .mdc-floating-label, .mat-mdc-select-value {
+        @include typography.body("Medium", "md");
+      }
+    }
+
+    &:not(#{$select-prefix}-light),
+    &:not(#{$select-prefix}-dark) {
+      $is-dark: helpers.is-dark-mode($theme);
+    }
+  }
+}
+
+@mixin _border-style() {
+  .mdc-notched-outline {
+    &__leading,
+    &__notch,
+    &__trailing {
+      @content;
+    }
+  }
+}
+@mixin _set-color($neutral-palette, $is-dark) {
+  @include _set-outline-color($neutral-palette, $is-dark);
+  @include _set-fill-color($neutral-palette, $is-dark);
+  @include _set-underline-color($neutral-palette, $is-dark);
+}
+
+@mixin _set-outline-color($neutral-palette, $is-dark) {
+  &.esn-select-outline {
+    .mdc-text-field {
+      @include _border-style {
+        background: if($is-dark, transparent, map.get($neutral-palette, 25));
+      }
+
+      &:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) {
+        @include _border-style {
+          border-color: map.get($neutral-palette, if($is-dark, 600, 200));
+          border-width: 1.5px;
+          
+        }
+
+        &:hover {
+          @include _border-style {
+            border-color: map.get($neutral-palette, 400);
+          }
+        }
+
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 400, 500));
+        }
+      }
+
+      &--disabled {
+        @include _border-style {
+          background: if($is-dark, transparent, map.get($neutral-palette, 50));
+          border-color: map.get($neutral-palette, if($is-dark, 800, 100));
+        }
+
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 500, 400));
+        }
+      }
+    }
+  }
+
+}
+
+
+@mixin _set-fill-color($neutral-palette, $is-dark) {
+  &.esn-select-fill {
+    .mdc-text-field {
+      &:not(.mdc-text-field--invalid) {
+        @include _border-style {
+          background: map.get($neutral-palette, if($is-dark, 700, 100));
+          border-width: 0;
+        }
+      }
+
+      &:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) {
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 300, 600));
+        }
+      }
+
+      &--disabled {
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 500, 100));
+        }
+      }
+    }
+  }
+}
+
+@mixin _set-underline-color($neutral-palette, $is-dark) {
+  &.esn-select-underline {
+    .mdc-text-field {
+      background-color: transparent;
+
+      .mat-mdc-form-field-focus-overlay {
+        background-color: map.get($neutral-palette, if($is-dark, 700, 300));
+      }
+
+      &:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) {
+        .mdc-floating-label {
+          color: map.get($neutral-palette, if($is-dark, 400, 500));
+        }
+      }
+
+      .mdc-line-ripple::before {
+        border-bottom-color: map.get($neutral-palette, if($is-dark, 600, 300));
+      }
+    }
+  }
+}
+
+@mixin style($theme) {
+  $border-radius-default: 8px;
+  $border-radius-override: helpers.get-value-from-component(
+    $theme,
+    "input",
+    "input-border-radius"
+  );
+  $border-radius: if(
+    $border-radius-override,
+    $border-radius-override,
+    $border-radius-default
+  );
+
+  #{$select-prefix} #{$mat-text-field}--outlined .mdc-notched-outline {
+    &__leading {
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+    }
+    &__trailing {
+      border-top-right-radius: $border-radius-default;
+      border-bottom-right-radius: $border-radius-default;
+    }
+  }
+
+  // have to put this here so that there is no encapsulation
+  .mat-mdc-option-active {
+    .mat-pseudo-checkbox-minimal {
+      display: none;
+    }
+  }  
+}
+
+@mixin typography($theme) {
+  #{$select-prefix} {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include style($theme);
+  @include typography($theme);
+}

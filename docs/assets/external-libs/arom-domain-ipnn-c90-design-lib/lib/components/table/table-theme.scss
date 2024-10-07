@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+@use "../../../themes/palettes";
+
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+
+  .esn-table {
+    mat-row, mat-header-row, mat-footer-row,
+    th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+      border-bottom-color: map.get($theme, "generic", "color-divider-darker");
+    }
+
+    th {
+      color: map.get($theme, "generic", "color-text-subtitle-neutral");
+    }
+    td {
+      color: map.get($theme, "generic", "color-text-body-neutral");
+    }
+  }
+}
+
+@mixin typography($theme) {
+  .esn-table {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+
+
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-document-colored-48dp">
+      <rect width="48" height="48"/>
+    </clipPath>
+  </defs>
+  <g id="document-colored-48dp" clip-path="url(#clip-document-colored-48dp)">
+    <g id="icon_-_document" data-name="icon - document">
+      <rect id="Box" width="48" height="48" fill="none"/>
+      <g id="file" transform="translate(7.736 4.085)">
+        <path id="Tracé_1283" data-name="Tracé 1283" d="M21.964.308A.964.964,0,0,0,21.272,0H5.734A5.256,5.256,0,0,0,.5,5.224V34.606A5.256,5.256,0,0,0,5.734,39.83H26.822a5.256,5.256,0,0,0,5.234-5.224V11.275a1.036,1.036,0,0,0-.279-.673ZM22.243,3.4l6.571,6.9H24.543A2.291,2.291,0,0,1,22.243,8Zm4.579,34.51H5.734a3.332,3.332,0,0,1-3.31-3.3V5.224a3.332,3.332,0,0,1,3.31-3.3H20.319V8a4.209,4.209,0,0,0,4.224,4.214h5.59V34.606A3.326,3.326,0,0,1,26.822,37.906Zm0,0" fill="#a8afbc"/>
+        <circle id="Ellipse_366" data-name="Ellipse 366" cx="2" cy="2" r="2" transform="translate(8.264 21.915)" fill="#a8afbc"/>
+        <circle id="Ellipse_367" data-name="Ellipse 367" cx="2" cy="2" r="2" transform="translate(14.264 21.915)" fill="#a8afbc"/>
+        <circle id="Ellipse_368" data-name="Ellipse 368" cx="2" cy="2" r="2" transform="translate(20.264 21.915)" fill="#a8afbc"/>
+      </g>
+    </g>
+  </g>
+</svg>

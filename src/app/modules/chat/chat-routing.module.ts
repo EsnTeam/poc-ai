@@ -14,6 +14,7 @@ import { WfSelectUmlComponent } from './components/wf-select-uml/wf-select-uml.c
 import { WfSelectObjComponent } from './components/wf-select-obj/wf-select-obj.component';
 import { WfEnrichObjComponent } from './components/wf-enrich-obj/wf-enrich-obj.component';
 import { WfGenerateCiComponent } from './components/wf-generate-ci/wf-generate-ci.component';
+import { FormPreviewComponent } from './components/form-preview/form-preview.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,12 @@ const routes: Routes = [
   {
     path: 'assistants',
     component: AssistantsComponent,
+    children: [],
+  },
+
+  {
+    path: 'preview',
+    component: FormPreviewComponent,
     children: [],
   },
 

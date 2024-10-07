@@ -1,0 +1,38 @@
+import { Component, Input } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "../../utils/services/country/country.service";
+import * as i2 from "@angular/common";
+export class EsnFlagComponent {
+    constructor(countryService) {
+        this.countryService = countryService;
+        this.shape = 'circle';
+        this.size = 'sm';
+        this.country = 'France';
+        this.countriesList = [];
+        this.countryCode = 'fr';
+        this.countriesList = this.countryService.getCountriesList();
+    }
+    ngOnChanges(changes) {
+        if (changes['country']) {
+            this.countryCode = this.countryService.getCountryCode(this.country);
+        }
+    }
+}
+EsnFlagComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnFlagComponent, deps: [{ token: i1.CountryService }], target: i0.ɵɵFactoryTarget.Component });
+EsnFlagComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "15.2.10", type: EsnFlagComponent, selector: "esn-flag", inputs: { shape: "shape", size: "size", country: "country" }, host: { properties: { "class.esn-flag__circle": "shape === 'circle' ", "class.esn-flag__rectangle": "shape === 'rectangle' ", "class.esn-flag__square": "shape === 'square' " }, classAttribute: "esn-flag" }, usesOnChanges: true, ngImport: i0, template: "<span class=\"fi fi-{{ countryCode }} {{size}}\"\r\n    [ngClass]=\"{'fis': shape === 'circle' || shape === 'square'}\"\r\n></span>\r\n", styles: [":host.esn-flag__circle span{border-radius:50%}:host.esn-flag__circle .xxs,:host.esn-flag__square .xxs{width:.75rem;height:.75rem}:host.esn-flag__circle .xs,:host.esn-flag__square .xs{width:1.25rem;height:1.25rem}:host.esn-flag__circle .sm,:host.esn-flag__square .sm{width:2rem;height:2rem}:host.esn-flag__circle .md,:host.esn-flag__square .md{width:4rem;height:4rem}:host.esn-flag__circle .lg,:host.esn-flag__square .lg{width:8rem;height:8rem}:host.esn-flag__circle .xl,:host.esn-flag__square .xl{width:16rem;height:16rem}:host.esn-flag__rectangle .xxs{width:1rem;height:.75rem}:host.esn-flag__rectangle .xs{width:1.5rem;height:1.25rem}:host.esn-flag__rectangle .sm{width:4rem;height:3rem}:host.esn-flag__rectangle .md{width:8rem;height:6rem}:host.esn-flag__rectangle .lg{width:16rem;height:12rem}:host.esn-flag__rectangle .xl{width:32rem;height:24rem}\n"], dependencies: [{ kind: "directive", type: i2.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnFlagComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'esn-flag', host: {
+                        class: 'esn-flag',
+                        '[class.esn-flag__circle]': `shape === 'circle' `,
+                        '[class.esn-flag__rectangle]': `shape === 'rectangle' `,
+                        '[class.esn-flag__square]': `shape === 'square' `,
+                    }, template: "<span class=\"fi fi-{{ countryCode }} {{size}}\"\r\n    [ngClass]=\"{'fis': shape === 'circle' || shape === 'square'}\"\r\n></span>\r\n", styles: [":host.esn-flag__circle span{border-radius:50%}:host.esn-flag__circle .xxs,:host.esn-flag__square .xxs{width:.75rem;height:.75rem}:host.esn-flag__circle .xs,:host.esn-flag__square .xs{width:1.25rem;height:1.25rem}:host.esn-flag__circle .sm,:host.esn-flag__square .sm{width:2rem;height:2rem}:host.esn-flag__circle .md,:host.esn-flag__square .md{width:4rem;height:4rem}:host.esn-flag__circle .lg,:host.esn-flag__square .lg{width:8rem;height:8rem}:host.esn-flag__circle .xl,:host.esn-flag__square .xl{width:16rem;height:16rem}:host.esn-flag__rectangle .xxs{width:1rem;height:.75rem}:host.esn-flag__rectangle .xs{width:1.5rem;height:1.25rem}:host.esn-flag__rectangle .sm{width:4rem;height:3rem}:host.esn-flag__rectangle .md{width:8rem;height:6rem}:host.esn-flag__rectangle .lg{width:16rem;height:12rem}:host.esn-flag__rectangle .xl{width:32rem;height:24rem}\n"] }]
+        }], ctorParameters: function () { return [{ type: i1.CountryService }]; }, propDecorators: { shape: [{
+                type: Input
+            }], size: [{
+                type: Input
+            }], country: [{
+                type: Input
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXNuLWZsYWcuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvYXJvbS1kb21haW4taXBubi1jOTAtZGVzaWduLWxpYi9zcmMvbGliL2NvbXBvbmVudHMvZXNuLWZsYWcvZXNuLWZsYWcuY29tcG9uZW50LnRzIiwiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvYXJvbS1kb21haW4taXBubi1jOTAtZGVzaWduLWxpYi9zcmMvbGliL2NvbXBvbmVudHMvZXNuLWZsYWcvZXNuLWZsYWcuY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxLQUFLLEVBQTRCLE1BQU0sZUFBZSxDQUFDOzs7O0FBYzNFLE1BQU0sT0FBTyxnQkFBZ0I7SUFPM0IsWUFBb0IsY0FBOEI7UUFBOUIsbUJBQWMsR0FBZCxjQUFjLENBQWdCO1FBTnpDLFVBQUssR0FBc0MsUUFBUSxDQUFDO1FBQ3BELFNBQUksR0FBNkMsSUFBSSxDQUFDO1FBQ3RELFlBQU8sR0FBVyxRQUFRLENBQUM7UUFFcEMsa0JBQWEsR0FBYSxFQUFFLENBQUM7UUFDN0IsZ0JBQVcsR0FBdUIsSUFBSSxDQUFDO1FBRXJDLElBQUksQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDLGNBQWMsQ0FBQyxnQkFBZ0IsRUFBRSxDQUFDO0lBQzlELENBQUM7SUFDRCxXQUFXLENBQUMsT0FBc0I7UUFDaEMsSUFBRyxPQUFPLENBQUMsU0FBUyxDQUFDLEVBQUU7WUFDckIsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLENBQUMsY0FBYyxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7U0FDckU7SUFDSCxDQUFDOzs4R0FkVSxnQkFBZ0I7a0dBQWhCLGdCQUFnQixrVkNkN0IseUlBR0E7NEZEV2EsZ0JBQWdCO2tCQVg1QixTQUFTOytCQUNFLFVBQVUsUUFHZDt3QkFDSixLQUFLLEVBQUUsVUFBVTt3QkFDakIsMEJBQTBCLEVBQUUscUJBQXFCO3dCQUNqRCw2QkFBNkIsRUFBRSx3QkFBd0I7d0JBQ3ZELDBCQUEwQixFQUFFLHFCQUFxQjtxQkFDbEQ7cUdBR1EsS0FBSztzQkFBYixLQUFLO2dCQUNHLElBQUk7c0JBQVosS0FBSztnQkFDRyxPQUFPO3NCQUFmLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIElucHV0LCBPbkNoYW5nZXMsIFNpbXBsZUNoYW5nZXMgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0IHsgQ291bnRyeVNlcnZpY2UgfSBmcm9tICcuLi8uLi91dGlscy9zZXJ2aWNlcy9jb3VudHJ5L2NvdW50cnkuc2VydmljZSc7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICBzZWxlY3RvcjogJ2Vzbi1mbGFnJyxcclxuICB0ZW1wbGF0ZVVybDogJy4vZXNuLWZsYWcuY29tcG9uZW50Lmh0bWwnLFxyXG4gIHN0eWxlVXJsczogWycuL2Vzbi1mbGFnLmNvbXBvbmVudC5zY3NzJ10sXHJcbiAgaG9zdDoge1xyXG4gICAgY2xhc3M6ICdlc24tZmxhZycsXHJcbiAgICAnW2NsYXNzLmVzbi1mbGFnX19jaXJjbGVdJzogYHNoYXBlID09PSAnY2lyY2xlJyBgLFxyXG4gICAgJ1tjbGFzcy5lc24tZmxhZ19fcmVjdGFuZ2xlXSc6IGBzaGFwZSA9PT0gJ3JlY3RhbmdsZScgYCxcclxuICAgICdbY2xhc3MuZXNuLWZsYWdfX3NxdWFyZV0nOiBgc2hhcGUgPT09ICdzcXVhcmUnIGAsXHJcbiAgfVxyXG59KVxyXG5leHBvcnQgY2xhc3MgRXNuRmxhZ0NvbXBvbmVudCBpbXBsZW1lbnRzIE9uQ2hhbmdlcyB7XHJcbiAgQElucHV0KCkgc2hhcGU6ICdzcXVhcmUnIHwgJ2NpcmNsZScgfCAncmVjdGFuZ2xlJyA9ICdjaXJjbGUnO1xyXG4gIEBJbnB1dCgpIHNpemU6ICd4eHMnIHwgJ3hzJyB8ICdzbScgfCAnbWQnIHwgJ2xnJyB8ICd4bCcgPSAnc20nO1xyXG4gIEBJbnB1dCgpIGNvdW50cnk6IHN0cmluZyA9ICdGcmFuY2UnO1xyXG5cclxuICBjb3VudHJpZXNMaXN0OiBzdHJpbmdbXSA9IFtdO1xyXG4gIGNvdW50cnlDb2RlOiBzdHJpbmcgfCB1bmRlZmluZWQgPSAnZnInO1xyXG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgY291bnRyeVNlcnZpY2U6IENvdW50cnlTZXJ2aWNlKSB7XHJcbiAgICB0aGlzLmNvdW50cmllc0xpc3QgPSB0aGlzLmNvdW50cnlTZXJ2aWNlLmdldENvdW50cmllc0xpc3QoKTtcclxuICB9XHJcbiAgbmdPbkNoYW5nZXMoY2hhbmdlczogU2ltcGxlQ2hhbmdlcyk6IHZvaWQge1xyXG4gICAgaWYoY2hhbmdlc1snY291bnRyeSddKSB7XHJcbiAgICAgIHRoaXMuY291bnRyeUNvZGUgPSB0aGlzLmNvdW50cnlTZXJ2aWNlLmdldENvdW50cnlDb2RlKHRoaXMuY291bnRyeSk7XHJcbiAgICB9XHJcbiAgfSAgXHJcbn1cclxuIiwiPHNwYW4gY2xhc3M9XCJmaSBmaS17eyBjb3VudHJ5Q29kZSB9fSB7e3NpemV9fVwiXHJcbiAgICBbbmdDbGFzc109XCJ7J2Zpcyc6IHNoYXBlID09PSAnY2lyY2xlJyB8fCBzaGFwZSA9PT0gJ3NxdWFyZSd9XCJcclxuPjwvc3Bhbj5cclxuIl19

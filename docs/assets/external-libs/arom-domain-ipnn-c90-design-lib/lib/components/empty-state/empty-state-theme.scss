@@ -1,0 +1,26 @@
+@use "../../../themes/helpers";
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+
+  .esn-empty-state{
+    color: if(
+      $is-dark,
+      helpers.get-color-from-theme($theme, "neutral", 400),
+      helpers.get-color-from-theme($theme, "neutral", 500)
+    );
+  }
+  
+ // TODO
+}
+
+@mixin typography($theme) {
+  .esn-empty-state {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

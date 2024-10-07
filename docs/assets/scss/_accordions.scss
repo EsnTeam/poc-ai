@@ -1,0 +1,46 @@
+@use 'src/assets/scss/text';
+
+.mat-accordion {
+    --border-radius: 8px;
+
+    .mat-expansion-panel {
+        background-color: var(--color-background-neutral-1);
+
+        &:not([class*=mat-elevation-z]) {
+            box-shadow: none !important;
+        }
+    
+        &:first-of-type {
+            border-top-right-radius: var(--border-radius) !important;
+            border-top-left-radius: var(--border-radius) !important;
+        }
+        &:last-of-type {
+            border-bottom-right-radius: var(--border-radius) !important;
+            border-bottom-left-radius: var(--border-radius) !important;
+        }
+
+        &.mat-expanded {
+            border-radius: var(--border-radius) !important;
+        }
+
+        &:not(:last-of-type):not(.mat-expanded) {
+            border-bottom: 1px solid var(--color-divider);
+        }
+    
+        .mat-expansion-panel-header {
+            @include text.body("Medium", "sm");
+            height: 4.5rem;
+
+            &:hover {
+                background-color: white !important;
+            }
+        }
+
+        .mat-expansion-panel-body {
+            @include text.body("Regular", "sm");
+            color: var(--color-text-neutral-body);
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--color-divider);
+        }
+    }
+}

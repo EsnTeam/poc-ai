@@ -1,0 +1,11 @@
+@use "sass:map";
+
+@mixin color($theme) {
+  .esn-divider {
+    border-top-color: map.get($theme, "generic", "color-divider");
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}

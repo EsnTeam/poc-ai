@@ -1,0 +1,25 @@
+@use "src/assets/scss/text";
+
+.mat-tab-nav-bar {
+  border-bottom-color: var(--color-divider) !important;
+
+  .mat-tab-link {
+    @include text.body("Medium", "sm");
+    color: var(--color-text-neutral-subtitle);
+    opacity: 1;
+    min-width: 9rem;
+  }
+
+  .mat-tab-label-active {
+    color: var(--color-primary);
+  }
+
+  .mat-ink-bar {
+    background-color: var(--color-primary) !important;
+  }
+}
+
+.tab-content {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}

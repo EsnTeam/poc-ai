@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "../../../themes/helpers";
+@use "../../../themes/typography";
+
+
+@mixin color($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+  $background-color: transparent;
+
+  .mat-mdc-paginator{
+    background-color: $background-color;
+   
+  }
+}
+
+@mixin typography($theme) {
+  .esn-paginator {
+    font-family: helpers.get-body-typography($theme);
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}
+

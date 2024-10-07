@@ -1,0 +1,32 @@
+@use "sass:map";
+@use "./helpers";
+
+@mixin scrollbar($theme) {
+  $is-dark: helpers.is-dark-mode($theme);
+  $foreground-hue: if($is-dark, 600, 300);
+  $background-hue: if($is-dark, 900, 200);
+  $color-foreground: helpers.get-color-from-theme($theme, "neutral", $foreground-hue);
+  $color-background: helpers.get-color-from-theme($theme, "neutral", $background-hue);
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-foreground;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-background;
+    border-radius: 4px;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $color-foreground;
+    scrollbar-track-color: $color-background;
+  }
+}

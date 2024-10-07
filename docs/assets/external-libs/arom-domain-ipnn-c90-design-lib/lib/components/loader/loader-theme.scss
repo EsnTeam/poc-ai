@@ -1,0 +1,23 @@
+@use "../../../themes/helpers";
+
+@mixin color($theme) {
+  $color-darker: helpers.get-color-from-theme($theme, "primary", 600);
+  $color-lighter: helpers.get-color-from-theme($theme, "primary", 300);
+  $color-lightest: helpers.get-color-from-theme($theme, "primary", 25);
+
+  .esn-loader {
+    &__square {
+      background: $color-darker;
+      color: $color-lighter;
+
+      &:after {
+        background: $color-lightest;
+      }
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+}
+

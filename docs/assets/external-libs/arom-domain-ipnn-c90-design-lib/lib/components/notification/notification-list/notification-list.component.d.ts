@@ -1,0 +1,35 @@
+import { OnDestroy, OnInit } from '@angular/core';
+import { EsnNotificationsService } from '../notifications.service';
+import { EsnNotificationModel } from '../model/notification';
+import { ApiErrorDisplay } from '../../../utils/public-api';
+import { BehaviorSubject, Subscription } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class EsnNotificationList implements OnInit, OnDestroy {
+    notificationsService: EsnNotificationsService;
+    refreshSubject$: BehaviorSubject<boolean>;
+    scrollElement: HTMLElement;
+    markAllAsReadSubject$: BehaviorSubject<any>;
+    unread?: boolean;
+    dateBefore?: Date;
+    dateAfter?: Date;
+    criticality?: string;
+    notifications: EsnNotificationModel[];
+    loading: boolean;
+    errorDisplay?: ApiErrorDisplay;
+    searchText: string;
+    totalNumberOfResults: number;
+    refreshElementsSubject: BehaviorSubject<null>;
+    callFunc?: (page: number, pageSize: number) => Promise<EsnNotificationModel[]>;
+    initialized: boolean;
+    refreshId: string;
+    subs: Subscription;
+    constructor(notificationsService: EsnNotificationsService);
+    ngOnInit(): void;
+    retreiveElms(page: number, size: number): Promise<any>;
+    onElmsUpdated(elms: EsnNotificationModel[]): void;
+    onRefresh(): void;
+    onNotificationClick(notification: EsnNotificationModel): void;
+    ngOnDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<EsnNotificationList, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<EsnNotificationList, "esn-notification-list", never, { "refreshSubject$": "refreshSubject$"; "scrollElement": "scrollElement"; "markAllAsReadSubject$": "markAllAsReadSubject$"; "unread": "unread"; "dateBefore": "dateBefore"; "dateAfter": "dateAfter"; "criticality": "criticality"; }, {}, never, never, false, never>;
+}

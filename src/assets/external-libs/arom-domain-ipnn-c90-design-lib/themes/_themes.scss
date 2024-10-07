@@ -1,0 +1,128 @@
+@use "sass:map";
+@use "./theming";
+@use "./palettes";
+
+$theme-light: theming.create-theme(
+  (
+    name: "theme-light",
+    color: (
+      primary: palettes.$blue-dark-palette,
+      accent: palettes.$blue-dark-palette,
+      error: palettes.$red-palette,
+      warning: palettes.$orange-palette,
+      success: palettes.$green-palette,
+      info: palettes.$blue-dark-palette,
+      neutral: palettes.$grey-modern-palette,
+    ),
+    typography: (
+      title: "Poppins",
+      body: "Inter",
+    ),
+    is-dark: false,
+  )
+);
+
+$theme-dark: theming.create-theme(
+  (
+    name: "theme-dark",
+    color: (
+      primary: palettes.$blue-dark-palette,
+      accent: palettes.$blue-dark-palette,
+      error: palettes.$red-palette,
+      warning: palettes.$orange-palette,
+      success: palettes.$green-palette,
+      info: palettes.$blue-dark-palette,
+      neutral: palettes.$grey-modern-palette,
+    ),
+    typography: (
+      title: "Inter",
+      body: "Inter",
+    ),
+    is-dark: true,
+  )
+);
+
+$theme-esn: theming.create-theme(
+  (
+    name: "theme-esn",
+    color: (
+      primary: palettes.$blue-dark-palette,
+      accent: palettes.$blue-dark-palette,
+      error: palettes.$red-palette,
+      warning: palettes.$orange-palette,
+      success: palettes.$green-palette,
+      info: palettes.$blue-dark-palette,
+      neutral: palettes.$grey-modern-palette,
+    ),
+    typography: (
+      title: "Poppins",
+      body: "WorkSans",
+    ),
+    is-dark: false,
+    generic: (
+      color-app-background: map.get(palettes.$blue-dark-palette, 25),
+
+    ),
+    components: (
+      sidenav:(
+        is-dark: true,
+        palette: palettes.$blue-dark-palette,
+      ),
+      badge: (
+        badge-light-neutral: map.get(palettes.$blue-dark-palette, 500),
+      ),
+    )
+  )
+);
+
+// CURRENT ESN CONFIG OBJECT
+$unused-object: (
+  name: "the name which is similar to the classname",
+  color: (
+    primary: palettes.$green-palette,
+    accent: palettes.$blue-dark-palette,
+    error: palettes.$red-palette,
+    warning: palettes.$orange-palette,
+    success: palettes.$green-palette,
+    info: palettes.$blue-dark-palette,
+    neutral: palettes.$grey-modern-palette,
+  ),
+  typography: (
+    title: "Inter",
+    body: "Inter",
+  ),
+  is-dark: false,
+  // Optional
+  generic: (
+    // color-text-[type]-[color]
+    // type: heading, body, subtitle
+    // color: neutral, primary
+    color-divider: #333333,
+    color-divider-darker: #222222,
+    color-icon: #444444,
+    color-text-heading-default: #555555,
+    color-app-background: #EEEEEE
+  ),
+  components: (
+    button: (
+      // btn-[type]-[color]
+      // type: basic, flat, stroked, link, light
+      // color: primary, accent, error, success, neutral
+      btn-border-radius: 5px,
+    ),
+    badge: (
+      // badge-[type]-[color]
+      // type: flat, stroked, light
+      // color: primary, accent, error, success, neutral, purple, indigo
+    ),
+    components: (
+      sidenav:(
+        // Override is-dark for this component
+        //is-dark: true,
+      ),
+      input: (
+        input-border-radius: 5px,
+      )
+    ),
+  ),
+);

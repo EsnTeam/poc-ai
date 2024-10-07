@@ -1,0 +1,32 @@
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/common";
+import * as i2 from "../../icon/icon.component";
+import * as i3 from "../../icon/icon-bg.component";
+import * as i4 from "./file-item/file-item.component";
+export class EsnFileList {
+    constructor() {
+        this.documents = [];
+        this.disabled = false;
+        this.readOnly = false;
+        this.event = new EventEmitter();
+    }
+}
+EsnFileList.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnFileList, deps: [], target: i0.ɵɵFactoryTarget.Component });
+EsnFileList.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "15.2.10", type: EsnFileList, selector: "esn-file-list", inputs: { documents: "documents", disabled: "disabled", readOnly: "readOnly" }, outputs: { event: "event" }, host: { properties: { "class.empty": "!documents.length" }, classAttribute: "esn-file-list" }, ngImport: i0, template: "<div *ngIf=\"!!documents?.length\">\r\n  <esn-file-item\r\n    *ngFor=\"let document of documents\"\r\n    [document]=\"document\"\r\n    (event)=\"event.emit($event)\"\r\n    [disabled]=\"disabled\"\r\n  ></esn-file-item>\r\n</div>\r\n<div *ngIf=\"readOnly && !documents.length\" class=\"file-selector-empty\">\r\n  <esn-icon-bg color=\"neutral\" type=\"mono\" shape=\"circle\">\r\n    <esn-icon name=\"file\"></esn-icon>\r\n  </esn-icon-bg>\r\n  <div>Aucun fichier disponible</div>\r\n</div>\r\n", styles: [":host{display:block}:host:not(.empty){padding:.75rem}:host .file-selector-empty{padding:.5rem;text-align:center;font-size:.75rem}:host .file-selector-empty .esn-icon-bg{margin-bottom:.5rem}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i2.EsnIcon, selector: "esn-icon", inputs: ["name", "boxed", "size"] }, { kind: "component", type: i3.EsnIconBg, selector: "esn-icon-bg", inputs: ["shape", "type", "color", "shade", "rings", "theme"] }, { kind: "component", type: i4.EsnFileItem, selector: "esn-file-item", inputs: ["document", "disabled"], outputs: ["event"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: EsnFileList, decorators: [{
+            type: Component,
+            args: [{ selector: 'esn-file-list', host: {
+                        class: 'esn-file-list',
+                        '[class.empty]': `!documents.length`
+                    }, template: "<div *ngIf=\"!!documents?.length\">\r\n  <esn-file-item\r\n    *ngFor=\"let document of documents\"\r\n    [document]=\"document\"\r\n    (event)=\"event.emit($event)\"\r\n    [disabled]=\"disabled\"\r\n  ></esn-file-item>\r\n</div>\r\n<div *ngIf=\"readOnly && !documents.length\" class=\"file-selector-empty\">\r\n  <esn-icon-bg color=\"neutral\" type=\"mono\" shape=\"circle\">\r\n    <esn-icon name=\"file\"></esn-icon>\r\n  </esn-icon-bg>\r\n  <div>Aucun fichier disponible</div>\r\n</div>\r\n", styles: [":host{display:block}:host:not(.empty){padding:.75rem}:host .file-selector-empty{padding:.5rem;text-align:center;font-size:.75rem}:host .file-selector-empty .esn-icon-bg{margin-bottom:.5rem}\n"] }]
+        }], propDecorators: { documents: [{
+                type: Input
+            }], disabled: [{
+                type: Input
+            }], readOnly: [{
+                type: Input
+            }], event: [{
+                type: Output
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1saXN0LmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL2Fyb20tZG9tYWluLWlwbm4tYzkwLWRlc2lnbi1saWIvc3JjL2xpYi9jb21wb25lbnRzL2ZpbGUtaW5wdXQvZmlsZS1saXN0L2ZpbGUtbGlzdC5jb21wb25lbnQudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9hcm9tLWRvbWFpbi1pcG5uLWM5MC1kZXNpZ24tbGliL3NyYy9saWIvY29tcG9uZW50cy9maWxlLWlucHV0L2ZpbGUtbGlzdC9maWxlLWxpc3QuY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxZQUFZLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxNQUFNLGVBQWUsQ0FBQzs7Ozs7O0FBWXZFLE1BQU0sT0FBTyxXQUFXO0lBVHhCO1FBVVcsY0FBUyxHQUF1QyxFQUFFLENBQUM7UUFDbkQsYUFBUSxHQUFZLEtBQUssQ0FBQztRQUMxQixhQUFRLEdBQVksS0FBSyxDQUFDO1FBQ3pCLFVBQUssR0FBdUMsSUFBSSxZQUFZLEVBQUUsQ0FBQztLQUcxRTs7eUdBUFksV0FBVzs2RkFBWCxXQUFXLGlRQ1p4QixtZkFjQTs0RkRGYSxXQUFXO2tCQVR2QixTQUFTOytCQUNFLGVBQWUsUUFHbkI7d0JBQ0osS0FBSyxFQUFFLGVBQWU7d0JBQ3RCLGVBQWUsRUFBRSxtQkFBbUI7cUJBQ3JDOzhCQUdRLFNBQVM7c0JBQWpCLEtBQUs7Z0JBQ0csUUFBUTtzQkFBaEIsS0FBSztnQkFDRyxRQUFRO3NCQUFoQixLQUFLO2dCQUNJLEtBQUs7c0JBQWQsTUFBTSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgRXZlbnRFbWl0dGVyLCBJbnB1dCwgT3V0cHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7IERvY3VtZW50RXZlbnRFbWl0dGVyLCBEb2N1bWVudEl0ZW0sIEZpbGVNZXRhZGF0YUR0byB9IGZyb20gJy4uLy4uLy4uL3V0aWxzL21vZGVsL2RvY3VtZW50cyc7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICBzZWxlY3RvcjogJ2Vzbi1maWxlLWxpc3QnLFxyXG4gIHRlbXBsYXRlVXJsOiAnLi9maWxlLWxpc3QuY29tcG9uZW50Lmh0bWwnLFxyXG4gIHN0eWxlVXJsczogWycuL2ZpbGUtbGlzdC5jb21wb25lbnQuc2NzcyddLFxyXG4gIGhvc3Q6IHtcclxuICAgIGNsYXNzOiAnZXNuLWZpbGUtbGlzdCcsXHJcbiAgICAnW2NsYXNzLmVtcHR5XSc6IGAhZG9jdW1lbnRzLmxlbmd0aGBcclxuICB9XHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBFc25GaWxlTGlzdCB7XHJcbiAgQElucHV0KCkgZG9jdW1lbnRzOiAoRG9jdW1lbnRJdGVtIHwgRmlsZU1ldGFkYXRhRHRvKVtdID0gW107XHJcbiAgQElucHV0KCkgZGlzYWJsZWQ6IGJvb2xlYW4gPSBmYWxzZTtcclxuICBASW5wdXQoKSByZWFkT25seTogYm9vbGVhbiA9IGZhbHNlO1xyXG4gIEBPdXRwdXQoKSBldmVudDogRXZlbnRFbWl0dGVyPERvY3VtZW50RXZlbnRFbWl0dGVyPiA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcclxuXHJcblxyXG59XHJcbiIsIjxkaXYgKm5nSWY9XCIhIWRvY3VtZW50cz8ubGVuZ3RoXCI+XHJcbiAgPGVzbi1maWxlLWl0ZW1cclxuICAgICpuZ0Zvcj1cImxldCBkb2N1bWVudCBvZiBkb2N1bWVudHNcIlxyXG4gICAgW2RvY3VtZW50XT1cImRvY3VtZW50XCJcclxuICAgIChldmVudCk9XCJldmVudC5lbWl0KCRldmVudClcIlxyXG4gICAgW2Rpc2FibGVkXT1cImRpc2FibGVkXCJcclxuICA+PC9lc24tZmlsZS1pdGVtPlxyXG48L2Rpdj5cclxuPGRpdiAqbmdJZj1cInJlYWRPbmx5ICYmICFkb2N1bWVudHMubGVuZ3RoXCIgY2xhc3M9XCJmaWxlLXNlbGVjdG9yLWVtcHR5XCI+XHJcbiAgPGVzbi1pY29uLWJnIGNvbG9yPVwibmV1dHJhbFwiIHR5cGU9XCJtb25vXCIgc2hhcGU9XCJjaXJjbGVcIj5cclxuICAgIDxlc24taWNvbiBuYW1lPVwiZmlsZVwiPjwvZXNuLWljb24+XHJcbiAgPC9lc24taWNvbi1iZz5cclxuICA8ZGl2PkF1Y3VuIGZpY2hpZXIgZGlzcG9uaWJsZTwvZGl2PlxyXG48L2Rpdj5cclxuIl19
