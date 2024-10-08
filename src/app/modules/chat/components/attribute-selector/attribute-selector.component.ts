@@ -1,3 +1,4 @@
+import { moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, Input, SimpleChange, SimpleChanges } from '@angular/core';
 import { UmlProcessingService } from 'src/app/core/services/uml-processing.service';
 import {
@@ -50,5 +51,16 @@ export class AttributeSelectorComponent {
         (uuid) => uuid != attrUuid
       );
     }
+  }
+
+  public drop(e: any) {
+    console.log('DROPED !');
+    console.log({ e });
+
+    moveItemInArray(
+      this.objectSchema.attributes,
+      e.previousIndex,
+      e.currentIndex
+    );
   }
 }
