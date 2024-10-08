@@ -35,6 +35,9 @@ export enum StepActionType {
   ADD_FIELD_TO_DATA = 'ADD_FIELD_TO_DATA',
   REPLACE_DATA = 'REPLACE_DATA',
   FORMAT_INPUT = 'FORMAT_INPUT',
+  IMPORT_JSON_SCHEMA_FROM_RESP = 'IMPORT_JSON_SCHEMA_FROM_RESP',
+  IMPORT_UI_SCHEMA_FROM_RESP = 'IMPORT_UI_SCHEMA_FROM_RESP',
+  OPEN_FORM_PREVIEW = 'OPEN_FORM_PREVIEW',
 }
 
 export const STEP_ACTION_LABELS: { [key in StepActionType]: string } = {
@@ -42,6 +45,9 @@ export const STEP_ACTION_LABELS: { [key in StepActionType]: string } = {
   ADD_FIELD_TO_DATA: `Update Data with the suggested field names`,
   REPLACE_DATA: `Import last response as object data`,
   FORMAT_INPUT: `Format input`,
+  IMPORT_JSON_SCHEMA_FROM_RESP: `Import last response as a JSON Schema`,
+  IMPORT_UI_SCHEMA_FROM_RESP: `Import last response as an UI Schema`,
+  OPEN_FORM_PREVIEW: `Open form preview in new tab`,
 };
 
 export enum InputFormattingEnum {

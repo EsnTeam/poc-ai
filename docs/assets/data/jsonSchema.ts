@@ -1,28 +1,40 @@
 export const jsonSchema = {
+  title: 'Contrat',
   type: 'object',
   properties: {
-    name: {
+    number: {
       type: 'string',
-      minLength: 3,
-      description: 'Please enter your name',
+      title: 'Numéro',
     },
-    vegetarian: { type: 'boolean' },
-    birthDate: { type: 'string', format: 'date' },
-    nationality: {
+    title: {
       type: 'string',
-      enum: ['DE', 'IT', 'JP', 'US', 'RU', 'Other'],
+      title: 'Titre',
     },
-    personalData: {
-      type: 'object',
-      properties: {
-        age: { type: 'integer', description: 'Please enter your age.' },
-        height: { type: 'number' },
-        drivingSkill: { type: 'number', maximum: 10, minimum: 1, default: 7 },
-      },
-      required: ['age', 'height'],
+    revision: {
+      type: 'string',
+      title: 'Révision',
     },
-    occupation: { type: 'string' },
-    postalCode: { type: 'string', maxLength: 5 },
+    executionDate: {
+      type: 'string',
+      title: "Date d'éxécution",
+      format: 'date',
+    },
+    signatureDate: {
+      type: 'string',
+      title: 'Date de signature',
+      format: 'date',
+    },
+    type: {
+      type: 'string',
+      title: 'Type',
+    },
   },
-  required: ['occupation', 'nationality'],
+  required: [
+    'number',
+    'title',
+    'revision',
+    'executionDate',
+    'signatureDate',
+    'type',
+  ],
 };

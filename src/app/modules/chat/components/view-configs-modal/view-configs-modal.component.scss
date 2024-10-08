@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  max-height: 90vh !important;
+  .tab-content {
+    white-space: pre;
+    min-width: 60vw;
+    padding: 1rem;
+  }
+}

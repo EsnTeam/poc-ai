@@ -1,0 +1,21 @@
+:host {
+  .preview-header {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    &__leading {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+  .form-preview-container {
+    padding: 1rem;
+    border-radius: 12px;
+    // background-color: var(--color-neutral-50);
+  }
+}

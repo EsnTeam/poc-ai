@@ -11,6 +11,9 @@ export class WorkflowSessionService {
   public session: WorkflowSession;
   public session$: BehaviorSubject<WorkflowSession | undefined> =
     new BehaviorSubject<WorkflowSession | undefined>(undefined);
+
+  public jsonSchema: any;
+  public uiSchema: any;
   constructor(public firebaseController: FirebaseController) {}
 
   public async loadSession(sessionId: string) {
@@ -58,5 +61,13 @@ export class WorkflowSessionService {
 
     this.session.activeStepId = nextStep.stepId;
     this.updateSession();
+  }
+
+  public getJsonSchema() {
+    return this.jsonSchema;
+  }
+
+  public getUiSchema() {
+    return this.uiSchema;
   }
 }

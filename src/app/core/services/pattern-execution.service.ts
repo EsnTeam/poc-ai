@@ -9,12 +9,14 @@ import { CookieService } from 'ngx-cookie-service';
 import {
   ASSISTANTS,
   CONFIG_COOKIE_NAME,
+  JSON_SCHEMA_DB_KEY,
   THREADS,
   THREADS_COOKIE_NAME,
+  UI_SCHEMA_DB_KEY,
 } from 'src/app/modules/shared/model/constants';
 import { threadId } from 'worker_threads';
 import { EsnOpenaiService } from './opeanai.service';
-import { DatePipe } from '@angular/common';
+import { DatePipe, LocationStrategy } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, lastValueFrom } from 'rxjs';
 import {
@@ -40,6 +42,9 @@ import {
 } from 'src/app/modules/shared/model/pattern';
 import { FirebaseController } from './firebase-controller.service';
 import { UmlProcessingService } from './uml-processing.service';
+import { WorkflowSessionService } from './workflow-session.service';
+import { Router } from '@angular/router';
+import { IdbService } from './idb.service';
 
 @Injectable({
   providedIn: 'root',
@@ -54,7 +59,11 @@ export class PatternExecutionService {
     public oaiService: EsnOpenaiService,
     public httpClient: HttpClient,
     public firebaseController: FirebaseController,
-    public umlService: UmlProcessingService
+    public umlService: UmlProcessingService,
+    public sessionService: WorkflowSessionService,
+    public locationStrategy: LocationStrategy,
+    public router: Router,
+    public dbService: IdbService
   ) {}
 
   public async executePattern(
@@ -172,9 +181,37 @@ export class PatternExecutionService {
         return await this.replaceData(threadId);
       case StepActionType.FORMAT_INPUT:
         return await this.formatInput(step, inputs);
+      case StepActionType.IMPORT_JSON_SCHEMA_FROM_RESP:
+        return await this.importJsonSchemaFromResp(threadId);
+      case StepActionType.IMPORT_UI_SCHEMA_FROM_RESP:
+        return await this.importUiSchemaFromResp(threadId);
+      case StepActionType.OPEN_FORM_PREVIEW:
+        return await this.openFormPreview();
       default:
         return true;
     }
+  }
+
+  public openFormPreview() {
+    // this.router.navigate(['/llm/preview']);
+    const url = `${this.locationStrategy.getBaseHref()}#/llm/preview`;
+    window.open(url, '_blank');
+  }
+
+  public async importJsonSchemaFromResp(threadId: string) {
+    await this.dbService.setValueByKey(
+      'session-data',
+      JSON_SCHEMA_DB_KEY,
+      JSON.parse(await this.getLastResponseText(threadId))
+    );
+  }
+
+  public async importUiSchemaFromResp(threadId: string) {
+    await this.dbService.setValueByKey(
+      'session-data',
+      UI_SCHEMA_DB_KEY,
+      JSON.parse(await this.getLastResponseText(threadId))
+    );
   }
 
   public formatInput(step: PatternStep, inputs: string[]) {
@@ -257,6 +294,13 @@ export class PatternExecutionService {
   }
 
   public async downloadLastResponse(threadId: string, fileName: string) {
+    const blob = new Blob([await this.getLastResponseText(threadId, true)], {
+      type: 'text/plain;charset=utf-8',
+    });
+    saveAs(blob, fileName);
+  }
+
+  public async getLastResponseText(threadId: string, asJson: boolean = true) {
     const jsonVal = JSON.parse(
       (
         (await this.oaiService.listMessages(threadId)).data[0]
@@ -264,10 +308,7 @@ export class PatternExecutionService {
       ).text.value
     );
 
-    const blob = new Blob([JSON.stringify(jsonVal, null, 4)], {
-      type: 'text/plain;charset=utf-8',
-    });
-    saveAs(blob, fileName);
+    return JSON.stringify(jsonVal, null, 4);
   }
 
   public replaceVariablesInString(str: string, inputs: string[]) {

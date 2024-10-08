@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { angularMaterialRenderers } from '@jsonforms/angular-material';
 import { JsonFormsI18nState, createAjv } from '@jsonforms/core';
 import { ESN_RENDERER } from 'src/app/modules/shared/renderers/custom-renderer.constant';
@@ -12,8 +12,8 @@ import { uiSchema } from 'src/assets/data/uiSchema';
 })
 export class FormPreviewComponent {
   public renderers = ESN_RENDERER;
-  public schema = jsonSchema;
-  public uischema = uiSchema;
+  @Input() schema: any; //= jsonSchema;
+  @Input() uischema: any; // = uiSchema;
   public i18n: JsonFormsI18nState;
   public validation: string = 'ValidateAndShow';
   public ajv = createAjv({

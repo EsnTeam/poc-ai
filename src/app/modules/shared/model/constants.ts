@@ -43,3 +43,9 @@ export const MODELS_PRICING = {
     output: 0.6,
   },
 };
+
+export const DATABASE_VERSION = 1;
+export const DB_NAME = 'poc-llm';
+
+export const JSON_SCHEMA_DB_KEY = 'json-schema';
+export const UI_SCHEMA_DB_KEY = 'ui-schema';

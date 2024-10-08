@@ -1,38 +1,37 @@
 export const uiSchema = {
-  type: 'VerticalLayout',
+  type: 'Stepper',
   elements: [
     {
-      type: 'HorizontalLayout',
+      label: 'Informations Générales',
+      type: 'Group',
       elements: [
-        { type: 'Control', scope: '#/properties/name' },
-        { type: 'Control', scope: '#/properties/personalData/properties/age' },
-        { type: 'Control', scope: '#/properties/birthDate' },
+        {
+          type: 'HorizontalLayout',
+          elements: [
+            { type: 'Control', scope: '#/properties/number' },
+            { type: 'Control', scope: '#/properties/title' },
+          ],
+        },
+        { type: 'Control', scope: '#/properties/revision' },
       ],
     },
-    { type: 'Label', text: 'Additional Information' },
     {
-      type: 'HorizontalLayout',
+      label: 'Dates',
+      type: 'Group',
       elements: [
         {
-          type: 'Control',
-          scope: '#/properties/personalData/properties/height',
-        },
-        { type: 'Control', scope: '#/properties/nationality' },
-        {
-          type: 'Control',
-          scope: '#/properties/occupation',
-          suggestion: [
-            'Accountant',
-            'Engineer',
-            'Freelancer',
-            'Journalism',
-            'Physician',
-            'Student',
-            'Teacher',
-            'Other',
+          type: 'HorizontalLayout',
+          elements: [
+            { type: 'Control', scope: '#/properties/executionDate' },
+            { type: 'Control', scope: '#/properties/signatureDate' },
           ],
         },
       ],
+    },
+    {
+      label: 'Détails du Contrat',
+      type: 'Group',
+      elements: [{ type: 'Control', scope: '#/properties/type' }],
     },
   ],
 };

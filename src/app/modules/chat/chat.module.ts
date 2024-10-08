@@ -29,6 +29,9 @@ import { WfSelectObjComponent } from './components/wf-select-obj/wf-select-obj.c
 import { WfEnrichObjComponent } from './components/wf-enrich-obj/wf-enrich-obj.component';
 import { WfGenerateCiComponent } from './components/wf-generate-ci/wf-generate-ci.component';
 import { FormPreviewComponent } from './components/form-preview/form-preview.component';
+import { PreviewComponent } from './pages/preview/preview.component';
+import { TestPreviewComponent } from './components/test-preview/test-preview.component';
+import { ViewConfigsModalComponent } from './components/view-configs-modal/view-configs-modal.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,9 @@ import { FormPreviewComponent } from './components/form-preview/form-preview.com
     WfEnrichObjComponent,
     WfGenerateCiComponent,
     FormPreviewComponent,
+    PreviewComponent,
+    TestPreviewComponent,
+    ViewConfigsModalComponent,
   ],
   imports: [CommonModule, ChatRoutingModule, SharedModule],
 })

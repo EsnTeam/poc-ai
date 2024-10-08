@@ -15,6 +15,8 @@ import { WfSelectObjComponent } from './components/wf-select-obj/wf-select-obj.c
 import { WfEnrichObjComponent } from './components/wf-enrich-obj/wf-enrich-obj.component';
 import { WfGenerateCiComponent } from './components/wf-generate-ci/wf-generate-ci.component';
 import { FormPreviewComponent } from './components/form-preview/form-preview.component';
+import { PreviewComponent } from './pages/preview/preview.component';
+import { TestPreviewComponent } from './components/test-preview/test-preview.component';
 
 const routes: Routes = [
   {
@@ -30,7 +32,12 @@ const routes: Routes = [
 
   {
     path: 'preview',
-    component: FormPreviewComponent,
+    component: PreviewComponent,
+    children: [],
+  },
+  {
+    path: 'test-preview',
+    component: TestPreviewComponent,
     children: [],
   },
 

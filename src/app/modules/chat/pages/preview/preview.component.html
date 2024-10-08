@@ -1,0 +1,15 @@
+<div class="preview-header">
+  <div class="preview-header__leading">
+    <div class="page-title">Prévisualisation du formulaire</div>
+    <button mat-raised-button color="primary" (click)="openConfigModal()">
+      Voir les configurations
+    </button>
+  </div>
+  <button mat-raised-button color="primary">Publier dans Pled</button>
+</div>
+<div class="form-preview-container">
+  <app-form-preview [schema]="schema" [uischema]="uischema"></app-form-preview>
+</div>
+
+<!-- <div class="json-schema-display">{{ schema }}</div>
+<div class="ui-schema-display">{{ uischema }}</div> -->

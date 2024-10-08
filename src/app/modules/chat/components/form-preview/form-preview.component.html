@@ -1,14 +1,14 @@
-<div>
-  <jsonforms
-    #jsonForms
-    [data]="{}"
-    [schema]="schema"
-    [uischema]="uischema"
-    [renderers]="renderers"
-    [i18n]="i18n"
-    validationMode="ValidateAndShow"
-    [ajv]="ajv"
-  ></jsonforms>
-</div>
+<jsonforms
+  *ngIf="!!schema && !!uischema"
+  #jsonForms
+  [data]="{}"
+  [schema]="schema"
+  [uischema]="uischema"
+  [renderers]="renderers"
+  [i18n]="i18n"
+  validationMode="ValidateAndShow"
+  [ajv]="ajv"
+></jsonforms>
 
-<!-- <esn-input-text label="Super"></esn-input-text> -->
+<div *ngIf="!schema" class="error">Aucun JSON Schema chargé</div>
+<div *ngIf="!uischema" class="error">Aucun UI Schema chargé</div>
