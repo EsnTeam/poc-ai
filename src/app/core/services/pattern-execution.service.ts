@@ -277,12 +277,7 @@ export class PatternExecutionService {
   }
 
   public async addFieldNames(threadId: string) {
-    const jsonVal = JSON.parse(
-      (
-        (await this.oaiService.listMessages(threadId)).data[0]
-          .content[0] as TextContentBlock
-      ).text.value
-    );
+    const jsonVal = JSON.parse(await this.getLastResponseText(threadId));
 
     this.umlService.loadedObjects.forEach((obj) => {
       obj.attributes.forEach((att) => {
