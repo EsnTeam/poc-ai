@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Create assistant</h1>
+<h1 mat-dialog-title>{{ data.assistantId ? "Update" : "Create" }} assistant</h1>
 <div mat-dialog-content>
   <div>
     Edit the config below
@@ -29,5 +29,7 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button (click)="createAssistant()">Create</button>
+  <button mat-button (click)="createAssistant()">
+    {{ data.assistantId ? "Update" : "Create" }}
+  </button>
 </div>

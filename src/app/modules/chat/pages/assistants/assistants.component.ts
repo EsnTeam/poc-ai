@@ -44,9 +44,13 @@ export class AssistantsComponent {
     return JSON.stringify(o, null, 4);
   }
 
-  public openAssistantCreationModal() {
+  public openAssistantCreationModal(assistant?: any) {
     this.dialog
       .open(AssistantEditionDialogComponent, {
+        data: {
+          assistantId: assistant?.id,
+          assistantConfig: assistant,
+        },
         width: '70vw',
         height: '80vh',
       })

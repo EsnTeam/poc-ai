@@ -13,6 +13,7 @@ export class ViewConfigsModalComponent {
     public data: {
       jsonSchema: any;
       uiSchema: any;
+      i18n: any;
     }
   ) {}
 }

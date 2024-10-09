@@ -10,9 +10,12 @@
     (click)="goToDetailView(pattern.id!)"
   >
     <div class="config-elm-list__element__label">{{ pattern.name }}</div>
-    <!-- <button mat-icon-button>
-      <mat-icon fontIcon="delete" (click)="openDeletionModal()"></mat-icon>
-    </button> -->
+    <button
+      mat-icon-button
+      (click)="openDeletionModal(pattern!); $event.stopPropagation()"
+    >
+      <mat-icon fontIcon="delete"></mat-icon>
+    </button>
   </div>
 </div>
 

@@ -74,6 +74,15 @@
     mat-raised-button
     color="primary"
     [disabled]="!selectedTestData"
+    (click)="openDataDeletionModal()"
+  >
+    Delete data
+  </button>
+
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="!selectedTestData"
     (click)="onOverrideClick()"
   >
     Save data

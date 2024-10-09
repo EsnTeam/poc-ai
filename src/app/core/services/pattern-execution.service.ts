@@ -9,6 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
 import {
   ASSISTANTS,
   CONFIG_COOKIE_NAME,
+  I18N_SCHEMA_DB_KEY,
   JSON_SCHEMA_DB_KEY,
   THREADS,
   THREADS_COOKIE_NAME,
@@ -69,7 +70,8 @@ export class PatternExecutionService {
   public async executePattern(
     patternId: string,
     inputs: string[],
-    threadId: string
+    threadId: string,
+    fromStep?: string
   ) {
     const pattern: Pattern = await lastValueFrom(
       this.firebaseController.getPatternById(patternId)
@@ -81,14 +83,20 @@ export class PatternExecutionService {
       },
     });
 
-    await this.oaiService.clearThread(threadId);
+    await this.oaiService.clearThread(threadId, fromStep);
+
     this.executionState$.next({
       clearThread: {
         state: ExecutionStateEnum.SUCCESS,
       },
     });
 
-    for (let i = 0; i < pattern.steps.length; i++) {
+    let startIndex = 0;
+    if (fromStep) {
+      startIndex = pattern.steps.findIndex((s) => s.stepId == fromStep);
+    }
+
+    for (let i = startIndex; i < pattern.steps.length; i++) {
       if (!pattern.steps[i].pause) {
         this.executionState$.value[pattern.steps[i].stepId] = {
           state: ExecutionStateEnum.ONGOING,
@@ -136,7 +144,8 @@ export class PatternExecutionService {
     } else {
       await this.oaiService.createMessage(
         this.replaceVariablesInString(step.prompt!, inputs),
-        threadId
+        threadId,
+        { stepId: step.stepId }
       );
     }
   }
@@ -185,6 +194,8 @@ export class PatternExecutionService {
         return await this.importJsonSchemaFromResp(threadId);
       case StepActionType.IMPORT_UI_SCHEMA_FROM_RESP:
         return await this.importUiSchemaFromResp(threadId);
+      case StepActionType.IMPORT_I18N_SCHEMA_FROM_RESP:
+        return await this.importI18nFromResp(threadId);
       case StepActionType.OPEN_FORM_PREVIEW:
         return await this.openFormPreview();
       default:
@@ -210,6 +221,14 @@ export class PatternExecutionService {
     await this.dbService.setValueByKey(
       'session-data',
       UI_SCHEMA_DB_KEY,
+      JSON.parse(await this.getLastResponseText(threadId))
+    );
+  }
+
+  public async importI18nFromResp(threadId: string) {
+    await this.dbService.setValueByKey(
+      'session-data',
+      I18N_SCHEMA_DB_KEY,
       JSON.parse(await this.getLastResponseText(threadId))
     );
   }
@@ -255,12 +274,7 @@ export class PatternExecutionService {
   }
 
   public async replaceData(threadId: string) {
-    const jsonVal = JSON.parse(
-      (
-        (await this.oaiService.listMessages(threadId)).data[0]
-          .content[0] as TextContentBlock
-      ).text.value
-    );
+    const jsonVal = JSON.parse(await this.getLastResponseText(threadId));
 
     jsonVal.data.forEach((obj: ObjectSchema) => {
       obj.attributes.forEach((att) => {
@@ -309,7 +323,8 @@ export class PatternExecutionService {
     try {
       jsonVal = JSON.parse(rawText);
     } catch (err) {
-      const extractedJson = rawText.split('```json')[1].split('```')[0];
+      const splitted = rawText.split('```json');
+      const extractedJson = splitted[splitted.length - 1].split('```')[0];
       jsonVal = JSON.parse(extractedJson);
     }
 
@@ -323,116 +338,4 @@ export class PatternExecutionService {
     }
     return returnStr;
   }
-
-  public async suggestFieldNames(schemas: ObjectSchema[]) {
-    const threadId = THREADS.main;
-    await this.oaiService.clearThread(threadId);
-    await this.oaiService.createMessage(
-      PROMPTS.rawDataStatement.replace('##1', JSON.stringify(schemas, null, 2)),
-      threadId
-    );
-
-    await this.oaiService.createMessage(
-      PROMPTS.askForFieldSuggestions,
-      threadId
-    );
-
-    const run = await this.oaiService.runThread(ASSISTANTS.basic4ov2, threadId);
-    await this.oaiService.waitForSuccess(run.id, threadId, true);
-
-    const newMessage = (await this.oaiService.listMessages(threadId)).data[0];
-
-    await this.oaiService.createMessage(
-      PROMPTS.formatFieldNamesAnswer,
-      threadId
-    );
-
-    const format = z.object({
-      attributes: z.array(
-        z.object({
-          uuid: z.string(),
-          suggestedFieldName: z.string(),
-        })
-      ),
-    });
-
-    const run2 = await this.oaiService.runThread(
-      ASSISTANTS.noTool4oMini,
-      threadId,
-      format
-    );
-    await this.oaiService.waitForSuccess(run2.id, threadId, true);
-
-    const jsonVal = JSON.parse(
-      (
-        (await this.oaiService.listMessages(threadId)).data[0]
-          .content[0] as TextContentBlock
-      ).text.value
-    );
-
-    console.log(jsonVal);
-    return jsonVal;
-  }
-
-  // public async generateJsonSchema(schemas: ObjectSchema[]) {
-  //   const threadId = THREADS.main;
-  //   await this.oaiService.clearThread(threadId);
-  //   await this.oaiService.createMessage(
-  //     PROMPTS.rawDataStatement.replace('##1', JSON.stringify(schemas, null, 2)),
-  //     threadId
-  //   );
-
-  //   // JSON Schema
-  //   await this.oaiService.createMessage(
-  //     PROMPTS.askForJsonSchema.replace('##1', schemas[0].name),
-  //     threadId
-  //   );
-  //   const run = await this.oaiService.runThread(ASSISTANTS.basic4ov2, threadId);
-  //   await this.oaiService.waitForSuccess(run.id, threadId, true);
-
-  //   const jsonSchema = await this.askAndGetJson(threadId);
-  //   const blob = new Blob([JSON.stringify(jsonSchema, null, 4)], {
-  //     type: 'text/plain;charset=utf-8',
-  //   });
-  //   saveAs(blob, 'json_schema.json');
-
-  //   // JSON UI
-  //   await this.oaiService.createMessage(
-  //     PROMPTS.askForJsonUI.replace('##1', schemas[0].name),
-  //     threadId
-  //   );
-  //   const run2 = await this.oaiService.runThread(
-  //     ASSISTANTS.basic4ov2,
-  //     threadId
-  //   );
-  //   await this.oaiService.waitForSuccess(run2.id, threadId, true);
-
-  //   const jsonUI = await this.askAndGetJson(threadId);
-  //   const blob2 = new Blob([JSON.stringify(jsonUI, null, 4)], {
-  //     type: 'text/plain;charset=utf-8',
-  //   });
-  //   saveAs(blob2, 'json_ui.json');
-  // }
-
-  // public async askAndGetJson(threadId: string) {
-  //   await this.oaiService.createMessage(PROMPTS.askForJsonOnly, threadId);
-
-  //   const run2 = await this.oaiService.runThread(
-  //     ASSISTANTS.noTool4oMini,
-  //     threadId,
-  //     null,
-  //     true
-  //   );
-  //   await this.oaiService.waitForSuccess(run2.id, threadId, true);
-
-  //   const jsonVal = JSON.parse(
-  //     (
-  //       (await this.oaiService.listMessages(threadId)).data[0]
-  //         .content[0] as TextContentBlock
-  //     ).text.value
-  //   );
-
-  //   console.log(jsonVal);
-  //   return jsonVal;
-  // }
 }

@@ -62,13 +62,13 @@ export class EsnOpenaiService {
 
   public async createAssistant(config: any) {
     const myAssistant = await this.openai.beta.assistants
-      // .create({
-      //   instructions: "You are an assistant who's job is to parse UML files.",
-      //   name: 'UML assistant',
-      //   tools: [{ type: 'file_search' }],
-      //   model: 'gpt-4o-mini',
-      // })
       .create(config)
+      .then((x) => x);
+  }
+
+  public async updateAssistant(assistantId: string, config: any) {
+    const myAssistant = await this.openai.beta.assistants
+      .update(assistantId, config)
       .then((x) => x);
   }
 
@@ -77,11 +77,12 @@ export class EsnOpenaiService {
     this.threadMgmtService.saveThread(myThread.id);
   }
 
-  public createMessage(str: string, threadId: string) {
+  public createMessage(str: string, threadId: string, metadata?: any) {
     return this.openai.beta.threads.messages
       .create(threadId, {
         role: 'user',
         content: str,
+        metadata,
       })
       .then((x) => x);
   }
@@ -158,11 +159,21 @@ export class EsnOpenaiService {
     return this.openai.files.list().then((x) => x.data);
   }
 
-  public async clearThread(threadId: string) {
+  public async clearThread(threadId: string, fromStep?: string) {
     const list = await this.listMessages(threadId);
     const promises = [] as any[];
 
-    list.data
+    let messagesToDelete = list.data;
+    if (fromStep) {
+      const index = messagesToDelete.findIndex(
+        (m) => (m.metadata as any)?.stepId == fromStep
+      );
+      if (index !== undefined && index !== undefined) {
+        messagesToDelete = messagesToDelete.slice(0, index + 1);
+      }
+    }
+
+    messagesToDelete
       .map((d) => d.id)
       .forEach((id, index) => {
         // if (list.data.length - index > 2) {

@@ -53,10 +53,13 @@
       [step]="step"
       [isFirst]="!index"
       [isLast]="index == pattern.steps.length - 1"
+      [startsFromHere]="pattern.startFrom == step.stepId"
+      [startsAfter]="startFromIndex > index"
       (update)="onUpdate()"
       (delete)="onDelete(step)"
       (moveUp)="moveUp(step)"
       (moveDown)="moveDown(step)"
+      (startFrom)="startFrom(step)"
     ></app-pattern-step>
   </div>
 

@@ -19,7 +19,7 @@ import {
   host: {
     '[class.pattern-step--ongoing]': `state?.state ==  'ONGOING' && !step.pause`,
     '[class.pattern-step--success]': `state?.state ==  'SUCCESS' && !step.pause`,
-    '[class.pattern-step--paused]': `step.pause`,
+    '[class.pattern-step--paused]': `step.pause || startsAfter`,
   },
 })
 export class PatternStepComponent {
@@ -27,10 +27,13 @@ export class PatternStepComponent {
   @Input() state: PatternStepExecutionState;
   @Input() isFirst: boolean = true;
   @Input() isLast: boolean = true;
+  @Input() startsFromHere: boolean = false;
+  @Input() startsAfter: boolean = false;
   @Output() delete: EventEmitter<void> = new EventEmitter<void>();
   @Output() update: EventEmitter<void> = new EventEmitter<void>();
   @Output() moveUp: EventEmitter<void> = new EventEmitter<void>();
   @Output() moveDown: EventEmitter<void> = new EventEmitter<void>();
+  @Output() startFrom: EventEmitter<void> = new EventEmitter<void>();
   public isFileAttached: boolean = false;
   public editionMode: boolean = false;
   public assistants: Assistant[] = [];
@@ -82,6 +85,10 @@ export class PatternStepComponent {
 
   public onMoveDown() {
     this.moveDown.emit();
+  }
+
+  public onStartFrom() {
+    this.startFrom.emit();
   }
 
   get assistantSelected() {

@@ -159,6 +159,18 @@
 </div>
 
 <div class="patter-step__trailing">
+  <button
+    mat-icon-button
+    *ngIf="step.type == 'MESSAGE'"
+    [matTooltip]="
+      startsFromHere ? 'Stop starting from this step' : 'Start from this step'
+    "
+    (click)="onStartFrom()"
+  >
+    <mat-icon
+      [fontIcon]="startsFromHere ? 'close' : 'arrow_downward'"
+    ></mat-icon>
+  </button>
   <div class="move-buttons-container">
     <div *ngIf="!isFirst" class="move-icon-container" (click)="onMoveUp()">
       <mat-icon fontIcon="arrow_drop_up"></mat-icon>

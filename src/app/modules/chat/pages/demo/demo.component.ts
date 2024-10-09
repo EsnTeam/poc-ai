@@ -133,23 +133,23 @@ export class DemoComponent {
     ];
   }
 
-  public async suggestFieldNames() {
-    this.suggestNameOngoing = true;
-    const schemas = this.getObjectsSchemas();
+  // public async suggestFieldNames() {
+  //   this.suggestNameOngoing = true;
+  //   const schemas = this.getObjectsSchemas();
 
-    const suggestedNames = (
-      await this.patternService.suggestFieldNames(schemas)
-    ).attributes;
+  //   const suggestedNames = (
+  //     await this.patternService.suggestFieldNames(schemas)
+  //   ).attributes;
 
-    this.umlService.loadedObjects.forEach((obj) => {
-      obj.attributes.forEach((att) => {
-        att.suggestedFieldName = suggestedNames.find(
-          (o: any) => o.uuid == att.uuid
-        )?.suggestedFieldName;
-      });
-    });
-    this.suggestNameOngoing = false;
-  }
+  //   this.umlService.loadedObjects.forEach((obj) => {
+  //     obj.attributes.forEach((att) => {
+  //       att.suggestedFieldName = suggestedNames.find(
+  //         (o: any) => o.uuid == att.uuid
+  //       )?.suggestedFieldName;
+  //     });
+  //   });
+  //   this.suggestNameOngoing = false;
+  // }
 
   // public async generateJSONSchema() {
   //   this.generateJsonsOngoing = true;

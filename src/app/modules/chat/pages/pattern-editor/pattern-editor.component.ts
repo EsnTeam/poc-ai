@@ -114,7 +114,8 @@ export class PatternEditorComponent {
     this.patternService.executePattern(
       this.patternId,
       inputs[0] as string[],
-      this.lastRanThreadId
+      this.lastRanThreadId,
+      this.pattern.startFrom
     );
   }
 
@@ -165,6 +166,21 @@ export class PatternEditorComponent {
     const startingIndex = this.pattern.steps.findIndex((s) => s == step);
     this.move(this.pattern.steps, startingIndex, startingIndex + 1);
     this.updatePattern();
+  }
+
+  public startFrom(step: PatternStep) {
+    if (this.pattern.startFrom == step.stepId) {
+      this.pattern.startFrom = undefined;
+    } else {
+      this.pattern.startFrom = step.stepId;
+    }
+    this.updatePattern();
+  }
+
+  get startFromIndex() {
+    return this.pattern.steps.findIndex(
+      (s) => s.stepId == this.pattern.startFrom
+    );
   }
 
   public move(input: any[], from: number, to: number) {

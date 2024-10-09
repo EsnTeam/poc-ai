@@ -1,6 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, EventEmitter, Inject, Output } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
 import { EsnOpenaiService } from 'src/app/core/services/opeanai.service';
+import { EsnUtils } from 'src/assets/external-libs/arom-domain-ipnn-c90-design-lib';
 
 @Component({
   selector: 'app-assistant-edition-dialog',
@@ -21,8 +23,23 @@ export class AssistantEditionDialogComponent {
   public parseError: boolean = false;
   constructor(
     public dialogRef: MatDialogRef<AssistantEditionDialogComponent>,
-    public oaiService: EsnOpenaiService
+    public oaiService: EsnOpenaiService,
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      assistantId: string;
+      assistantConfig: any;
+    }
   ) {}
+
+  ngOnInit() {
+    if (this.data.assistantId) {
+      const conf = EsnUtils.cloneDeep(this.data.assistantConfig);
+      delete conf.id;
+      delete conf.object;
+      delete conf.created_at;
+      this.confString = JSON.stringify(conf, null, 4);
+    }
+  }
 
   public async createAssistant() {
     let config;
@@ -36,7 +53,9 @@ export class AssistantEditionDialogComponent {
 
     if (config) {
       this.parseError = false;
-      await this.oaiService.createAssistant(config);
+      !!this.data.assistantId
+        ? await this.oaiService.updateAssistant(this.data.assistantId, config)
+        : await this.oaiService.createAssistant(config);
       this.updated.emit();
       this.dialogRef.close();
     }

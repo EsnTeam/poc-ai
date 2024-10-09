@@ -7,6 +7,10 @@ import { ModalInputTextConfirmComponent } from '../modal-input-text-confirm/moda
 import { THREADS } from 'src/app/modules/shared/model/constants';
 import { EsnThreadManagementService } from 'src/app/core/services/thread-management.service';
 import { EsnAiUserConfigService } from 'src/app/core/services/user-config.service';
+import {
+  EsnConfirmationDialogComponent,
+  EsnDialog,
+} from 'src/assets/external-libs/arom-domain-ipnn-c90-design-lib';
 
 @Component({
   selector: 'app-test-panel',
@@ -30,7 +34,8 @@ export class TestPanelComponent {
     public firebaseController: FirebaseController,
     public dialog: MatDialog,
     public threadsService: EsnThreadManagementService,
-    public userConfigService: EsnAiUserConfigService
+    public userConfigService: EsnAiUserConfigService,
+    public esnDialog: EsnDialog
   ) {}
 
   async ngOnInit() {
@@ -118,6 +123,27 @@ export class TestPanelComponent {
       .componentInstance.updated.subscribe((resp) => {
         console.log({ resp });
         this.refresh(resp.response);
+      });
+  }
+
+  public openDataDeletionModal() {
+    this.esnDialog
+      .open(EsnConfirmationDialogComponent, {
+        data: {
+          title: `Delete test data "${this.selectedTestData?.name}"`,
+          message: 'This cannot be undone',
+        },
+        width: '70vw',
+      })
+      .componentInstance.decision.subscribe((resp) => {
+        if (!!resp) {
+          this.firebaseController
+            .deleteTestData(this.selectedTestData?.id!)
+            .subscribe(() => {
+              this.selectedTestData = undefined;
+              this.refresh();
+            });
+        }
       });
   }
 }

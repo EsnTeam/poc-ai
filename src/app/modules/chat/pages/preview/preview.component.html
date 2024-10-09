@@ -8,7 +8,11 @@
   <button mat-raised-button color="primary">Publier dans Pled</button>
 </div>
 <div class="form-preview-container">
-  <app-form-preview [schema]="schema" [uischema]="uischema"></app-form-preview>
+  <app-form-preview
+    [schema]="schema"
+    [uischema]="uischema"
+    [i18n]="i18n"
+  ></app-form-preview>
 </div>
 
 <!-- <div class="json-schema-display">{{ schema }}</div>

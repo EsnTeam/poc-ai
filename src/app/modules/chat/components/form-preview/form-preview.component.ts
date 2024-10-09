@@ -14,7 +14,8 @@ export class FormPreviewComponent {
   public renderers = ESN_RENDERER;
   @Input() schema: any; //= jsonSchema;
   @Input() uischema: any; // = uiSchema;
-  public i18n: JsonFormsI18nState;
+  @Input() i18n: JsonFormsI18nState;
+
   public validation: string = 'ValidateAndShow';
   public ajv = createAjv({
     schemaId: 'id',

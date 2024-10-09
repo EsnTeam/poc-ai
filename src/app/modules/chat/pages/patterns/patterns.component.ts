@@ -5,6 +5,10 @@ import { lastValueFrom } from 'rxjs';
 import { FirebaseController } from 'src/app/core/services/firebase-controller.service';
 import { Pattern } from 'src/app/modules/shared/model/pattern';
 import { PatternCreationDialogComponent } from '../../components/pattern-creation-dialog/pattern-creation-dialog.component';
+import {
+  EsnConfirmationDialogComponent,
+  EsnDialog,
+} from 'src/assets/external-libs/arom-domain-ipnn-c90-design-lib';
 
 @Component({
   selector: 'app-patterns',
@@ -17,7 +21,8 @@ export class PatternsComponent {
   constructor(
     public router: Router,
     public firebaseController: FirebaseController,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public esnDialog: EsnDialog
   ) {}
 
   async ngOnInit() {
@@ -38,6 +43,25 @@ export class PatternsComponent {
       .componentInstance.updated.subscribe((resp) => {
         console.log('UPDATED');
         this.goToDetailView(resp.response);
+      });
+  }
+
+  public openDeletionModal(pattern: Pattern) {
+    console.log('AAAAAA');
+    this.esnDialog
+      .open(EsnConfirmationDialogComponent, {
+        data: {
+          title: `Delete pattern "${pattern.name}"`,
+          message: 'This cannot be undone',
+        },
+        width: '70vw',
+      })
+      .componentInstance.decision.subscribe((resp) => {
+        if (!!resp) {
+          this.firebaseController.deletePattern(pattern.id!).subscribe(() => {
+            this.refreshPatterns();
+          });
+        }
       });
   }
 

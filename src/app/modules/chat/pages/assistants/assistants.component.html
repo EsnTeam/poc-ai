@@ -10,8 +10,15 @@
     (click)="goToDetailView(assistant)"
     [matTooltip]="stringify(assistant)"
   >
-    <div class="config-elm-list__element__label">{{ assistant.name }}</div>
-    <div class="config-elm-list__element__info">{{ assistant.model }}</div>
+    <div class="config-elm-list__element__leading">
+      <div class="config-elm-list__element__label">{{ assistant.name }}</div>
+      <div class="config-elm-list__element__info">{{ assistant.model }}</div>
+    </div>
+    <div class="config-elm-list__element__trailing">
+      <button mat-icon-button (click)="openAssistantCreationModal(assistant)">
+        <mat-icon fontIcon="edit"></mat-icon>
+      </button>
+    </div>
   </div>
 </div>
 

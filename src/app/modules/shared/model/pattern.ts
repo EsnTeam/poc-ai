@@ -1,6 +1,7 @@
 export interface Pattern {
   id?: string;
   name: string;
+  startFrom?: string;
   steps: PatternStep[];
 }
 
@@ -37,6 +38,7 @@ export enum StepActionType {
   FORMAT_INPUT = 'FORMAT_INPUT',
   IMPORT_JSON_SCHEMA_FROM_RESP = 'IMPORT_JSON_SCHEMA_FROM_RESP',
   IMPORT_UI_SCHEMA_FROM_RESP = 'IMPORT_UI_SCHEMA_FROM_RESP',
+  IMPORT_I18N_SCHEMA_FROM_RESP = 'IMPORT_I18N_SCHEMA_FROM_RESP',
   OPEN_FORM_PREVIEW = 'OPEN_FORM_PREVIEW',
 }
 
@@ -47,6 +49,7 @@ export const STEP_ACTION_LABELS: { [key in StepActionType]: string } = {
   FORMAT_INPUT: `Format input`,
   IMPORT_JSON_SCHEMA_FROM_RESP: `Import last response as a JSON Schema`,
   IMPORT_UI_SCHEMA_FROM_RESP: `Import last response as an UI Schema`,
+  IMPORT_I18N_SCHEMA_FROM_RESP: `Import last response as an i18n config`,
   OPEN_FORM_PREVIEW: `Open form preview in new tab`,
 };
 
