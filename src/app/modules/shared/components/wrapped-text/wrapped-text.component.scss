@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  margin-top: 4px;
+  .text-container {
+    white-space: pre-wrap;
+  }
+
+  .see-more-link {
+    color: var(--color-primary-600);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="text-container">{{ displayedText }}</div>
+<div
+  class="see-more-link"
+  *ngIf="!isOpened && text.length > maxChars"
+  (click)="open()"
+>
+  <span>Tout voir</span>
+</div>

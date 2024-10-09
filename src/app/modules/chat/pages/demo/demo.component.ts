@@ -151,12 +151,12 @@ export class DemoComponent {
     this.suggestNameOngoing = false;
   }
 
-  public async generateJSONSchema() {
-    this.generateJsonsOngoing = true;
-    const schemas = this.getObjectsSchemas(); //TEST_DATA.rawDataWithFieldNames; //
-    await this.patternService.generateJsonSchema(schemas);
-    this.generateJsonsOngoing = false;
-  }
+  // public async generateJSONSchema() {
+  //   this.generateJsonsOngoing = true;
+  //   const schemas = this.getObjectsSchemas(); //TEST_DATA.rawDataWithFieldNames; //
+  //   await this.patternService.generateJsonSchema(schemas);
+  //   this.generateJsonsOngoing = false;
+  // }
 
   public search() {
     this.searchOngoing = true;

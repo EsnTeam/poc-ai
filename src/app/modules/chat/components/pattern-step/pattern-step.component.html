@@ -38,7 +38,12 @@
       </div>
       <ng-container *ngIf="!editionMode">
         <div class="action-display">
-          Add message: <span class="prompt-display">"{{ step.prompt }}"</span>
+          Add message:
+          <span class="prompt-display"
+            ><app-wrapped-text
+              [text]="'&quot;' + step.prompt + '&quot;'"
+            ></app-wrapped-text
+          ></span>
         </div>
         <div *ngIf="step.attachedFileId">
           Attached file:

@@ -301,12 +301,22 @@ export class PatternExecutionService {
   }
 
   public async getLastResponseText(threadId: string, asJson: boolean = true) {
-    const jsonVal = JSON.parse(
-      (
-        (await this.oaiService.listMessages(threadId)).data[0]
-          .content[0] as TextContentBlock
-      ).text.value
-    );
+    const rawText = (
+      (await this.oaiService.listMessages(threadId)).data[0]
+        .content[0] as TextContentBlock
+    ).text.value;
+
+    if (!asJson) {
+      return rawText;
+    }
+
+    let jsonVal = '';
+    try {
+      jsonVal = JSON.parse(rawText);
+    } catch (err) {
+      const extractedJson = rawText.split('```json')[1].split('```')[0];
+      jsonVal = JSON.parse(extractedJson);
+    }
 
     return JSON.stringify(jsonVal, null, 4);
   }
@@ -369,65 +379,65 @@ export class PatternExecutionService {
     return jsonVal;
   }
 
-  public async generateJsonSchema(schemas: ObjectSchema[]) {
-    const threadId = THREADS.main;
-    await this.oaiService.clearThread(threadId);
-    await this.oaiService.createMessage(
-      PROMPTS.rawDataStatement.replace('##1', JSON.stringify(schemas, null, 2)),
-      threadId
-    );
+  // public async generateJsonSchema(schemas: ObjectSchema[]) {
+  //   const threadId = THREADS.main;
+  //   await this.oaiService.clearThread(threadId);
+  //   await this.oaiService.createMessage(
+  //     PROMPTS.rawDataStatement.replace('##1', JSON.stringify(schemas, null, 2)),
+  //     threadId
+  //   );
 
-    // JSON Schema
-    await this.oaiService.createMessage(
-      PROMPTS.askForJsonSchema.replace('##1', schemas[0].name),
-      threadId
-    );
-    const run = await this.oaiService.runThread(ASSISTANTS.basic4ov2, threadId);
-    await this.oaiService.waitForSuccess(run.id, threadId, true);
+  //   // JSON Schema
+  //   await this.oaiService.createMessage(
+  //     PROMPTS.askForJsonSchema.replace('##1', schemas[0].name),
+  //     threadId
+  //   );
+  //   const run = await this.oaiService.runThread(ASSISTANTS.basic4ov2, threadId);
+  //   await this.oaiService.waitForSuccess(run.id, threadId, true);
 
-    const jsonSchema = await this.askAndGetJson(threadId);
-    const blob = new Blob([JSON.stringify(jsonSchema, null, 4)], {
-      type: 'text/plain;charset=utf-8',
-    });
-    saveAs(blob, 'json_schema.json');
+  //   const jsonSchema = await this.askAndGetJson(threadId);
+  //   const blob = new Blob([JSON.stringify(jsonSchema, null, 4)], {
+  //     type: 'text/plain;charset=utf-8',
+  //   });
+  //   saveAs(blob, 'json_schema.json');
 
-    // JSON UI
-    await this.oaiService.createMessage(
-      PROMPTS.askForJsonUI.replace('##1', schemas[0].name),
-      threadId
-    );
-    const run2 = await this.oaiService.runThread(
-      ASSISTANTS.basic4ov2,
-      threadId
-    );
-    await this.oaiService.waitForSuccess(run2.id, threadId, true);
+  //   // JSON UI
+  //   await this.oaiService.createMessage(
+  //     PROMPTS.askForJsonUI.replace('##1', schemas[0].name),
+  //     threadId
+  //   );
+  //   const run2 = await this.oaiService.runThread(
+  //     ASSISTANTS.basic4ov2,
+  //     threadId
+  //   );
+  //   await this.oaiService.waitForSuccess(run2.id, threadId, true);
 
-    const jsonUI = await this.askAndGetJson(threadId);
-    const blob2 = new Blob([JSON.stringify(jsonUI, null, 4)], {
-      type: 'text/plain;charset=utf-8',
-    });
-    saveAs(blob2, 'json_ui.json');
-  }
+  //   const jsonUI = await this.askAndGetJson(threadId);
+  //   const blob2 = new Blob([JSON.stringify(jsonUI, null, 4)], {
+  //     type: 'text/plain;charset=utf-8',
+  //   });
+  //   saveAs(blob2, 'json_ui.json');
+  // }
 
-  public async askAndGetJson(threadId: string) {
-    await this.oaiService.createMessage(PROMPTS.askForJsonOnly, threadId);
+  // public async askAndGetJson(threadId: string) {
+  //   await this.oaiService.createMessage(PROMPTS.askForJsonOnly, threadId);
 
-    const run2 = await this.oaiService.runThread(
-      ASSISTANTS.noTool4oMini,
-      threadId,
-      null,
-      true
-    );
-    await this.oaiService.waitForSuccess(run2.id, threadId, true);
+  //   const run2 = await this.oaiService.runThread(
+  //     ASSISTANTS.noTool4oMini,
+  //     threadId,
+  //     null,
+  //     true
+  //   );
+  //   await this.oaiService.waitForSuccess(run2.id, threadId, true);
 
-    const jsonVal = JSON.parse(
-      (
-        (await this.oaiService.listMessages(threadId)).data[0]
-          .content[0] as TextContentBlock
-      ).text.value
-    );
+  //   const jsonVal = JSON.parse(
+  //     (
+  //       (await this.oaiService.listMessages(threadId)).data[0]
+  //         .content[0] as TextContentBlock
+  //     ).text.value
+  //   );
 
-    console.log(jsonVal);
-    return jsonVal;
-  }
+  //   console.log(jsonVal);
+  //   return jsonVal;
+  // }
 }

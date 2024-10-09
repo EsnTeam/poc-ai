@@ -101,6 +101,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { WrappedTextComponent } from './components/wrapped-text/wrapped-text.component';
 
 export const CUSTOM_RENDERERS_PROVIDER = [
   CustomRendererInputBoolean,
@@ -118,6 +119,8 @@ export const CUSTOM_RENDERERS_PROVIDER = [
   CustomRendererLayoutStepper,
   CustomRendererLayoutTabs,
 ];
+
+const DECLARE_AND_EXPORT = [...CUSTOM_RENDERERS_PROVIDER, WrappedTextComponent];
 
 const importAndExport = [
   MatFormFieldModule,
@@ -218,9 +221,9 @@ const importAndExport = [
 ];
 
 @NgModule({
-  declarations: [...CUSTOM_RENDERERS_PROVIDER],
+  declarations: [...DECLARE_AND_EXPORT],
   imports: [CommonModule, ...importAndExport],
-  exports: [...importAndExport],
+  exports: [...importAndExport, ...DECLARE_AND_EXPORT],
   providers: [
     DatePipe,
     {
