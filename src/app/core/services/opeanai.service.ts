@@ -263,7 +263,7 @@ Cost: ${cost}$`;
       MODELS_PRICING[
         this.assistants.find((a) => a.id == assistantId)?.model as 'gpt-4o'
       ];
-    return modelPricing.input;
+    return modelPricing?.input;
   }
 
   public getPricePerMOutputTokens(assistantId: string) {
@@ -271,6 +271,6 @@ Cost: ${cost}$`;
       MODELS_PRICING[
         this.assistants.find((a) => a.id == assistantId)?.model as 'gpt-4o'
       ];
-    return modelPricing.output;
+    return modelPricing?.output;
   }
 }

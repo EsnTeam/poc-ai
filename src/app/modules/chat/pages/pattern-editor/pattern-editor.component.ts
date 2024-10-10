@@ -170,7 +170,7 @@ export class PatternEditorComponent {
 
   public startFrom(step: PatternStep) {
     if (this.pattern.startFrom == step.stepId) {
-      this.pattern.startFrom = undefined;
+      this.pattern.startFrom = '';
     } else {
       this.pattern.startFrom = step.stepId;
     }
