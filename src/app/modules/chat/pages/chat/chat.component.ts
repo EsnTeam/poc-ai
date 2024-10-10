@@ -227,14 +227,21 @@ export class ChatComponent {
       const inputToks = runVal?.usage?.prompt_tokens || 0;
       const outputToks = runVal?.usage?.completion_tokens || 0;
 
-      let cost: any =
-        (inputToks / 1000000) * this.getPricePerMInputTokens() +
-        (outputToks / 1000000) * this.getPricePerMOutputTokens();
+      const priceInput = this.getPricePerMInputTokens();
+      const priceOutput = this.getPricePerMOutputTokens();
 
-      if (cost < 0.0001) {
-        cost = '< 0.0001';
-      } else {
-        cost = Math.trunc(cost * 10000) / 10000;
+      let cost: any = '?';
+
+      if (priceInput && priceOutput) {
+        cost =
+          (inputToks / 1000000) * this.getPricePerMInputTokens() +
+          (outputToks / 1000000) * this.getPricePerMOutputTokens();
+
+        if (cost < 0.0001) {
+          cost = '< 0.0001';
+        } else {
+          cost = Math.trunc(cost * 10000) / 10000;
+        }
       }
 
       const message = `Input: ${inputToks} tokens
@@ -251,7 +258,7 @@ Cost: ${cost}$`;
       MODELS_PRICING[
         this.assistants.find((a) => a.id == this.assistantId)?.model as 'gpt-4o'
       ];
-    return modelPricing.input;
+    return modelPricing?.input;
   }
 
   public getPricePerMOutputTokens() {
@@ -259,7 +266,7 @@ Cost: ${cost}$`;
       MODELS_PRICING[
         this.assistants.find((a) => a.id == this.assistantId)?.model as 'gpt-4o'
       ];
-    return modelPricing.output;
+    return modelPricing?.output;
   }
 
   public listFiles() {
