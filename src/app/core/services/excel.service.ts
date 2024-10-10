@@ -86,7 +86,7 @@ export class EsnExcelService {
     const rows = [] as any;
     let merges = [] as any;
 
-    const objects = this.getObjectsWithHierarchy(schemas, schemas[0], []);
+    const objects = this.getObjectsWithHierarchy(schemas, schemas[0], [], []);
 
     objects.forEach((obj) => {
       const [newRows, newMerges] = this.createObjectLines(obj, rows.length + 2);
@@ -120,6 +120,8 @@ export class EsnExcelService {
     obj: {
       obj: ObjectSchema;
       parents: string[];
+      parentsNames: string[];
+      name: string;
       cardinality?: string;
       suggestedFieldName?: string;
     },
@@ -187,10 +189,13 @@ export class EsnExcelService {
 
     const rows = [] as any[];
     const merges = [];
+
     if (obj.parents.length < 2) {
       rows.push([
         {
-          v: `${obj.obj.name}${!obj.parents.length ? ' (Objet racine)' : ''}`,
+          v: `${obj.name || obj.obj.name}${
+            !obj.parents.length ? ' (Objet racine)' : ''
+          }`,
           s: sectionStyle,
         },
         ...this.emptyCells(
@@ -209,7 +214,7 @@ export class EsnExcelService {
       rows.push([
         { v: a.name, s: valStyle },
         ...this.makeCells(
-          [obj.obj.name, obj.obj.name, a.name, a.name],
+          [obj.name || obj.obj.name, obj.name || obj.obj.name, a.name, a.name],
           mdmStyle
         ),
         ...this.makeCells(
@@ -232,10 +237,13 @@ export class EsnExcelService {
 
         ...this.makeCells(
           [
-            obj.parents.length
-              ? obj.parents[obj.parents.length - 1]
+            obj.parentsNames.length
+              ? obj.parentsNames[obj.parentsNames.length - 1]
               : 'Aucun\n(Objet racine)', // Parent
-            this.makeStructureString(obj.parents, obj.obj.name), // Structure
+            this.makeStructureString(
+              obj.parentsNames,
+              obj.suggestedFieldName || obj.name || obj.obj.name
+            ), // Structure
           ],
           structStyleSchemaStyle
         ),
@@ -298,12 +306,21 @@ export class EsnExcelService {
     schemas: ObjectSchema[],
     currentObj: ObjectSchema,
     parents: string[],
+    parentsNames: string[],
     cardinality?: string,
-    suggestedFieldName?: string
+    suggestedFieldName?: string,
+    name?: string
   ) {
     console.log({ currentObj, parents });
     const objets = [
-      { obj: currentObj, parents, cardinality, suggestedFieldName },
+      {
+        obj: currentObj,
+        parents,
+        parentsNames,
+        cardinality,
+        suggestedFieldName,
+        name,
+      },
     ] as any[];
 
     currentObj.attributes.forEach((a) => {
@@ -313,8 +330,12 @@ export class EsnExcelService {
             schemas,
             PocUtils.getSchemaNamed(a.type, schemas),
             parents.concat([currentObj.name]),
+            parentsNames.concat([
+              suggestedFieldName || name! || currentObj.name,
+            ]),
             `${a.isMandatory ? 1 : 0}, ${a.isMultivalued ? 'N' : 1}`,
-            a.suggestedFieldName
+            a.suggestedFieldName,
+            a.name
           )
         );
       }
