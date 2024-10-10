@@ -1,11 +1,11 @@
 <jsonforms
-  *ngIf="!!schema && !!uischema"
+  *ngIf="!!schema && !!uischema && !!i18nConf && !hide"
   #jsonForms
   [data]="{}"
   [schema]="schema"
   [uischema]="uischema"
   [renderers]="renderers"
-  [i18n]="i18n"
+  [i18n]="i18nConf"
   validationMode="ValidateAndShow"
   [ajv]="ajv"
 ></jsonforms>

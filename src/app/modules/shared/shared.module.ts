@@ -27,7 +27,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { JsonFormsModule } from '@jsonforms/angular';
+import { JsonFormsAngularService, JsonFormsModule } from '@jsonforms/angular';
 import { JsonFormsAngularMaterialModule } from '@jsonforms/angular-material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
@@ -46,11 +46,13 @@ import {
   EsnExpansionModule,
   EsnFileInputModule,
   EsnFilemanagerModule,
+  EsnFlagModule,
   EsnGlobalConfigurationModule,
   EsnIconModule,
   EsnIconsRegistry,
   EsnInputModule,
   EsnLoaderModule,
+  EsnMenuModule,
   EsnPaginatorModule,
   EsnPeoplePickerModule,
   EsnPersonAvatarModule,
@@ -102,6 +104,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { WrappedTextComponent } from './components/wrapped-text/wrapped-text.component';
+import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
 
 export const CUSTOM_RENDERERS_PROVIDER = [
   CustomRendererInputBoolean,
@@ -120,7 +123,11 @@ export const CUSTOM_RENDERERS_PROVIDER = [
   CustomRendererLayoutTabs,
 ];
 
-const DECLARE_AND_EXPORT = [...CUSTOM_RENDERERS_PROVIDER, WrappedTextComponent];
+const DECLARE_AND_EXPORT = [
+  ...CUSTOM_RENDERERS_PROVIDER,
+  WrappedTextComponent,
+  LanguageSelectorComponent,
+];
 
 const importAndExport = [
   MatFormFieldModule,
@@ -214,6 +221,8 @@ const importAndExport = [
   EsnPaginatorModule,
   EsnPersonAvatarModule,
   EsnBreadcrumbModule,
+  EsnFlagModule,
+  EsnMenuModule,
   //
   JsonFormsModule,
   JsonFormsAngularMaterialModule,
@@ -226,6 +235,7 @@ const importAndExport = [
   exports: [...importAndExport, ...DECLARE_AND_EXPORT],
   providers: [
     DatePipe,
+    JsonFormsAngularService,
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'outline' },

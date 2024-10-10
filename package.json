@@ -41,7 +41,8 @@
     "tslib": "^2.3.0",
     "xlsx-js-style": "^1.2.0",
     "zod": "^3.23.8",
-    "zone.js": "~0.12.0"
+    "zone.js": "~0.12.0",
+    "flag-icons": "^6.7.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.8",

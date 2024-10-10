@@ -5,13 +5,20 @@
       Voir les configurations
     </button>
   </div>
-  <button mat-raised-button color="primary">Publier dans Pled</button>
+  <div class="preview-header__trailing">
+    <app-language-selector
+      [languages]="languages"
+      (onLanguageSelected)="setSelectedLang($event)"
+    ></app-language-selector>
+    <button mat-raised-button color="primary">Publier dans Pled</button>
+  </div>
 </div>
 <div class="form-preview-container">
   <app-form-preview
     [schema]="schema"
     [uischema]="uischema"
     [i18n]="i18n"
+    [locale]="selectedLang"
   ></app-form-preview>
 </div>
 

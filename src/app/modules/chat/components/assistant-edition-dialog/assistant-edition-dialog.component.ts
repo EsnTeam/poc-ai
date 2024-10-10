@@ -37,6 +37,9 @@ export class AssistantEditionDialogComponent {
       delete conf.id;
       delete conf.object;
       delete conf.created_at;
+      if (!conf.description) {
+        conf.description = '';
+      }
       this.confString = JSON.stringify(conf, null, 4);
     }
   }

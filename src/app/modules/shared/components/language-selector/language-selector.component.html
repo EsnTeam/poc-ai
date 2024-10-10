@@ -1,0 +1,38 @@
+<ng-container *ngIf="currentLanguage && languages">
+  <esn-button
+    class="esn-btn"
+    type="light"
+    (menuOpened)="stateDropdown = true"
+    (menuClosed)="stateDropdown = false"
+    [esnMenuTriggerFor]="viewModeSelect"
+  >
+    <esn-flag
+      style="display: inline-block; transform: translateY(-4px)"
+      class="mr-2"
+      [shape]="'circle'"
+      [size]="'xs'"
+      [country]="getCountryNameFromLanguageCode(currentLanguage)"
+    ></esn-flag>
+    <span> {{ currentLanguage }}</span>
+    <mat-icon class="icon--sm"
+      >expand_{{ !stateDropdown ? "more" : "less" }}</mat-icon
+    >
+  </esn-button>
+  <esn-menu #viewModeSelect>
+    <button
+      *ngFor="let language of languages"
+      (click)="clickOnLanguage(language)"
+      esn-menu-item
+      data-testid="language-selector"
+    >
+      <esn-flag
+        style="display: inline-block; transform: translateY(-4px)"
+        class="mr-2"
+        [shape]="'circle'"
+        [size]="'xs'"
+        [country]="getCountryNameFromLanguageCode(language)"
+      ></esn-flag>
+      <span>{{ language }}</span>
+    </button>
+  </esn-menu>
+</ng-container>

@@ -13,12 +13,14 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-preview',
   templateUrl: './preview.component.html',
-  styleUrls: ['./preview.component.scss', '../config-page.scss'],
+  styleUrls: ['./preview.component.scss'],
 })
 export class PreviewComponent {
   public schema = null;
   public uischema = null;
   public i18n: any;
+  public languages: string[];
+  public selectedLang = 'fr';
   constructor(public dbService: IdbService, public dialog: MatDialog) {}
   async ngOnInit() {
     this.schema = await this.dbService.getValueByKey(
@@ -33,6 +35,11 @@ export class PreviewComponent {
       'session-data',
       I18N_SCHEMA_DB_KEY
     );
+    this.languages = Object.keys(this.i18n);
+  }
+
+  public setSelectedLang(lang: string) {
+    this.selectedLang = lang;
   }
 
   public openConfigModal() {
